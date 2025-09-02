@@ -1,0 +1,405 @@
+.about-banner-background {
+  background: #a9a9a9;
+  position: relative;
+}
+
+.about-banner-background .customContainer {
+  height: 70%;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+}
+
+#growth-partner {
+  padding-top: 4rem;
+}
+
+.aboutCon {
+  margin: 0 !important;
+}
+
+.paragraph {
+  color: #555;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+section.sec6 button.getintouchBtn.ctagetint {
+  width: 130px !important;
+}
+
+.bgnews {
+  background-color: #edeff1;
+}
+
+.founder {
+  padding: 1rem !important;
+  gap: 8px;
+}
+
+#our-founders .customContainer,
+#latest-news .customContainer {
+  margin: 5rem 0;
+}
+
+.articalMe .news-card {
+  margin: 1rem;
+}
+
+.articalMe .news-card .card-img-top {
+  width: 100% !important;
+}
+
+.ctagetint {
+  font-family: "Proxima Nova";
+
+}
+
+.foundersh {
+  color: #000;
+
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.foundersp {
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-family: "Proxima Nova";
+
+
+}
+
+/* -------------------------------- */
+
+@media screen and (max-width: 1080px) {
+  .paragraph.mt4Is {
+    margin-top: 1rem !important;
+  }
+
+  .text80 {
+    font-size: 38px !important;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Tablet View */
+  .founder {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .founder img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .founder h5 {
+    font-size: 16px;
+  }
+
+  .paragraph.mt4Is {
+    margin-top: 0rem !important;
+  }
+
+  .text80 {
+    font-size: 28px !important;
+  }
+
+  #growth-partner .paragraph {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+
+  }
+
+  .titleH1 {
+    font-size: 48px !important;
+    line-height: 54px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .text80 {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-banner-background .customContainer {
+    align-items: flex-start;
+  }
+
+  /* Mobile View */
+  .row-cols-md-2 {
+    row-gap: 1.5rem !important;
+  }
+
+  .romdcol {
+    flex-direction: column-reverse;
+  }
+
+  .text80 {
+    margin-top: 1rem;
+  }
+
+  .founder {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .founder h5 {
+    font-size: 26px;
+  }
+
+  .founder p {
+    font-size: 16px;
+  }
+}
+
+/* --------------------------------- */
+/* Background Styling */
+.values-section {
+  background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* Card Container */
+.rowCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Individual Card */
+.cardContainerBox {
+  flex: 1 1 calc(20% - 1.5rem);
+  /* Default: 5 cards in a row */
+  min-width: 250px;
+  /* Prevents too small cards */
+}
+
+.value-card {
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.value-card:hover {
+  background: white;
+  color: black;
+}
+
+/* Default & Hover Content */
+.value-card .default-content,
+.value-card .hover-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.value-card .hover-content {
+  opacity: 0;
+}
+
+.value-card:hover .default-content {
+  opacity: 0;
+}
+
+.value-card:hover .hover-content {
+  opacity: 1;
+}
+
+/* Button */
+.btn-custom {
+  width: 200px !important;
+  font-weight: bold;
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-custom:hover {
+  background: #ddd;
+}
+
+@media screen and (max-width: 1440px) {
+  .paragraph {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .paragraph {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .founder {
+    padding: 2rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cardContainerBox {
+    flex: 1 1 calc(33.33% - 1.5rem);
+    /* 3 cards per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .cardContainerBox {
+    flex: 1 1 calc(50% - 1.5rem);
+    /* 2 cards per row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .forMobBanner {
+    max-height: 590px;
+    object-fit: cover;
+  }
+
+  /* .aboutmobile {
+    max-height: 600px;
+  } */
+}
+
+@media (max-width: 576px) {
+  .cardContainerBox {
+    flex: 1 1 100%;
+    /* Single column layout */
+  }
+}
+
+@media (max-width: 767px) {
+  .founder img {
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width:767px) {
+
+  #our-founders .customContainer,
+  #latest-news .customContainer {
+    margin: 3rem 0;
+  }
+
+  .customSection .contact-card.p-4.h-100.d-flex.flex-column {
+    padding-bottom: 0 !important;
+  }
+
+  .customSection .customContainer.mediaCon {
+    margin-top: 1rem !important;
+  }
+
+  .mediaCon {
+    margin: 3rem 0 !important;
+  }
+
+  .getintouchBtn.gettouchbtn {
+    margin-bottom: 20px !important;
+  }
+
+  .foundersh {
+    font-size: 32px;
+    padding-bottom: 30px;
+  }
+
+  section#our-founders .customContainer {
+    margin: 2rem 0;
+  }
+
+  section#our-founders .customContainer .col {
+    margin-top: 0;
+  }
+
+  .sec6 .front-card1 {
+    margin: 1rem 0rem !important;
+  }
+
+  .sec6 .flip-card1 {
+    margin: 1rem 0rem !important;
+  }
+
+  .sec6 .back-card1 {
+    margin: 1rem 0rem !important;
+  }
+
+  section.approach.firstSection.approachsection.bg-approach-banner {
+    background-image: url("/website/assets/images/approach/approachbannermb.webp") !important;
+    background-size: cover !important;
+    background-position: 75% !important;
+    align-items: flex-start !important;
+    padding-top: 14% !important;
+    padding-left: 8% !important;
+    min-height: 74vh !important;
+  }
+}
+
+section.approach.firstSection.approachsection .customContainer.firstContainer h1 {
+  color: #fff !important;
+}
+
+section.approach.firstSection.approachsection.bg-approach-banner {
+  background-image: url("/website/assets/images/approach/approachbanner.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 0 6%;
+}
+
+section.approach.firstSection.approachsection.bg-approach-banner .customContainer {
+  z-index: 2;
+  position: relative;
+}
+
+section.approach.firstSection.approachsection.bg-approach-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* optional: dark overlay for text visibility */
+  z-index: 1;
+}

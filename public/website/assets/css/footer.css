@@ -1,0 +1,531 @@
+.footer {
+    /*   margin-top: 100px; */
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Proxima Nova";
+    position: relative;
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire screen */
+    /* z-index: -1; */
+    position: absolute;
+    opacity: 0.2;
+}
+.subContainer,
+.footerContainer,
+.footer-bottom {
+    z-index: 2;
+}
+.scrollAlign {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 19vh;
+}
+.subContainer {
+    width: 60%;
+    position: absolute;
+    top: -60px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    border: 2px solid #161616;
+    font-family: "Proxima Nova";
+}
+.subContainer h4 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ef4b4f;
+    font-family: "Proxima Nova";
+}
+.subscribeBox {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribeBox select {
+    background: transparent !important;
+}
+.subscribeBox input {
+    width: 350px;
+    height: 100%;
+    padding: 0 16px;
+    border: none;
+    border: 1px solid #c5c5c5;
+    font-size: 16px;
+    font-weight: 400;
+    color: #161616;
+    border-radius: 6px 0 0 6px;
+    font-style: normal;
+    font-family: "Proxima Nova" !important;
+}
+.subscribeBox input::placeholder {
+    color: #000 !important;
+    opacity: 1; /* Ensures full opacity in some browsers */
+}
+.footerForm select {
+    border: 1px solid #c5c5c5;
+    color: #ffffff !important;
+    background: none !important;
+}
+.footerForm select:hover option {
+    color: #000 !important;
+}
+.subscribeBox button {
+    border: none;
+    height: 100%;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(260.56deg, #ef4b4f 4.76%, #991f3d 69.81%);
+    box-shadow: 0px 7.07px 7.07px 0px rgba(16, 137, 255, 0.1);
+    border-radius: 0 8px 8px 0;
+    font-style: normal;
+    font-family: "Proxima Nova";
+}
+/* ---------------- */
+.footerContainer {
+    width: 90%;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    font-family: "Proxima Nova" !important;
+}
+
+.footer-logo img {
+    height: 100px;
+}
+.footerContainer p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Proxima Nova" !important;
+}
+.footerContainer p strong {
+    font-family: "Proxima Nova" !important;
+}
+.contactP {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    /* align-items: center; */
+    gap: 1rem;
+    font-family: "Proxima Nova" !important;
+}
+.footerContainer .contactP img {
+    height: 24px;
+    margin-bottom: 3rem;
+}
+
+.footerContainer h6 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Proxima Nova" !important;
+}
+.fIcon {
+    height: 40px;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+.footer ul li {
+    margin-bottom: 0.8rem;
+}
+.footer ul li a {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-family: "Proxima Nova" !important;
+}
+.footer ul li a .material-symbols-outlined {
+    rotate: 270deg;
+}
+
+.footerForm {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    font-family: "Proxima Nova" !important;
+}
+.footerForm input,
+.footerForm textarea {
+    background-color: transparent;
+    color: #fff !important;
+    font-family: "Proxima Nova" !important;
+}
+
+.footerForm input:focus,
+.footerForm textarea:focus {
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    border-color: #fff;
+}
+.submitFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 1rem;
+    gap: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #ffffff;
+    /* color: #000; */
+    color: #000 !important;
+}
+.submitFooter img {
+    height: 0px;
+}
+/* ------------------------- */
+.footer-bottom {
+    /* border-top: 1px solid #c9302c; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #161616;
+    font-family: "Proxima Nova" !important;
+}
+.fbContainer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fbContainer p,
+.fbContainer a {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    font-family: "Proxima Nova" !important;
+}
+
+::placeholder {
+    color: #fff !important;
+    opacity: 1; /* Firefox */
+}
+input,
+select,
+textarea {
+    color: #000 !important;
+    font-family: "Proxima Nova" !important;
+}
+.footerForm input,
+.footerForm select,
+.footerForm textarea {
+    color: #ffffff !important;
+}
+form#footerForm {
+    font-family: "Proxima Nova";
+}
+.contact-detail a:hover span {
+    color: #ef4b4f !important;
+}
+@media screen and (max-width: 1800px) {
+    .subContainer {
+        top: -50px;
+        gap: 2rem;
+    }
+    .subContainer h4 {
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .subContainer {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .footer-logo img {
+        height: 80px;
+    }
+    .footerContainer p br {
+        display: none;
+    }
+    .subContainer {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .subContainer {
+        width: 80%;
+    }
+    .subContainer h4 {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .footer-logo img {
+        height: 60px;
+    }
+    .subContainer {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 990px) {
+    .subContainer {
+        width: 95%;
+        height: 80px;
+        top: -40px;
+    }
+    .subContainer h4 {
+        font-size: 20px;
+    }
+    .subscribeBox input {
+        width: 250px;
+        font-size: 20px;
+    }
+    .subscribeBox button {
+        width: 150px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .fbContainer p,
+    .fbContainer a {
+        font-size: 18px;
+    }
+    .subContainer {
+        margin: 2rem 0;
+        flex-direction: column;
+        height: 120px;
+        top: -100px;
+        gap: 1rem;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+    }
+    .subContainer h4 {
+        font-size: 20px;
+    }
+    .subscribeBox input {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .fbContainer p,
+    .fbContainer a {
+        font-size: 18px;
+    }
+    .footer-bottom {
+        height: 110px;
+    }
+    .fbContainer {
+        flex-direction: column;
+    }
+    .footerContainer h6 {
+        font-size: 22px;
+    }
+    .subContainer {
+        width: 90%;
+        border-radius: 12px;
+        border: 2px solid #000;
+
+        background: #fff;
+
+        box-shadow: 0px 0px 64px 10px rgba(0, 0, 0, 0.1);
+    }
+    .subContainer h4 {
+        font-size: 18px;
+    }
+    .subscribeBox input {
+        width: auto;
+        font-size: 14px;
+    }
+    .subscribeBox button {
+        width: 125px;
+        font-size: 13px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .subscribeBox input {
+        width: auto;
+        font-size: 12px;
+    }
+    .subscribeBox button {
+        width: 115px;
+        font-size: 11px !important;
+    }
+    .subContainer h4 {
+        font-size: 14px !important;
+    }
+    .sec8 h2 {
+        font-size: 22px !important;
+    }
+    .sec8 h5 {
+        font-size: 16px !important;
+    }
+}
+/* form css start */
+.text-danger {
+    color: #fb0119 !important;
+}
+.custom-formset {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+.text-success1 {
+    color: #00cb6d !important;
+}
+
+/* form css End */
+.footerForm .form-control {
+    background: none;
+    /* color: #000 !important; */
+}
+
+.footerForm .form-control::placeholder {
+    /* color: #000 !important; */
+    opacity: 1; /* Ensures full visibility */
+}
+.footerForm .dropdown-toggle {
+    text-align: left;
+    width: 100%;
+    background: none;
+    border-color: #c5c5c5;
+    /* color: #000; */
+    text-wrap: wrap;
+    font-family: "Proxima Nova" !important;
+}
+.footerForm .dropdown-toggle:hover {
+    background: none;
+    /* color: #000000; */
+    border-color: #c5c5c5;
+}
+.footerForm .dropdown-toggle:focus {
+    background: none;
+    /* color: #000000; */
+    box-shadow: none !important;
+}
+
+.form-check-input {
+    border: 1px solid #666666 !important;
+}
+.form-check-input:checked {
+    background-color: #161616 !important;
+}
+
+/* -------------- */
+.modalForm .form-control {
+    background: none;
+    color: #000 !important;
+}
+
+.modalForm .form-control::placeholder {
+    color: #000 !important;
+    opacity: 1; /* Ensures full visibility */
+}
+.modalForm .dropdown-toggle {
+    text-align: left;
+    width: 100%;
+    background: none;
+    border-color: #c5c5c5;
+    color: #000;
+    text-wrap: wrap;
+}
+.modalForm .dropdown-toggle:hover {
+    background: none;
+    color: #000000;
+}
+.modalForm .dropdown-toggle:focus {
+    background: none;
+    color: #000000;
+    box-shadow: none !important;
+}
+
+/* ==================== */
+.sticky-sideBtn {
+    width: 180px;
+    height: 45px;
+    position: fixed;
+    top: 50vh;
+    right: -50px;
+    rotate: 90deg;
+    transform: translateY(-50%);
+    background-color: #ef4b4f;
+    color: #fff;
+    border: none;
+    border-radius:0 0  8px 8px ;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.sticky-sideBtn:hover {
+    color: #ffffff !important;
+}
+.modalBtn {
+    width: 180px;
+    height: 45px;
+    background-color: #ef4b4f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+.modalBtn:hover {
+    color: #ffffff !important;
+}
+.popModal .modal-content{
+    position: relative;
+}
+.popModal .btn-close{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+.popModal .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+.popModal .modal-body img {
+    width: 100%;
+    height: auto;
+}

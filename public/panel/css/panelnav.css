@@ -1,0 +1,148 @@
+.panelNavbar-component {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blankbox {
+  width: 300px;
+}
+
+.panelNavbar-container {
+  padding: 1rem;
+  width: calc(100% - 300px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panelNavbar-container-h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.panelNavbar-profilebox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.panelNavbar-clgImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.panelNavbar-notifyBox {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(222, 222, 222, 1);
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.panelNavbar-notifyBox:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+  background-color: #ce2e28;
+  transition: 0.2s;
+}
+
+.panelNavbar-notifybell {
+  width: 30px;
+  height: 30px;
+}
+
+.panelNavbar-notifycount {
+  margin: 0;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50%;
+  color: #fff;
+  background: #ce2e28;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.dropdown{
+  margin: 0;
+  margin-top: 0.5rem;
+}
+.dropdown-menu{
+  margin-top: 1.2rem !important;
+}
+.dropdownbtn {
+  font-size: 16px;
+  cursor: pointer;
+  color: #666666;
+  transition: 0.2s;
+}
+.dropdownbtn:hover{
+  transform: scale(1.1);
+  color: #ce2e28;
+  transition: 0.2s;
+}
+
+.contact-nav-btn {
+  margin-right: 10px;
+  padding: 0 16px;
+  width: auto;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: #ce2e28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-nav-btn:hover{
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 990px) {
+  .blankbox {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #menu-btn {
+    font-size: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .panelNavbar-container {
+    width: calc(100% - 40px);
+    padding-left: 0.5rem;
+  }
+
+  .panelNavbar-container-h3 {
+    font-size: 24px;
+  }
+  
+}

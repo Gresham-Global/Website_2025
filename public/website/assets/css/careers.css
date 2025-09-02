@@ -1,0 +1,850 @@
+.whyWorkHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0 20px;
+    grid-column: span 1;
+}
+
+.cardContainer1 {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+    border-radius: 1.25rem;
+    min-height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+
+    /* Gradient from top to bottom */
+    color: white;
+}
+
+.card:hover h3,
+.card:hover p {
+    color: white;
+    /* Make text white on hover */
+}
+
+.card .icon {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: left;
+    /* Center icon horizontally */
+    align-items: center;
+}
+
+.card .icon img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s;
+}
+
+.card:hover .icon img {
+    transform: scale(1.1);
+    /* Slight zoom effect on icons */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: "Proxima Nova";
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+    /* Ensures the paragraph content doesn't affect height inconsistency */
+    text-align: left;
+    font-family: "Proxima Nova";
+}
+
+.form-control {
+    color: #000 !important;
+}
+
+.whyWorkHeading h1 {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* input::placeholder,
+textarea::placeholder {
+    color: black !important;
+    opacity: 1; 
+} */
+
+/* For screens between 768px and 400px */
+@media (max-width: 768px) and (min-width: 400px) {
+    .cardContainer1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Two cards per row */
+        gap: 10px;
+        /* Space between the cards */
+        padding: 10px;
+        /* Optional padding around the container */
+        width: 100%;
+        /* Full width of the container */
+    }
+
+    .whyWorkHeading {
+        grid-column: span 2;
+        /* Make the heading span both columns */
+        text-align: center;
+    }
+
+    .whyWorkHeading h2 {
+        font-size: 2rem;
+        text-align: center;
+        /* Center align the heading text */
+    }
+}
+
+/* For screens smaller than 400px */
+@media (max-width: 400px) {
+    .cardContainer1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* One card per row */
+        gap: 10px;
+        /* Space between the cards */
+        padding: 10px;
+        /* Optional padding around the container */
+        width: 100%;
+        /* Full width of the container */
+    }
+
+    .whyWorkHeading {
+        grid-column: span 1;
+        /* Make the heading span one column */
+        text-align: center;
+    }
+
+    .whyWorkHeading h2 {
+        font-size: 1.5rem;
+        /* Adjust font size for smaller screens */
+        text-align: center;
+        /* Center align the heading text */
+    }
+}
+
+.backgRound {
+    background: #f5f5f7;
+}
+
+.opening-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+    min-height: 100%;
+}
+
+.opening-card:hover {
+    transform: scale(1.05);
+}
+
+.apply-btn {
+    border-radius: 8px !important;
+    background: linear-gradient(
+        266deg,
+        #ef4b4f -0.04%,
+        #991f3d 72.43%
+    ) !important;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.4rem 1.5rem;
+    font-family: "Proxima Nova";
+    line-height: 1.2;
+    border: unset !important;
+}
+
+.apply-btn:hover {
+    background-color: #444;
+}
+
+.careerFooter .customContainer {
+    margin: 0;
+}
+
+.careerFooter {
+    /* margin-bottom: -100px; */
+}
+
+.latest-news .slide-item {
+    transition: 0.3s;
+}
+
+.latest-news .slide-item:hover {
+    transform: scale(1.1) !important;
+    transition: 0.3s;
+}
+
+.connect-btn {
+    background: linear-gradient(265.76deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.connect-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    color: #fff !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .careerFooter {
+        /* margin-bottom: -70px; */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .careerFooter {
+        /* margin-bottom: 0px; */
+    }
+}
+
+/* ------------------- */
+.jobtitle {
+    font-size: 64px !important;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #ffffff;
+    max-width: 58%;
+}
+
+.companyname {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.jobdescription {
+    font-size: 16px !important;
+    color: #ffffff;
+    max-width: 50%;
+}
+
+.customCard {
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0px 4px 9.1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.lead1 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 46px;
+    font-family: "Proxima Nova";
+}
+
+.submit-button {
+    background: linear-gradient(
+        266deg,
+        #ef4b4f -0.04%,
+        #991f3d 72.43%
+    ) !important;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.43rem 2.26rem;
+    border-radius: 8px;
+    font-family: "Proxima Nova";
+    line-height: 1.2;
+    border: unset;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+    /* Slightly increase button size */
+    filter: brightness(1.1);
+    /* Make it slightly brighter */
+}
+
+/* qualification */
+.bebtech-electronicseeeeni {
+    position: relative;
+    line-height: 33px;
+    opacity: 0.7;
+}
+
+.bebtech-electronicseeeeni-parent {
+    position: relative;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    width: fit-content;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 20px;
+    color: #000;
+    font-family: Inter;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1350px) {
+    .lead1 {
+        font-size: 24px !important;
+        line-height: 28px;
+    }
+
+    .lead1 br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .customSection .cardContainer1 {
+        margin-bottom: 2rem;
+    }
+
+    .whyWorkHeading h1 {
+        line-height: 1;
+    }
+
+    .customSection .customContainer.mediaCon {
+        margin-top: 1rem !important;
+        margin-bottom: 5rem !important;
+    }
+
+    .lead1 {
+        font-size: 15px !important;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .jobtitle {
+        font-size: 48px !important;
+        line-height: 49px;
+    }
+
+    .companyname {
+        font-size: 28px;
+        font-family: "Proxima Nova";
+    }
+
+    .careerFooter {
+        margin-bottom: 1rem;
+        /* margin-top: -8rem; */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jobtitle {
+        font-size: 38px !important;
+        line-height: 40px;
+    }
+
+    .card {
+        min-height: 17rem;
+    }
+
+    .companyname {
+        font-size: 20px;
+    }
+
+    .careerpban {
+        color: #fff;
+        font-weight: 900;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 30px;
+        /* 150% */
+        width: 698px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .jobtitle {
+        font-size: 28px !important;
+        line-height: 35px;
+    }
+
+    .companyname {
+        font-size: 20px;
+    }
+}
+
+.careerpban {
+    color: #fff;
+    font-weight: 900 !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 30px;
+    /* 150% */
+    width: 698px;
+}
+
+@media screen and (max-width: 1650px) {
+    section#growth-partner p.lead1 br {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1775px) and (min-wdith: 1575px) {
+    .whyWorkHeading h1 {
+        font-size: 74px !important;
+        line-height: 85px !important;
+    }
+}
+
+@media screen and (max-width: 1574px) and (min-width: 1300px) {
+    .whyWorkHeading h1 {
+        font-size: 64px !important;
+        line-height: 75px !important;
+    }
+}
+
+@media screen and (max-width: 1299px) and (min-width: 1024px) {
+    .whyWorkHeading h1 {
+        font-size: 54px !important;
+        line-height: 65px !important;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .whyWorkHeading h1 {
+        font-size: 44px !important;
+        line-height: 48px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .whyWorkHeading h1 {
+        font-size: 44px !important;
+        line-height: 48px !important;
+    }
+
+    .customContainer.careerCon {
+        margin: 3rem 0 !important;
+    }
+}
+
+/* @media screen and (max-width: 375px) {
+  .jobtitle {
+    font-size: 28px !important;
+    line-height: 20px;
+  }
+
+  .companyname {
+    font-size: 20px;
+  }
+}
+
+.careerpban {
+ 
+    color: #FFF;
+    
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 30px;
+    width: 698px;
+
+} */
+/* @media screen and (max-width: 425px) {
+    .slick-prev, .slick-next {
+        font-size: 40px;
+        color: rgb(168, 35, 35);
+        cursor: pointer;
+        z-index: 100;
+        margin-left: 0rem!important;
+
+    }
+  } */
+
+/* Main container */
+.careerbanner_section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 30px 90px;
+    margin-top: 77px;
+}
+
+/* Background image for desktop */
+.careerbanner_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("/website/assets/images/carrerbannerimg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Background image for mobile */
+@media (max-width: 767px) {
+    .careerbanner_background {
+        background-image: url("/website/assets/images/carrermobile.png");
+        background-position: 100% !important;
+    }
+}
+
+/* Text wrapper to ensure text stays above background */
+.careerbanner_container {
+    position: relative;
+    z-index: 2;
+    margin-top: 10%;
+}
+
+.careerbanner_textWrapper {
+    color: white;
+    /* Optional: change text color if needed */
+}
+
+.careerbanner_title {
+    font-size: 3rem;
+    /* Adjust size as needed */
+}
+
+.careerbanner_description {
+    font-size: 1.25rem;
+    max-width: 35%;
+}
+
+.career-current-opening-internal {
+    /* background-image: url('/website/assets/images/career/career_currentopening.webp'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    min-height: 60vh !important;
+    display: flex;
+    /* padding: 0 6%; */
+    align-items: center;
+    margin-top: 4%;
+}
+
+.career-current-opening-internal img {
+    position: relative;
+    width: 100% !important;
+    display: block;
+    height: 100%;
+}
+
+.career-current-opening-internal .customContainer {
+    z-index: 9;
+    display: block;
+    position: absolute;
+    padding: 0 6%;
+}
+
+.career-current-opening-internal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* optional overlay */
+    z-index: 2;
+}
+
+div#career-description .career-current-opening-detail h3 {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1700px) {
+    .careerbanner_description {
+        max-width: 55% !important;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .jobtitle {
+        max-width: 65% !important;
+    }
+    .jobdescription {
+        max-width: 65% !important;
+    }
+    .careerbanner_description {
+        max-width: 60% !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .jobtitle {
+        max-width: 85% !important;
+    }
+    .jobdescription {
+        max-width: 85% !important;
+    }
+    .careerbanner_description {
+        max-width: 95% !important;
+        font-size: 16px !important;
+    }
+    .career-current-opening-internal {
+        background-position: 72% !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .career-current-opening-internal {
+        min-height: auto !important;
+        margin-top: 20% !important;
+    }
+    .career-current-opening-internal h1 {
+        font-size: 24px !important;
+        line-height: 28px !important;
+    }
+}
+@media screen and (max-width: 659px) {
+    .jobtitle {
+        max-width: 100% !important;
+    }
+    .jobdescription {
+        max-width: 100% !important;
+    }
+    .careerbanner_section {
+        padding: 0px 40px 30px !important;
+        /* height: 44vh; */
+    }
+    .careerbanner_section {
+        align-items: flex-start !important;
+    }
+}
+
+.opening-card h3.job-title {
+    color: #ef4b4f;
+    font-family: "Proxima Nova";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    min-height: 50px;
+}
+p.opencard_txt {
+    color: #555;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+p.opencard_txt strong.stbgtxt {
+    color: #000;
+    font-size: 20px;
+}
+
+.currentopn_topsect {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#viewall {
+    width: 10rem;
+    border-radius: 8px;
+    background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    padding: 12px 25px !important;
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: unset !important;
+}
+#viewall:hover span {
+    color: #fff;
+}
+
+h1#currentopeningsection {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 64px !important;
+    font-style: normal;
+    font-weight: 300 !important;
+    line-height: 77px;
+    /* margin-bottom: 3rem !important; */
+}
+
+@media screen and (max-width: 1900px) {
+    .opening-card h3.job-title {
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 1775px) and (min-width: 1575px) {
+    h1#currentopeningsection {
+        /* font-size: 69px !important; */
+        line-height: 77px;
+    }
+    a#viewall {
+        font-size: 20px !important;
+    }
+    .opening-card h3.job-title {
+        font-size: 32px !important;
+        line-height: 34px !important;
+        min-height: 70px;
+    }
+}
+@media screen and (max-width: 1690px) {
+    p.opencard_txt {
+        min-height: 93px;
+    }
+}
+@media screen and (max-width: 1574px) and (min-width: 1450px) {
+    h1#currentopeningsection {
+        font-size: 66px !important;
+        line-height: 77px;
+    }
+    a#viewall {
+        font-size: 20px !important;
+    }
+    .opening-card h3.job-title {
+        font-size: 26px !important;
+        line-height: 36px !important;
+        min-height: 50px;
+    }
+}
+@media screen and (max-width: 1449px) and (min-width: 1300px) {
+    h1#currentopeningsection {
+        font-size: 55px !important;
+        line-height: 77px;
+    }
+    a#viewall {
+        font-size: 20px !important;
+    }
+    .opening-card h3.job-title {
+        font-size: 24px !important;
+        line-height: 30px !important;
+        min-height: 59px;
+    }
+}
+
+@media screen and (max-width: 1299px) and (min-width: 1024px) {
+    h1#currentopeningsection {
+        font-size: 52px !important;
+        line-height: 77px;
+    }
+    a#viewall {
+        font-size: 20px !important;
+        width: 9rem;
+    }
+    .opening-card h3.job-title {
+        font-size: 24px !important;
+        line-height: 28px !important;
+        min-height: 55px;
+    }
+    p.opencard_txt {
+        min-height: 120px;
+    }
+}
+@media screen and (max-width: 1100px) and (min-width: 1024px) {
+    p.opencard_txt {
+        min-height: 150px;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    h1#currentopeningsection {
+        font-size: 44px !important;
+        line-height: 77px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    a#viewall {
+        font-size: 20px !important;
+        /* width: 6.5rem; */
+        padding: 0.6rem 1rem !important;
+    }
+    .opening-card h3.job-title {
+        font-size: 24px !important;
+        line-height: 28px !important;
+        min-height: 55px;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 640px) {
+    h1#currentopeningsection {
+        font-size: 36px !important;
+        line-height: 77px;
+    }
+}
+@media screen and (max-width: 767px) {
+    /* h1#currentopeningsection {
+        font-size: 55px !important;
+        line-height: 77px;
+    }    */
+}
+@media screen and (max-width: 640px) {
+    h1#currentopeningsection {
+        font-size: 30px !important;
+        line-height: 77px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .currentopn_topsect {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.life-slider .slick-next {
+    right: -2rem !important;
+}
+.life-slider .slick-prev {
+    left: -2.1rem !important;
+}
+@media screen and (max-width: 767px) {
+    .life-slider .slick-prev {
+        left: -1.5rem !important;
+    }
+}

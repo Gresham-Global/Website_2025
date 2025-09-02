@@ -1,0 +1,974 @@
+.servicesbannerSec {
+  background: url("../images/banner.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+}
+
+.servicesbannerSec h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec {
+    padding: 200px 60px 60px 60px;
+
+
+  }
+
+
+  .servicesbannerSec h1 {
+    font-size: 36px;
+  }
+}
+
+/* events */
+
+.servicesbannerSec2 {
+  background: url("../images/banner_events.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+}
+
+.servicesbannerSec2 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec2 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec2 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec2 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec2 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec2 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec2 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec2 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec2 h1 {
+    font-size: 36px;
+  }
+}
+
+/* Research and assessment */
+
+.servicesbannerSec3 {
+  background: url("../images/banner.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+}
+
+.servicesbannerSec3 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec3 {
+    padding: 10px 60px 300px 60px;
+    background: url("../images/banner.png");
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 36px;
+  }
+}
+
+/* contact-us */
+
+.servicesbannerSec1 {
+  background: url("../../assets/images/contactus.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+}
+
+.servicesbannerSec1 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec1 {
+    padding: 400px 60px 60px 60px;
+  }
+
+  .servicesbannerSec1 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec1 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec1 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec1 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec1 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec1 {
+    padding: 40px 60px 260px 60px;
+    background-image: url(../images/contactusmobile.png);
+    background-size: cover;
+  }
+
+  .servicesbannerSec1 h1 {
+    font-size: 36px;
+  }
+
+  .minScreenBG {
+    min-height: 380px !important;
+  }
+}
+
+/* career inside  */
+
+.servicesbannerSec5 {
+  background: url("../../assets/images/bg-img.png") no-repeat center center;
+  color: #fff;
+  padding: 200px 60px 60px 60px;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.servicesbannerSec5 h1 {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 40px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.servicesbannerSec5 h1 .non-bold {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec5 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec5 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec5 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec5 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec5 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec5 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec5 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec5 h1 {
+    font-size: 36px;
+  }
+
+  .servicesbannerSec5 .subtitle {
+    font-size: 14px;
+  }
+
+  .servicesbannerSec5 .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+.servicesbannerSec5 .subtitle {
+  font-family: "Inter";
+  font-size: 16px;
+  margin: 0px 40px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.servicesbannerSec5 .cta-button {
+  display: inline-block;
+  background-color: #900000;
+  border-color: #b20000;
+  color: #fff;
+  margin: 20px 40px;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 42px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.servicesbannerSec5 .cta-button:hover {
+  background-color: #b20000;
+  color: #fff !important;
+  border-color: #b20000;
+}
+
+/* service page */
+
+.servicesbannerSec3 {
+  background: url("../images/Service1.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+}
+
+.servicesbannerSec3 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 36px;
+  }
+}
+
+.servicesbannerSec3 {
+  background: url("../images/Service1.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+  /* margin-top: 130px; */
+}
+
+.servicesbannerSec3 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9rem */
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec3 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec3 {
+    padding: 70px 60px 660px 60px;
+    background: url(../images/rsmobileview.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .servicesbannerSec3 h1 {
+    font-size: 36px;
+  }
+}
+
+/*       in country css          */
+.in_country {
+  background-image: url("../images/icounrtybannerimg1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  /* margin-top: 130px; */
+}
+
+.in_country h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .in_country {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9.5rem; */
+  }
+
+  .in_country h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .in_country {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9rem; */
+  }
+
+  .in_country h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .in_country {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 8rem; */
+    background-position: right;
+  }
+
+  .in_country h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .in_country {
+    padding: 70px 60px 660px 60px;
+    /* margin-top: 8rem; */
+    background-image: url(../images/in-countrmobileview.png);
+    background-position: center;
+
+  }
+
+  .in_country h1 {
+    font-size: 36px;
+    /* color: #000000; */
+  }
+}
+
+
+/* academic coolab css */
+.servicesbannerSec98 {
+  background: url("../images/Group 1000004072.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  /* margin-top: 130px; */
+}
+
+.servicesbannerSec98 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec98 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9.5rem; */
+  }
+
+  .servicesbannerSec98 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec98 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9rem; */
+  }
+
+  .servicesbannerSec98 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec98 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 8rem; */
+  }
+
+  .servicesbannerSec98 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec98 {
+    padding: 70px 60px 660px 60px;
+    /* margin-top: 8rem; */
+    background: url(../images/academicmobileview.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .servicesbannerSec98 h1 {
+    font-size: 36px;
+  }
+}
+
+/* Admission_compliance css */
+.servicesbannerSec100 {
+  background: url("../images/aacservice-banner.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  /* margin-top: 130px; */
+}
+
+.servicesbannerSec100 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec100 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9.5rem; */
+  }
+
+  .servicesbannerSec100 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec100 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9rem; */
+  }
+
+  .servicesbannerSec100 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec100 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 8rem; */
+  }
+
+  .servicesbannerSec100 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec100 {
+    padding: 40px 60px 260px 60px;
+    /* margin-top: 8rem; */
+    background: url(../images/asmissionmobilev.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .servicesbannerSec98 h1 {
+    font-size: 36px;
+  }
+}
+
+/* Strategic_marketing css */
+
+.servicesbannerSec101 {
+  background: url("../images/Frame 2.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  /* margin-top: 130px; */
+}
+
+.servicesbannerSec101 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec101 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9.5rem; */
+  }
+
+  .servicesbannerSec101 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec101 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9rem; */
+  }
+
+  .servicesbannerSec101 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec101 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 8rem; */
+  }
+
+  .servicesbannerSec101 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec101 {
+    padding: 40px 60px 260px 60px;
+    /* margin-top: 8rem; */
+    background: url(../images/stratergicmob.png)no-repeat center center;
+    background-size: cover;
+  }
+
+  .servicesbannerSec101 h1 {
+    font-size: 36px;
+  }
+}
+
+/* operational support csss */
+.servicesbannerSec102 {
+  background: url(../images/operational_banner.png) no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-size: cover;
+  /* margin-top: 130px; */
+}
+
+.servicesbannerSec102 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec102 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9.5rem; */
+  }
+
+  .servicesbannerSec102 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec102 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 9rem; */
+  }
+
+  .servicesbannerSec102 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec102 {
+    padding: 200px 60px 60px 60px;
+    /* margin-top: 8rem; */
+  }
+
+  .servicesbannerSec102 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec102 {
+    padding: 40px 60px 260px 60px;
+    /* margin-top: 8rem; */
+    background: url(../images/operationalmobie.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .servicesbannerSec102 h1 {
+    font-size: 36px;
+  }
+}
+
+/* home page css */
+
+.servicesbannerSec104 {
+  background: url("../images/banner.png") no-repeat center center;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+}
+
+.servicesbannerSec104 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .servicesbannerSec104 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec104 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .servicesbannerSec104 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec104 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesbannerSec104 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec104 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesbannerSec104 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .servicesbannerSec104 h1 {
+    font-size: 36px;
+  }
+}
+
+/* home page video */
+.Homepagesec11 {
+  background: url("../videos/Home_page_banner.mp4") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  padding: 400px 60px 60px 60px;
+  background-size: cover;
+}
+
+.Homepagesec11 h1 {
+  color: #fff;
+  font-family: "Proxima Nova";
+  font-size: 64px;
+  font-style: normal;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .Homepagesec11 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .Homepagesec11 h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .Homepagesec11 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .Homepagesec11 h1 {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Homepagesec11 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .Homepagesec11 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Homepagesec11 {
+    padding: 200px 60px 60px 60px;
+  }
+
+  .Homepagesec11 h1 {
+    font-size: 36px;
+  }
+  .servicesbannerSec3,
+  .in_country,
+  .servicesbannerSec98,
+  .servicesbannerSec101,
+  .servicesbannerSec102,
+  .servicesbannerSec1,
+  .careerbanner_section {
+    padding: 70px 60px 400px 30px !important;
+    max-height: 75vh;
+  }
+  .forMobBanner {
+    max-height: 68vh !important;
+    height: 68vh !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .servicesbannerSec102 {
+    object-position: right !important;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .in_country {
+    padding: 70px 60px 405px 60px;
+  }
+}

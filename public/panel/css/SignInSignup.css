@@ -1,0 +1,187 @@
+.login-signup-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    font-family: "Poppins", sans-serif !important;
+}
+
+.login-signup-container {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.login-signup-container .headerLog {
+    /* background-color: #eee; */
+    width: 100%;
+    /* padding: 1rem; */
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.login-signup-container .instImg {
+    height: 45px;
+}
+
+.login-signup-container .InstTitle {
+    margin: 0;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #666666;
+}
+
+.login-signup-container .form {
+    width: 100%;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.login-signup-container .form-control {
+    height: 50px;
+    border: none !important;
+    background: none !important;
+}
+
+.login-signup-container .input-group {
+    border: 1px solid #ccc9c9;
+    border-radius: 5px;
+}
+
+.login-signup-container .input-group-prepend span {
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+}
+
+.login-signup-container input {
+    box-shadow: none !important;
+}
+
+.login-signup-container input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.remember-container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.login-signup-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1px solid #006b4f;
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling in Safari */
+    outline: none;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-signup-container input[type="checkbox"]:checked {
+    background-color: #006b4f;
+}
+
+.login-signup-container input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+#num1 {
+    width: 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#num2 {
+    width: 40px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.login-signup-container .login-btn {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #ee2d43;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-signup-container.forgotPassword {
+    margin: 0;
+    color: #ee2d43;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1660px) {
+    .login-signup-container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .login-signup-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .login-signup-container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .login-signup-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login-signup-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-signup-container {
+        width: 90%;
+    }
+}

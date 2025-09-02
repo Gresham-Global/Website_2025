@@ -1,0 +1,725 @@
+.customContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h2.mainHeadingSection {
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+/* middleContentSection CSS */
+.middleContentSection {
+    padding: 60px 0;
+}
+
+.downloadBrochureImg {
+    box-shadow: 0px 0px 14px 0px #00000040;
+    border-radius: 20px;
+}
+
+.middleContentSection p {
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #555555;
+}
+
+.downloadBtn {
+    background: linear-gradient(270deg, #EF4B4F 0%, #991F3D 100%);
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    border: 0;
+}
+
+/* ReportSection CSS */
+.reportSection {
+    padding: 0px 0 60px;
+}
+
+.reportSection {
+    padding: 60px 0;
+}
+
+.reportCard {
+    position: relative;
+    width: 100%;
+    perspective: 1000px;
+    height: 100%;
+    min-height: 320px;
+    border-radius: 30px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    font-family: "Proxima Nova";
+    margin-bottom: 1rem;
+}
+
+.frontView,
+.backView {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.8s ease;
+    top: 0;
+    left: 0;
+}
+
+.frontView>img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.frontView {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.backView {
+    transform: rotateY(180deg);
+    background: linear-gradient(180deg, #EF4B4F 0%, #991F3D 100%);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 30px;
+}
+
+.backView h5 {
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    text-align: left;
+}
+
+.backView ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.backView ul li {
+    font-family: "Proxima Nova";
+    position: relative;
+    padding-left: 28px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #ffffff;
+}
+
+.backView ul li::before {
+    content: "";
+    background-image: url(../images/publications/globe.svg);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.reportCard:hover .frontView {
+    transform: rotateY(-180deg);
+}
+
+.reportCard:hover .backView {
+    transform: rotateY(0deg);
+    z-index: 3;
+}
+
+.reportCard h4 {
+    color: #ffffff;
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 0%;
+}
+
+.reapeatButton {
+    background-color: #EF4B4F;
+    border: 0;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.4s ease-in;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-radius: 0 0 30px 30px;
+}
+
+.keyHightSection {
+    background-image: url(../images/publications/keyHightBg.webp);
+    width: 100%;
+    padding: 80px 0 40px;
+}
+
+.keyHightSectionMain {
+    position: relative;
+}
+
+.keyHightSectionMain::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-image: url(../images/publications/line.svg);
+    height: 2px;
+    width: 100%;
+}
+
+.keyHightCard {
+    text-align: center;
+    position: relative;
+}
+
+.keyHightCard>img {
+    height: 158px;
+}
+
+.keyHightCard::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/publications/lineBottom.svg);
+    height: 80px;
+    width: 28px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.keyHightCard p {
+    margin-top: 6rem;
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.keyHightCard p span {
+    display: block;
+}
+
+.similarProductSection {
+    padding: 60px 0 140px;
+}
+
+.publicationCard {
+    border: 1px solid #BEBEBE;
+    padding: 0.8rem;
+    border-radius: 30px;
+    margin: 0 1rem;
+}
+
+.verticalImage {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.downloadBtn:hover {
+    color: #fff !important;
+}
+
+.publicationBanner .publicationBannerimg {
+    max-height: 560px;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.publicationCard img {
+    border-radius: 10px;
+}
+
+.publicationCard h4 {
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #EF4B4F;
+    margin-top: 0.5rem;
+}
+
+.publicationCard p {
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #555555;
+    min-height: 5.5rem;
+}
+
+.publicationCard .tagDiv {
+    font-family: "Proxima Nova";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+.publicationCard .tagDiv span {
+    color: #9C9C9C;
+    font-weight: 700;
+}
+
+.readMoreBtn {
+    background: linear-gradient(270deg, #EF4B4F 0%, #991F3D 100%);
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 0;
+}
+
+.publicationSlider .slick-dots li {
+    border-radius: 20px;
+    background-color: #d9d9d9;
+}
+
+.publicationSlider .slick-dots li.slick-active {
+    width: 40px;
+    background-color: #EF4B4F;
+}
+
+.publicationSlider .slick-dots li button:before {
+    color: unset;
+    display: none;
+}
+
+@media screen and (max-width: 1440px) {
+    h2.mainHeadingSection {
+        font-size: 48px;
+    }
+
+    .middleContentSection p {
+        font-size: 18px;
+    }
+
+    .keyHightCard p {
+        font-size: 21px;
+    }
+
+    .backView h5 {
+        font-size: 28px;
+    }
+
+    .reportCard {
+        min-height: 220px;
+    }
+
+    .backView ul li {
+        font-size: 18px;
+    }
+
+    .keyHightCard p {
+        font-size: 18px;
+        margin-top: 4rem;
+    }
+
+    .keyHightCard>img {
+        height: 100px;
+    }
+
+    .keyHightSectionMain::before {
+        top: 50px;
+    }
+
+    .keyHightCard::before {
+        top: 95px;
+        height: 60px;
+    }
+
+    .downloadBtn {
+        font-size: 18px;
+        padding: 0.6rem 1rem;
+    }
+
+    .reportCard h4 {
+        font-size: 22px;
+    }
+
+    .publicationCard h4 {
+        font-size: 20px;
+    }
+
+    .publicationCard p {
+        font-size: 16px;
+    }
+
+    .readMoreBtn {
+        font-size: 16px;
+        padding: 0.8rem 1rem;
+    }
+
+    .publicationCard {
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    h2.mainHeadingSection {
+        font-size: 48px;
+    }
+
+    .middleContentSection p {
+        font-size: 18px;
+    }
+
+    .reportCard {
+        min-height: 280px;
+    }
+
+    .frontView {
+        position: unset;
+        z-index: 9;
+        border-radius: 30px;
+    }
+
+    .reportCard .backView {
+        transform: rotateY(0deg);
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 30px;
+    }
+
+    .reportCard:hover .frontView {
+        transform: rotateY(0deg);
+    }
+
+    .reportCard:hover .backView {
+        transform: rotateY(0deg);
+        z-index: 99;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .backView h5 {
+        font-size: 28px;
+    }
+
+    .backView ul li {
+        font-size: 18px;
+    }
+
+    .keyHightCard>img {
+        height: 125px;
+    }
+
+    .keyHightCard::before {
+        top: 120px;
+    }
+
+    .keyHightSectionMain::before {
+        top: 66px;
+    }
+
+    .keyHightCard p {
+        font-size: 21px;
+    }
+
+    .keyHightCard p span {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .keyHightCard {
+        display: flex;
+        gap: 4rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+    .keyHightCard p {
+        text-align: left;
+        margin-top: 0;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .keyHightCard>img {
+        height: 80px;
+    }
+
+    .keyHightCard::before {
+        top: 25%;
+        transform: rotate(270deg) translateY(-50%);
+        left: 115px;
+        height: 50px;
+        display: none !important;
+    }
+
+    .keyHightSectionMain::before {
+        top: 0;
+        width: 1px;
+        height: 60%;
+        background-image: url(../images/publications/vertical_line.svg);
+        left: 60px;
+    }
+
+    .publicationCard {
+        border-radius: 8px;
+    }
+
+    .publicationBanner .publicationMbBannerimg,
+    .publicationTitle {
+        display: none !important;
+    }
+
+    section.middleContentSection {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .downloadReportForm.downloadReportBtn{
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+    .similarPublication{
+        text-align: center;
+    }
+}
+
+.customContainer.publicationBanner {
+    width: 100% !important;
+}
+
+    .backView {
+        justify-content: center;
+    }
+/* publication report form styles  */
+
+.downloadReportForm {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.downloadReportForm:hover {
+    background-color: #0056b3;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Popup Container */
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: white; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    z-index: 1001;
+    border-radius: 25px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(6, 21, 50, 0.80) 100%);
+    backdrop-filter: blur(12.5px);
+    color: #fff !important;
+}
+
+/* Popup Header */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    /* border-bottom: 1px solid #eee; */
+    flex-direction: column;
+}
+
+.popup-header .popupheaer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #eee; */
+}
+
+.popup-title {
+    color: #FFF;
+    font-family: Arial;
+    font-size: 28px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.popup-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+/* Form Styles */
+.popup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #ffffff2a;
+    color: #fff !important;
+    outline: none !important;
+}
+
+.form-input::placeholder {
+    color: #ffffffaf !important;
+}
+
+.form-input:focus {
+    outline: none;
+    /* border-color: #007bff; */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-submit {
+    display: inline-block;
+    margin: 10px;
+    transition: background-color 0.3s;
+    background: linear-gradient(270deg, #EF4B4F 0%, #991F3D 100%);
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    border: 0;
+}
+
+.formLink {
+    color: #fff;
+    font-weight: 600;
+}
+
+.form-submit:hover {
+    background-color: #218838;
+}
+
+.form-submit:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Loading state */
+.loading {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+}
+
+@media screen and (max-width: 1200px) {
+    .popup-title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .keyHightCard {
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+}
+
+.downloadReportPopup {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(6, 21, 50, 0.80) 100%);
+    color: #fff;
+    border-radius: 1rem;
+}

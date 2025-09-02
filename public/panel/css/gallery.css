@@ -1,0 +1,178 @@
+
+.gallery-section{
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-sec-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.drag-drop-files{
+    width: 100%;
+    padding: 3rem;
+    border-radius: 10px;
+    border: 1px solid #666666;
+    border-style: dashed;
+    background-color: #F8FFF1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.drag-drop-files span{
+    font-size: 50px;
+}
+
+.browse-btn{
+    font-weight: bold !important;
+    height: 40px;
+    width: 140px;
+}
+
+.gall-btn-box{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+}
+.gall-btn{
+    font-weight: bold;
+    width: 100px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.gall-btn:hover{
+    background-color: #1bac99;
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.btn-active{
+    background-color: #1bac99;
+    color: #ffffff;
+}
+
+.gallery-item-box{
+    padding: 1.5rem;
+    margin-top: -1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    justify-content: center;
+}
+
+.gall-item-container{
+    width: 24%;
+    height: 290px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.gall-item-container-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gall-item-container-filter{
+    top: 0;
+    position: absolute;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #2C2B2B 100%);
+}
+
+.gall-item-container-filter-btn-container{
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.gall-item-container-filter-btn{
+    background-color: #CE2E28;
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gall-item-container-filter-btn .material-symbols-outlined{
+    font-size: 20px;
+}
+
+.gall-item-container-filter-btn:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.gall-item-container-filter-p{
+    position: absolute;
+    font-weight: bold;
+    color: #ffffff;
+    bottom: 0rem;
+    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 1660px) {
+    .gall-item-container{
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .gall-item-container{
+        width: 31%;
+    }
+    .gallery-sec-form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .gall-item-container{
+        width: 48%;
+    }
+    .gallery-sec-form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .gall-item-container{
+        width: 32%;
+    }
+    .gallery-sec-form{
+        width: 95%;
+    }
+}

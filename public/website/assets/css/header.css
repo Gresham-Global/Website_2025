@@ -1,0 +1,398 @@
+.header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.header .topSection {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    font-family: "Proxima Nova";
+}
+.header .topContainer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .topContainer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.76rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.header .callTopBtn a img {
+    height: 32px;
+}
+.header .topRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .topRight .topLink {
+    padding: 0 1.5rem;
+}
+
+.topLink .active1{
+    border-bottom: 2px solid #fff !important;
+}
+
+.header .followBox {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.header .followBox p {
+    font-family: "Proxima Nova";
+    margin: 0 0.5rem 0 2rem;
+    color: #212529;
+    font-size: 20px;
+    font-weight: 600;
+}
+.header .offerBox {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    margin-left: 1.5rem;
+    z-index: 3;
+}
+.header .offerBox img {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    height: auto;
+}
+
+.header .buttomSection {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.navContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.navLogoImg {
+    height: 60px;
+    /* margin-left: 1rem; */
+}
+.borderLW {
+    border-left: 1px solid #ffffff;
+}
+.borderLB {
+    border-left: 1px solid #000000;
+}
+/* ======================= */
+.webNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: calc(110px + 2rem); */
+}
+.nav .nav-item {
+    font-size: 18px;
+    padding: 0 2.5rem;
+}
+.nav .nav-item a {
+    padding: 0;
+    font-family: "Proxima Nova" !important;
+}
+.nav .nav-item.active a {
+    color: #ef4b4f !important;
+    font-weight: 700;
+    border-bottom: 2px solid #ef4b4f;
+}
+.header .touchBtn {
+    height: 45px;
+    padding: 0 1.5rem;
+    background: linear-gradient(265.76deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-toggler {
+    display: none;
+}
+
+/* ------------------ */
+
+.navbar-toggler img {
+    height: 30px;
+}
+.offcanvas {
+    height: 100vh;
+}
+.offcanvas-header {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start;
+    border-bottom: 1px solid #eee;
+}
+.offcanvas-header .navLogoImg {
+    height: 68px;
+}
+.offcanvas-body {
+    padding: 0 !important;
+}
+
+.secNavMenus .dropdown-item {
+    padding: 1rem !important;
+    border-bottom: 1px solid #000000;
+}
+.secNavMenus .lstBor{
+    border-bottom: none !important;;
+}
+.offcanvas .nav-item {
+    padding: 1rem 1.5rem !important;
+    border-bottom: 1px solid #000000;
+}
+.offcanvas .nav .nav-item.active a {
+    color: #ef4b4f !important;
+    font-weight: 700;
+    border-bottom: 0;
+}
+.offcanvas .dropdownmenu{
+    display: block;
+    list-style: none;
+    padding: 0;
+    /* margin-left: 1rem; */  
+}
+.offcanvas .dropdownmenu .dropdown-item {
+    padding: 0.7rem 1.5rem !important;
+    border-bottom: 1px solid #000000;
+}
+.offcanvas .dropdownmenu .dropdown-item.last{
+    border: none !important;
+}
+.offcanvas .dropdownmenu {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.offcanvas .dropdownmenu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header .followBox {
+    margin-left: 10px;
+}
+@media screen and (max-width: 1700px) {
+    .nav .nav-item {
+        padding: 0 2rem;
+    }
+}
+@media screen and (max-width: 1660px) {
+    .header .topRight .topLink {
+        padding: 0 1rem;
+    }
+    .header .followBox {
+        gap: 0rem;
+    }
+    .header .followBox p {
+        margin: 0 0.5rem 0 1rem;
+    }
+    .header .offerBox {
+        margin-left: 1rem;
+    }
+    /* .header .buttomSection {
+    height: 80px;
+  }
+  .navLogoImg {
+    height: 50px;
+  } */
+    /* .webNav {
+        margin-right: calc(110px + -6rem);
+    } */
+    .nav .nav-item {
+        padding: 0 1.5rem;
+    }
+    .header .touchBtn {
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 1430px) {
+    .navContainer {
+        padding: 0 70px !important;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .topContainer {
+        width: 91%;
+    }
+    .navContainer {
+        padding: 0 50px !important;
+    }
+    .nav .nav-item {
+        padding: 0 1rem !important;
+    }
+    .navLogoImg {
+        height: 46px !important;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .header .topContainer,
+    .navContainer {
+        width: 100%;
+    }
+    .nav .nav-item {
+        padding: 0 1rem;
+    }
+    .webNav {
+        margin-right: calc(100px + -5rem);
+    }
+}
+@media screen and (max-width: 1170px) and (min-width: 1024px) {
+    .nav .nav-item {
+        padding: 0 0.7rem !important;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .header .offerBox {
+        display: none;
+    }
+    .navbar-toggler {
+        margin-right: 0;
+    }
+    .header .buttomSection {
+        height: 80px;
+    }
+    .navLogoImg {
+        height: 60px;
+    }
+    .offcanvas-header .navLogoImg {
+        height: 48px;
+    }
+
+    .topSection {
+        display: none !important;
+    }
+    .firstSection {
+        margin-top: 80px !important;
+    }
+}
+/* For large screens */
+@media (min-width: 1081px) {
+    /* .topSection{
+        transition: all 0.3s ease;
+    }
+    .webNav {
+        transition: all 0.3s ease;
+    }
+
+    .webNav.hidden {
+        opacity: 0;
+        display: none;
+        transform: translateY(-20px);
+    }
+    .topSection.hidden{
+        display: none !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler.visible {
+        display: flex;
+        opacity: 1;
+    } */
+}
+/* For smaller screens - ensure default behavior */
+@media (max-width: 1080px) {
+    .topSection{
+        display: none !important;
+    }
+    .webNav {
+        display: none !important;
+    }
+    .navbar-toggler {
+        display: flex !important;
+    }
+}
+@media screen and (max-width: 990px) {
+    .header .topRight .dn990 {
+        display: none;
+    }
+    /* .topRight .dropdown {
+        display: flex;
+    } */
+}
+@media screen and (max-width: 768px) {
+    .header .followBox p {
+        display: none;
+    }
+    .topRight .dropdown {
+        margin-right: 1rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .header .callTopBtn a {
+        color: transparent;
+        text-shadow: 0 0 0 transparent;
+    }
+    .header .callTopBtn a:hover {
+        color: transparent !important;
+        text-shadow: 0 0 0 transparent;
+    }
+   
+        .navLogoImg {
+            height: 44px;
+        }
+    
+}
+/* 
+.secNavMenus .nav .nav-item.active a{
+    color:#000!important;
+} */
+
+.dropdown-menu.show{
+    color:#000!important;
+}
+/* 
+.secNavMenus .nav .nav-item.active a {
+    color:#000!important;
+} */
+.nav-item:hover {
+    background-color: #f8f9fa; /* Light gray */
+}
+
+.nav-item:hover .nav-link {
+    color: #ef4b4f !important;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+

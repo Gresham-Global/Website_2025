@@ -1,0 +1,82 @@
+.enquiry-popup-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.enquiry-details-container {
+  width: 30%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.enquiry-details-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 1rem;
+}
+
+.bg-lblue {
+  background: #f3f3f3;
+}
+
+.enquiry-details-container .closeBtn {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.enquiry-details-container .closeBtn:hover {
+  background-color: #eee;
+  border-radius: 50%;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 1800px) {
+  .enquiry-details-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .enquiry-details-container {
+    width: 50%;
+  }
+  .facility-container-box {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .enquiry-details-container {
+    width: 60%;
+  }
+  .facility-container-box {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .enquiry-details-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .enquiry-details-container {
+    width: 90%;
+  }
+}

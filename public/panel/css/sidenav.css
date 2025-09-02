@@ -1,0 +1,345 @@
+.panelSidebar-collegeTitlebox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 1rem;
+    height: 60px;
+    background: linear-gradient(90deg, #1bac99 0%, #0e7063 100%);
+}
+
+.panelSidebar-collegeTitlebox p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.panelSidebar-collegeTitlebox img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.panelSidebar-component {
+    height: 100vh;
+    position: absolute;
+    position: fixed;
+    left: 0;
+    width: 300px;
+    z-index: 10000;
+    background-color: #ffffff;
+}
+
+.panelSidebar-logo-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+}
+
+.panelSidebar-collegeMenu {
+    width: 100%;
+    height: 79%;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0rem;
+}
+
+.panelSidebar-collegeMenu::-webkit-scrollbar {
+    display: none;
+}
+
+.panelSidebar-collegeMenusBox {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.collegeMenu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.collegeMenu-itemIcon {
+    color: #666666;
+}
+
+.collegeMenu-itemText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+}
+
+.collegeMenu-item:hover .collegeMenu-itemText {
+    font-weight: 700;
+}
+
+.item_active {
+    background-color: #ce2e28;
+    border-radius: 10px;
+}
+
+.item_active .collegeMenu-itemText {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.item_active .collegeMenu-itemIcon {
+    color: #ffffff;
+}
+
+#copyright {
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 12px;
+    color: #666666;
+    margin: 0;
+}
+
+#menu-back {
+    display: none;
+}
+
+/* General styles for the dropdown menu */
+.select-menu {
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.select-menu .dropicon {
+    transform: rotate(90deg);
+    transition: 0.2s;
+}
+
+.select-btn {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.select-btn p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.options {
+    padding: 0;
+    display: none;
+    width: 100%;
+}
+
+.options .collegeMenu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.select-menu.active .options {
+    display: block;
+}
+
+.select-menu.active .dropicon {
+    transform: rotate(0deg);
+    transition: 0.2s;
+}
+
+.options li {
+    list-style: none;
+}
+
+@media screen and (max-width: 990px) {
+    #sidenav {
+        display: none;
+        position: relative;
+        position: fixed;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #menu-back {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+        font-size: 35px;
+        cursor: pointer;
+        color: #666666;
+    }
+}
+
+ul.collegeSubMenu.sidebar_subtab li {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+ul.collegeSubMenu.sidebar_subtab li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+}
+
+ul.collegeSubMenu.sidebar_subtab li.nb_subtab a:first-child {
+    display: none;
+}
+
+ul.collegeSubMenu.sidebar_subtab li.sub_active {
+    /* background: #ffdcdc;
+    border-radius: 17px; */
+    background-color: #ce2e28;
+    border-radius: 10px;
+
+    a {
+        color: #fff !important;
+    }
+}
+
+.statuswdth {
+    max-width: 10rem;
+}
+
+p.notetxt {
+    color: darkslategrey;
+}
+
+hr.divideline {
+    border: none;
+    height: 2px;
+    color: #333;
+    background-color: #333;
+}
+
+input.boxline {
+    border: 2px solid grey !important;
+}
+
+form#edit-city-image #existing-images-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+form#edit-city-image #existing-images-wrapper .image-upload-div.existing-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solid #d1cfcf;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* form#edit-city-image #existing-images-wrapper  .image-upload-div.existing-image .image-preview-container.boxline {
+    width: 86%;
+} */
+
+#image-upload-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#add-career .note-editor.note-frame.card {
+    width: 100% !important;
+}
+
+.image-preview-container.boxline img {
+    max-height: 10rem !important;
+    object-fit: contain !important;
+}
+
+.form-flex-box.upload-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.upload-section .form-group-box {
+    flex: 1 1 30%;
+}
+
+.upload-section .preview-image,
+.upload-section .preview-pdf,
+.upload-section .existing-preview{
+    display: none;
+    width: 100%;
+    height: 250px !important;
+    max-height: 250px !important;
+    margin: 10px auto 0 !important;
+    object-fit: contain;
+}
+.upload-section .preview_pdf{
+    display: block;
+    width: 100%;
+    height: 250px !important;
+    max-height: 250px !important;
+    margin-top: 10px;
+    object-fit: contain;
+}
+.upload-section .existings-preview {
+    display: block;
+    width: 100%;
+    height: 100px !important;
+    max-height: 100px !important;
+    margin-top: 3rem;
+    object-fit: contain;
+}
+
+.upload-section .preview-pdf {
+    object-fit: unset;
+}
+
+.upload-section .error,
+.error {
+    /* display: none; */
+    /* color: red; */
+    margin-top: 5px;
+    font-size: 0.875rem;
+    background: #fff6f6;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Show class toggles preview visibility */
+.preview-image.show,
+.preview-pdf.show {
+    display: block !important;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.report-list-item input {
+    flex: 1;
+}
+
+.existing-preview {
+    display: block !important;
+}

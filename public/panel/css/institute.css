@@ -1,0 +1,52 @@
+label.error {
+    color: red;
+    width: 100%;
+    display: block;
+    clear: both;
+    margin-top: 5px;
+}
+.hide {
+    display: none;
+}
+
+.radio_space{
+    width: 80px !important;
+    display: inline-block !important;
+}
+
+.input-group .input-group-text {
+    display: flex;
+    align-items: center;
+    background: none;
+}
+li.paginate_button.page-item.first {
+    display: none;
+}
+li.paginate_button.page-item.last {
+    display: none;
+}
+button.dt-button.buttons-csv.buttons-html5 {
+    position: relative;
+    float: left;
+    margin: 25px 0 0 10px;
+    padding: 2px 10px;
+}
+.reset_table.btn.btn-primary.btn-block {
+    width: 100px;
+    /* float: left; */
+    margin-top: 7px;
+    /* padding: 3px;*/
+}
+.date_ranger {
+    float: left;
+}
+.date_ranger .form-group {
+    float: left;
+}
+
+.up_center {
+    margin: 0 auto;
+}
+table a.btn {
+    margin: 0 5px;
+}

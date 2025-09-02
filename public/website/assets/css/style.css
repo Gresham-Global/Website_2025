@@ -1,0 +1,2366 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+/* Active link styles */
+ul.list-unstyled .ftactive {
+    /* color: #ef4b4f !important; */
+    color: #45090b !important;
+    background-color: white !important;
+    border-radius: 10px;
+    padding: 3px 10px !important;
+    min-width: 7rem;
+    display: inline-block;
+    font-weight: 600;
+}
+
+section.homebann.customSection.firstSection .firstContainer h1 {
+    margin: 0rem !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    /* Apply Inter font to all body text */
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    /* background-color: #ed0101 !important; */
+}
+
+.interFont {
+    font-family: "Inter", sans-serif !important;
+}
+
+.proximaFont {
+    font-family: "Proxima Nova" !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #ef4b4f !important;
+}
+
+.customSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.customContainer {
+    width: 90%;
+}
+
+div#career-description span,
+div#career-description p {
+    font-family: "Proxima Nova" !important;
+}
+
+.contact-heading {
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 3.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.21069rem;
+    /* 129.559% */
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: bold !important;
+    line-height: 1.2;
+}
+
+/* global share btn styles starts*/
+
+.share-popup {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    background: #fff;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.share-popup a {
+    margin: 0 6px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.share-popup a:hover {
+    color: #007bff;
+}
+
+.share-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.share-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.share-links a {
+    display: block;
+    margin: 10px 0;
+}
+
+.share-modal .close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* global share btn styles ends*/
+.servicesbannerSec {
+    background: url("../../assets/images/reesearch-assetment-bg.png") no-repeat
+        center center;
+    color: #fff;
+    padding: 400px 60px 60px 60px;
+    background-size: cover;
+}
+
+.servicesbannerSec h1 {
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    font-style: normal;
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.custom-container {
+    width: 90%;
+    margin: 0 5%;
+    margin: 0 auto;
+}
+
+/* sec 2 starts */
+.sec2 {
+    padding: 140px 0 0px 0px;
+    background: url("../../assets/images/aboutbg.png") no-repeat center center;
+    background-size: cover;
+}
+
+.sec2 h2 {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    padding-bottom: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sec2Left {
+    position: relative;
+}
+
+.sec2Left img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.sec2 p {
+    color: #555;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    /* 141.667% */
+}
+
+.sec2right {
+    vertical-align: center;
+    padding-bottom: 10px;
+}
+
+/* sec 2 ends */
+
+/* sec3 starts */
+.sec3 {
+    padding: 60px 0px;
+}
+
+.sec3 h2 {
+    color: #000;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 30px;
+}
+
+.sec3 .flip-card {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    height: 430px;
+    margin-bottom: 0px;
+    background: transparent;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+}
+
+.sec3 .front-card {
+    position: absolute;
+    height: 75%;
+    width: 95%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+    border-radius: 30px;
+    /*    background: url('../../assets/images/flip1.png') no-repeat center center; */
+}
+
+.front-card.pic1 {
+    background: url("../../assets/images/Component 12.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.front-card.pic2 {
+    background: url("../../assets/images/Component 13.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.front-card.pic3 {
+    background: url("../../assets/images/Default.png") no-repeat center center;
+    background-size: cover;
+}
+
+.front-card.pic4 {
+    background: url("../../assets/images/Mask group.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.front-card.pic5 {
+    background: url("../../assets/images/Component 15.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.front-card.pic6 {
+    background: url("../../assets/images/Component 14.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.frontcardLeft h3 {
+    font-family: "Proxima Nova";
+}
+
+/*Just overlay color of front image*/
+
+.sec3 .back-card {
+    position: absolute;
+    height: 75%;
+    width: 95%;
+    /*    background:orange; */
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    /*-180deg to flip direction*/
+    transition: transform 1s;
+    justify-content: center;
+    /* align-items: bottom; */
+    display: flex;
+    padding: 10px 10px;
+    flex-direction: column;
+    border-radius: 30px;
+    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+}
+
+.sec3 .flip-card:hover .front-card {
+    transform: rotateY(-180deg);
+    /*180deg to flip direction*/
+}
+
+.sec3 .flip-card:hover .back-card {
+    transform: rotateY(0deg);
+}
+
+.fCardMain {
+    top: 71%;
+    height: 100%;
+    position: relative;
+}
+
+.contactlinks {
+    color: #d9d9d9;
+}
+
+.frontcardLeft {
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 48px;
+    font-style: normal;
+    padding: 20px 30px !important;
+    font-weight: 700;
+    line-height: 50px;
+    /* 104.167% */
+}
+
+.frontcardRight {
+    text-align: right;
+    padding: 25px 30px !important;
+}
+
+.back-card h3 {
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    width: 100%;
+    padding: 0 40px;
+    line-height: normal;
+}
+
+.back-card ul {
+    padding: 0px;
+    margin: -0px;
+    width: 109%;
+    padding: 0px 36px;
+}
+
+.back-card ul li {
+    padding: 0px 0 0px 25px;
+    margin: 0px;
+    list-style-type: none;
+    background: url("../../assets/images/bullet.png") no-repeat center left;
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    /* 240% */
+}
+
+/* sec3 ends */
+
+/* sec 4 starts */
+.sec4 {
+    padding: 100px 0 0 0px;
+    background: url("../../assets/images/whychooseusimg.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.sec4 h2 {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    padding-bottom: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sec4 p {
+    color: #555;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    /* 141.667% */
+}
+
+.sec4left {
+    padding-bottom: 60px;
+}
+
+.sec4Right {
+    vertical-align: center;
+    position: relative;
+}
+
+.sec4Right img {
+    position: absolute;
+    bottom: 0;
+    max-width: 750px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* sec 4 ends */
+
+/* sec 5 starts */
+.sec5 {
+    padding: 60px 0 60px 0px;
+    /* background: url("../../assets/images/aboutbg.png") no-repeat center center; */
+    background-size: cover;
+}
+
+.sec5 h2 {
+    color: #ef4b4f;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 77px;
+}
+
+.sec5 h2 span {
+    color: #000000;
+}
+
+.sec5 p {
+    color: #272727;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto 60px auto;
+    font-style: normal;
+    max-width: 1200px;
+    font-weight: 700;
+    line-height: 34px;
+    /* 141.667% */
+}
+
+.sec5right {
+    vertical-align: center;
+}
+
+.serviecsmob {
+    color: #000;
+
+    text-align: center !important;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sec6 {
+    padding: 60px 0 60px 0px;
+    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+}
+
+.sec6 h2 {
+    color: #fff;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 30px;
+}
+
+.MainValueBox {
+    width: 100%;
+    display: flex;
+}
+
+.getintouchBtn {
+    font-family: "Proxima Nova";
+}
+
+.box1 {
+    border-radius: 30px;
+    padding: 40px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    /* margin: 20px !important; */
+    height: 15rem;
+}
+
+.box1 img {
+    margin-bottom: 10px;
+}
+
+.box1 h4 {
+    color: #fff;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sec6 .flip-card1 {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    height: 300px;
+    margin-bottom: 0;
+    background: transparent;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    height: 15rem;
+    /* margin: 20px !important; */
+}
+
+.sec6 .front-card1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+    border-radius: 30px;
+    height: 15rem;
+    /* margin: 20px !important; */
+    /*    background: url('../../assets/images/flip1.png') no-repeat center center; */
+}
+
+/*Just overlay color of front image*/
+
+.sec6 .back-card1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*    background:orange; */
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    /*-180deg to flip direction*/
+    transition: transform 1s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    border-radius: 30px;
+    background: #ffffff;
+    height: 15rem;
+    /* margin: 20px !important; */
+}
+
+.sec6 .flip-card1:hover .front-card1 {
+    transform: rotateY(-180deg);
+    /*180deg to flip direction*/
+}
+
+.sec6 .flip-card1:hover .back-card1 {
+    transform: rotateY(0deg);
+}
+
+.back-card1 h3 {
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 30px;
+    padding: 0 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+
+.back-card1 p {
+    color: #000;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 30px;
+    line-height: 24px;
+    /* 125% */
+}
+
+/* sec 6 ends */
+
+/* sec 7 starts */
+.sec7 {
+    padding: 60px 0px;
+    background: url("../../assets/images/researchbg.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.sec7Left h2 {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 20px;
+    line-height: normal;
+}
+
+.sec7Right ul {
+    max-width: 400px;
+    float: right;
+}
+
+.sec7Right ul li {
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    cursor: pointer;
+    font-style: normal;
+    margin: 16px 10px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: normal;
+    list-style: none;
+    padding: 12px 25px;
+    color: #000000;
+    border: 1px #000000 solid;
+    border-radius: 10px;
+}
+
+.sec7Right .active {
+    background: linear-gradient(
+        266deg,
+        #ef4b4f -0.04%,
+        #991f3d 72.43%
+    ) !important;
+    color: #ffffff;
+    border: 1px #fff solid;
+}
+
+.slick-slide {
+    padding-right: 20px;
+}
+
+/* .media .slick-prev {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("./images/prev.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 120px;
+    top: -120px;
+}
+.media .slick-next {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("./images/next.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 20px;
+    top: -120px;
+}
+.media .slick-dots {
+    margin: 40px auto 0 auto;
+}
+.media .slick-dots li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0;
+    background: #d9d9d9;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.media img {
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+.media .slick-dots .slick-active {
+    background: #ef4b4f;
+    width: 40px;
+}
+.media .slick-dots button {
+    display: none;
+} */
+.mediaboxL {
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 187.5% */
+}
+
+.mediaboxR {
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    text-align: right;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 187.5% */
+}
+
+.mediaboxB {
+    color: black;
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    /* 150% */
+}
+
+.mediaboxB p {
+    margin-top: 0.5rem;
+    line-height: 24px;
+    font-size: 1rem;
+    /* max-height: 60px;
+    overflow-y: scroll; */
+}
+
+.media .articalThamble {
+    min-height: 165px;
+    width: 100%;
+    object-fit: cover;
+    max-height: 170px;
+}
+
+.mediaboxR ul {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.medialogo {
+    width: 15rem;
+    height: 1.6rem;
+}
+
+.mediaboxR ul li {
+    list-style-type: none;
+    padding: 0 2px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mediaboxR img {
+    max-width: 60px !important;
+}
+
+.mediaBox {
+    background: #fff;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    min-height: 12rem;
+    /* height: 100%; */
+}
+
+.mediaboxB {
+    height: 8rem;
+}
+
+/* tabs */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block !important;
+}
+
+.blogs .slick-prev {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("./images/prev.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 120px;
+    top: -120px;
+}
+
+.blogs .slick-next {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("./images/next.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 20px;
+    top: -120px;
+}
+
+.blogs .slick-dots {
+    max-width: 220px;
+    margin: 40px auto 0 auto;
+}
+
+.blogs .slick-dots li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0;
+    background: #d9d9d9;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.blogs img {
+    margin-bottom: 0px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.blogs .slick-dots .slick-active {
+    background: #ef4b4f;
+    width: 40px;
+}
+
+.blogs .slick-dots button {
+    display: none;
+}
+
+.blogsboxL {
+    color: #777;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 187.5% */
+}
+
+.blogsboxR {
+    color: #777;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    text-align: right;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 187.5% */
+}
+
+.blogsboxB {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 150% */
+}
+
+/* sec 7 ends */
+
+/* sec 8 starts */
+.sec8 {
+    padding: 60px 0px;
+    background: url("../../assets/images/testimonialbg.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.sec8 h5 {
+    color: #ef4b4f;
+    font-family: "Proxima Nova";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    line-height: normal;
+}
+
+.sec8 h2 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.TestiBox {
+    border-radius: 30px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0px 0px 24px 0px rgba(185, 185, 185, 0.57);
+}
+
+.sec8 .slick-slide {
+    padding-right: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sec8 .slick-slide {
+    transform: scale(0.9);
+    /* Reduce size for non-active slides */
+    transition: transform 0.5s ease-in-out;
+    opacity: 0.7;
+}
+
+.sec8 .slick-center {
+    transform: scale(1);
+    /* Keep center slide big */
+    opacity: 1;
+}
+
+.testimonials .slick-prev {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("../images/prev.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 120px;
+    top: -120px;
+    margin-left: 1rem;
+}
+
+.testimonials .slick-next {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("../images/next.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 20px;
+    top: -120px;
+    margin-right: 2rem;
+}
+
+.testimonials .slick-dots {
+    max-width: 220px;
+    margin: 40px auto 0 auto;
+}
+
+.testimonials .slick-dots li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0;
+    background: #d9d9d9;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.testimonials img {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.testimonials .slick-dots .slick-active {
+    background: #ef4b4f;
+    width: 40px;
+}
+
+.testimonials .slick-dots button {
+    display: none;
+}
+
+.TestiBox h4 {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 27.067px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 12px;
+}
+
+.TestiBox p {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 142.857% */
+}
+
+.TestiBox p:first-child {
+    padding-bottom: 1rem;
+}
+
+/* sec 8 ends */
+
+/* sec 9 starts */
+.sec9 {
+    padding: 60px 0px;
+    background: #ffffff;
+}
+
+.sec9 h2 {
+    color: #000;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.slick-slide {
+    padding-right: 20px;
+}
+
+.mainvidBox {
+    border-radius: 30px;
+    margin: 10px;
+    background: #fff;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mainvidBox:hover {
+    border-radius: 30px;
+    margin: 10px;
+    background: #ef4b4f;
+    padding: 20px;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mainvidBox:hover p {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.video .slick-prev {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("../../assets/images/prev.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 120px;
+    top: -120px;
+}
+
+.video .slick-next {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("../../assets/images/next.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 20px;
+    top: -120px;
+}
+
+.video .slick-dots {
+    max-width: 220px;
+    margin: 40px auto 0 auto;
+}
+
+.video .slick-dots li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0;
+    background: #d9d9d9;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.video img {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.video .slick-dots .slick-active {
+    background: #ef4b4f;
+    width: 40px;
+}
+
+.video .slick-dots button {
+    display: none;
+}
+
+.videoB {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 150% */
+}
+
+/* sec 9 ends */
+
+/* sec 10 starts */
+.sec10 {
+    padding: 60px 0 130px 0px;
+    background: url("../../assets/images/researchbg.png") no-repeat center
+        center;
+    background-size: cover;
+}
+
+.sec10 h2 {
+    color: #000;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.slick-slide {
+    padding-right: 20px;
+}
+
+.Research .slick-prev {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("../../assets/images/prev.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 120px;
+    top: -120px;
+}
+
+.Research .slick-next {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 0px;
+    background: url("../../assets/images/next.svg") no-repeat;
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    right: 20px;
+    top: -120px;
+}
+
+.Research .slick-dots {
+    max-width: 220px;
+    margin: 40px auto 0 auto;
+}
+
+.Research .slick-dots li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0;
+    background: #d9d9d9;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.Research img {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.Research .slick-dots .slick-active {
+    background: #ef4b4f;
+    width: 40px;
+}
+
+.Research .slick-dots button {
+    display: none;
+}
+
+.researchboxL {
+    color: #777;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 187.5% */
+}
+
+.researchboxR {
+    color: #777;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    text-align: right;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 187.5% */
+}
+
+.researchboxB {
+    color: #000;
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 150% */
+}
+
+/* sec 10 ends */
+
+/* contact pages csss starts here */
+.contactsec2 {
+    padding: 60px 0 120px 0px;
+}
+
+.contact-card {
+    border-radius: 1.875rem;
+    /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    height: 100%;
+    /* Ensures the height matches the map */
+}
+
+.contactsec2 h2 {
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 20px;
+    line-height: normal;
+}
+
+.contactsec2 h3 {
+    color: #000000;
+    font-family: Raleway;
+    font-size: 44px;
+    padding-bottom: 0px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 129.559% */
+}
+
+.contact-icon {
+    width: 1.6rem;
+    /* Reduced size */
+    height: 1.6rem;
+    /* Reduced size */
+    margin-right: 10px;
+}
+
+.map-embed {
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    /* Matches the card height */
+}
+
+.equal-height {
+    height: 350px;
+    /* Set consistent height for both sections */
+}
+
+.contactform1 {
+    background-color: #4e4e4e;
+    padding: 14px 12px;
+    border-radius: 1rem;
+    font-family: "Proxima Nova";
+}
+
+.contactform1 input,
+.contactform1 select,
+.contactform1 textarea,
+.contactform1 button {
+    font-family: "Proxima Nova";
+}
+
+.contact-text {
+    color: #000000;
+    font-family: "Proxima Nova";
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 45px;
+    /* 190.482% */
+}
+
+.contact-card h3 {
+    font-family: "Proxima Nova";
+}
+
+.contact-form h4 {
+    font-family: "Proxima Nova";
+}
+
+/* -------------------- */
+/* .contactDropdown {
+    width: 100% !important;
+    margin-bottom: 1rem;
+} */
+
+/* #services {
+    background: transparent !important;
+    border: 1px solid #ffffff !important;
+}
+#services input:checked {
+    background-color: blue !important;
+    border-color: blue !important;
+} */
+
+/* .contactform .form-control {
+    background: none !;
+    color: #000 !important;
+} */
+
+/* .contactform .form-control::placeholder {
+    color: #000 !important;
+} */
+.contactform .dropdown-toggle {
+    text-align: left;
+    width: 100%;
+    background: #333 !important;
+    border: none;
+    color: #fff !important;
+    text-wrap: wrap;
+    font-weight: 400 !important;
+}
+
+.contactform .dropdown-toggle:hover {
+    background: none;
+    color: #000000;
+}
+
+.contactform .dropdown-toggle:focus {
+    background: none;
+    color: #000000;
+    box-shadow: none !important;
+}
+
+/* contact pages csss ends here */
+
+@media screen and (max-width: 1800px) {
+    .sec2 h2 {
+        font-size: 60px;
+        padding-bottom: 10px;
+    }
+
+    .sec2 p {
+        font-size: 22px;
+    }
+
+    .sec3 h2 {
+        font-size: 60px;
+    }
+
+    .sec4 h2 {
+        font-size: 60px;
+        padding-bottom: 10px;
+    }
+
+    .sec4 p {
+        font-size: 22px;
+    }
+
+    .sec5 h2 {
+        font-size: 60px;
+    }
+
+    .sec5 p {
+        font-size: 24px;
+    }
+
+    .sec6 h2 {
+        font-size: 60px;
+    }
+
+    .sec7Left h2 {
+        font-size: 60px;
+    }
+
+    .researchboxB p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .sec8 h2 {
+        font-size: 60px;
+    }
+
+    .TestiBox p {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .sec9 h2 {
+        font-size: 60px;
+    }
+
+    .sec10 h2 {
+        font-size: 60px;
+    }
+
+    .servicesbannerSec {
+        padding: 200px 60px 60px 60px;
+    }
+
+    .servicesbannerSec h1 {
+        font-size: 60px;
+    }
+
+    /*   contact page */
+    .contactsec2 h2 {
+        font-size: 52px;
+    }
+
+    .contactsec2 h3 {
+        font-size: 52px;
+    }
+
+    .contact-text {
+        font-size: 24px;
+    }
+
+    /*   contact page */
+}
+
+@media screen and (max-width: 1600px) {
+    .sec2 h2 {
+        font-size: 54px;
+        padding-bottom: 10px;
+    }
+
+    .sec2 p {
+        font-size: 22px;
+    }
+
+    .sec3 h2 {
+        font-size: 54px;
+    }
+
+    .sec4 h2 {
+        font-size: 54px;
+        padding-bottom: 10px;
+    }
+
+    .sec4 p {
+        font-size: 22px;
+    }
+
+    .sec5 h2 {
+        font-size: 54px;
+    }
+
+    .sec5 p {
+        font-size: 24px;
+    }
+
+    .sec6 h2 {
+        font-size: 54px;
+    }
+
+    .sec7Left h2 {
+        font-size: 54px;
+    }
+
+    .researchboxB p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .sec8 h2 {
+        font-size: 54px;
+    }
+
+    .TestiBox p {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .sec9 h2 {
+        font-size: 54px;
+    }
+
+    .sec10 h2 {
+        font-size: 54px;
+    }
+
+    .servicesbannerSec {
+        padding: 200px 60px 60px 60px;
+    }
+
+    .servicesbannerSec h1 {
+        font-size: 54px;
+    }
+
+    /*   contact page */
+    .contactsec2 h2 {
+        font-size: 48px;
+    }
+
+    .contactsec2 h3 {
+        font-size: 40px;
+    }
+
+    .contact-text {
+        font-size: 22px;
+    }
+
+    /*   contact page */
+}
+
+@media screen and (max-width: 1280px) {
+    .news-card-title {
+        font-size: 18px !important;
+        min-height: 60px;
+    }
+
+    .news-card-text {
+        font-size: 16px !important;
+    }
+
+    .sec2 h2 {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    .sec2 p {
+        font-size: 21px;
+    }
+
+    .sec3 h2 {
+        font-size: 50px;
+    }
+
+    .sec4 h2 {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    .sec4 p {
+        font-size: 22px;
+    }
+
+    .sec5 h2 {
+        font-size: 50px;
+    }
+
+    .sec5 p {
+        font-size: 21px;
+    }
+
+    .sec6 h2 {
+        font-size: 50px;
+    }
+
+    .sec7Left h2 {
+        font-size: 50px;
+    }
+
+    .researchboxB p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .sec8 h2 {
+        font-size: 50px;
+    }
+
+    .TestiBox p {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .sec9 h2 {
+        font-size: 50px;
+    }
+
+    .sec10 h2 {
+        font-size: 50px;
+    }
+
+    .servicesbannerSec {
+        padding: 200px 60px 60px 60px;
+    }
+
+    .servicesbannerSec h1 {
+        font-size: 46px;
+    }
+
+    .box1 {
+        margin: 0px !important;
+    }
+
+    .MainValueBox {
+        /* display: block; */
+    }
+
+    .ValueBox {
+        display: inline-block;
+        max-width: 14rem;
+    }
+
+    /*   contact page */
+    .contactsec2 h2 {
+        font-size: 42px;
+    }
+
+    .contactsec2 h3 {
+        font-size: 36px;
+    }
+
+    .contact-text {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    /*   contact page */
+}
+
+@media screen and (max-width: 1080px) {
+    .news-card-text {
+        min-height: 72px !important;
+    }
+
+    .contact-text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .sec2 h2 {
+        font-size: 42px;
+        padding-bottom: 10px;
+    }
+
+    .sec2 p {
+        font-size: 20px;
+    }
+
+    .sec3 h2 {
+        font-size: 42px;
+    }
+
+    .sec4 h2 {
+        font-size: 42px;
+        padding-bottom: 10px;
+    }
+
+    .sec4 p {
+        font-size: 22px;
+    }
+
+    .sec5 h2 {
+        font-size: 42px;
+    }
+
+    .sec5 p {
+        font-size: 20px;
+    }
+
+    .GrowBoxMob h3 {
+        color: #ef4b4f;
+        font-family: "Proxima Nova";
+        font-size: 22px;
+        text-align: left;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .GrowBoxImg {
+        text-align: center;
+    }
+
+    .GrowBoxMob p {
+        color: #272727;
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        text-align: left;
+        font-style: normal;
+        font-weight: 500;
+        padding-bottom: 0px;
+        margin-bottom: 30px;
+        line-height: 26px;
+        /* 142.857% */
+    }
+
+    .sec6 h2 {
+        font-size: 42px;
+    }
+
+    .sec7Left h2 {
+        font-size: 42px;
+        padding-bottom: 0px;
+    }
+
+    .sec7Right ul {
+        padding-bottom: 20px;
+    }
+
+    .sec7Right ul li {
+        margin: 0px 10px;
+    }
+
+    .researchboxB p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .sec8 h2 {
+        font-size: 42px;
+    }
+
+    .TestiBox p {
+        font-size: 20px !important;
+        line-height: 36px;
+    }
+
+    .sec9 h2 {
+        font-size: 42px;
+    }
+
+    .sec10 h2 {
+        font-size: 42px;
+    }
+
+    .sec4Right {
+        vertical-align: center;
+        position: relative;
+    }
+
+    .sec4Right img {
+        position: relative;
+        bottom: 0;
+        max-width: 700px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .servicesbannerSec {
+        padding: 200px 60px 60px 60px;
+    }
+
+    .servicesbannerSec h1 {
+        font-size: 40px;
+    }
+
+    .ValueBox {
+        width: 30%;
+        display: inline-block;
+    }
+
+    /*   contact page */
+    .contactsec2 h2 {
+        font-size: 40px;
+    }
+
+    .contactsec2 h3 {
+        font-size: 32px;
+    }
+
+    .contact-text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec2 {
+        padding: 60px 0 0 0px;
+    }
+
+    .sec2 h2 {
+        font-size: 36px;
+        padding-bottom: 10px;
+    }
+
+    .sec2 p {
+        font-size: 14px;
+        line-height: 24px !important;
+    }
+
+    .sec3 {
+        padding: 30px 0 0 0px;
+    }
+
+    .sec3 h2 {
+        font-size: 36px;
+    }
+
+    .sec4 {
+        padding: 60px 0 0 0;
+    }
+
+    .sec4 h2 {
+        font-size: 36px;
+        padding-bottom: 10px;
+    }
+
+    .sec4 p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .sec4left {
+        padding-bottom: 20px !important;
+    }
+
+    .sec5 {
+        padding: 60px 0px;
+    }
+
+    .sec5 h2 {
+        font-size: 36px;
+        line-height: 47px;
+        padding-bottom: 5px;
+    }
+
+    .sec5 p {
+        font-size: 14px;
+    }
+
+    .sec6 {
+        /* padding: 30px 0px; */
+    }
+
+    #our-values-sec {
+        padding: 40px 0px 15px;
+    }
+
+    .sec6 h2 {
+        font-size: 36px;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .sec7 {
+        padding: 60px 0px;
+    }
+
+    .sec7Left h2 {
+        padding-bottom: 16px;
+        text-align: center;
+        font-family: "Proxima Nova";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700 !important;
+        line-height: normal;
+    }
+
+    .sec7Right ul {
+        padding-bottom: 20px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sec7Right ul a {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .sec7Right ul li {
+        margin: 0px 4px 30px 4px;
+        padding: 10px 40px;
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .researchboxB p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .sec8 {
+        padding: 30px 0px;
+    }
+
+    .sec8 h2 {
+        font-size: 32px;
+    }
+
+    .TestiBox p.test_per_desc {
+        font-family: "Proxima Nova";
+        font-size: 12px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        margin-bottom: 0 !important;
+    }
+
+    .TestiBox p.textTexsti span,
+    p.see-more-btn {
+        color: #000;
+        font-family: "Proxima Nova";
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .sec9 {
+        padding: 30px 0px;
+    }
+
+    .sec9 h2 {
+        font-size: 36px;
+        padding-bottom: 0px;
+    }
+
+    .sec10 {
+        padding: 10px 0 90px 0px;
+    }
+
+    .sec10 h2 {
+        font-size: 36px;
+    }
+
+    .testilogo img {
+        max-width: 100px;
+        margin: 0 auto;
+    }
+
+    .sec4Right {
+        vertical-align: center;
+        position: relative;
+    }
+
+    .sec4Right img {
+        position: relative;
+        bottom: 0;
+        max-width: 700px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .servicesbannerSec {
+        padding: 200px 60px 60px 60px;
+    }
+
+    .servicesbannerSec h1 {
+        font-size: 36px;
+    }
+
+    .MainValueBox {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    .sec7Right {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .ValueBox {
+        width: 100%;
+        display: inline-block;
+    }
+
+    /*   contact page */
+    .contactsec2 {
+        padding: 30px 0px;
+    }
+
+    .contactsec2 h2 {
+        font-size: 36px;
+    }
+
+    .contactsec2 h3 {
+        font-size: 28px;
+    }
+
+    .contact-text {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    section.homebann.customSection.firstSection {
+        justify-content: flex-start !important;
+        padding-top: 18% !important;
+        height: 54vh !important;
+    }
+
+    body .getintouchbtn-box {
+        margin-bottom: 4.5rem !important;
+    }
+    section#latest-news .life-slider .slick-prev {
+        left: -20px;
+    }
+    .mt-5.abtnt5btn {
+        margin-top: 2rem !important;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Centering Slick Dots */
+.slick-dots {
+    bottom: -50px !important;
+    /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* card css */
+@media screen and (max-width: 767px) {
+    .sec3 .flip-card {
+        height: 430px;
+    }
+
+    .back-card ul li {
+        font-size: 16px;
+    }
+
+    .back-card ul {
+        padding: 0px;
+        margin: -0px;
+        width: 100%;
+        padding: 0px 12px;
+    }
+
+    .back-card h3 {
+        font-size: 25px;
+        padding: 0 15px;
+    }
+
+    .sec3 .back-card {
+        justify-content: center;
+        padding: 0rem 1rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sec5 h2 {
+        font-size: 36px;
+        line-height: 47px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sec5 p {
+        color: #272727;
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        text-align: start;
+    }
+    .mt-5.abtnt5btn {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sec3 .flip-card {
+        height: 450px;
+    }
+
+    .back-card ul li {
+        font-size: 18px;
+    }
+
+    .back-card ul {
+        padding: 0px;
+        margin: -0px;
+        width: 100%;
+        padding: 0px 12px;
+    }
+}
+
+.ValueBox {
+    margin: 0.5rem !important;
+}
+
+@media screen and (max-width: 1800px) and (min-width: 1100px) {
+    .ValueBox {
+        width: 18% !important;
+        margin: 0.5rem !important;
+    }
+
+    .back-card ul li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sec6 .front-card1 {
+        margin: 1rem 0rem !important;
+    }
+
+    .sec6 .flip-card1 {
+        margin: 1rem 0rem !important;
+    }
+
+    .sec6 .back-card1 {
+        margin: 1rem 0rem !important;
+    }
+
+    .slick-prev,
+    .slick-next {
+        font-size: 28px !important;
+    }
+
+    .customContainer.publicationBanner {
+        width: 100% !important;
+    }
+    .life-slider.slick-initialized.slick-slider {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.servivesBox {
+    display: none !important;
+}
+
+.footerForm input[type="text"] {
+    color: #fff !important;
+    font-family: "Proxima Nova";
+}
+
+@media screen and (max-width: 992px) {
+    .d-mob {
+        display: block !important;
+    }
+
+    .d-desk {
+        display: none !important;
+    }
+}
+
+.d-mob {
+    display: none;
+}
+
+.d-desk {
+    display: block;
+}
+
+.flex-wrap {
+    flex-wrap: nowrap !important;
+}
+
+@media screen and (max-width: 400px) {
+    #latest-news .slick-next {
+        right: -1.7rem !important;
+    }
+}
+
+nav.webNav ul.nav li a strong {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1775px) and (min-width: 1575px) {
+    .sec6 .front-card1 .box1 img {
+        width: 36%;
+    }
+
+    .sec6 .front-card1 .box1 h4 {
+        font-size: 22px !important;
+    }
+}
+
+@media screen and (max-width: 1574px) and (min-width: 1300px) {
+    .sec6 .front-card1 .box1 img {
+        width: 40%;
+    }
+
+    .sec6 .front-card1 .box1 h4 {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 1299px) and (min-width: 1024px) {
+    /* .sec6 .front-card1 .box1  img{
+        width: 40%;
+    } */
+    .sec6 .front-card1 .box1 h4 {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    /* .sec6 .front-card1 .box1  img{
+        width: 70%;
+    } */
+}
+
+@media screen and (max-width: 1024px) {
+    .sec6 .front-card1 .box1 h4 {
+        font-size: 16px !important;
+    }
+
+    .ValueBox .box1 {
+        padding: 30px 0 !important;
+    }
+}
+
+.ValueBox .box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.homebann.customSection.firstSection {
+    position: relative;
+    width: 100%;
+    height: 74vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.homebann .videoBackground {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+section.homebann .videoBackground video {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+section.homebann.customSection.firstSection .customContainer.firstContainer {
+    position: relative !important;
+    z-index: 2;
+    top: unset !important;
+    padding-left: 2%;
+}
+
+@media screen and (max-width: 400px) {
+    .homebann.customSection.firstSection {
+        height: 55vh !important;
+    }
+}
+
+.swal2-actions button.swal2-styled {
+    background: linear-gradient(
+        266deg,
+        #ef4b4f -0.04%,
+        #991f3d 72.43%
+    ) !important;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.5rem 2.5rem;
+    border-radius: 8px;
+    font-family: "Proxima Nova";
+    line-height: 1.2;
+}
+body.popup-open {
+    overflow: hidden;
+}
+section.sec7 .slider.media.hmmedia .slick-list .slick-slide {
+    padding: 0 10px;
+}
+
+/* section.sec7 .slider.media.hmmedia .slick-prev,
+section.sec7 .slider.media.hmmedia .slick-next {
+    margin-left: 0;
+}
+section#latest-news .life-slider .slick-next {
+    margin-right: 0;
+}
+section#latest-news .life-slider .slick-prev {
+    margin-left: 0;
+    left: -30px;
+} */
+section.sec7 .slider.media.hmmedia .slick-prev {
+    left: -18px !important;   
+}
+section.sec7 .slider.media.hmmedia .slick-next {
+	right: -20px !important;
+}
