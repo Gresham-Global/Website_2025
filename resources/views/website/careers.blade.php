@@ -403,24 +403,24 @@
         <img src="{{ asset('website/assets/images/lifeofgg/img11.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
       </div>
-      <div class="slide-item">
+      {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img2.webp') }}" class="img-fluid rounded"
           alt="Team enjoying at an event">
-      </div>
+      </div> --}}
 
-      <div class="slide-item">
+      {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img4.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
-      </div>
+      </div> --}}
       <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img5.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
       </div>
 
-      <div class="slide-item">
+      {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img7.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
-      </div>
+      </div> --}}
 
       <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img9.webp') }}" class="img-fluid rounded"
@@ -430,10 +430,10 @@
         <img src="{{ asset('website/assets/images/lifeofgg/img10.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
       </div>
-      <div class="slide-item">
+      {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img3.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
-      </div>
+      </div> --}}
       <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img12.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
@@ -451,17 +451,45 @@
           alt="Interactive games at the event">
       </div>
       <div class="slide-item">
+        <img src="{{ asset('website/assets/images/lifeofgg/EMP_5505.webp') }}" class="img-fluid rounded"
+          alt="Interactive games at the event">
+      </div>
+      <div class="slide-item">
+        <img src="{{ asset('website/assets/images/lifeofgg/EMP_5515.webp') }}" class="img-fluid rounded"
+          alt="Interactive games at the event">
+      </div>
+      <div class="slide-item">
+        <img src="{{ asset('website/assets/images/lifeofgg/EMP_5524.webp') }}" class="img-fluid rounded"
+          alt="Interactive games at the event">
+      </div>
+      <div class="slide-item">
+        <img src="{{ asset('website/assets/images/lifeofgg/EMP_5669.webp') }}" class="img-fluid rounded"
+          alt="Interactive games at the event">
+      </div>
+      <div class="slide-item">
+        <img src="{{ asset('website/assets/images/lifeofgg/EMP_7865.webp') }}" class="img-fluid rounded"
+          alt="Interactive games at the event">
+      </div>
+      <div class="slide-item">
+        <img src="{{ asset('website/assets/images/lifeofgg/EMP_7925.webp') }}" class="img-fluid rounded"
+          alt="Interactive games at the event">
+      </div>
+      <div class="slide-item">
+        <img src="{{ asset('website/assets/images/lifeofgg/EMP_8020.webp') }}" class="img-fluid rounded"
+          alt="Interactive games at the event">
+      </div>
+      {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img6.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
-      </div>
-      <div class="slide-item">
+      </div> --}}
+      {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img15.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
-      </div>
-      <div class="slide-item">
+      </div> --}}
+      {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img1.webp') }}" class="img-fluid rounded"
           alt="Group of people smiling together">
-      </div>
+      </div> --}}
     </div>
   </div>
 </section>
