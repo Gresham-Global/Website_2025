@@ -450,6 +450,7 @@
         <img src="{{ asset('website/assets/images/lifeofgg/img8.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
       </div>
+
       <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/EMP_5505.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
@@ -478,6 +479,7 @@
         <img src="{{ asset('website/assets/images/lifeofgg/EMP_8020.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
       </div>
+
       {{-- <div class="slide-item">
         <img src="{{ asset('website/assets/images/lifeofgg/img6.webp') }}" class="img-fluid rounded"
           alt="Interactive games at the event">
