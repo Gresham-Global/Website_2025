@@ -94,7 +94,8 @@
     font-weight: 700;
     text-align: center;
     color: #ffffff;
-    background: linear-gradient(260.56deg, #ef4b4f 4.76%, #991f3d 69.81%);
+    /* background: linear-gradient(260.56deg, #ef4b4f 4.76%, #991f3d 69.81%); */
+    background: #e32636;
     box-shadow: 0px 7.07px 7.07px 0px rgba(16, 137, 255, 0.1);
     border-radius: 0 8px 8px 0;
     font-style: normal;
@@ -131,7 +132,8 @@
 }
 .footerContainer .contactP img {
     height: 24px;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    margin-bottom: 1rem;
 }
 
 .footerContainer h6 {

@@ -31,7 +31,8 @@
 
 .card:hover {
     transform: translateY(-5px);
-    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
+    background: #e32636;
 
     /* Gradient from top to bottom */
     color: white;
@@ -96,7 +97,7 @@
 /* input::placeholder,
 textarea::placeholder {
     color: black !important;
-    opacity: 1; 
+    opacity: 1;
 } */
 
 /* For screens between 768px and 400px */
@@ -175,11 +176,12 @@ textarea::placeholder {
 
 .apply-btn {
     border-radius: 8px !important;
-    background: linear-gradient(
+    background: #e32636 !important;
+    /* background: linear-gradient(
         266deg,
         #ef4b4f -0.04%,
         #991f3d 72.43%
-    ) !important;
+    ) !important; */
     font-weight: 700;
     font-size: 20px;
     text-align: center;
@@ -212,7 +214,8 @@ textarea::placeholder {
 }
 
 .connect-btn {
-    background: linear-gradient(265.76deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    /* background: linear-gradient(265.76deg, #ef4b4f -0.04%, #991f3d 72.43%); */
+    background: #e32636;
     color: #fff !important;
     font-size: 20px;
     font-weight: bold;
@@ -482,9 +485,9 @@ textarea::placeholder {
 }
 
 .careerpban {
- 
+
     color: #FFF;
-    
+
     font-size: 20px;
     font-style: normal;
     font-weight: 100;
@@ -693,7 +696,8 @@ p.opencard_txt strong.stbgtxt {
 #viewall {
     width: 10rem;
     border-radius: 8px;
-    background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%); */
+    background: #e32636;
     padding: 12px 25px !important;
     display: flex;
     justify-content: space-evenly;

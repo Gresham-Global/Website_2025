@@ -80,7 +80,8 @@ section.events_main .event-description {
 
 section.events_main .read-more {
   border-radius: 8px;
-  background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%) !important;
+  /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%) !important; */
+  background: #e32636 !important;
   font-weight: 700;
   font-size: 20px;
   text-align: center;
@@ -165,12 +166,12 @@ margin: 5rem 0;
   .customContainer.mediaCon h1 {
     font-size: 54px !important;
   }
-  
+
   .similar_newsandblogs_head h3.similar_newsandblogs_title {
     font-size: 43px !important;
     line-height: 32px !important;
   }
-  
+
 }
 
 @media screen and (max-width: 1574px) and (min-width: 1300px) {
