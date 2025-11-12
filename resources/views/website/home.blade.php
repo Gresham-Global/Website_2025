@@ -547,7 +547,7 @@
 
             <div id="tab1" class="tab-content active">
                 <!-- slider starts -->
-                
+
                 <div class="slider media hmmedia">
                     @foreach ($media_for_slider as $media)
                         <div>
@@ -569,7 +569,7 @@
                             </div>
                         </div>
                     @endforeach
-                    
+
                 </div>
                 <!-- slider ends -->
             </div>
@@ -594,7 +594,7 @@
                                     {{-- Title (similar to original card's h5, but placed within mediaboxB) --}}
                                     <a href="{{ route('news-and-blogs.show', $news_and_blog->slug) }}" target="_blank"
                                         class="mediaText">
-                                        <p class="news-card-title-in-mediaBox">{{ $news_and_blog->title }}</p>
+                                        <p class="news-card-title-in-mediaBox">{{ \Illuminate\Support\Str::limit($news_and_blog->title, 50) }}</p>
                                     </a>
 
                                     {{-- Short Description (re-added from original card) --}}
@@ -623,8 +623,8 @@
     <!-- sec 8 starts -->
     <section class="sec8" style="margin-bottom: 100px;">
         <div class="container-fluid">
-            <h5>Testimonials</h5>
-            <h2>What our client partners have to say</h2>
+            {{-- <h5>Testimonials</h5> --}}
+            <h2>What our partner universities have to say</h2>
             <!-- slider starts -->
             <div class="slider testimonials">
                 <div class="TestiBox">

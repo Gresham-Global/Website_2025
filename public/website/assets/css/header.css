@@ -45,7 +45,7 @@
     padding: 0 1.5rem;
 }
 
-.topLink .active1{
+.topLink .active1 {
     border-bottom: 2px solid #fff !important;
 }
 
@@ -139,6 +139,7 @@
 }
 .navbar-toggler {
     display: none;
+    padding: 0.25rem 0rem !important;
 }
 
 /* ------------------ */
@@ -166,29 +167,29 @@
     padding: 1rem !important;
     border-bottom: 1px solid #000000;
 }
-.secNavMenus .lstBor{
-    border-bottom: none !important;;
+.secNavMenus .lstBor {
+    border-bottom: none !important;
 }
 .offcanvas .nav-item {
     padding: 1rem 1.5rem !important;
-    border-bottom: 1px solid #000000;
+    /* border-bottom: 1px solid #000000; */
 }
 .offcanvas .nav .nav-item.active a {
     color: #ef4b4f !important;
     font-weight: 700;
     border-bottom: 0;
 }
-.offcanvas .dropdownmenu{
+.offcanvas .dropdownmenu {
     display: block;
     list-style: none;
     padding: 0;
-    /* margin-left: 1rem; */  
+    /* margin-left: 1rem; */
 }
 .offcanvas .dropdownmenu .dropdown-item {
     padding: 0.7rem 1.5rem !important;
     border-bottom: 1px solid #000000;
 }
-.offcanvas .dropdownmenu .dropdown-item.last{
+.offcanvas .dropdownmenu .dropdown-item.last {
     border: none !important;
 }
 .offcanvas .dropdownmenu {
@@ -250,7 +251,8 @@
         width: 91%;
     }
     .navContainer {
-        padding: 0 50px !important;
+        /* padding: 0 50px !important; */
+        padding: 0 1rem !important;
     }
     .nav .nav-item {
         padding: 0 1rem !important;
@@ -331,7 +333,7 @@
 }
 /* For smaller screens - ensure default behavior */
 @media (max-width: 1080px) {
-    .topSection{
+    .topSection {
         display: none !important;
     }
     .webNav {
@@ -366,21 +368,20 @@
         color: transparent !important;
         text-shadow: 0 0 0 transparent;
     }
-   
-        .navLogoImg {
-            height: 44px;
-        }
-    
+
+    .navLogoImg {
+        height: 44px;
+    }
 }
-/* 
+/*
 .secNavMenus .nav .nav-item.active a{
     color:#000!important;
 } */
 
-.dropdown-menu.show{
-    color:#000!important;
+.dropdown-menu.show {
+    color: #000 !important;
 }
-/* 
+/*
 .secNavMenus .nav .nav-item.active a {
     color:#000!important;
 } */
@@ -396,3 +397,19 @@
     display: block;
 }
 
+@media screen and (max-width: 767px) {
+    .nav .nav-item {
+        font-size: 20px;
+        line-height: 2.5rem;
+    }
+
+    .offcanvas .dropdownmenu .dropdown-item {
+        font-size: 18px;
+        line-height: 1.5rem;
+        border: none;
+    }
+
+    .offcanvas-header {
+        align-items: center !important;
+    }
+}

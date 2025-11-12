@@ -319,7 +319,8 @@ h6 {
     padding: 10px 10px;
     flex-direction: column;
     border-radius: 30px;
-    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
+    background: #e32636;
 }
 
 .sec3 .flip-card:hover .front-card {
@@ -489,7 +490,8 @@ h6 {
 
 .sec6 {
     padding: 60px 0 60px 0px;
-    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
+    background: #e32636;
 }
 
 .sec6 h2 {
@@ -659,11 +661,12 @@ h6 {
 }
 
 .sec7Right .active {
-    background: linear-gradient(
+    /* background: linear-gradient(
         266deg,
         #ef4b4f -0.04%,
         #991f3d 72.43%
-    ) !important;
+    ) !important; */
+    background: #e32636 !important;
     color: #ffffff;
     border: 1px #fff solid;
 }
@@ -765,7 +768,8 @@ h6 {
     min-height: 165px;
     width: 100%;
     object-fit: cover;
-    max-height: 170px;
+    height: 170px;
+    object-fit: cover;
 }
 
 .mediaboxR ul {
@@ -2359,8 +2363,33 @@ section#latest-news .life-slider .slick-prev {
     left: -30px;
 } */
 section.sec7 .slider.media.hmmedia .slick-prev {
-    left: -18px !important;   
+    left: -18px !important;
 }
 section.sec7 .slider.media.hmmedia .slick-next {
-	right: -20px !important;
+    right: -20px !important;
+}
+
+form .dropdown-menu {
+    background: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(25px);
+    width: 100%;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate(0px, 40px);
+    height: max-content;
+    overflow-y: scroll;
+}
+
+.modalForm .dropdown-menu {
+    background: rgba(255, 255, 255, 1) !important;
+    backdrop-filter: none;
+}
+
+.dropdown-menu li {
+    color: #ffffff !important;
+}
+
+.modalForm .dropdown-menu li {
+    color: #000000 !important;
 }

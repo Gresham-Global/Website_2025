@@ -31,14 +31,14 @@ class NewsBlogsController extends Controller
             ->take(5)
             ->get();
         $media_for_slider = Media::where('status', 1)->latest('publish_date')
-        ->take(6) // or any number you want
-        ->get();
-        
+            ->take(6) // or any number you want
+            ->get();
+
 
         $title = 'Welcome to Gresham Global';
 
         // VERY IMPORTANT: Check this line
-        return view('website.home', compact('news_and_blogs_for_slider','media_for_slider', 'title'));
+        return view('website.home', compact('news_and_blogs_for_slider', 'media_for_slider', 'title'));
         // If you accidentally did compact('news_and_blogs') here, then it would be correct.
         // But if you did compact('news_and_blogs_for_slider'), the view needs to use that name.
     }

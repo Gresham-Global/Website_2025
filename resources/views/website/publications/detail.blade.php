@@ -8,7 +8,7 @@
 
 
 <section class="publicationBannerSection firstSection">
-    <div class="customContainer publicationBanner pt-sm-5">
+    <div class="customContainer publicationBanner">
         <img src="{{ $publications['banner_image'] }}" alt="Publication Banner" class="w-100 d-none d-md-block publicationBannerimg" />
         <img src="{{ $publications['mb_banner_image'] }}" alt="Publication Banner" class="w-100 d-block d-md-none publicationBannerimg publicationMbBannerimg" />
     </div>
@@ -145,7 +145,7 @@
             </div>
             <p class="mb-0 mt-2 formtxt"> Get your report delivered to your inbox</p>
         </div>
-        
+
 
         <form class="popup-form" id="downloadForm">
             <!-- Existing Fields -->

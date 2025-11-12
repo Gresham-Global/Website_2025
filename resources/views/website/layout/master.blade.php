@@ -34,10 +34,10 @@
     <link rel="stylesheet" href="{{ asset('website/assets/css/footer.css') }}" />
     <link rel="stylesheet" href="{{ asset('website/assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('website/assets/css/index.css') }}" />
-    <link rel="stylesheet" href="{{ asset('website/assets/css/banner.css') }}">
-    <link rel="stylesheet" href="{{ asset('website/assets/css/about.css') }}">
+    <link rel="stylesheet" href="{{ asset('website/assets/css/banner.css') }}" />
+    <link rel="stylesheet" href="{{ asset('website/assets/css/about.css') }}" />
     <link rel="stylesheet" href="{{ asset('website/assets/css/media.css') }}" />
-    <link rel="stylesheet" href="{{ asset('website/assets/css/banner.css') }}">
+    <link rel="stylesheet" href="{{ asset('website/assets/css/banner.css') }}" />
     <!-- <link rel="stylesheet" href="{{ asset('website/assets/css/event.css') }}" /> -->
     <link rel="stylesheet" href="{{ asset('website/assets/css/media.css') }}" />
     <link rel="stylesheet" href="{{ asset('website/assets/css/events.css') }}" />
@@ -636,17 +636,17 @@ function destroyAllSliders() {
 $('#hmtab1').on('click', function() {
     // Remove active from all tabs
     $('#hmtab1, #hmtab2').removeClass('active');
-    
+
     // Add active to clicked tab
     $(this).addClass('active');
-    
+
     // Immediately destroy and reinitialize
     destroyAllSliders();
-    
+
     // Hide all tab content and show target immediately
     $('.tab-content').hide();
     $('#tab1').show();
-    
+
     // Initialize slider immediately - no setTimeout delay
     initializeMediaSlider();
 });
@@ -655,17 +655,17 @@ $('#hmtab1').on('click', function() {
 $('#hmtab2').on('click', function() {
     // Remove active from all tabs
     $('#hmtab1, #hmtab2').removeClass('active');
-    
+
     // Add active to clicked tab
     $(this).addClass('active');
-    
+
     // Immediately destroy and reinitialize
     destroyAllSliders();
-    
+
     // Hide all tab content and show target immediately
     $('.tab-content').hide();
     $('#tab2').show();
-    
+
     // Initialize slider immediately - no setTimeout delay
     initializeNewsSlider();
 });
@@ -693,7 +693,7 @@ $(document).ready(function() {
     } else if ($('#hmtab2').hasClass('active')) {
         initializeNewsSlider();
     }
-    
+
     // Preload images for faster switching (optional)
     preloadSliderImages();
 });

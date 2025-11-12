@@ -748,11 +748,13 @@
 
 .getintouchBtn.gettouchbtn {
     border-radius: 8px;
-    background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%); */
+    background: #e32636;
 }
 .com_gradient {
     border-radius: 8px;
-    background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%); */
+    background: #e32636;
 }
 
 .imgRadius {

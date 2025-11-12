@@ -1,139 +1,151 @@
 /* Custom News Card */
 .news-card .news-card-body {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  font-family: 'Proxima Nova' !important;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    font-family: "Proxima Nova" !important;
 }
 .news-card .news-card-body span {
-  font-family: 'Proxima Nova' !important;
+    font-family: "Proxima Nova" !important;
 }
-.news-card .news-card-body .cards_tags{
-  margin-top: 0.8rem;
+.news-card .news-card-body .cards_tags {
+    margin-top: 0.8rem;
 }
-.mediaCon{
+.mediaCon {
     margin: 5rem 0;
 }
 .news-card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease-in-out;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
 }
 .news-card {
-  transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Card Image */
 .news-card-img {
-  margin-bottom: 10px;
-  width: 100%;
-  min-height: 200px;
-  object-fit: cover;
-  border-radius: 10px 10px 0rem 0rem;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    /* border-radius: 10px 10px 0rem 0rem; */
+    border-radius: 8px;
+    height: 250px !important;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Card Body */
 .news-card-body {
-  padding: 20px;
-  font-family: 'Proxima Nova';
+    padding: 20px;
+    font-family: "Proxima Nova";
 }
 
 /* Title */
 .news-card-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #d10000;
-  margin-top: 12px;
-  font-family: "Proxima Nova";
-
+    font-size: 24px;
+    font-weight: 700;
+    color: #d10000;
+    margin-top: 12px;
+    font-family: "Proxima Nova";
 }
 
 /* Card Text */
 .news-card-text {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.5;
-  font-family: "Proxima Nova";
-  min-height: 58px;
-  margin-bottom: 5px !important;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    font-family: "Proxima Nova";
+    min-height: 58px;
+    margin-bottom: 5px !important;
 }
 .cardpm {
-  margin-top: 3rem!important;
+    margin-top: 3rem !important;
 }
-.addmoreBlogs{
-  justify-content: center;
+.addmoreBlogs {
+    justify-content: center;
 }
-#loadMore,#loadMoreMedia,#loadMorePublications,#loadMoreEvents,#loadMoreNews {
-  margin-top: 5rem;
-  width: 10rem;
-  border-radius: 8px;
-  background: linear-gradient(266deg, #EF4B4F -0.04%, #991F3D 72.43%);
-  padding: 0.5rem 1.5rem !important;
-  display: flex;
-  justify-content: space-evenly;
-  color: #FFF;
-  font-family: "Proxima Nova";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.2;
-  border: unset !important;
+#loadMore,
+#loadMoreMedia,
+#loadMorePublications,
+#loadMoreEvents,
+#loadMoreNews {
+    margin-top: 5rem;
+    width: 10rem;
+    border-radius: 8px;
+    /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%); */
+    background: #e32636;
+    padding: 0.5rem 1.5rem !important;
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    border: unset !important;
 }
 .readmoreBtn {
-  border-radius: 8px;
-  background: linear-gradient(        266deg,        #ef4b4f -0.04%,        #991f3d 72.43%    ) !important;
-  font-weight: 700;
-  font-size: 20px;
-  text-align: center;
-  color: #ffffff;
-  padding: 0.5rem 1.5rem;
-  border-radius: 8px;
-  font-family: "Proxima Nova";
-  /* margin-top: 5rem; */
-  line-height: 1.2;
-
+    border-radius: 8px;
+    /* background: linear-gradient(
+        266deg,
+        #ef4b4f -0.04%,
+        #991f3d 72.43%
+    ) !important; */
+    background: #e32636 !important;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-family: "Proxima Nova";
+    /* margin-top: 5rem; */
+    line-height: 1.2;
 }
-.readmoreBtn:hover{
+.readmoreBtn:hover {
     color: #ffffff !important;
 }
 /* Small Icons */
 .icon-sm {
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .icon-xs {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .news-card-img {
-    height: 300px;
-    object-fit: cover;
-}
-@media screen and (max-width: 480px){
-  .news-card-img {
-    height: 180px;
-    min-height: unset;
-  }
-}
-  .news-card-title {
-    font-size: 16px;
-  }
-  .news-card-text {
-    font-size: 13px;
-    color: black;
-    font-weight: 200px;
-  }
+    .news-card-img {
+        height: 300px;
+        object-fit: cover;
+    }
+    @media screen and (max-width: 480px) {
+        .news-card-img {
+            height: 180px;
+            min-height: unset;
+        }
+    }
+    .news-card-title {
+        font-size: 16px;
+    }
+    .news-card-text {
+        font-size: 13px;
+        color: black;
+        font-weight: 200px;
+    }
 }
 .repiblicimg {
-  width: 190px;
-  height: 58px;
-  flex-shrink: 0;
-  margin-top: 9px;
-  margin-bottom: 10px;
-  object-fit: contain;
+    width: 190px;
+    height: 58px;
+    flex-shrink: 0;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    object-fit: contain;
 }
