@@ -71,14 +71,14 @@
             <div class="col-lg-2 col-sm-6 mb-4 order-md-2 order-3">
                 <h6 class="mb-4">Quick Links</h6>
                 <ul class="list-unstyled row">
-                    <li class="col-6 col-md-12"><a href="{{ url('') }}"
+                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('') }}"
                             class="text-light {{ request()->is('/') ? 'ftactive' : '' }}">Home</a></li>
-                    <li class="col-6 col-md-12"><a href="{{ url('about') }}"
+                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('about') }}"
                             class="text-light {{ request()->is('about') ? 'ftactive' : '' }}">About Us</a></li>
-                    <li class="col-6 col-md-12"><a href="{{ url('approach') }}"
+                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('approach') }}"
                             class="text-light {{ request()->is('approach') ? 'ftactive' : '' }}">Approach</a></li>
 
-                    <li class="col-6 col-md-12">
+                    <li class="col-6 col-md-12 col-lg-12">
                         <a href="#" class="text-light" data-bs-toggle="dropdown">Services
                             <span class="material-symbols-outlined">
                                 arrow_drop_down
@@ -99,13 +99,13 @@
                                     href="{{ url('operational-support') }}">Operational Support</a></li>
                         </ul>
                     </li>
-                    <li class="col-6 col-md-12"><a href="{{ url('contact') }}"
+                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('contact') }}"
                             class="text-light {{ request()->is('contact') ? 'ftactive' : '' }}">Contact Us</a></li>
-                    <li class="col-6 col-md-12"><a href="{{ url('media') }}"
+                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('media') }}"
                             class="text-light {{ request()->is('media') ? 'ftactive' : '' }}">Media</a></li>
-                    <li class="col-6 col-md-12"><a href="{{ url('events') }}"
+                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('events') }}"
                             class="text-light {{ request()->is('events') ? 'ftactive' : '' }}">Events</a></li>
-                    <li class="col-6 col-md-12"><a href="{{ url('careers') }}"
+                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('careers') }}"
                             class="text-light {{ request()->is('careers') ? 'ftactive' : '' }}">Careers</a></li>
                 </ul>
 

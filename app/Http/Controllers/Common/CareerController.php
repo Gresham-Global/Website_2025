@@ -185,10 +185,10 @@ class CareerController extends Controller
 
                 // Create an instance of ImageController
                 $imageController = new ImageController();
-                
+
                 // Call the upload_image_s3_only method and get the response
                 $response = $imageController->upload_image_storage_only($imageUploadRequest);
-                
+
                 // Decode the response to get the data
                 $responseImageData = json_decode($response->getContent(), true);
                 // dd($responseImageData);
@@ -196,9 +196,7 @@ class CareerController extends Controller
                 if ($responseImageData['success']) {
                     $data['cover_image'] = $responseImageData['data']['imagePath'];
                 }
-
-            }
-            else{
+            } else {
                 // dd('sssssssvvvvvvv');
                 $data['cover_image'] = null;
             }
@@ -262,10 +260,10 @@ class CareerController extends Controller
 
                     // Create an instance of ImageController
                     $imageController = new ImageController();
-                    
+
                     // Call the upload_image_s3_only method and get the response
                     $response = $imageController->upload_image_storage_only($imageUploadRequest);
-                    
+
                     // Decode the response to get the data
                     $responseImageData = json_decode($response->getContent(), true);
                     // dd($responseImageData);
@@ -273,9 +271,7 @@ class CareerController extends Controller
                     if ($responseImageData['success']) {
                         $data['cover_image'] = $responseImageData['data']['imagePath'];
                     }
-
-                }
-                else{
+                } else {
                     // dd('sssssssvvvvvvv');
                     $data['cover_image'] = $career->cover_image;
                 }
@@ -424,7 +420,7 @@ class CareerController extends Controller
 
             $total = $query->count();
             // Apply search filter
-           if (!empty($search)) {
+            if (!empty($search)) {
                 $query->where(function ($q) use ($search) {
                     $q->where('fullname', 'like', "%$search%")
                         ->orWhere('email', 'like', "%$search%")
@@ -576,7 +572,7 @@ class CareerController extends Controller
                     $jobInterest->resource->role_description ?? '', // Role Description
                     !empty($jobInterest->resource->resume)
                         ? url($jobInterest->resource->resume)
-                        : '', // Resume with full URL                    
+                        : '', // Resume with full URL
                     Carbon::parse($jobInterest->resource->created_at)
                         ->timezone('Asia/Kolkata')
                         ->format('Y-m-d h:i:s A'), // Date
@@ -604,6 +600,7 @@ class CareerController extends Controller
     public function careers_openings()
     {
         $careers = Career::where('status', 'active')
+            ->orWhere('status', 'inactive')
             ->orderBy('created_at', 'desc')
             ->paginate(9) // Change '9' to the number of items per page you want
             ->map(function ($item) {

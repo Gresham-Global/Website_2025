@@ -666,7 +666,7 @@ h6 {
         #ef4b4f -0.04%,
         #991f3d 72.43%
     ) !important; */
-     background: #e32636 !important;
+    background: #e32636 !important;
     color: #ffffff;
     border: 1px #fff solid;
 }
@@ -2365,5 +2365,30 @@ section.sec7 .slider.media.hmmedia .slick-prev {
     left: -18px !important;
 }
 section.sec7 .slider.media.hmmedia .slick-next {
-	right: -20px !important;
+    right: -20px !important;
+}
+
+form .dropdown-menu {
+    background: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(25px);
+    width: 100%;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate(0px, 40px);
+    height: max-content;
+    overflow-y: scroll;
+}
+
+.modalForm .dropdown-menu {
+    background: rgba(255, 255, 255, 1) !important;
+    backdrop-filter: none;
+}
+
+.dropdown-menu li {
+    color: #ffffff !important;
+}
+
+.modalForm .dropdown-menu li {
+    color: #000000 !important;
 }

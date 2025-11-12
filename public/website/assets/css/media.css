@@ -30,7 +30,11 @@
     width: 100%;
     min-height: 200px;
     object-fit: cover;
-    border-radius: 10px 10px 0rem 0rem;
+    /* border-radius: 10px 10px 0rem 0rem; */
+    border-radius: 8px;
+    height: 250px !important;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Card Body */

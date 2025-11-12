@@ -744,7 +744,7 @@ h1#currentopeningsection {
 }
 @media screen and (max-width: 1690px) {
     p.opencard_txt {
-        min-height: 93px;
+        /* min-height: 93px; */
     }
 }
 @media screen and (max-width: 1574px) and (min-width: 1450px) {
