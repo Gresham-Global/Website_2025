@@ -594,7 +594,7 @@
                                     {{-- Title (similar to original card's h5, but placed within mediaboxB) --}}
                                     <a href="{{ route('news-and-blogs.show', $news_and_blog->slug) }}" target="_blank"
                                         class="mediaText">
-                                        <p class="news-card-title-in-mediaBox">{{ $news_and_blog->title }}</p>
+                                        <p class="news-card-title-in-mediaBox">{{ \Illuminate\Support\Str::limit($news_and_blog->title, 50) }}</p>
                                     </a>
 
                                     {{-- Short Description (re-added from original card) --}}
