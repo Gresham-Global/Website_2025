@@ -41,10 +41,7 @@
                     class="contactlinks">
                     <p class="contactP ">
 
-                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" /> 1204/1206, Signature
-                        Business Park, <br />
-                        Chembur, Mumbai, Maharashtra, <br />
-                        India 400071
+                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" /> 808, The Epicentre Wadhwa, Chembur, Mumbai, Maharashtra, India 400088
 
                     </p>
 

@@ -66,8 +66,7 @@
                                 height:80px!important">
                         <a target="_blank" href="https://www.google.com/maps/dir//1206,+Signature+Business+Park,+Mono+Rail+Station,+Postal+Colony+Rd,+near+Chembur,+Postal+Colony,+Chembur,+Mumbai,+Maharashtra+400071/@19.0600367,72.8138403,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.896242!2d19.060055?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D">
 
-                            <span class="contact-text dark">1204/1206, Signature Business Park, Chembur, Mumbai, India
-                                400071</span>
+                            <span class="contact-text dark">808, The Epicentre Wadhwa, Chembur, Mumbai, Maharashtra, India 400088</span>
                         </a>
                     </div>
                     <div class="contact-detail d-flex gap-2 mb-2">

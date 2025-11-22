@@ -2345,9 +2345,11 @@ section.homebann.customSection.firstSection .customContainer.firstContainer {
     font-family: "Proxima Nova";
     line-height: 1.2;
 }
+
 body.popup-open {
     overflow: hidden;
 }
+
 section.sec7 .slider.media.hmmedia .slick-list .slick-slide {
     /* padding: 0 10px; */
 }
@@ -2366,6 +2368,7 @@ section#latest-news .life-slider .slick-prev {
 section.sec7 .slider.media.hmmedia .slick-prev {
     left: -18px !important;
 }
+
 section.sec7 .slider.media.hmmedia .slick-next {
     right: -20px !important;
 }
