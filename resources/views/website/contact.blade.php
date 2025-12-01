@@ -57,17 +57,17 @@
 
         <div class="row g-4 align-items-stretch">
             <!-- Contact Info -->
-            <div class="col-lg-4">
+            <div class="col-lg-8">
                 <div class="contact-card p-4 h-100 d-flex flex-column">
                     <h3 class="mb-3 fw-bold">Gresham Global</h3>
                     <div class="contact-detail d-flex gap-2 mb-2">
                         <img src="{{ asset('website/assets/images/Group 1000004045.png') }}" alt="Location Icon"
                             style="width:80px !important;
                                 height:80px!important">
-                        <a target="_blank" href="https://www.google.com/maps/dir//1206,+Signature+Business+Park,+Mono+Rail+Station,+Postal+Colony+Rd,+near+Chembur,+Postal+Colony,+Chembur,+Mumbai,+Maharashtra+400071/@19.0600367,72.8138403,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.896242!2d19.060055?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D">
+                        {{-- <a target="_blank" href="https://www.google.com/maps/dir//1206,+Signature+Business+Park,+Mono+Rail+Station,+Postal+Colony+Rd,+near+Chembur,+Postal+Colony,+Chembur,+Mumbai,+Maharashtra+400071/@19.0600367,72.8138403,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.896242!2d19.060055?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D"> --}}
 
                             <span class="contact-text dark">808, The Epicentre Wadhwa, Chembur, Mumbai, Maharashtra, India 400088</span>
-                        </a>
+                        {{-- </a> --}}
                     </div>
                     <div class="contact-detail d-flex gap-2 mb-2">
                         <img src="{{ asset('website/assets/icons/icon2.svg') }}" alt="Phone Icon"
@@ -87,7 +87,7 @@
             </div>
 
             <!-- Google Map -->
-            <div class="col-lg-4">
+            {{-- <div class="col-lg-4">
                 <div class="map-container h-100">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1629.3365424887747!2d72.89537320482417!3d19.060371741411533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8ed89588c29%3A0xba83964829b13797!2sGresham%20Global!5e0!3m2!1sen!2sin!4v1739370786449!5m2!1sen!2sin"
@@ -95,7 +95,7 @@
                         allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Contact Form -->
             <div class="col-lg-4">

@@ -183,7 +183,7 @@ h6 {
 
 /* sec 2 starts */
 .sec2 {
-    padding: 140px 0 0px 0px;
+    padding: 40px 0 0px 0px;
     background: url("../../assets/images/aboutbg.png") no-repeat center center;
     background-size: cover;
 }
@@ -394,7 +394,7 @@ h6 {
 
 /* sec 4 starts */
 .sec4 {
-    padding: 100px 0 0 0px;
+    padding: 40px 0 0 0px;
     background: url("../../assets/images/whychooseusimg.png") no-repeat center
         center;
     background-size: cover;
