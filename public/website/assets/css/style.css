@@ -2397,3 +2397,9 @@ form .dropdown-menu {
 .modalForm .dropdown-menu li {
     color: #000000 !important;
 }
+
+.desk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}

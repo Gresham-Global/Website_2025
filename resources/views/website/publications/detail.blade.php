@@ -112,9 +112,9 @@
                 </a>
                 <div class="bodyContent">
                     <a href="{{ route('publications.show', $item->slug) }}" target="_blank">
-                    <h4 class="similarPublicationsTitle">{{ Str::limit($item->title, 70) }}</h4>
+                    <h4 class="similarPublicationsTitle">{{ Str::limit($item->title, 20) }}</h4>
                     </a>
-                    <p class="similarPublicationsDesc">{{ Str::limit(strip_tags($item->short_description), 100) }}</p>
+                    <p class="similarPublicationsDesc">{{ Str::limit(strip_tags($item->short_description), 200) }}</p>
                 </div>
 
                 @if ($item->tags && count($item->tags))

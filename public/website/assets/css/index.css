@@ -1,4 +1,4 @@
-/* Global Styles */
+.testimonials .slick-prev::after/* Global Styles */
 .firstSection {
     margin-top: 80px;
 }
@@ -260,18 +260,18 @@
 .testimonials .slick-prev::after,
 .testimonials .slick-next::after {
     font-family: "Material Symbols Outlined";
-    font-size: 24px;
+    font-size: 35px;
     color: #fff;
 }
 
 /* Left arrow icon */
 .testimonials .slick-prev::after {
-    content: "arrow_back_ios";
+    content: "keyboard_arrow_left";
 }
 
 /* Right arrow icon */
 .testimonials .slick-next::after {
-    content: "arrow_forward_ios";
+    content: "keyboard_arrow_right";
 }
 
 /* Responsive adjustments */

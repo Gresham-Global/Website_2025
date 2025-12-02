@@ -214,6 +214,7 @@
     justify-content: center;
     background-color: #161616;
     font-family: "Proxima Nova" !important;
+    z-index: 1;
 }
 .fbContainer {
     width: 90%;

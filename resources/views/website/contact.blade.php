@@ -73,7 +73,7 @@
                         <img src="{{ asset('website/assets/icons/icon2.svg') }}" alt="Phone Icon"
                             style="width:80px !important;    ">
                         <a target="_blank" href="tel:9773911384">
-                            <span class="contact-text dark" style=" line-height: 5rem;">+91 9773911384</span>
+                            <span class="contact-text dark" style=" line-height: 5rem;">+91 97739 11384</span>
                         </a>
                     </div>
                     <div class="contact-detail d-flex">

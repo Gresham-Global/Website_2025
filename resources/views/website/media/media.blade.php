@@ -15,26 +15,26 @@
         <div class="customContainer mediaCon">
             <div class="row g-4" id="mediaContainer">
                 @foreach ($media as $item)
-                    <div class="col-md-6 col-lg-4 ">
+                    <div class="col-md-4 col-lg-3 ">
                         <div class="news-card h-100 d-flex flex-column">
                             <div class="news-card-body d-flex flex-column flex-grow-1">
                                 <a href="{{ $item->media_link }}" target="_blank">
                                     <img src="{{ asset($item->thumbnail_image) }}" alt="News Image" class="news-card-img">
                                 </a>
-                                {{-- <div class="d-flex align-items-center gap-2 text-muted small">
+                                <div class="d-flex align-items-center gap-2 text-muted small">
                                     <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
                                         class="icon-sm">
-                                    <span>{{ \Carbon\Carbon::parse($item->publish_date ?? $item->created_at)->format('d M Y | h:i A \I\S\T') }}</span>
-                                </div> --}}
+                                    <span>{{ \Carbon\Carbon::parse($item->publish_date ?? $item->created_at)->format('d M Y') }}</span>
+                                </div>
 
                                 <img src="{{ asset($item->logo_image) }}" alt="" class="repiblicimg my-2">
 
                                 <a href="{{ $item->media_link }}" target="_blank">
-                                    <h5 class="news-card-title">{{ $item->title }}</h5>
+                                    <h5 class="news-card-title">{{ \Illuminate\Support\Str::limit($item->title, 20) }}</h5>
                                 </a>
 
                                 <p class="news-card-text flex-grow-1">
-                                    {{ \Illuminate\Support\Str::limit($item->short_description, 120) }}
+                                    {{ \Illuminate\Support\Str::limit($item->short_description, 200) }}
                                 </p>
 
                                 <hr class="opacity-25">

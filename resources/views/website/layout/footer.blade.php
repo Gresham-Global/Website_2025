@@ -13,7 +13,7 @@
     </div>
     <div class="footerContainer">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4 order-md-1 order-2">
+            <div class="col-lg-3 col-md-6 mb-4 order-md-1 order-2">
                 {{-- <div class="footer-logo">
                     <img src="{{ asset('website/assets/logo/logo-W.svg') }}" alt="Gresham Global Logo"
                         class="img-fluid mb-5" />
@@ -27,7 +27,7 @@
                 <h6 class="mb-4">Contact Us</h6>
                 <a target="_blank" href="tel:9773911384" class="contactlinks">
                     <p class="contactP d-flex ">
-                        <img src="{{ asset('website/assets/icons/callIcon.svg') }}" alt="" /> +91 977 3911 384
+                        <img src="{{ asset('website/assets/icons/callIcon.svg') }}" alt="" /> +91 97739 11384
                     </p>
                 </a>
                 <a target="_blank" href="mailto:contact@gresham.world" class="contactlinks">
@@ -41,7 +41,8 @@
                     class="contactlinks">
                     <p class="contactP ">
 
-                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" /> 808, The Epicentre Wadhwa, Chembur, Mumbai, Maharashtra, India 400088
+                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" /> 808, The Epicentre
+                        Wadhwa, Chembur, Mumbai, Maharashtra, India 400088
 
                     </p>
 
@@ -53,29 +54,34 @@
                         style="margin-left :1rem;"><img src="{{ asset('website/assets/icons/linkedinRound.svg') }}"
                             alt="" class="fIcon me-4" /></a>
                 </h6>
-
-
-                <!-- <a href="https://www.instagram.com/gresham.global" target="_blank" class="text-light"><img
-                    src="{{ asset('website/assets/icons/instaRound.svg') }}" alt="" class="fIcon" /></a> -->
-                {{-- <div class="mt-4">
-                    <img src="{{ asset('website/assets/images/offer.webp') }}" alt="Great Place to Work"
-                        class="img-fluid" />
-                </div> --}}
                 {{-- <div class="col-lg-3 col-sm-6 mb-4">
                 </div> --}}
             </div>
 
-            <div class="col-lg-2 col-sm-6 mb-4 order-md-2 order-3">
+            <div class="col-lg-3 col-sm-6 mb-4 order-md-2 order-3">
                 <h6 class="mb-4">Quick Links</h6>
                 <ul class="list-unstyled row">
-                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('') }}"
+                    <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('') }}"
                             class="text-light {{ request()->is('/') ? 'ftactive' : '' }}">Home</a></li>
-                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('about') }}"
-                            class="text-light {{ request()->is('about') ? 'ftactive' : '' }}">About Us</a></li>
-                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('approach') }}"
-                            class="text-light {{ request()->is('approach') ? 'ftactive' : '' }}">Approach</a></li>
+                    <li class="col-6 col-md-6 col-lg-6">
+                        <a href="#" class="text-light" data-bs-toggle="dropdown">About
+                            <span class="material-symbols-outlined">
+                                arrow_drop_down
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item {{ request()->is('about') ? 'ftactive' : '' }}"
+                                    href="{{ url('about') }}">About Us</a></li>
+                            <li><a class="dropdown-item {{ request()->is('approach') ? 'ftactive' : '' }}"
+                                    href="{{ url('approach') }}">Approach</a></li>
+                        </ul>
+                    </li>
+                    {{-- <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('about') }}"
+                            class="text-light {{ request()->is('about') ? 'ftactive' : '' }}">About Us</a></li> --}}
+                    {{-- <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('approach') }}"
+                            class="text-light {{ request()->is('approach') ? 'ftactive' : '' }}">Approach</a></li> --}}
 
-                    <li class="col-6 col-md-12 col-lg-12">
+                    <li class="col-6 col-md-6 col-lg-6">
                         <a href="#" class="text-light" data-bs-toggle="dropdown">Services
                             <span class="material-symbols-outlined">
                                 arrow_drop_down
@@ -96,16 +102,38 @@
                                     href="{{ url('operational-support') }}">Operational Support</a></li>
                         </ul>
                     </li>
-                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('contact') }}"
-                            class="text-light {{ request()->is('contact') ? 'ftactive' : '' }}">Contact Us</a></li>
-                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('media') }}"
-                            class="text-light {{ request()->is('media') ? 'ftactive' : '' }}">Media</a></li>
-                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('events') }}"
+                    {{-- <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('contact') }}"
+                            class="text-light {{ request()->is('contact') ? 'ftactive' : '' }}">Contact Us</a></li> --}}
+                    {{-- <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('media') }}"
+                            class="text-light {{ request()->is('media') ? 'ftactive' : '' }}">Media</a></li> --}}
+                    <li class="col-6 col-md-6 col-lg-6">
+                        <a href="#" class="text-light" data-bs-toggle="dropdown">Media
+                            <span class="material-symbols-outlined">
+                                arrow_drop_down
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item {{ request()->is('media') ? 'ftactive' : '' }}"
+                                    href="{{ url('media') }}">Media</a></li>
+                            <li><a class="dropdown-item {{ request()->is('news-and-blogs') ? 'ftactive' : '' }}"
+                                    href="{{ url('news-and-blogs') }}">News and Blogs</a></li>
+                        </ul>
+                    </li>
+                    <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('publications') }}"
+                            class="text-light {{ request()->is('publications') ? 'ftactive' : '' }}">Publications</a>
+                    </li>
+                    <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('events') }}"
                             class="text-light {{ request()->is('events') ? 'ftactive' : '' }}">Events</a></li>
-                    <li class="col-6 col-md-12 col-lg-12"><a href="{{ url('careers') }}"
+                    <li class="col-6 col-md-6 col-lg-6"><a href="{{ url('careers') }}"
                             class="text-light {{ request()->is('careers') ? 'ftactive' : '' }}">Careers</a></li>
                 </ul>
 
+                <!-- <a href="https://www.instagram.com/gresham.global" target="_blank" class="text-light"><img
+                    src="{{ asset('website/assets/icons/instaRound.svg') }}" alt="" class="fIcon" /></a> -->
+                <div class="mt-4">
+                    <img src="{{ asset('website/assets/images/offer.webp') }}" alt="Great Place to Work"
+                        class="img-fluid" />
+                </div>
             </div>
 
             <!-- Contact Form -->

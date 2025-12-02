@@ -22,21 +22,24 @@
             <div class="row g-4 publication-container" id="publicationContainer">
                 @foreach ($publications as $publication)
                     <!-- Card 1 -->
-                    <div class="col-md-6 col-lg-4 ">
+                    <div class="col-md-4 col-lg-3 ">
                         <div class="news-card publication-card h-100 d-flex flex-column">
 
                             <div class="news-card-body d-flex flex-column flex-grow-1">
                                 <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
                                     <img src="{{ $publication->thumbnail_image }}" alt="News Image" class="news-card-img">
                                 </a>
-                                <!-- <div class="d-flex align-items-center gap-2 text-muted small">
-          <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
-          <span>12 March 2025 | 5:56 IST</span>
-          </div> -->
+                                <div class="d-flex align-items-center gap-2 text-muted small">
+                                    <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
+                                        class="icon-sm">
+                                    <span>{{ \Carbon\Carbon::parse($publication->created_at)->format('d M Y') }}</span>
+                                </div>
                                 <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
-                                    <h5 class="news-card-title">{{ $publication->title }}</h5>
+                                    <h5 class="news-card-title">
+                                        {{ \Illuminate\Support\Str::limit($publication->title, 20) }}</h5>
                                 </a>
-                                <p class="news-card-text flex-grow-1">{{ $publication->short_description }} ...</p>
+                                <p class="news-card-text flex-grow-1">
+                                    {{ \Illuminate\Support\Str::limit($publication->short_description, 200) }} ...</p>
                                 <div class="cards_tags">
                                     <span class="taghead">Tags: </span>
                                     <span class="tagtxt">
@@ -79,12 +82,12 @@
                 @endforeach
             </div>
             <!-- <div class="row g-4 addmoreBlogs text-center">
-          <button id="loadMorePublications" data-page="2" data-loaded="{{ $publications->count() }}"
-          data-total="{{ $total }}">
-          <span>Load More</span>
-          <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
-          </button>
-        </div> -->
+                  <button id="loadMorePublications" data-page="2" data-loaded="{{ $publications->count() }}"
+                  data-total="{{ $total }}">
+                  <span>Load More</span>
+                  <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
+                  </button>
+                </div> -->
 
         </div>
     </section>
@@ -94,7 +97,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const cards = document.querySelectorAll(
-        '#publicationscrads .publication-card'); // Assuming .card is the class for each card
+            '#publicationscrads .publication-card'); // Assuming .card is the class for each card
         const loadMoreButton = document.querySelector('#loadMore');
         const eventsContainer = document.querySelector('#publicationscrads');
 

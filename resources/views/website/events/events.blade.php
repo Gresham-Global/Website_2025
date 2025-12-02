@@ -12,7 +12,7 @@
 
     <!-- Text and City Picture section starts -->
     <section class="events_main my-5">
-        <div class="events_container container-fluid px-5 py-5">
+        <div class="events_container container-fluid px-5 pt-2 pb-5">
             <div class="events-container" id="eventscrads">
                 @foreach ($events as $event)
                     <div class="event-card">
@@ -24,12 +24,12 @@
                         <div class="event-content col-md-12 p-0">
                             <div class="d-flex align-items-center gap-2 text-muted small">
                                 <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
-                                <span>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y | h:i A \I\S\T') }}</span>
+                                <span>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</span>
                             </div>
                             <div class="news-card-title"> <a href="{{ route('events.show', $event->slug) }}"
-                                    class="news-card-title">{{ $event->title }} </a></div>
+                                    class="news-card-title">{{ \Illuminate\Support\Str::limit($event->title, 20) }}</a></div>
                             <div class="news-card-text">
-                                {{ $event->short_description }}
+                                {{ \Illuminate\Support\Str::limit($event->short_description, 200) }}
                             </div>
                             <hr class="opacity-25 w-100">
                             <div class="events_footer_card">
