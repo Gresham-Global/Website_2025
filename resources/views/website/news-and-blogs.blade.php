@@ -17,7 +17,7 @@
 
                 @foreach ($news_and_blogs as $news_and_blog)
                     <!-- Card 1 -->
-                    <div class="col-md-4 col-lg-3 ">
+                    <div class="col-md-4">
                         <div class="news-card h-100 d-flex flex-column">
                             <div class="news-card-body d-flex flex-column flex-grow-1">
                                 <a href="{{ route('news-and-blogs.show', $news_and_blog->slug) }}" target="_blank"><img

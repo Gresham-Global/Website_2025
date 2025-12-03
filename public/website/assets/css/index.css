@@ -2,6 +2,11 @@
 .firstSection {
     margin-top: 80px;
 }
+
+.firstSection {
+    margin-top: 80px;
+}
+
 .dropdown-item.active,
 .dropdown-item:active {
     color: #ef4b4f !important;

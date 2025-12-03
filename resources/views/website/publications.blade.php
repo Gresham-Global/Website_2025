@@ -22,7 +22,7 @@
             <div class="row g-4 publication-container" id="publicationContainer">
                 @foreach ($publications as $publication)
                     <!-- Card 1 -->
-                    <div class="col-md-4 col-lg-3 ">
+                    <div class="col-md-4 ">
                         <div class="news-card publication-card h-100 d-flex flex-column">
 
                             <div class="news-card-body d-flex flex-column flex-grow-1">

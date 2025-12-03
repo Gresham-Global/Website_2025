@@ -15,7 +15,7 @@
         <div class="customContainer mediaCon">
             <div class="row g-4" id="mediaContainer">
                 @foreach ($media as $item)
-                    <div class="col-md-4 col-lg-3 ">
+                    <div class="col-md-4 ">
                         <div class="news-card h-100 d-flex flex-column">
                             <div class="news-card-body d-flex flex-column flex-grow-1">
                                 <a href="{{ $item->media_link }}" target="_blank">
