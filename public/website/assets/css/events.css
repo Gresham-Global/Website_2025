@@ -133,9 +133,9 @@ section.events_main .read-more:hover {
 }
 
 @media screen and (max-width: 1500px) {
-    section.events_main {
+    /* section.events_main {
         margin-top: 0 !important;
-    }
+    } */
 
     section.events_main .event-description {
         line-height: 1.3 !important;

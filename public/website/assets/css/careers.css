@@ -582,6 +582,9 @@ textarea::placeholder {
     width: 100% !important;
     display: block;
     height: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: center;
 }
 
 .career-current-opening-internal .customContainer {
