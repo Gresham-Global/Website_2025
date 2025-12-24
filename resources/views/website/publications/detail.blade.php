@@ -108,11 +108,11 @@
             @foreach ($similarPublications as $item)
             <div class="col-md-3 publicationCard">
                 <a href="{{ route('publications.show', $item->slug) }}" target="_blank">
-                <img src="{{ $item->thumbnail_image ?? asset('website/assets/images/publications/publicationCard.webp') }}" alt="{{ $item->title }}" class="w-100">
+                    <img src="{{ $item->thumbnail_image ?? asset('website/assets/images/publications/publicationCard.webp') }}" alt="{{ $item->title }}" class="w-100">
                 </a>
                 <div class="bodyContent">
                     <a href="{{ route('publications.show', $item->slug) }}" target="_blank">
-                    <h4 class="similarPublicationsTitle">{{ Str::limit($item->title, 20) }}</h4>
+                        <h4 class="similarPublicationsTitle">{{ Str::limit($item->title, 20) }}</h4>
                     </a>
                     <p class="similarPublicationsDesc">{{ Str::limit(strip_tags($item->short_description), 200) }}</p>
                 </div>
@@ -152,12 +152,12 @@
             <div id="allerror" class="font-weight-bold text-danger custom-formset"></div>
             <div class="form-group">
                 <label class="form-label" for="fullName">Full Name *</label>
-                <input type="text" class="form-input" id="fullName" name="full_name" placeholder="Full Name" >
+                <input type="text" class="form-input" id="fullName" name="full_name" placeholder="Full Name">
             </div>
 
             <div class="form-group">
                 <label class="form-label" for="emailId">Business Email ID *</label>
-                <input type="email" class="form-input" id="emailId" name="email_id" placeholder="Email ID" >
+                <input type="email" class="form-input" id="emailId" name="email_id" placeholder="Email ID">
             </div>
 
             <!-- Hidden Fields for Title and ID -->
@@ -165,7 +165,7 @@
             <input type="hidden" id="publicationTitle" name="publication_title">
             <input type="hidden" id="publicationId" name="publication_id">
 
-            <span class="mb-3 formtxt">By Submitting this form, you are accepting Gresham Global's <a class="formLink" href="/privacy-policy" target="_blank" >Terms &amp; Conditions</a>.</span>
+            <span class="mb-3 formtxt">By Submitting this form, you are accepting Gresham Global's <a class="formLink" href="/privacy-policy" target="_blank">Terms &amp; Conditions</a>.</span>
 
             <button type="submit" class="form-submit" id="submitBtn">
                 Submit

@@ -1,7 +1,7 @@
 <section class="about-banner-background firstSection customSection">
 
     <div class="customContainer firstContainer">
-        <h1 class="text-white titleH1">{{ $banner->title }}</h1>
+        <h1 class="text-white titleH1">{{ $banner->title ?? '' }}</h1>
     </div>
 
     {{-- Desktop Banner --}}

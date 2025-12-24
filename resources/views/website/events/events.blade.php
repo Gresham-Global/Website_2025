@@ -1,72 +1,72 @@
 @extends('website.layout.master')
 
 @section('content')
-    <section id="" class="about-banner-background firstSection customSection">
-        <div class="customContainer firstContainer">
-            <h1 class="text-white titleH1">Events</h1>
-        </div>
-        <img src="{{ asset('website/assets/images/banner_events.png') }}" class="w-100 img-fluid forMobBanner minScreenBG"
-            alt="Bootstrap Themes" />
-    </section>
-    <!-- banner section ends here -->
+<section id="" class="about-banner-background firstSection customSection">
+    <div class="customContainer firstContainer">
+        <h1 class="text-white titleH1">Events</h1>
+    </div>
+    <img src="{{ asset('website/assets/images/banner_events.png') }}" class="w-100 img-fluid forMobBanner minScreenBG"
+        alt="Bootstrap Themes" />
+</section>
+<!-- banner section ends here -->
 
-    <!-- Text and City Picture section starts -->
-    <section class="events_main my-5">
-        <div class="events_container container-fluid px-5 pt-2 pb-5">
-            <div class="events-container" id="eventscrads">
-                @foreach ($events as $event)
-                    <div class="event-card">
-                        <div class="event-img col-md-12">
-                            <a href="{{ route('events.show', $event->slug) }}">
-                                <img src="{{ $event->thumbnail_image }}" alt="Event Image" class="news-card-img">
-                            </a>
-                        </div>
-                        <div class="event-content col-md-12 p-0">
-                            <div class="d-flex align-items-center gap-2 text-muted small">
-                                <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
-                                <span>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</span>
-                            </div>
-                            <div class="news-card-title"> <a href="{{ route('events.show', $event->slug) }}"
-                                    class="news-card-title">{{ \Illuminate\Support\Str::limit($event->title, 20) }}</a></div>
-                            <div class="news-card-text">
-                                {{ \Illuminate\Support\Str::limit($event->short_description, 200) }}
-                            </div>
-                            <hr class="opacity-25 w-100">
-                            <div class="events_footer_card">
-                                <!-- <a href="{{ url('/events/' . $event->slug) }}" class="read-more" data-post-url="{{ $event->slug }}">Read More</a> -->
-                                <a href="{{ route('events.show', $event->slug) }}" class="readmoreBtn">Read More</a>
+<!-- Text and City Picture section starts -->
+<section class="events_main my-5">
+    <div class="events_container container-fluid px-5 pt-2 pb-5">
+        <div class="events-container" id="eventscrads">
+            @foreach ($events as $event)
+            <div class="event-card">
+                <div class="event-img col-md-12">
+                    <a href="{{ route('events.show', $event->slug) }}">
+                        <img src="{{ $event->thumbnail_image }}" alt="Event Image" class="news-card-img">
+                    </a>
+                </div>
+                <div class="event-content col-md-12 p-0">
+                    <div class="d-flex align-items-center gap-2 text-muted small">
+                        <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
+                        <span>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</span>
+                    </div>
+                    <div class="news-card-title"> <a href="{{ route('events.show', $event->slug) }}"
+                            class="news-card-title">{{ \Illuminate\Support\Str::limit($event->title, 20) }}</a></div>
+                    <div class="news-card-text">
+                        {{ \Illuminate\Support\Str::limit($event->short_description, 200) }}
+                    </div>
+                    <hr class="opacity-25 w-100">
+                    <div class="events_footer_card">
+                        <!-- <a href="{{ url('/events/' . $event->slug) }}" class="read-more" data-post-url="{{ $event->slug }}">Read More</a> -->
+                        <a href="{{ route('events.show', $event->slug) }}" class="readmoreBtn">Read More</a>
 
-                                <!-- <a href="{{ $event->share_link ?? '#' }}" class="share_social share-blog-hit">
+                        <!-- <a href="{{ $event->share_link ?? '#' }}" class="share_social share-blog-hit">
                         <img src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
                       </a> -->
 
-                                <a href="javascript:void(0);" class="share_social share-blog-hit"
-                                    data-url="{{ route('events.show', $event->slug) }}" data-title="{{ $event->title }}">
-                                    <img src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
-                                </a>
+                        <a href="javascript:void(0);" class="share_social share-blog-hit"
+                            data-url="{{ route('events.show', $event->slug) }}" data-title="{{ $event->title }}">
+                            <img src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
+                        </a>
 
 
-                            </div>
-                        </div>
                     </div>
-                @endforeach
-
+                </div>
             </div>
+            @endforeach
 
-            <div class="row g-4 addmoreevents text-center {{ $events->count() >= $total ? 'd-none' : '' }} ">
-                <button class="mx-auto" id="loadMoreEvents" data-page="2" data-loaded="{{ $events->count() }}"
-                    data-total="{{ $total }}">
-                    <span>Load More</span>
-                    <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
-                </button>
-            </div>
         </div>
-    </section>
+
+        <div class="row g-4 addmoreevents text-center {{ $events->count() >= $total ? 'd-none' : '' }} ">
+            <button class="mx-auto" id="loadMoreEvents" data-page="2" data-loaded="{{ $events->count() }}"
+                data-total="{{ $total }}">
+                <span>Load More</span>
+                <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
+            </button>
+        </div>
+    </div>
+</section>
 
 
 
 
-    <!-- <script>
+<!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             const descriptions = document.querySelectorAll(".event-description");
             const maxLength = 280;
@@ -122,41 +122,41 @@
 
 
 @push('js_code')
-    <script>
-        $(document).ready(function() {
-            $('#loadMoreEvents').click(function() {
-                let button = $(this);
-                let page = parseInt(button.data('page'));
-                let total = parseInt(button.data('total'));
-                let loaded = parseInt(button.data('loaded'));
-                let loader = button.find('img');
+<script>
+    $(document).ready(function() {
+        $('#loadMoreEvents').click(function() {
+            let button = $(this);
+            let page = parseInt(button.data('page'));
+            let total = parseInt(button.data('total'));
+            let loaded = parseInt(button.data('loaded'));
+            let loader = button.find('img');
 
-                loader.removeClass('d-none');
+            loader.removeClass('d-none');
 
-                $.ajax({
-                    url: "{{ url('events') }}?page=" + page,
-                    type: "GET",
-                    dataType: "json",
-                    success: function(response) {
-                        if (response.count === 0) {
+            $.ajax({
+                url: "{{ url('events') }}?page=" + page,
+                type: "GET",
+                dataType: "json",
+                success: function(response) {
+                    if (response.count === 0) {
+                        button.hide();
+                    } else {
+                        $('#eventscrads').append(response.html);
+                        loaded += response.count;
+                        button.data('page', page + 1);
+                        button.data('loaded', loaded);
+                        if (loaded >= total) {
                             button.hide();
-                        } else {
-                            $('#eventscrads').append(response.html);
-                            loaded += response.count;
-                            button.data('page', page + 1);
-                            button.data('loaded', loaded);
-                            if (loaded >= total) {
-                                button.hide();
-                            }
                         }
-                        loader.addClass('d-none');
-                    },
-                    error: function() {
-                        // alert('Could not load more events. Try again.');
-                        loader.addClass('d-none');
                     }
-                });
+                    loader.addClass('d-none');
+                },
+                error: function() {
+                    // alert('Could not load more events. Try again.');
+                    loader.addClass('d-none');
+                }
             });
         });
-    </script>
+    });
+</script>
 @endpush
