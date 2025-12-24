@@ -1,166 +1,237 @@
 @extends('website.layout.master')
 @section('content')
 <!-- banner section starts here -->
-<x-banner-section type="media" title="Media" />
-<!-- <section class="about-banner-background firstSection customSection">
+<section class="about-banner-background firstSection customSection">
     <div class="customContainer firstContainer">
         <h1 class="text-white  titleH1">Media</h1>
     </div>
-    <img src="{{ asset('website/assets/images/bannermedia44.png') }}" alt="" class="w-100 forMobBanner d-none d-md-block" />
-    <img src="{{ asset('website/assets/images/mediamobilebanner.png') }}" alt="" class="w-100 forMobBanner d-block d-md-none" />
+    <img src="{{ asset('website/assets/images/bannermedia44.png') }}" class="w-100 forMobBanner d-none d-md-block" />
+    <img src="{{ asset('website/assets/images/mediamobilebanner.png') }}" class="w-100 forMobBanner d-block d-md-none" />
 
-</section> -->
+</section>
 <!-- Media section -->
 
 <section class="customSection my-5">
     <div class="customContainer mediaCon">
-        <div class="row g-4" id="mediaContainer">
-            @foreach ($media as $item)
+        <div class="row g-4">
+            <!-- Card 1 -->
             <div class="col-md-6 col-lg-4 ">
                 <div class="news-card h-100 d-flex flex-column">
-                    <div class="news-card-body d-flex flex-column flex-grow-1">
-                        <!-- <a href="{{ $item->media_link }}" target="_blank">
-                            <img src="{{ asset($item->thumbnail_image) }}" alt="News Image" class="news-card-img">
-                        </a> -->
-                        @php
-
-                        $images = is_array(json_decode($item->thumbnail_image))
-                        ? json_decode($item->thumbnail_image)
-                        : ($item->thumbnail_image ? [$item->thumbnail_image] : ['/storage/default-fallback.png']);
-                        @endphp
-                        <div class="swiper imageSwiper">
-                            <div class="swiper-wrapper">
-
-                                @foreach ($images as $image)
-                                <div class="swiper-slide">
-                                    <div class="news-card-img-wrapper">
-                                        <a href="{{ $item->media_link }}" target="_blank">
-                                            <img src="{{ asset($image) }}"
-                                                alt="News Image"
-                                                class="news-card-img">
-                                        </a>
-                                    </div>
-                                </div>
-                                @endforeach
-
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                        {{-- <div class="d-flex align-items-center gap-2 text-muted small">
-                                    <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
-                        class="icon-sm">
-                        <span>{{ \Carbon\Carbon::parse($item->publish_date ?? $item->created_at)->format('d M Y | h:i A \I\S\T') }}</span>
-                    </div> --}}
-
-                    <img src="{{ asset($item->logo_image) }}" alt="" class="repiblicimg my-2">
-
-                    <a href="{{ $item->media_link }}" target="_blank">
-                        <h5 class="news-card-title">{{ $item->title }}</h5>
+                    <a href="https://thepienews.com/unis-and-agencies-work-to-leverage-bangladeshi-market/"
+                        target="_blank"><img src="{{ asset('website/assets/images/Group 1000004103.png') }}"
+                            alt="News Image" class="news-card-img">
                     </a>
-
-                    <p class="news-card-text flex-grow-1">
-                        {{ \Illuminate\Support\Str::limit($item->short_description, 120) }}
-                    </p>
-
-                    <hr class="opacity-25">
-
-                    <div class="mt-1 d-flex justify-content-between align-items-center w-100">
-                        <a href="{{ $item->media_link }}" target="_blank" class="readmoreBtn">Read More</a>
+                    <div class="news-card-body d-flex flex-column flex-grow-1">
+                        <div class="d-flex align-items-center gap-2 text-muted small">
+                            <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
+                            <span>12 March 2025 | 5:56 IST</span>
+                        </div>
+                        <img src="{{ asset('website/assets/icons/Desktop.png') }}" alt="" class="repiblicimg">
+                        <a href="https://thepienews.com/unis-and-agencies-work-to-leverage-bangladeshi-market/"
+                            target="_blank">
+                            <h5 class="news-card-title">Unis and agencies work to leverage Bangladeshi market
+                            </h5>
+                        </a>
+                        <p class="news-card-text flex-grow-1">As the number of Bangladeshi students pursuing education
+                            abroad continues ...</p>
+                        <hr class="opacity-25">
+                        <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                            <a href="https://thepienews.com/unis-and-agencies-work-to-leverage-bangladeshi-market/"
+                                target="_blank" class="readmoreBtn">Read More</a>
+                            <!-- <img src="{{ asset('website/assets/images/share.svg') }}" alt="Share Icon" class="icon-xs"> -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        @endforeach
-    </div>
-    <div class="row g-4 addmoreBlogs text-center {{ $media->count() >= $total ? 'd-none' : '' }}">
-        <button id="loadMoreMedia" data-page="2" data-loaded="{{ $media->count() }}"
-            data-total="{{ $total }}">
-            <span>Load More</span>
-            <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
-        </button>
-    </div>
+            <!-- card 2 -->
+            <div class="col-md-6 col-lg-4 ">
+                <div class="news-card h-100 d-flex flex-column">
+                    <a href="https://www.hindustantimes.com/brand-stories/gresham-global-strengthens-south-asia-education-networks-with-inaugural-gresham-connect-event-in-bangladesh-101741068844870.html"
+                        target="_blank"><img src="{{ asset('website/assets/images/Group 1000004103.png') }}"
+                            alt="News Image" class="news-card-img">
+                    </a>
+                    <div class="d-flex align-items-center gap-2 text-muted small">
+                        <div class="news-card-body d-flex flex-column flex-grow-1">
+                            <div class="d-flex align-items-center gap-2 text-muted small">
+                                <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
+                                    class="icon-sm">
+                                {{-- <span>04 Mar 2025 | 11:47 AM IST</span> --}}
+                            </div>
+                            <img src="{{ asset('website/assets/images/hindustaitimes.png') }}" alt=""
+                                class="repiblicimg">
+                            <a href="https://www.hindustantimes.com/brand-stories/gresham-global-strengthens-south-asia-education-networks-with-inaugural-gresham-connect-event-in-bangladesh-101741068844870.html"
+                                target="_blank">
+                                <h5 class="news-card-title">Gresham Global Strengthens South Asia Education Networks
+                                    ....
+                                </h5>
+                            </a>
+                            <p class="news-card-text flex-grow-1">With the success of its inaugural event in Bangladesh,
+                                Gresham Global ...</p>
+                            <hr class="opacity-25">
+                            <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                                <a href="https://www.hindustantimes.com/brand-stories/gresham-global-strengthens-south-asia-education-networks-with-inaugural-gresham-connect-event-in-bangladesh-101741068844870.html"
+                                    target="_blank" class="readmoreBtn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    {{-- Optional Pagination (if you decide to paginate properly) --}}
-    {{-- <div class="mt-4 d-flex justify-content-center">
-      {{ $media->links() }}
-    </div> --}}
+            <!-- card 3 -->
+            <div class="col-md-6 col-lg-4 ">
+                <div class="news-card h-100 d-flex flex-column">
+                    <a href="https://www.ptinews.com/press-release/gresham-global-simplifies-south-asia-growth-for-international-universities/2330553"
+                        target="_blank"><img src="{{ asset('website/assets/images/bcofounder.png') }}" alt="News Image"
+                            class="news-card-img">
+                    </a>
+                    <div class="d-flex align-items-center gap-2 text-muted small">
+                        <div class="news-card-body d-flex flex-column flex-grow-1">
+                            <div class="d-flex align-items-center gap-2 text-muted small">
+                                <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
+                                    class="icon-sm">
+                                {{-- <span>27 Feb 2025 |10:02:56 IST</span> --}}
+                            </div>
+                            <img src="{{ asset('website/assets/images/imgpsh_fullsize_anim3 1.svg') }}" alt=""
+                                class="repiblicimg">
+                            <a href="https://www.ptinews.com/press-release/gresham-global-simplifies-south-asia-growth-for-international-universities/2330553"
+                                target="_blank">
+                                <h5 class="news-card-title">Gresham Global Simplifies Growth in South Asia for
+                                    International Universities
+                                </h5>
+                            </a>
+                            <p class="news-card-text flex-grow-1">The international higher education landscape is
+                                evolving rapidly, ...</p>
+                            <hr class="opacity-25">
+                            <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                                <a href="https://www.ptinews.com/press-release/gresham-global-simplifies-south-asia-growth-for-international-universities/2330553"
+                                    target="_blank" class="readmoreBtn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card h-100 d-flex flex-column">
+                    <a href="https://thepienews.com/studying-abroad-disease-or-an-opportunity-lets-break-the-myth/
+      "
+                        target="_blank">
+                        <img src="{{ asset('website/assets/images/media596.png') }}" alt="News Image"
+                            class="news-card-img">
+                    </a>
+                    <div class="news-card-body d-flex flex-column flex-grow-1">
+                        <div class="d-flex align-items-center gap-2 text-muted small">
+                            <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
+                            {{-- <span>12 Nov 2024 | 12:05 IST</span> --}}
+                        </div>
+                        <img src="{{ asset('website/assets/icons/Desktop.png') }}" alt=""
+                            style="width: 152.045px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-top:12px;
+    margin-bottom:12px;">
+                        <a href="https://thepienews.com/studying-abroad-disease-or-an-opportunity-lets-break-the-myth/
+      "
+                            target="_blank">
+                            <h5 class="news-card-title flex-grow-1">Studying abroad – disease or an opportunity? Let’s
+                                break the myth
+                            </h5>
+                        </a>
+                        <p class="news-card-text flex-grow-1">The honourable vice president of India, Jagdeep Dhankar,
+                            recently
+                            described the trend ....
+                        </p>
+                        <hr class="opacity-25">
+                        <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                            <a href="https://thepienews.com/studying-abroad-disease-or-an-opportunity-lets-break-the-myth/
+    "
+                                target="_blank" class="readmoreBtn">Read More</a>
+                            <!-- <img src="{{ asset('website/assets/images/share.svg') }}" alt="Share Icon" class="icon-xs"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card h-100 d-flex flex-column">
+                    <a href="https://www.business-standard.com/content/press-releases-ani/gresham-global-becomes-south-asia-representative-for-university-of-guelph-124102100639_1.html"
+                        target="_blank"><img src="{{ asset('website/assets/images/3.webp') }}" alt="News Image"
+                            class="news-card-img"></a>
+                    <div class="news-card-body d-flex flex-column flex-grow-1">
+                        <div class="d-flex align-items-center gap-2 text-muted small">
+                            <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
+                                class="icon-sm">
+                            {{-- <span>22 Oct 2024 | 12:05 IST</span> --}}
+                        </div>
+                        <img src="{{ asset('website/assets/icons/business-standard-logo 1.svg') }}" alt=""
+                            class="repiblicimg">
+
+                        <a href="https://www.business-standard.com/content/press-releases-ani/gresham-global-becomes-south-asia-representative-for-university-of-guelph-124102100639_1.html"
+                            target="_blank">
+                            <h5 class="news-card-title">Gresham Global Becomes South Asia Representative for University
+                                of Guelph</h5>
+                        </a>
+                        <p class="news-card-text flex-grow-1">Mumbai (Maharashtra) [India], October 21: Gresham Global
+                            is excited to
+                            announce its recent partnership...</p>
+                        <hr class="opacity-25">
+                        <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                            <a href="https://www.business-standard.com/content/press-releases-ani/gresham-global-becomes-south-asia-representative-for-university-of-guelph-124102100639_1.html"
+                                target="_blank" class="readmoreBtn">Read More</a>
+                            <!-- <img src="{{ asset('website/assets/images/share.svg') }}" alt="Share Icon" class="icon-xs"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="news-card h-100 d-flex flex-column">
+                    <a href="https://thepienews.com/canada-australia-shift-from-quantity-to-quality/"
+                        target="_blank"><img src="{{ asset('website/assets/images/the-pie.png') }}" alt="News Image"
+                            class="news-card-img"></a>
+                    <div class="news-card-body d-flex flex-column flex-grow-1">
+                        <div class="d-flex align-items-center gap-2 text-muted small">
+                            <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
+                                class="icon-sm">
+                            {{-- <span>23 Sept 2024 | 17:04 IST</span> --}}
+                            <br>
+                        </div>
+                        <img src="{{ asset('website/assets/icons/Desktop.png') }}" alt=""
+                            style="width: 152.045px;
+      height: 30px;
+      flex-shrink: 0;
+      margin-top:12px;
+      margin-bottom:12px;">
+                        <a href="https://thepienews.com/canada-australia-shift-from-quantity-to-quality/"
+                            target="_blank">
+                            <h5 class="news-card-title">Canada and Australia: the shift from quantity to quality – and
+                                rightly so</h5>
+                        </a>
+                        <p class="news-card-text flex-grow-1 ">Jasminder Khanna's head's still spinning after a
+                            tumultuous few weeks
+                            for Canadian and Australian intled...</p>
+                        <hr class="opacity-25">
+                        <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                            <a href="https://thepienews.com/canada-australia-shift-from-quantity-to-quality/"
+                                target="_blank" class="readmoreBtn">Read More</a>
+                            <!-- <img src="{{ asset('website/assets/images/share.svg') }}" alt="Share Icon" class="icon-xs"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row g-4 addmoreBlogs">
+            <button id="loadMore">
+                <span>Load More</span>
+                <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
+            </button>
+
+
+        </div>
     </div>
 </section>
 @endsection
-
-@push('css')
-<style>
-
-</style>
-@endpush
-
-@push('js_code')
-<script>
-    $(document).ready(function() {
-
-        function initializeSwipers() {
-            document.querySelectorAll(".imageSwiper").forEach((el) => {
-                if (el.swiper) {
-                    el.swiper.destroy(true, true); // destroy previous instance
-                }
-
-                new Swiper(el, {
-                    slidesPerView: 'auto', // allow fixed width slides
-                    loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: el.querySelector(".swiper-pagination"),
-                        clickable: true,
-                    },
-                    spaceBetween: 10, // optional spacing between slides
-                });
-            });
-        }
-
-        // Call on page load and after AJAX load
-        initializeSwipers();
-
-        // Load More Media AJAX
-        $('#loadMoreMedia').click(function() {
-            let button = $(this);
-            let page = parseInt(button.data('page'));
-            let total = parseInt(button.data('total'));
-            let loaded = parseInt(button.data('loaded'));
-            let loader = button.find('img');
-
-            loader.removeClass('d-none');
-
-            $.ajax({
-                url: "{{ url('media') }}?page=" + page,
-                type: "GET",
-                dataType: "json",
-                success: function(response) {
-                    if (response.count === 0) {
-                        button.hide();
-                    } else {
-                        $('#mediaContainer').append(response.html);
-
-                        // Re-initialize Swipers for new items
-                        initializeSwipers();
-
-                        loaded += response.count;
-                        button.data('page', page + 1);
-                        button.data('loaded', loaded);
-                        if (loaded >= total) {
-                            button.hide();
-                        }
-                    }
-                    loader.addClass('d-none');
-                },
-                error: function() {
-                    loader.addClass('d-none');
-                }
-            });
-        });
-
-    });
-</script>
-@endpush

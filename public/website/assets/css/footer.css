@@ -228,8 +228,7 @@
     align-items: center;
     justify-content: center;
     background-color: #161616;
-    /* font-family: "Proxima Nova" !important; */
-    font-family: "Poppins", sans-serif;
+    font-family: "Proxima Nova" !important;
 }
 .fbContainer {
     width: 90%;

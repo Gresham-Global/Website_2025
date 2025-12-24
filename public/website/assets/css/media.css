@@ -16,7 +16,7 @@
     margin-top: 0.8rem;
 }
 .mediaCon {
-    margin: 5rem 0;
+    margin: 1rem 0 5rem 0;
 }
 .news-card:hover {
     transform: translateY(-5px);
@@ -46,7 +46,8 @@
 .mediaText {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* crop without distortion */
+    /* object-fit: contain; /* crop without distortion */ */
+    object-fit: contain;
     object-position: center;
     display: block;
 }

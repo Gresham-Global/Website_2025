@@ -306,7 +306,7 @@ h6 {
 
 /* sec 2 starts */
 .sec2 {
-    padding: 140px 0 0px 0px;
+    padding: 40px 0 0px 0px;
     background: url("../../assets/images/aboutbg.png") no-repeat center center;
     background-size: cover;
 }
@@ -529,7 +529,7 @@ h6 {
 
 /* sec 4 starts */
 .sec4 {
-    padding: 100px 0 0 0px;
+    padding: 40px 0 0 0px;
     background: url("../../assets/images/whychooseusimg.png") no-repeat center
         center;
     background-size: cover;
@@ -930,6 +930,7 @@ h6 {
     object-fit: cover;
     height: 170px;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 .mediaboxR ul {
@@ -2540,11 +2541,13 @@ section.homebann.customSection.firstSection .customContainer.firstContainer {
     font-family: "Poppins", sans-serif;
     line-height: 1.2;
 }
+
 body.popup-open {
     overflow: hidden;
 }
+
 section.sec7 .slider.media.hmmedia .slick-list .slick-slide {
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 /* section.sec7 .slider.media.hmmedia .slick-prev,
@@ -2561,6 +2564,7 @@ section#latest-news .life-slider .slick-prev {
 section.sec7 .slider.media.hmmedia .slick-prev {
     left: -18px !important;
 }
+
 section.sec7 .slider.media.hmmedia .slick-next {
     right: -20px !important;
 }
@@ -2588,4 +2592,10 @@ form .dropdown-menu {
 
 .modalForm .dropdown-menu li {
     color: #000000 !important;
+}
+
+.desk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }

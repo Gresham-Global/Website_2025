@@ -47,8 +47,7 @@ h1.mainHeadingSection {
 
 .downloadBtn {
     background: linear-gradient(270deg, #ef4b4f 0%, #991f3d 100%);
-    /* font-family: "Proxima Nova"; */
-    font-family: "Poppins", sans-serif;
+    font-family: "Proxima Nova";
     font-weight: 700;
     font-size: 20px;
     line-height: 100%;
@@ -331,8 +330,7 @@ a.downloadBtn:hover {
 
 .readMoreBtn {
     background: linear-gradient(270deg, #ef4b4f 0%, #991f3d 100%);
-    /* font-family: "Proxima Nova"; */
-    font-family: "Poppins", sans-serif;
+    font-family: "Proxima Nova";
     font-weight: 700;
     font-size: 20px;
     line-height: 100%;
@@ -341,6 +339,10 @@ a.downloadBtn:hover {
     padding: 1rem 1.5rem;
     border-radius: 8px;
     border: 0;
+}
+
+.readMoreBtn:hover {
+    color: #fff !important;
 }
 
 .publicationSlider .slick-dots li {
