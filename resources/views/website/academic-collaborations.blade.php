@@ -6,7 +6,8 @@
 <style>
   @media screen and (max-width:1700px) and (min-width:1100px) {
     .fntsize {
-      font-size: 1rem;
+      /* font-size: 1rem; */
+      font-size: 20px;
       text-align: start;
     }
 
@@ -29,7 +30,7 @@
   <div class="custom-container">
     <div class="row g-4">
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 overview-title">
-        <h1 class="serh1">Shaping Your Academic Partnerships</h1>
+        <h2 class="serh1">Shaping Your Academic Partnerships</h2>
 
         <p class="service-p">Expanding your global footprint through Academic Partnerships and Transnational Education
           (TNE) initiatives requires a strategic vision and a deep understanding of both local and international
@@ -134,7 +135,7 @@
           </button>
         </a>
       </div>
-      
+
       <div class="">
         <a href="/incountry-representation" class="text-dark">
           <button type="button" class="btn Explore">

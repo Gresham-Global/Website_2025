@@ -7,7 +7,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <x-seo-meta :page-url="request()->path()" />
     @php
     $currentRoute = request()->route()->getName();
     @endphp
@@ -23,13 +23,9 @@
     <meta property="og:image" content="{{ $post->thumbnail_image }}" />
     <meta property="og:url" content="{{ url()->current() }}" />
     @endif
-
-
-
-
     @yield('meta')
 
-    <title>Gresham Global</title>
+
     <link rel="stylesheet" href="{{ asset('website/assets/css/header.css') }}" />
     <link rel="stylesheet" href="{{ asset('website/assets/css/footer.css') }}" />
     <link rel="stylesheet" href="{{ asset('website/assets/css/style.css') }}" />
@@ -83,6 +79,9 @@
 
     <link rel="stylesheet" href="{{ asset('website/assets/share-hit/style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -282,10 +281,10 @@ $(document).ready(function() {
 </script>
 <!-- load more query  -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         var loadMoreBtn = document.getElementById("loadMoreBtn");
         if (loadMoreBtn) {
-            loadMoreBtn.addEventListener("click", function () {
+            loadMoreBtn.addEventListener("click", function() {
                 var hiddenCards = document.querySelector(".hidden-cards");
                 if (hiddenCards) {
                     hiddenCards.style.display = "block";
@@ -546,176 +545,176 @@ $(document).ready(function() {
 
 
         // Slick slider configuration object
-       // Slick slider configuration object
-const slickConfig = {
-    infinite: true,
-    slidesToShow: 4,
-    loop: true,
-    dots: true,
-    arrows: true,
-    prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
-    nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
-    centerPadding: '60px',
-    slideTransition: "linear",
-    autoplay: false,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsive: [{
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 3,
-            }
-        },
-        {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 2,
-                arrows: false,
-            }
-        },
-        {
-            breakpoint: 575,
-            settings: {
-                slidesToShow: 1,
-                arrows: false,
-            }
-        },
-        {
-            breakpoint: 400,
-            settings: {
-                slidesToShow: 1,
-                arrows: false,
+        // Slick slider configuration object
+        const slickConfig = {
+            infinite: true,
+            slidesToShow: 4,
+            loop: true,
+            dots: true,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+            nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+            centerPadding: '60px',
+            slideTransition: "linear",
+            autoplay: false,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false,
+                    }
+                }
+            ]
+        };
+
+        // Function to initialize media slider
+        function initializeMediaSlider() {
+            // Check if slider exists and is visible before initializing
+            if ($(".hmmedia").length && $('#tab1').is(':visible')) {
+                $(".hmmedia").slick(slickConfig);
             }
         }
-    ]
-};
 
-// Function to initialize media slider
-function initializeMediaSlider() {
-    // Check if slider exists and is visible before initializing
-    if ($(".hmmedia").length && $('#tab1').is(':visible')) {
-        $(".hmmedia").slick(slickConfig);
-    }
-}
-
-// Function to initialize news slider
-function initializeNewsSlider() {
-    // Check if slider exists and is visible before initializing
-    if ($(".hmnews").length && $('#tab2').is(':visible')) {
-        $(".hmnews").slick(slickConfig);
-    }
-}
-
-// Function to destroy media slider
-function destroyMediaSlider() {
-    if ($('.hmmedia').hasClass('slick-initialized')) {
-        $('.hmmedia').slick('unslick');
-    }
-}
-
-// Function to destroy news slider
-function destroyNewsSlider() {
-    if ($('.hmnews').hasClass('slick-initialized')) {
-        $('.hmnews').slick('unslick');
-    }
-}
-
-// Function to destroy all sliders
-function destroyAllSliders() {
-    destroyMediaSlider();
-    destroyNewsSlider();
-}
-
-// Media tab (hmtab1) click handler
-$('#hmtab1').on('click', function() {
-    // Remove active from all tabs
-    $('#hmtab1, #hmtab2').removeClass('active');
-
-    // Add active to clicked tab
-    $(this).addClass('active');
-
-    // Immediately destroy and reinitialize
-    destroyAllSliders();
-
-    // Hide all tab content and show target immediately
-    $('.tab-content').hide();
-    $('#tab1').show();
-
-    // Initialize slider immediately - no setTimeout delay
-    initializeMediaSlider();
-});
-
-// News/Blogs tab (hmtab2) click handler
-$('#hmtab2').on('click', function() {
-    // Remove active from all tabs
-    $('#hmtab1, #hmtab2').removeClass('active');
-
-    // Add active to clicked tab
-    $(this).addClass('active');
-
-    // Immediately destroy and reinitialize
-    destroyAllSliders();
-
-    // Hide all tab content and show target immediately
-    $('.tab-content').hide();
-    $('#tab2').show();
-
-    // Initialize slider immediately - no setTimeout delay
-    initializeNewsSlider();
-});
-
-// Optimized slider initialization functions
-function initializeMediaSlider() {
-    // Check if slider exists and is visible before initializing
-    if ($(".hmmedia").length && $('#tab1').is(':visible')) {
-        $(".hmmedia").slick(slickConfig);
-    }
-}
-
-function initializeNewsSlider() {
-    // Check if slider exists and is visible before initializing
-    if ($(".hmnews").length && $('#tab2').is(':visible')) {
-        $(".hmnews").slick(slickConfig);
-    }
-}
-
-// Pre-initialize both sliders on page load for faster switching
-$(document).ready(function() {
-    // Initialize the active tab's slider immediately
-    if ($('#hmtab1').hasClass('active')) {
-        initializeMediaSlider();
-    } else if ($('#hmtab2').hasClass('active')) {
-        initializeNewsSlider();
-    }
-
-    // Preload images for faster switching (optional)
-    preloadSliderImages();
-});
-
-// Optional: Preload images for faster switching
-function preloadSliderImages() {
-    $('.hmmedia img, .hmnews img').each(function() {
-        if (this.src) {
-            const img = new Image();
-            img.src = this.src;
+        // Function to initialize news slider
+        function initializeNewsSlider() {
+            // Check if slider exists and is visible before initializing
+            if ($(".hmnews").length && $('#tab2').is(':visible')) {
+                $(".hmnews").slick(slickConfig);
+            }
         }
-    });
-}
 
-// Initialize appropriate slider on page load
-$(document).ready(function() {
-    if ($('#hmtab1').hasClass('active')) {
-        initializeMediaSlider();
-    } else if ($('#hmtab2').hasClass('active')) {
-        initializeNewsSlider();
-    }
-});
+        // Function to destroy media slider
+        function destroyMediaSlider() {
+            if ($('.hmmedia').hasClass('slick-initialized')) {
+                $('.hmmedia').slick('unslick');
+            }
+        }
+
+        // Function to destroy news slider
+        function destroyNewsSlider() {
+            if ($('.hmnews').hasClass('slick-initialized')) {
+                $('.hmnews').slick('unslick');
+            }
+        }
+
+        // Function to destroy all sliders
+        function destroyAllSliders() {
+            destroyMediaSlider();
+            destroyNewsSlider();
+        }
+
+        // Media tab (hmtab1) click handler
+        $('#hmtab1').on('click', function() {
+            // Remove active from all tabs
+            $('#hmtab1, #hmtab2').removeClass('active');
+
+            // Add active to clicked tab
+            $(this).addClass('active');
+
+            // Immediately destroy and reinitialize
+            destroyAllSliders();
+
+            // Hide all tab content and show target immediately
+            $('.tab-content').hide();
+            $('#tab1').show();
+
+            // Initialize slider immediately - no setTimeout delay
+            initializeMediaSlider();
+        });
+
+        // News/Blogs tab (hmtab2) click handler
+        $('#hmtab2').on('click', function() {
+            // Remove active from all tabs
+            $('#hmtab1, #hmtab2').removeClass('active');
+
+            // Add active to clicked tab
+            $(this).addClass('active');
+
+            // Immediately destroy and reinitialize
+            destroyAllSliders();
+
+            // Hide all tab content and show target immediately
+            $('.tab-content').hide();
+            $('#tab2').show();
+
+            // Initialize slider immediately - no setTimeout delay
+            initializeNewsSlider();
+        });
+
+        // Optimized slider initialization functions
+        function initializeMediaSlider() {
+            // Check if slider exists and is visible before initializing
+            if ($(".hmmedia").length && $('#tab1').is(':visible')) {
+                $(".hmmedia").slick(slickConfig);
+            }
+        }
+
+        function initializeNewsSlider() {
+            // Check if slider exists and is visible before initializing
+            if ($(".hmnews").length && $('#tab2').is(':visible')) {
+                $(".hmnews").slick(slickConfig);
+            }
+        }
+
+        // Pre-initialize both sliders on page load for faster switching
+        $(document).ready(function() {
+            // Initialize the active tab's slider immediately
+            if ($('#hmtab1').hasClass('active')) {
+                initializeMediaSlider();
+            } else if ($('#hmtab2').hasClass('active')) {
+                initializeNewsSlider();
+            }
+
+            // Preload images for faster switching (optional)
+            preloadSliderImages();
+        });
+
+        // Optional: Preload images for faster switching
+        function preloadSliderImages() {
+            $('.hmmedia img, .hmnews img').each(function() {
+                if (this.src) {
+                    const img = new Image();
+                    img.src = this.src;
+                }
+            });
+        }
+
+        // Initialize appropriate slider on page load
+        $(document).ready(function() {
+            if ($('#hmtab1').hasClass('active')) {
+                initializeMediaSlider();
+            } else if ($('#hmtab2').hasClass('active')) {
+                initializeNewsSlider();
+            }
+        });
 
         // Initialize appropriate slider on page load
         $(document).ready(function() {
@@ -831,40 +830,39 @@ $(document).ready(function() {
             ]
         });
         $('.publicationSlider').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                cssEase: 'linear',
-                adaptiveHeight: true,
-                speed: 500,
-                autoplay: true,
-                dots: true,
-                responsive: [
-                    {
-                        breakpoint: 1280,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    },
-                     {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                        slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 700,
-                        settings: {
-                        slidesToShow: 1
-                        }
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            cssEase: 'linear',
+            adaptiveHeight: true,
+            speed: 500,
+            autoplay: true,
+            dots: true,
+            responsive: [{
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 3
                     }
-                    ]
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
     });
 </script>
@@ -908,14 +906,17 @@ $(document).ready(function() {
         let blogs = '<div class="col-md-6 col-lg-4 cardpm">';
         blogs += '<div class="news-card h-100 d-flex flex-column">';
         blogs += '<a href="https://www.republicworld.com/initiatives/gresham-global-helps-international-universities-expand-their-reach-through-strategic-partnerships" target="_blank">';
-        blogs += '<img src="{{ asset('website / assets / images / art4.png ') }}" alt="News Image" class="news-card-img">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / art4.png ') }}" alt="News Image" class="news-card-img">';
         blogs += '</a>';
         blogs += '<div class="news-card-body d-flex flex-column flex-grow-1">';
         blogs += '<div class="d-flex align-items-center gap-2 text-muted small">';
-        blogs += '<img src="{{ asset('website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
         blogs += '<span>14 Sept 2024 | 17:04 IST</span>';
         blogs += '</div>';
-        blogs += '<img src="{{ asset('website / assets / icons / republic - logo2 1. png ') }}" alt="" class="repiblicimg">';
+        blogs += '<img src="{{ asset('
+        website / assets / icons / republic - logo2 1. png ') }}" alt="" class="repiblicimg">';
         blogs += '<a href="https://www.republicworld.com/initiatives/gresham-global-helps-international-universities-expand-their-reach-through-strategic-partnerships" target="_blank">';
         blogs += '<h5 class="news-card-title flex-grow-1">Gresham Global helps international universities expand...</h5>';
         blogs += '</a>';
@@ -929,14 +930,17 @@ $(document).ready(function() {
         blogs += '</div>';
         blogs += '<div class="col-md-6 col-lg-4 cardpm">';
         blogs += '<div class="news-card h-100 d-flex flex-column">';
-        blogs += '<a href="https://thepienews.com/international-universities-go-non-traditional-to-attract-indian-students/" target="_blank"><img src="{{ asset('website / assets / images / medianew33.png ') }}" alt="News Image" class="news-card-img">';
+        blogs += '<a href="https://thepienews.com/international-universities-go-non-traditional-to-attract-indian-students/" target="_blank"><img src="{{ asset('
+        website / assets / images / medianew33.png ') }}" alt="News Image" class="news-card-img">';
         blogs += '</a>';
         blogs += '<div class="news-card-body d-flex flex-column flex-grow-1">';
         blogs += '<div class="d-flex align-items-center gap-2 text-muted small">';
-        blogs += '<img src="{{ asset('website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
         blogs += '<span>21 August 2024 | 5:56 IST</span>';
         blogs += '</div>';
-        blogs += '<img src="{{ asset('website / assets / icons / Desktop.png ') }}" alt="" class="repiblicimg">';
+        blogs += '<img src="{{ asset('
+        website / assets / icons / Desktop.png ') }}" alt="" class="repiblicimg">';
         blogs += '<a href="https://thepienews.com/international-universities-go-non-traditional-to-attract-indian-students/" target="_blank">';
         blogs += '<h5 class="news-card-title">Global universities spotlight non-traditional pathways in India';
         blogs += '</h5>';
@@ -952,14 +956,17 @@ $(document).ready(function() {
         blogs += '<div class="col-md-6 col-lg-4 cardpm">';
         blogs += '<div class="news-card h-100 d-flex flex-column">';
         blogs += '<a href="https://timesofindia.indiatimes.com/education/gresham-globals-gacc-2024-paving-the-way-for-new-career-pathways-in-education/articleshow/112530572.cms" target="_blank">';
-        blogs += '<img src="{{ asset('website / assets / images / art2.png ') }}" alt="News Image" class="news-card-img">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / art2.png ') }}" alt="News Image" class="news-card-img">';
         blogs += '</a>';
         blogs += '<div class="news-card-body d-flex flex-column flex-grow-1">';
         blogs += '<div class="d-flex align-items-center gap-2 text-muted small">';
-        blogs += '<img src="{{ asset('website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
         blogs += '<span>14 Aug 2024 | 20:46 IST </span>';
         blogs += '</div>';
-        blogs += '<img src="{{ asset('website / assets / icons / Group 1000004042. png ') }}" alt="" class="repiblicimg">';
+        blogs += '<img src="{{ asset('
+        website / assets / icons / Group 1000004042. png ') }}" alt="" class="repiblicimg">';
         blogs += '<a href="https://timesofindia.indiatimes.com/education/gresham-globals-gacc-2024-paving-the-way-for-new-career-pathways-in-education/articleshow/112530572.cms" target="_blank">';
         blogs += '<h5 class="news-card-title flex-grow-1">Gresham Global’s GACC 2024: Paving the way for new career pathways in education</h5>';
         blogs += '</a>';
@@ -974,14 +981,17 @@ $(document).ready(function() {
         blogs += '<div class="col-md-6 col-lg-4 cardpm">';
         blogs += '<div class="news-card h-100 d-flex flex-column">';
         blogs += ' <a href="https://thepienews.com/unified-consortium-in-india/" target="_blank">';
-        blogs += '<img src="{{ asset('website / assets / images / art3.png ') }}" alt="News Image" class="news-card-img">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / art3.png ') }}" alt="News Image" class="news-card-img">';
         blogs += '</a>';
         blogs += '<div class="news-card-body d-flex flex-column flex-grow-1">';
         blogs += '<div class="d-flex align-items-center gap-2 text-muted small">';
-        blogs += '<img src="{{ asset('website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
         blogs += '<span>8 July 2024 | 5:56 IST</span>';
         blogs += '</div>';
-        blogs += '<img src="{{ asset('website / assets / icons / Desktop.png ') }}" alt="" class="repiblicimg">';
+        blogs += '<img src="{{ asset('
+        website / assets / icons / Desktop.png ') }}" alt="" class="repiblicimg">';
         blogs += '<a href="https://thepienews.com/unified-consortium-in-india/" target="_blank">';
         blogs += '<h5 class="news-card-title">We need a unified consortium for India’s int’l education industry</h5>';
         blogs += '</a>';
@@ -996,14 +1006,17 @@ $(document).ready(function() {
         blogs += '<div class="col-md-6 col-lg-4 cardpm">';
         blogs += '<div class="news-card h-100 d-flex flex-column">';
         blogs += '<a href="https://www.outlookindia.com/hub4business/maintaining-excellence-gresham-globals-continued-role-as-a-leading-representative-of-international-educational-institutes-in-the-global-market" target="_blank">';
-        blogs += '<img src="{{ asset('website / assets / images / 1. png ') }}" alt="News Image" class="news-card-img">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / 1. png ') }}" alt="News Image" class="news-card-img">';
         blogs += '</a>';
         blogs += '<div class="news-card-body d-flex flex-column flex-grow-1">';
         blogs += '<div class="d-flex align-items-center gap-2 text-muted small">';
-        blogs += '<img src="{{ asset('website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
+        blogs += '<img src="{{ asset('
+        website / assets / images / time.svg ') }}" alt="Time Icon" class="icon-sm">';
         blogs += '<span>8 July 2024 | 5:56 IST</span>';
         blogs += '</div>';
-        blogs += '<img src="{{ asset('website / assets / icons / Outlook 1. svg ') }}" alt="" class="repiblicimg">';
+        blogs += '<img src="{{ asset('
+        website / assets / icons / Outlook 1. svg ') }}" alt="" class="repiblicimg">';
         blogs += '<a href="https://www.outlookindia.com/hub4business/maintaining-excellence-gresham-globals-continued-role-as-a-leading-representative-of-international-educational-institutes-in-the-global-market" target="_blank">';
         blogs += '<h5 class="news-card-title">Maintaining Excellence: Gresham Globals Continued Role...</h5>';
         blogs += '</a>';
@@ -1082,4 +1095,5 @@ $(document).ready(function() {
 </script>
 
 @stack('js_code')
+
 </html>

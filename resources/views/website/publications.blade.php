@@ -1,84 +1,85 @@
 @extends('website.layout.master')
 @section('content')
-    <!-- banner section starts here -->
-    <section class="about-banner-background firstSection customSection">
-        <div class="customContainer firstContainer">
-            <h1 class="text-white  titleH1">Publications</h1>
-        </div>
-        <img src="{{ asset('website/assets/images/banner_event_publi.webp') }}"
-            class="w-100 forMobBanner d-none d-md-block" />
-        <img src="{{ asset('website/assets/images/banner_event_publi_mb.webp') }}"
-            class="w-100 forMobBanner d-block d-md-none" />
+<!-- banner section starts here -->
+<!-- <section class="about-banner-background firstSection customSection">
+    <div class="customContainer firstContainer">
+        <h1 class="text-white  titleH1">Publications</h1>
+    </div>
+    <img src="{{ asset('website/assets/images/banner_event_publi.webp') }}"
+        class="w-100 forMobBanner d-none d-md-block" alt="" />
+    <img src="{{ asset('website/assets/images/banner_event_publi_mb.webp') }}"
+        class="w-100 forMobBanner d-block d-md-none" alt="" />
 
-    </section>
-    <!-- Media section -->
-
-
-
+</section> -->
+<x-banner-section type="publication" title="Publications" />
+<!-- Media section -->
 
 
-    <section class="customSection my-5">
-        <div class="customContainer mediaCon publicationscrads">
-            <div class="row g-4 publication-container" id="publicationContainer">
-                @foreach ($publications as $publication)
-                    <!-- Card 1 -->
-                    <div class="col-md-6 col-lg-4 ">
-                        <div class="news-card publication-card h-100 d-flex flex-column">
 
-                            <div class="news-card-body d-flex flex-column flex-grow-1">
-                                <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
-                                    <img src="{{ $publication->thumbnail_image }}" alt="News Image" class="news-card-img">
-                                </a>
-                                <!-- <div class="d-flex align-items-center gap-2 text-muted small">
+
+
+<section class="customSection my-5">
+    <div class="customContainer mediaCon publicationscrads">
+        <div class="row g-4 publication-container" id="publicationContainer">
+            @foreach ($publications as $publication)
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 ">
+                <div class="news-card publication-card h-100 d-flex flex-column">
+
+                    <div class="news-card-body d-flex flex-column flex-grow-1">
+                        <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
+                            <img src="{{ $publication->thumbnail_image }}" alt="News Image" class="news-card-img">
+                        </a>
+                        <!-- <div class="d-flex align-items-center gap-2 text-muted small">
           <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
           <span>12 March 2025 | 5:56 IST</span>
           </div> -->
-                                <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
-                                    <h5 class="news-card-title">{{ $publication->title }}</h5>
-                                </a>
-                                <p class="news-card-text flex-grow-1">{{ $publication->short_description }} ...</p>
-                                <div class="cards_tags">
-                                    <span class="taghead">Tags: </span>
-                                    <span class="tagtxt">
+                        <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
+                            <h5 class="news-card-title">{{ $publication->title }}</h5>
+                        </a>
+                        <p class="news-card-text flex-grow-1">{{ $publication->short_description }} ...</p>
+                        <div class="cards_tags">
+                            <span class="taghead">Tags: </span>
+                            <span class="tagtxt">
 
-                                        @if ($publication->tags && $publication->tags->isNotEmpty())
-                                            {{ $publication->tags->pluck('name')->join(', ') }}
-                                        @else
-                                            -
-                                        @endif
+                                @if ($publication->tags && $publication->tags->isNotEmpty())
+                                {{ $publication->tags->pluck('name')->join(', ') }}
+                                @else
+                                -
+                                @endif
 
-                                    </span>
-                                </div>
+                            </span>
+                        </div>
 
 
-                                <hr class="opacity-25">
-                                <div class="mt-1 d-flex justify-content-between align-items-center w-100">
-                                    <a href="{{ route('publications.show', $publication->slug) }}" target="_blank"
-                                        class="readmoreBtn">Read
-                                        More</a>
-                                    <!-- <a href="#" target="_blank" class="readmoreBtn">Read More</a> -->
-                                    <!-- <img src="{{ asset('website/assets/images/share.svg') }}" alt="Share Icon" class="icon-xs"> -->
-                                    @if (!empty($publication->share_link))
-                                        <a href="{{ !empty($publication->share_link) ? $publication->share_link : '#' }}"
-                                            class="share_social share-blog-hit ">
-                                            <img src="{{ asset('website/assets/images/events/share_icon.webp') }}"
-                                                alt="Share Icon">
-                                        </a>
-                                    @endif
+                        <hr class="opacity-25">
+                        <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                            <a href="{{ route('publications.show', $publication->slug) }}" target="_blank"
+                                class="readmoreBtn">Read
+                                More</a>
+                            <!-- <a href="#" target="_blank" class="readmoreBtn">Read More</a> -->
+                            <!-- <img src="{{ asset('website/assets/images/share.svg') }}" alt="Share Icon" class="icon-xs"> -->
+                            @if (!empty($publication->share_link))
+                            <a href="{{ !empty($publication->share_link) ? $publication->share_link : '#' }}"
+                                class="share_social share-blog-hit ">
+                                <img src="{{ asset('website/assets/images/events/share_icon.webp') }}"
+                                    alt="Share Icon">
+                            </a>
+                            @endif
 
-                                    <a href="javascript:void(0);" class="share_social share-blog-hit"
-                                        data-url="{{ route('publications.show', $publication->slug) }}"
-                                        data-title="{{ $publication->title }}">
-                                        <img src="{{ asset('website/assets/images/events/share_icon.webp') }}"
-                                            alt="">
-                                    </a>
-                                </div>
-                            </div>
+                            <a href="javascript:void(0);" class="share_social share-blog-hit"
+                                data-url="{{ route('publications.show', $publication->slug) }}"
+                                data-title="{{ $publication->title }}">
+                                <img src="{{ asset('website/assets/images/events/share_icon.webp') }}"
+                                    alt="">
+                            </a>
                         </div>
                     </div>
-                @endforeach
+                </div>
             </div>
-            <!-- <div class="row g-4 addmoreBlogs text-center">
+            @endforeach
+        </div>
+        <!-- <div class="row g-4 addmoreBlogs text-center">
           <button id="loadMorePublications" data-page="2" data-loaded="{{ $publications->count() }}"
           data-total="{{ $total }}">
           <span>Load More</span>
@@ -86,8 +87,8 @@
           </button>
         </div> -->
 
-        </div>
-    </section>
+    </div>
+</section>
 @endsection
 
 <!--
@@ -133,39 +134,39 @@
 
 
 @push('js_code')
-    <script>
-        $('#loadMorePublications').on('click', function() {
-            var button = $(this);
-            var page = button.data('page');
-            var loaded = button.data('loaded');
-            var total = button.data('total');
-            var loader = button.find('img');
+<script>
+    $('#loadMorePublications').on('click', function() {
+        var button = $(this);
+        var page = button.data('page');
+        var loaded = button.data('loaded');
+        var total = button.data('total');
+        var loader = button.find('img');
 
-            loader.removeClass('d-none');
+        loader.removeClass('d-none');
 
-            $.ajax({
-                url: '{{ url('/publications') }}?page=' + page,
-                type: 'GET',
-                dataType: 'json',
-                success: function(res) {
-                    $('#publicationContainer').append(res.html);
+        $.ajax({
+            url: '{{ url(' / publications ') }}?page=' + page,
+            type: 'GET',
+            dataType: 'json',
+            success: function(res) {
+                $('#publicationContainer').append(res.html);
 
-                    // Update counts
-                    var newLoaded = loaded + res.count;
-                    button.data('page', page + 1);
-                    button.data('loaded', newLoaded);
+                // Update counts
+                var newLoaded = loaded + res.count;
+                button.data('page', page + 1);
+                button.data('loaded', newLoaded);
 
-                    if (newLoaded >= total) {
-                        button.addClass('d-none');
-                    }
-
-                    loader.addClass('d-none');
-                },
-                error: function() {
-                    // alert('Failed to load more publications.');
-                    loader.addClass('d-none');
+                if (newLoaded >= total) {
+                    button.addClass('d-none');
                 }
-            });
+
+                loader.addClass('d-none');
+            },
+            error: function() {
+                // alert('Failed to load more publications.');
+                loader.addClass('d-none');
+            }
         });
-    </script>
+    });
+</script>
 @endpush

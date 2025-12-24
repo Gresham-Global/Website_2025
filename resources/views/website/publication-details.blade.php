@@ -21,7 +21,7 @@
                 </button>
             </div>
             <div class="col-sm-8 col-xl-8">
-                <h2 class="mainHeadingSection">Lorem Ipsum is simply dummy text of the printing</h2>
+                <h1 class="mainHeadingSection">Lorem Ipsum is simply dummy text of the printing</h1>
                 <p>India's engineering and technology sector is a rapidly expanding force, driving economic growth and offering a wealth of opportunities across diverse industries. The country's prestigious institutions produce a large pool of skilled graduates annually. As India invests heavily in infrastructure, renewable energy, and digital transformation, the sector is projected to become the 3rd largest globally by 2030. This growth, coupled with increasing adoption of AI, creates a dynamic landscape for global collaboration and talent acquisition.</p>
                 <p>Explore the full report to identify strategic opportunities for engaging with India's talent pool and expanding your institution's reach. Understanding these trends is crucial for universities aiming to attract top Indian students and build lasting partnerships.</p>
             </div>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -129,83 +129,87 @@
             <button type="button" aria-label="Download Brochure" class="downloadBtn mb-3">
                 Download Report <img src="website/assets/images/publications/downloadArrow.svg" alt="" />
             </button>
-       </div>
+        </div>
     </div>
 </section>
 <section class="similarProductSection">
     <div class="customContainer">
         <h2 class="mainHeadingSection mb-5">Similar publications</h2>
-            <div class="row publicationSlider">
-                <div class="publicationCard">
-                    <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
-                    <div class="bodyContent">
-                        <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
-                        <p>GACC is an annual conference for counsellors supporting high school students in their
+        <div class="row publicationSlider">
+            <div class="publicationCard">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <div class="bodyContent">
+                    <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
+                    <p>GACC is an annual conference for counsellors supporting high school students in their
                         career transitions. This flagship event aimed to provide counsellors with insights and
                         information on new career options, empowering them with diverse pathways from top UK,
-                        Canada and European universities.</div>
-                        <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
-                        <hr/>
-                        <div class="d-flex justify-content-between">
-                            <button type="button" aria-label="Read More" class="readMoreBtn">
-                                Read More
-                            </button>
-                            <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
-                        </div>
-                    </div>
-                    <div class="publicationCard">
-                        <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
-                        <div class="bodyContent">
-                            <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
-                            <p>GACC is an annual conference for counsellors supporting high school students in their
-                            career transitions. This flagship event aimed to provide counsellors with insights and
-                            information on new career options, empowering them with diverse pathways from top UK,
-                            Canada and European universities.</div>
-                            <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
-                            <hr/>
-                            <div class="d-flex justify-content-between">
-                                <button type="button" aria-label="Read More" class="readMoreBtn">
-                                    Read More
-                                </button>
-                                <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
-                            </div>
-                        </div>
-                        <div class="publicationCard">
-                    <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
-                    <div class="bodyContent">
-                        <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
-                        <p>GACC is an annual conference for counsellors supporting high school students in their
+                        Canada and European universities.
+                </div>
+                <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
+                <hr />
+                <div class="d-flex justify-content-between">
+                    <button type="button" aria-label="Read More" class="readMoreBtn">
+                        Read More
+                    </button>
+                    <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
+                </div>
+            </div>
+            <div class="publicationCard">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <div class="bodyContent">
+                    <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
+                    <p>GACC is an annual conference for counsellors supporting high school students in their
                         career transitions. This flagship event aimed to provide counsellors with insights and
                         information on new career options, empowering them with diverse pathways from top UK,
-                        Canada and European universities.</div>
-                        <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
-                        <hr/>
-                        <div class="d-flex justify-content-between">
-                            <button type="button" aria-label="Read More" class="readMoreBtn">
-                                Read More
-                            </button>
-                            <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
-                        </div>
-                    </div>
-                    <div class="publicationCard">
-                    <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
-                    <div class="bodyContent">
-                        <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
-                        <p>GACC is an annual conference for counsellors supporting high school students in their
+                        Canada and European universities.
+                </div>
+                <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
+                <hr />
+                <div class="d-flex justify-content-between">
+                    <button type="button" aria-label="Read More" class="readMoreBtn">
+                        Read More
+                    </button>
+                    <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
+                </div>
+            </div>
+            <div class="publicationCard">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <div class="bodyContent">
+                    <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
+                    <p>GACC is an annual conference for counsellors supporting high school students in their
                         career transitions. This flagship event aimed to provide counsellors with insights and
                         information on new career options, empowering them with diverse pathways from top UK,
-                        Canada and European universities.</div>
-                        <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
-                        <hr/>
-                        <div class="d-flex justify-content-between">
-                            <button type="button" aria-label="Read More" class="readMoreBtn">
-                                Read More
-                            </button>
-                            <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
-                        </div>
-                    </div>
+                        Canada and European universities.
+                </div>
+                <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
+                <hr />
+                <div class="d-flex justify-content-between">
+                    <button type="button" aria-label="Read More" class="readMoreBtn">
+                        Read More
+                    </button>
+                    <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
+                </div>
+            </div>
+            <div class="publicationCard">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <div class="bodyContent">
+                    <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
+                    <p>GACC is an annual conference for counsellors supporting high school students in their
+                        career transitions. This flagship event aimed to provide counsellors with insights and
+                        information on new career options, empowering them with diverse pathways from top UK,
+                        Canada and European universities.
+                </div>
+                <div class="tagDiv"><span>Tags : </span> AI, Technology, Industry</div>
+                <hr />
+                <div class="d-flex justify-content-between">
+                    <button type="button" aria-label="Read More" class="readMoreBtn">
+                        Read More
+                    </button>
+                    <img src="website/assets/images/publications/share.svg" alt="Share Icon" />
+                </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 @endsection

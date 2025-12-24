@@ -6,7 +6,8 @@
 <style>
     @media screen and (max-width:1700px) and (min-width:1100px) {
         .fntsize {
-            font-size: 1rem;
+            /* font-size: 1rem; */
+            font-size: 20px;
             text-align: start;
         }
 
@@ -29,7 +30,7 @@
     <div class="custom-container">
         <div class="row g-4 ">
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 overview-title">
-                <h1 class="serh1">Upholding Your University’s Admissions Standards</h1>
+                <h2 class="serh1">Upholding Your University’s Admissions Standards</h2>
 
                 <p class="service-p">Managing admissions and ensuring compliance is pivotal to a successful
                     international student recruitment strategy. At Gresham Global, we simplify these complex

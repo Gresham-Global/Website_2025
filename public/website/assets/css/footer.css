@@ -6,7 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     position: relative;
 }
 
@@ -40,14 +41,18 @@
     justify-content: center;
     gap: 4rem;
     border: 2px solid #161616;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 .subContainer h4 {
     margin: 0;
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 25px;
     font-weight: 700;
-    color: #ef4b4f;
-    font-family: "Proxima Nova";
+    /* color: #ef4b4f; */
+    color: #e32636;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 .subscribeBox {
     height: 40px;
@@ -69,7 +74,8 @@
     color: #161616;
     border-radius: 6px 0 0 6px;
     font-style: normal;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .subscribeBox input::placeholder {
     color: #000 !important;
@@ -99,14 +105,16 @@
     box-shadow: 0px 7.07px 7.07px 0px rgba(16, 137, 255, 0.1);
     border-radius: 0 8px 8px 0;
     font-style: normal;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 /* ---------------- */
 .footerContainer {
     width: 90%;
     margin-top: 8rem;
     margin-bottom: 2rem;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 
 .footer-logo img {
@@ -116,10 +124,12 @@
     margin: 0;
     font-size: 18px;
     font-weight: 400;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .footerContainer p strong {
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .contactP {
     margin: 0;
@@ -128,7 +138,8 @@
     display: flex;
     /* align-items: center; */
     gap: 1rem;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .footerContainer .contactP img {
     height: 24px;
@@ -140,7 +151,8 @@
     margin: 0;
     font-size: 24px;
     font-weight: 600;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .fIcon {
     height: 40px;
@@ -159,7 +171,8 @@
     display: flex;
     align-items: center;
     gap: 2px;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .footer ul li a .material-symbols-outlined {
     rotate: 270deg;
@@ -170,13 +183,15 @@
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .footerForm input,
 .footerForm textarea {
     background-color: transparent;
     color: #fff !important;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 
 .footerForm input:focus,
@@ -213,7 +228,8 @@
     align-items: center;
     justify-content: center;
     background-color: #161616;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .fbContainer {
     width: 90%;
@@ -227,7 +243,8 @@
     font-size: 20px;
     font-weight: 400;
     text-align: center;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 
 ::placeholder {
@@ -238,7 +255,8 @@ input,
 select,
 textarea {
     color: #000 !important;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .footerForm input,
 .footerForm select,
@@ -246,10 +264,12 @@ textarea {
     color: #ffffff !important;
 }
 form#footerForm {
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 .contact-detail a:hover span {
-    color: #ef4b4f !important;
+    /* color: #ef4b4f !important; */
+    color: #e32636 !important;
 }
 @media screen and (max-width: 1800px) {
     .subContainer {
@@ -416,7 +436,8 @@ form#footerForm {
     border-color: #c5c5c5;
     /* color: #000; */
     text-wrap: wrap;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .footerForm .dropdown-toggle:hover {
     background: none;
@@ -479,7 +500,7 @@ form#footerForm {
     right: -50px;
     rotate: 90deg;
     transform: translateY(-50%);
-    background-color: #ef4b4f;
+    background-color: #e32636;
     color: #fff;
     border: none;
     border-radius: 0 0 8px 8px;
@@ -498,7 +519,8 @@ form#footerForm {
 .modalBtn {
     width: 180px;
     height: 45px;
-    background-color: #ef4b4f;
+    /* background-color: #ef4b4f; */
+    background-color: #e32636;
     color: #fff;
     border: none;
     border-radius: 8px;

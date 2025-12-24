@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminAuthenticate;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Common\SeoController;
 // use App\Http\Controllers\Admin\InstituteController;
 // use App\Http\Controllers\Admin\DisciplineController;
 // use App\Http\Controllers\Admin\SpecializationMasterController;
@@ -22,6 +23,8 @@ use App\Http\Controllers\Common\NewsCityController;
 use App\Http\Controllers\Common\PublicationController;
 use App\Http\Controllers\Common\EventCityController;
 use App\Http\Controllers\Common\EventCityImageController;
+use App\Http\Controllers\Common\LifeController;
+use App\Http\Controllers\Common\BannerController;
 
 /*
 
@@ -95,7 +98,7 @@ Route::prefix('admin')->group(function () {
             Route::get('/newsandblog/edit/{id}', 'newsandblog_edit');
             Route::post('/newsandblog/edit/{id}', 'newsandblog_update');
         });
- 
+
         // City Management Routes under Events section Cities
         Route::prefix('/event/cities')->name('admin.event.cities.')->controller(EventCityController::class)->group(function () {
             Route::get('/', 'index')->name('index');          // admin.newsandblog.cities.index
@@ -105,7 +108,7 @@ Route::prefix('admin')->group(function () {
             Route::get('/edit/{id}', 'edit')->name('edit');   // admin.newsandblog.cities.edit
             Route::post('/update/{id}', 'update')->name('update'); // admin.newsandblog.cities.update
             Route::post('/delete', 'delete')->name('delete'); // admin.newsandblog.cities.delete
-            
+
         });
         Route::controller(EventCityImageController::class)->group(function () {
             Route::get('/event/city/images', 'index')->name('admin.event.city.images');
@@ -154,7 +157,6 @@ Route::prefix('admin')->group(function () {
             Route::get('/publication-form-list', 'publication_form_list')->name('admin.publication-form-list');
             Route::get('/publication-form-list-all', 'publication_form_list_all')->name('admin.fetch-publication-form-list');
             Route::get('/publication-form-list-download', 'downloadPublicationFormList');
-
         });
 
         Route::controller(CareerController::class)->group(function () {
@@ -190,6 +192,53 @@ Route::prefix('admin')->group(function () {
             Route::get('/subscribe-list', 'subscribe_index')->name('admin.subscribe');
             Route::get('/subscribe-all', 'subscribe_all')->name('admin.fetch-subscribe');
             Route::get('/subscribe-download', 'downloadSubscribe');
+        });
+
+        Route::controller(MediaController::class)->group(function () {
+            Route::get('/media', 'index')->name('admin.media');
+            Route::get('/media-all', 'allMedia');
+            Route::get('/media/create', 'create')->name('admin.media.create');
+            Route::post('/media/store', 'store')->name('admin.media.store');
+            Route::post('/media/delete', 'delete')->name('admin.media.delete');
+            Route::get('/media/edit/{id}', 'media_edit');
+            Route::post('/media/edit/{id}', 'media_update');
+        });
+
+        Route::controller(LifeController::class)->group(function () {
+
+            Route::get('/life', 'index')->name('admin.life');
+            Route::get('/life-all', 'allLife');
+
+            Route::get('/life/create', 'create')->name('admin.life.create');
+            Route::post('/life/store', 'store')->name('admin.life.store');
+
+            Route::post('/life/delete', 'delete')->name('admin.life.delete');
+
+            Route::get('/life/edit/{id}', 'life_edit');
+            Route::post('/life/edit/{id}', 'life_update');
+        });
+
+        Route::controller(BannerController::class)->group(function () {
+
+            Route::get('/banner', 'index')->name('admin.banner');
+            Route::get('/banner-all', 'allBanner');
+
+            Route::get('/banner/create', 'create')->name('admin.banner.create');
+            Route::post('/banner/store', 'store')->name('admin.banner.store');
+
+            Route::post('/banner/delete', 'delete')->name('admin.banner.delete');
+
+            Route::get('/banner/edit/{id}', 'banner_edit');
+            Route::post('/banner/edit/{id}', 'banner_update');
+        });
+        Route::controller(SeoController::class)->group(function () {
+            Route::get('/seo', 'index')->name('admin.seo');              // page
+            Route::get('/seo-all', 'allSeo');
+            Route::post('/seo/delete', 'delete')->name('admin.seo.delete');                            // datatable
+            Route::get('/seo/create', 'create')->name('admin.seo.create');
+            Route::post('/seo/store', 'store')->name('admin.seo.store');
+            Route::get('/seo/edit/{seo}', 'seo_edit')->name('admin.seo_edit');     // add name
+            Route::post('/seo/edit/{seo}', 'seo_update')->name('admin.seo_update'); // add name
         });
     });
 });

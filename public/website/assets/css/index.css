@@ -2,9 +2,13 @@
 .firstSection {
     margin-top: 80px;
 }
+.dropdown-menu {
+    padding: 0 !important;
+}
 .dropdown-item.active,
 .dropdown-item:active {
-    color: #ef4b4f !important;
+    /* color: #ef4b4f !important; */
+    color: #e32636 !important;
     text-decoration: none;
     background-color: transparent !important;
 }
@@ -16,13 +20,16 @@
 }
 .firstContainer {
     position: absolute;
-    font-family: "Proxima Nova";
-    color: #ef4b4f;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* color: #ef4b4f; */
+    color: #e32636;
     top: 8%;
 }
 .firstContainer h1 {
     margin: 0;
-    font-size: 110px;
+    /* font-size: 110px; */
+    font-size: 80px;
     font-weight: 700;
     line-height: 120%;
     padding-bottom: 0px;
@@ -34,13 +41,15 @@
     /* color: #fff; */
     font-style: normal;
     font-weight: 800;
-    color: #ef4b4f;
+    /* color: #ef4b4f; */
+    color: #e32636;
 }
 
 .firstContainer p {
     margin: 0;
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -127,7 +136,8 @@
 
 .servicesCard h3 {
     margin: 0;
-    font-family: "Roboto", serif;
+    /* font-family: "Roboto", serif; */
+    font-family: "Poppins", sans-serif;
     font-size: 42px;
     font-weight: 700;
     text-align: center;
@@ -144,7 +154,8 @@
     height: 100%;
     overflow-y: auto;
     position: absolute;
-    background-color: #ef4b4f;
+    /* background-color: #ef4b4f; */
+    background-color: #e32636;
     transition: 0.3s;
     padding: 2rem;
     color: #ffffff;
@@ -152,7 +163,8 @@
 
 .cardContainer h4 {
     margin: 0;
-    font-family: "Raleway", serif;
+    /* font-family: "Raleway", serif; */
+    font-family: "Poppins", sans-serif;
     font-size: 28px;
     font-weight: 700;
     text-align: left;
@@ -168,7 +180,8 @@
     font-size: 26px;
     font-weight: 500;
     text-align: left;
-    font-family: "Raleway", serif;
+    /* font-family: "Raleway", serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 .cardContainer li img {
@@ -192,7 +205,8 @@
     margin-top: -2rem !important;
     margin-right: 2rem !important;
     background: none !important;
-    color: #ef4b4f !important;
+    /* color: #ef4b4f !important; */
+    color: #e32636 !important;
     font-weight: 700 !important;
     cursor: pointer;
     text-align: right;
@@ -215,7 +229,61 @@
     margin-top: 10px;
     transition: all 0.3s ease;
 }
+.new-sec-6 h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 92px;
+    font-weight: bold;
+    color: #e32636;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+}
+.new-sec-6 h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+}
+.new-sec-6 p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+}
 
+.icon-bx {
+    width: 87.84px;
+    height: 87.84px;
+}
+
+.news-card {
+    overflow: hidden;
+}
+@media (min-width: 992px) {
+    .custom-margin {
+        margin-left: 25px;
+    }
+    .new-sec-6 {
+        width: 100%;
+    }
+}
+@media (max-width: 991.98px) {
+    .custom-margin {
+        margin-left: 0;
+    }
+    .new-sec-6 {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .new-sec-6 h2 {
+        font-size: 76px;
+    }
+    .new-sec-6 h5 {
+        font-size: 24px;
+    }
+    .new-sec-6 p {
+        font-size: 20px;
+    }
+}
 /* Target arrows only inside the .testimonials slider */
 .testimonials .slick-prev,
 .testimonials .slick-next {
@@ -274,6 +342,10 @@
     content: "arrow_forward_ios";
 }
 
+.privacy_policy h1 {
+    font-size: 80px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     h1.jobtitle {
@@ -319,11 +391,14 @@
 /* Responsive Styles */
 @media screen and (max-width: 1660px) {
     .firstContainer h1 {
-        font-size: 94px;
-        line-height: 100px;
+        /* font-size: 94px; */
+        font-size: 80px;
+        /* line-height: 100px; */
+        line-height: 90px;
     }
     .firstContainer p {
-        font-size: 28px;
+        /* font-size: 28px; */
+        font-size: 22px;
     }
     .secRightBox {
         gap: 1.5rem;
@@ -429,8 +504,10 @@
         font-size: 28px;
     }
     .firstContainer h1 {
-        color: #ef4b4f;
-        font-family: "Proxima Nova";
+        /* color: #ef4b4f; */
+        color: #e32636;
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
         font-size: 56px !important;
         font-style: normal;
         font-weight: 700 !important;
@@ -487,7 +564,8 @@
 }
 .mediaboxB .mediaText p {
     color: #000000 !important;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 /*  Media logo sixe style*/
 .mediaLogo {
@@ -496,12 +574,14 @@
 }
 .titleH1 {
     margin: 0;
+    /* font-size: 80px !important; */
     font-size: 80px !important;
     font-weight: 800;
     line-height: 77px;
     text-align: left;
     color: #ffffff;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 
 .testimonialimgs {
@@ -554,7 +634,8 @@
     font-size: 20px;
     margin-bottom: 8px;
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -570,7 +651,8 @@
     margin: 4px 0;
     position: relative;
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 500;
 }
@@ -679,7 +761,8 @@
         bottom: -59px !important;
     }
     .media .slick-dots .slick-active {
-        background: #ef4b4f;
+        /* background: #ef4b4f; */
+        background: #e32636;
         width: 28px !important;
         height: 14px !important;
     }
@@ -751,7 +834,8 @@
     cursor: pointer;
 }
 .media .slick-dots .slick-active {
-    background: #ef4b4f;
+    /* background: #ef4b4f; */
+    background: #e32636;
     width: 40px;
 }
 .media .slick-dots li button:before {

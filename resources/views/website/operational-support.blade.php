@@ -6,7 +6,8 @@
 <style>
     @media screen and (max-width:1700px) and (min-width:1100px) {
         .fntsize {
-            font-size: 1rem;
+            /* font-size: 1rem; */
+            font-size: 20px;
             text-align: start;
         }
 
@@ -30,7 +31,7 @@
     <div class="custom-container">
         <div class="row g-4 ">
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 overview-title">
-                <h1 class="serh1">Upholding your Benchmarks through Operational Excellence</h1>
+                <h2 class="serh1">Upholding your Benchmarks through Operational Excellence</h2>
 
                 <p class="service-p">Successfully navigating India and South Asia’s dynamic market requires more than just local
                     presence—it demands expertise. Gresham Global’s Operational Support ensures that every facet of your

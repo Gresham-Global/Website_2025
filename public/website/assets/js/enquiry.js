@@ -1,6 +1,11 @@
 $("#submit_footer,#submit_contact, #submit_modal").click(function (e) {
     var clickedID = $(this).attr("id"); // Get the ID of the clicked element
-    var form_value = clickedID === "submit_contact" ? "_contact" : clickedID === "submit_modal" ? "_modal" : "";
+    var form_value =
+        clickedID === "submit_contact"
+            ? "_contact"
+            : clickedID === "submit_modal"
+            ? "_modal"
+            : "";
     $("#allerror" + form_value)
         .html("")
         .removeClass("text-success1 text-danger");
@@ -40,17 +45,31 @@ $("#submit_footer,#submit_contact, #submit_modal").click(function (e) {
         return false;
     }
     var disallowedDomains = [
-        "gmail.com", "yahoo.com", "hotmail.com", "outlook.com",
-        "live.com", "aol.com", "msn.com", "icloud.com",
-        "me.com", "mail.com", "gmx.com", "protonmail.com",
-        "yandex.com", "zoho.com", "tutanota.com", "rediffmail.com",
-        "rocketmail.com", "ymail.com", "inbox.com", "fastmail.com",
-        "hushmail.com"
+        "gmail.com",
+        "yahoo.com",
+        "hotmail.com",
+        "outlook.com",
+        "live.com",
+        "aol.com",
+        "msn.com",
+        "icloud.com",
+        "me.com",
+        "mail.com",
+        "gmx.com",
+        "protonmail.com",
+        "yandex.com",
+        "zoho.com",
+        "tutanota.com",
+        "rediffmail.com",
+        "rocketmail.com",
+        "ymail.com",
+        "inbox.com",
+        "fastmail.com",
+        "hushmail.com",
     ];
 
-    var emailDomain = email.split('@')[1].toLowerCase();
+    var emailDomain = email.split("@")[1].toLowerCase();
     if (disallowedDomains.includes(emailDomain)) {
-
         $("#allerror" + form_value)
             .html("Please use your official or institutional email address.")
             .addClass("text-danger");
@@ -103,10 +122,10 @@ $("#submit_footer,#submit_contact, #submit_modal").click(function (e) {
             if (response.status) {
                 // Show success alert
                 Swal.fire({
-                    title: 'Success!',
-                    text: 'Enquiry submitted successfully.',
-                    icon: 'success',
-                    confirmButtonText: 'OK'
+                    title: "Success!",
+                    text: "Enquiry submitted successfully.",
+                    icon: "success",
+                    confirmButtonText: "OK",
                 });
 
                 // Clear all fields
@@ -125,16 +144,15 @@ $("#submit_footer,#submit_contact, #submit_modal").click(function (e) {
                     .removeClass("text-danger")
                     .removeClass("text-success1")
                     .html("");
-
             } else {
                 let errorMessage = response.message || "Please try again.";
 
                 // Show error alert
                 Swal.fire({
-                    title: 'Error!',
+                    title: "Error!",
                     text: errorMessage,
-                    icon: 'error',
-                    confirmButtonText: 'OK'
+                    icon: "error",
+                    confirmButtonText: "OK",
                 });
 
                 $("#" + clickedID).prop("disabled", false);

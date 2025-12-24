@@ -6,7 +6,8 @@
 <style>
   @media screen and (max-width:1700px) and (min-width:1100px) {
     .fntsize {
-      font-size: 1rem;
+      /* font-size: 1rem; */
+      font-size: 20px;
       text-align: start;
     }
 
@@ -28,7 +29,7 @@
   <div class="custom-container">
     <div class="row g-4 ">
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 overview-title">
-        <h1 class="serh1">Ennobling the Stature of your University</h1>
+        <h2 class="serh1">Ennobling the Stature of your University</h2>
 
         <p class="service-p">Expanding your university’s reach demands a strategy that resonates with the region’s
           distinct dynamics. We deliver tailored marketing solutions that increase visibility, build strong

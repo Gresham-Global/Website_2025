@@ -31,7 +31,7 @@
                 </div>
             </a>
 
-            
+
 
             <div class="select-menu {{ (request()->is('admin/event*') ) ? 'active disabled prevent-close' : '' }}">
                 <div class="select-btn {{ (request()->is('admin/event*') ) ? 'item_active disabled text-white' : '' }}">
@@ -141,6 +141,35 @@
                 <div class="collegeMenu-item {{ request()->is('admin/publication-form-list') ? 'item_active disabled' : '' }}">
                     <span class="material-symbols-outlined collegeMenu-itemIcon">campaign</span>
                     <p class="collegeMenu-itemText">Publication Form List</p>
+                </div>
+            </a>
+
+            <a href="{{ route('admin.life') }}">
+                <div
+                    class="collegeMenu-item {{ (request()->is('admin/life') || request()->is('admin/life/create') || request()->is('admin/life/edit*')) ? 'item_active disabled' : '' }}">
+                    <span class="material-symbols-outlined collegeMenu-itemIcon">
+                        campaign
+                    </span>
+                    <p class="collegeMenu-itemText">Life at Grisham Global</p>
+                </div>
+            </a>
+
+            <a href="{{ route('admin.banner') }}">
+                <div
+                    class="collegeMenu-item {{ (request()->is('admin/banner') || request()->is('admin/banner/create') || request()->is('admin/banner/edit*')) ? 'item_active disabled' : '' }}">
+                    <span class="material-symbols-outlined collegeMenu-itemIcon">
+                        campaign
+                    </span>
+                    <p class="collegeMenu-itemText">Banner</p>
+                </div>
+            </a>
+            <a href="{{ route('admin.seo') }}">
+                <div
+                    class="collegeMenu-item {{ (request()->is('admin/seo') || request()->is('admin/seo/create') || request()->is('admin/seo/edit*')) ? 'item_active disabled' : '' }}">
+                    <span class="material-symbols-outlined collegeMenu-itemIcon">
+                        campaign
+                    </span>
+                    <p class="collegeMenu-itemText">SEO</p>
                 </div>
             </a>
 

@@ -5,10 +5,12 @@
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .news-card .news-card-body span {
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 .news-card .news-card-body .cards_tags {
     margin-top: 0.8rem;
@@ -25,39 +27,93 @@
 }
 
 /* Card Image */
-.news-card-img {
-    margin-bottom: 10px;
+
+.news-card-img-wrapper {
     width: 100%;
-    min-height: 200px;
-    object-fit: cover;
-    /* border-radius: 10px 10px 0rem 0rem; */
+    aspect-ratio: 16 / 9; /* 🔥 always 16:9 */
+    overflow: hidden;
     border-radius: 8px;
-    height: 250px !important;
-    object-fit: cover;
+    background: rgba(227, 38, 54, 0.2);
+}
+.home-news-card-img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 🔥 always 16:9 */
+    overflow: hidden;
+    border-radius: 8px;
+    background: rgba(227, 38, 54, 0.2);
+}
+.news-card-img,
+.mediaText {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* crop without distortion */
     object-position: center;
+    display: block;
 }
 
 /* Card Body */
 .news-card-body {
     padding: 20px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 /* Title */
 .news-card-title {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 25px;
     font-weight: 700;
-    color: #d10000;
+    /* color: #d10000; */
+    color: #e32636;
     margin-top: 12px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+}
+.imageSwiper {
+    /* width: 600px; */
+    /* Fixed width for swiper container */
+    max-width: 100%;
+    /* optional: prevent overflow on small screens */
 }
 
+.imageSwiper .swiper-slide {
+    /* width: 600px; */
+    /* Fix each slide width */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.imageSwiper img {
+    width: 100%;
+    /* Make image fit slide */
+    height: auto;
+    /* maintain aspect ratio */
+    object-fit: cover;
+    /* optional: crop nicely */
+}
+
+/* Normal (inactive) dots */
+.imageSwiper .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border: 1px solid #fff;
+    /* change inactive dot color */
+}
+
+/* Active dot */
+.imageSwiper .swiper-pagination-bullet-active {
+    background-color: red !important;
+    border: 1px solid #fff;
+    /* change active dot color */
+}
 /* Card Text */
 .news-card-text {
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 20px;
     color: #333;
     line-height: 1.5;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     min-height: 58px;
     margin-bottom: 5px !important;
 }
@@ -81,7 +137,8 @@
     display: flex;
     justify-content: space-evenly;
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -102,7 +159,8 @@
     color: #ffffff;
     padding: 0.5rem 1.5rem;
     border-radius: 8px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     /* margin-top: 5rem; */
     line-height: 1.2;
 }

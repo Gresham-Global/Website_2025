@@ -1,9 +1,11 @@
 /* career inside-index.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-    font-family: "Inter", sans-serif; /* Apply Inter font to all body text */
+    /* font-family: "Inter", sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 .h1,
 h2,
@@ -11,7 +13,116 @@ h3,
 h4,
 h5,
 p {
-    font-family: Inter;
+    /* font-family: Inter; */
+    font-family: "Poppins", sans-serif;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
 }
 
 /* qualification */
@@ -42,7 +153,8 @@ p {
 /* General Reset */
 body {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    /* font-family: "Inter", sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 
 /* .servicesbannerSec{ background: url('../../assets/images/bg-img.png') no-repeat center center; color: #fff;
@@ -193,7 +305,8 @@ a:hover {
 
 .contact-heading {
     color: #fff;
-    font-family: Raleway;
+    /* font-family: Raleway; */
+    font-family: "Poppins", sans-serif;
     font-size: 3.25rem;
     font-style: normal;
     font-weight: 700;
@@ -209,7 +322,8 @@ a:hover {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Poppins", sans-serif;
     /* padding: 20px; */
 }
 
@@ -250,7 +364,8 @@ body {
 
 .card-date {
     color: #555;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -266,7 +381,8 @@ body {
 
 .card-title1 {
     color: #ef4b4f;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -279,7 +395,8 @@ body {
     margin-top: 16px;
     margin-bottom: 15px;
     color: #555;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -615,7 +732,8 @@ body {
     margin-bottom: 20px;
     color: #000;
     text-align: center;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 55px;
     font-style: normal;
     font-weight: 400;
@@ -628,7 +746,8 @@ body {
     margin-left: 40px;
     color: #555;
     text-align: center;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -834,7 +953,8 @@ h3,
 h4,
 h5,
 p {
-    font-family: Proxima Nova;
+    /* font-family: Proxima Nova; */
+    font-family: "Poppins", sans-serif;
 }
 @media (max-width: 992px) {
     .col-lg-9 {
@@ -1044,7 +1164,8 @@ h3,
 h4,
 h5,
 p {
-    font-family: Proxima Nova;
+    /* font-family: Proxima Nova; */
+    font-family: "Poppins", sans-serif;
 }
 
 .customSection {
@@ -1632,8 +1753,10 @@ p {
 }
 .custom-card.light {
     background: white;
-    color: #d32f2f;
-    border: 1px solid #d32f2f;
+    /* color: #d32f2f; */
+    color: #e32636;
+    /* border: 1px solid #d32f2f; */
+    border: 1px solid #e32636;
 }
 .row {
     --bs-gutter-x: 1.5rem;
@@ -1669,8 +1792,23 @@ p {
 .overview-title h1 {
     color: #000;
     text-align: center;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 40px;
+    line-height: 44px;
+    font-style: normal;
+    font-weight: 600;
+    padding-bottom: 10px;
+    /* 75% */
+}
+
+.overview-title h2 {
+    color: #000;
+    text-align: center;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 40px; */
+    font-size: 50px;
     line-height: 44px;
     font-style: normal;
     font-weight: 600;
@@ -1681,7 +1819,8 @@ p {
 #about-overview p {
     color: #555;
     text-align: center;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -1781,7 +1920,8 @@ p {
 .fntsize {
     font-size: 1.5rem;
     text-align: start;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 .icon1 {
     margin-bottom: 20px;
@@ -1789,8 +1929,10 @@ p {
 .heading1 {
     margin-bottom: 10px;
     /*     color: #FFF; */
-    font-family: "Proxima Nova";
-    font-size: 32px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 32px; */
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1798,7 +1940,8 @@ p {
 .custom-card p {
     color: #000;
 
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -1920,7 +2063,8 @@ button.Explore:hover div .pr-2.fntsize {
 
 .content-videotext {
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 64px;
     font-style: normal;
     width: 90%;
@@ -1955,7 +2099,8 @@ button.Explore:hover div .pr-2.fntsize {
 
 .whitevideotext {
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 110px;
     font-style: normal;
     font-weight: 700;
@@ -1963,7 +2108,8 @@ button.Explore:hover div .pr-2.fntsize {
 }
 .redvideotext {
     color: #ef4b4f;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 110px;
     font-style: normal;
     font-weight: 700;
@@ -1972,7 +2118,8 @@ button.Explore:hover div .pr-2.fntsize {
 
 .paratextvideo {
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -2027,7 +2174,8 @@ button.Explore:hover div .pr-2.fntsize {
 }
 
 .prof-content h2 {
-    font-family: "helvetica_neue_lt_std45_light" !important;
+    /* font-family: "helvetica_neue_lt_std45_light" !important; */
+    font-family: "Poppins", sans-serif;
     font-size: 45px;
     line-height: 1.2;
 }
@@ -2164,7 +2312,7 @@ background: linear-gradient(-249deg, #995fa3 3.9%, #261447 63.77%);
 }
 
 .imgRadius {
-     border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
     display: block;
     overflow: hidden;
 }

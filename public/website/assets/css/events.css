@@ -4,16 +4,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
-
+.mediaCon span {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 22px !important;
+}
 section.events_main .events-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 30px 23px;
     padding: 0 20px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 section.events_main .event-card {
@@ -28,7 +33,8 @@ section.events_main .event-card {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     align-items: stretch;
     flex-wrap: wrap;
     gap: 16px;
@@ -48,7 +54,8 @@ section.events_main .event-img img {
 
 section.events_main .event-content {
     padding: 0 15px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -58,7 +65,8 @@ section.events_main .event-content {
 section.events_main .event-title {
     margin-bottom: 10px;
     color: #ef4b4f;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -70,7 +78,8 @@ section.events_main .event-description {
     padding-bottom: 14px;
     overflow: hidden;
     color: #555;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -89,7 +98,8 @@ section.events_main .read-more {
     color: #ffffff;
     padding: 0.5rem 1.5rem;
     border-radius: 8px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     /* margin-top: 5rem; */
     line-height: 1.2;
 }
@@ -373,7 +383,8 @@ section.events_main .read-more:hover {
 .city-button:hover {
     /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%);
 }
 
@@ -398,6 +409,11 @@ section.events_main .read-more:hover {
 
 .customContainer.mediaCon h1 {
     font-size: 44px;
+}
+
+.customContainer.mediaCon h2 {
+    font-size: 50px;
+    color: #000;
 }
 
 @media (max-width: 768px) {
@@ -460,7 +476,8 @@ section.events_main .read-more:hover {
     color: #9c9c9c;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
@@ -468,7 +485,8 @@ section.events_main .read-more:hover {
 
 .publications span.tagtxt {
     color: #555;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -480,7 +498,8 @@ section.events_main .read-more:hover {
 }
 .similar_newsandblogs_head h3.similar_newsandblogs_title {
     color: #555;
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;

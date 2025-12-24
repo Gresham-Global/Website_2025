@@ -1,9 +1,119 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
 
 /* Active link styles */
 ul.list-unstyled .ftactive {
     /* color: #ef4b4f !important; */
-    color: #45090b !important;
+    color: #e32636 !important;
+    /* color: #45090b !important; */
     background-color: white !important;
     border-radius: 10px;
     padding: 3px 10px !important;
@@ -19,7 +129,8 @@ section.homebann.customSection.firstSection .firstContainer h1 {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    /* font-family: "Inter", sans-serif; */
+    font-family: "Poppins", sans-serif;
     /* Apply Inter font to all body text */
     overflow-x: hidden;
 }
@@ -38,11 +149,13 @@ body {
 }
 
 .interFont {
-    font-family: "Inter", sans-serif !important;
+    /* font-family: "Inter", sans-serif !important; */
+    font-family: "Poppins", sans-serif;
 }
 
 .proximaFont {
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -50,7 +163,8 @@ a {
 }
 
 a:hover {
-    color: #ef4b4f !important;
+    /* color: #ef4b4f !important; */
+    color: #e32636 !important;
 }
 
 .customSection {
@@ -67,12 +181,20 @@ a:hover {
 
 div#career-description span,
 div#career-description p {
-    font-family: "Proxima Nova" !important;
+    /* font-family: "Proxima Nova" !important; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #555555;
+    margin-bottom: 5px;
 }
 
 .contact-heading {
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 3.25rem;
     font-style: normal;
     font-weight: 700;
@@ -166,7 +288,8 @@ h6 {
 
 .servicesbannerSec h1 {
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 64px;
     font-style: normal;
     width: 90%;
@@ -190,8 +313,10 @@ h6 {
 
 .sec2 h2 {
     color: #000;
-    font-family: "Proxima Nova";
-    font-size: 64px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 64px; */
+    font-size: 50px;
     padding-bottom: 30px;
     font-style: normal;
     font-weight: 700;
@@ -211,8 +336,10 @@ h6 {
 
 .sec2 p {
     color: #555;
-    font-family: "Proxima Nova";
-    font-size: 24px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 24px; */
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 34px;
@@ -234,8 +361,10 @@ h6 {
 .sec3 h2 {
     color: #000;
     text-align: center;
-    font-family: "Proxima Nova";
-    font-size: 64px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 64px; */
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -299,7 +428,8 @@ h6 {
 }
 
 .frontcardLeft h3 {
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 /*Just overlay color of front image*/
@@ -344,7 +474,8 @@ h6 {
 
 .frontcardLeft {
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 48px;
     font-style: normal;
     padding: 20px 30px !important;
@@ -360,8 +491,10 @@ h6 {
 
 .back-card h3 {
     color: #fff;
-    font-family: "Proxima Nova";
-    font-size: 30px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 30px; */
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     width: 100%;
@@ -382,8 +515,10 @@ h6 {
     list-style-type: none;
     background: url("../../assets/images/bullet.png") no-repeat center left;
     color: #fff;
-    font-family: "Proxima Nova";
-    font-size: 24px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 24px; */
+    font-size: 22px;
     font-style: normal;
     font-weight: 500;
     line-height: 36px;
@@ -402,8 +537,10 @@ h6 {
 
 .sec4 h2 {
     color: #000;
-    font-family: "Proxima Nova";
-    font-size: 64px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 64px; */
+    font-size: 50px;
     padding-bottom: 30px;
     font-style: normal;
     font-weight: 700;
@@ -412,8 +549,10 @@ h6 {
 
 .sec4 p {
     color: #555;
-    font-family: "Proxima Nova";
-    font-size: 24px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 24px; */
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 34px;
@@ -447,9 +586,12 @@ h6 {
 }
 
 .sec5 h2 {
-    color: #ef4b4f;
-    font-family: "Proxima Nova";
-    font-size: 64px;
+    /* color: #ef4b4f; */
+    color: #e32636;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 64px; */
+    font-size: 50px;
     text-align: center;
     font-style: normal;
     font-weight: 700;
@@ -463,8 +605,10 @@ h6 {
 .sec5 p {
     color: #272727;
     text-align: center;
-    font-family: "Proxima Nova";
-    font-size: 24px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 24px; */
+    font-size: 22px;
     text-align: center;
     margin: 0 auto 60px auto;
     font-style: normal;
@@ -482,7 +626,8 @@ h6 {
     color: #000;
 
     text-align: center !important;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -497,8 +642,10 @@ h6 {
 .sec6 h2 {
     color: #fff;
     text-align: center;
-    font-family: "Proxima Nova";
-    font-size: 64px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 64px; */
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -511,7 +658,8 @@ h6 {
 }
 
 .getintouchBtn {
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 .box1 {
@@ -530,8 +678,10 @@ h6 {
 .box1 h4 {
     color: #fff;
     text-align: center;
-    font-family: "Proxima Nova";
-    font-size: 24px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 24px; */
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -596,8 +746,10 @@ h6 {
 .back-card1 h3 {
     color: #000;
     text-align: center;
-    font-family: Raleway;
-    font-size: 30px;
+    /* font-family: Raleway; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 30px; */
+    font-size: 25px;
     padding: 0 20px;
     font-style: normal;
     font-weight: 700;
@@ -608,8 +760,10 @@ h6 {
 .back-card1 p {
     color: #000;
     text-align: center;
-    font-family: "Proxima Nova";
-    font-size: 18px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 18px; */
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     padding: 0 30px;
@@ -629,8 +783,10 @@ h6 {
 
 .sec7Left h2 {
     color: #000;
-    font-family: "Proxima Nova";
-    font-size: 64px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 64px; */
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     padding-bottom: 20px;
@@ -645,7 +801,8 @@ h6 {
 .sec7Right ul li {
     border-radius: 8px;
     color: #fff;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     cursor: pointer;
     font-style: normal;
@@ -727,7 +884,8 @@ h6 {
 } */
 .mediaboxL {
     color: #000000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -737,7 +895,8 @@ h6 {
 
 .mediaboxR {
     color: #000000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     text-align: right;
     font-style: normal;
@@ -748,7 +907,8 @@ h6 {
 
 .mediaboxB {
     color: black;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -866,7 +1026,8 @@ h6 {
 }
 
 .blogs .slick-dots .slick-active {
-    background: #ef4b4f;
+    /* background: #ef4b4f; */
+    background: #e32636;
     width: 40px;
 }
 
@@ -876,7 +1037,8 @@ h6 {
 
 .blogsboxL {
     color: #777;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -886,7 +1048,8 @@ h6 {
 
 .blogsboxR {
     color: #777;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     text-align: right;
     font-style: normal;
@@ -897,7 +1060,8 @@ h6 {
 
 .blogsboxB {
     color: #000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -916,8 +1080,10 @@ h6 {
 }
 
 .sec8 h5 {
-    color: #ef4b4f;
-    font-family: "Proxima Nova";
+    /* color: #ef4b4f; */
+    color: #e32636;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -929,8 +1095,10 @@ h6 {
     color: #fff;
     text-align: center;
     padding-bottom: 40px;
-    font-family: "Proxima Nova";
-    font-size: 64px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    /* font-size: 64px; */
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -1013,7 +1181,8 @@ h6 {
 }
 
 .testimonials .slick-dots .slick-active {
-    background: #ef4b4f;
+    /* background: #ef4b4f; */
+    background: #e32636;
     width: 40px;
 }
 
@@ -1023,7 +1192,8 @@ h6 {
 
 .TestiBox h4 {
     color: #000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 27.067px;
     font-style: normal;
     font-weight: 700;
@@ -1033,7 +1203,8 @@ h6 {
 
 .TestiBox p {
     color: #000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -1057,7 +1228,8 @@ h6 {
     color: #000;
     padding-bottom: 30px;
     text-align: center;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1080,7 +1252,8 @@ h6 {
 .mainvidBox:hover {
     border-radius: 30px;
     margin: 10px;
-    background: #ef4b4f;
+    /* background: #ef4b4f; */
+    background: #e32636;
     padding: 20px;
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.25);
 }
@@ -1140,7 +1313,8 @@ h6 {
 }
 
 .video .slick-dots .slick-active {
-    background: #ef4b4f;
+    /* background: #ef4b4f; */
+    background: #e32636;
     width: 40px;
 }
 
@@ -1150,7 +1324,8 @@ h6 {
 
 .videoB {
     color: #000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -1174,7 +1349,8 @@ h6 {
     color: #000;
     padding-bottom: 30px;
     text-align: center;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1235,7 +1411,8 @@ h6 {
 }
 
 .Research .slick-dots .slick-active {
-    background: #ef4b4f;
+    /* background: #ef4b4f; */
+    background: #e32636;
     width: 40px;
 }
 
@@ -1245,7 +1422,8 @@ h6 {
 
 .researchboxL {
     color: #777;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -1255,7 +1433,8 @@ h6 {
 
 .researchboxR {
     color: #777;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     text-align: right;
     font-style: normal;
@@ -1266,7 +1445,8 @@ h6 {
 
 .researchboxB {
     color: #000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -1293,7 +1473,8 @@ h6 {
 .contactsec2 h2 {
     color: #000;
     text-align: center;
-    font-family: Raleway;
+    /* font-family: Raleway; */
+    font-family: "Poppins", sans-serif;
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
@@ -1303,7 +1484,8 @@ h6 {
 
 .contactsec2 h3 {
     color: #000000;
-    font-family: Raleway;
+    /* font-family: Raleway; */
+    font-family: "Poppins", sans-serif;
     font-size: 44px;
     padding-bottom: 0px;
     font-style: normal;
@@ -1336,19 +1518,22 @@ h6 {
     background-color: #4e4e4e;
     padding: 14px 12px;
     border-radius: 1rem;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 .contactform1 input,
 .contactform1 select,
 .contactform1 textarea,
 .contactform1 button {
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 .contact-text {
     color: #000000;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     font-size: 23px;
     font-style: normal;
     font-weight: 500;
@@ -1357,11 +1542,13 @@ h6 {
 }
 
 .contact-card h3 {
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 .contact-form h4 {
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 /* -------------------- */
@@ -1730,8 +1917,10 @@ h6 {
     }
 
     .GrowBoxMob h3 {
-        color: #ef4b4f;
-        font-family: "Proxima Nova";
+        /* color: #ef4b4f; */
+        color: #e32636;
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
         font-size: 22px;
         text-align: left;
         font-style: normal;
@@ -1745,7 +1934,8 @@ h6 {
 
     .GrowBoxMob p {
         color: #272727;
-        font-family: "Proxima Nova";
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
         font-size: 16px;
         text-align: left;
         font-style: normal;
@@ -1911,7 +2101,8 @@ h6 {
     .sec7Left h2 {
         padding-bottom: 16px;
         text-align: center;
-        font-family: "Proxima Nova";
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
         font-size: 32px;
         font-style: normal;
         font-weight: 700 !important;
@@ -1954,7 +2145,8 @@ h6 {
     }
 
     .TestiBox p.test_per_desc {
-        font-family: "Proxima Nova";
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
         font-size: 12px !important;
         font-style: normal;
         font-weight: 400;
@@ -1965,7 +2157,8 @@ h6 {
     .TestiBox p.textTexsti span,
     p.see-more-btn {
         color: #000;
-        font-family: "Proxima Nova";
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
         font-size: 14px !important;
         font-style: normal;
         font-weight: 400;
@@ -2120,7 +2313,8 @@ h6 {
 
     .sec5 p {
         color: #272727;
-        font-family: "Proxima Nova";
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
@@ -2198,7 +2392,8 @@ h6 {
 
 .footerForm input[type="text"] {
     color: #fff !important;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
 }
 
 @media screen and (max-width: 992px) {
@@ -2332,7 +2527,7 @@ section.homebann.customSection.firstSection .customContainer.firstContainer {
 .swal2-actions button.swal2-styled {
     background: linear-gradient(
         266deg,
-        #ef4b4f -0.04%,
+        #e32636 -0.04%,
         #991f3d 72.43%
     ) !important;
     font-weight: 700;
@@ -2341,7 +2536,8 @@ section.homebann.customSection.firstSection .customContainer.firstContainer {
     color: #ffffff;
     padding: 0.5rem 2.5rem;
     border-radius: 8px;
-    font-family: "Proxima Nova";
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
     line-height: 1.2;
 }
 body.popup-open {

@@ -6,7 +6,8 @@
 <style>
     @media screen and (max-width:1700px) and (min-width:1100px) {
         .fntsize {
-            font-size: 1rem;
+            /* font-size: 1rem; */
+            font-size: 20px;
             text-align: start;
         }
 
@@ -32,7 +33,7 @@
     <div class="custom-container">
         <div class="row g-4">
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 overview-title">
-                <h1 class="serh1">Your Global Strategy, Supported Locally</h1>
+                <h2 class="serh1">Your Global Strategy, Supported Locally</h2>
 
                 <p class="service-p">
                     A dedicated regional office is pivotal for expanding your university's presence in India and South Asia. Our

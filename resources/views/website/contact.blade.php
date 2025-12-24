@@ -64,10 +64,9 @@
                         <img src="{{ asset('website/assets/images/Group 1000004045.png') }}" alt="Location Icon"
                             style="width:80px !important;
                                 height:80px!important">
-                        <a target="_blank" href="https://www.google.com/maps/dir//1206,+Signature+Business+Park,+Mono+Rail+Station,+Postal+Colony+Rd,+near+Chembur,+Postal+Colony,+Chembur,+Mumbai,+Maharashtra+400071/@19.0600367,72.8138403,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.896242!2d19.060055?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D">
+                        <a target="_blank" href="https://www.google.com/maps/dir//Gresham+Global+consultancy+LLP,+The+Epicenter,+806-808,+MBPT+Colony,+Wadhwa,+Chembur,+Mumbai,+Maharashtra+400088/@19.0595049,72.8969309,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.9105279!2d19.0478745!3e3?entry=ttu&g_ep=EgoyMDI1MTIwOC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D">
 
-                            <span class="contact-text dark">1204/1206, Signature Business Park, Chembur, Mumbai, India
-                                400071</span>
+                            <span class="contact-text dark">The Epicenter, 806-808, MBPT Colony, Wadhwa, Chembur, Mumbai, Maharashtra 400088</span>
                         </a>
                     </div>
                     <div class="contact-detail d-flex gap-2 mb-2">
@@ -89,12 +88,8 @@
 
             <!-- Google Map -->
             <div class="col-lg-4">
-                <div class="map-container h-100">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1629.3365424887747!2d72.89537320482417!3d19.060371741411533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8ed89588c29%3A0xba83964829b13797!2sGresham%20Global!5e0!3m2!1sen!2sin!4v1739370786449!5m2!1sen!2sin"
-                        width="100%" height="100%" style="border:0; border-radius: 15px; min-height: 350px;"
-                        allowfullscreen="" loading="lazy">
-                    </iframe>
+                <div class="map-container  h-100 d-flex flex-column">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942.8415744612576!2d72.90997644251647!3d19.04762603571917!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8ed89588c29%3A0xba83964829b13797!2sGresham%20Global%20consultancy%20LLP!5e0!3m2!1sen!2sin!4v1765453777712!5m2!1sen!2sin" width="100%" height="100%" style="border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 

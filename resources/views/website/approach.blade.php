@@ -1,11 +1,11 @@
 @extends('website.layout.master')
 @section('content')
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"> -->
 <style>
     /* .approach .custom-set {
             margin-top: 130px;
@@ -33,7 +33,7 @@
     }
 
     body {
-        font-family: "Montserrat";
+        font-family: 'Poppins', sans-serif;
     }
 
     .ml-2 {
@@ -92,9 +92,9 @@
 
 
 <section id="" class="approach firstSection approachsection bg-approach-banner">
-  <div class="customContainer firstContainer">
-    <h1 class="titleH1">Approach</h1>
-  </div>
+    <div class="customContainer firstContainer">
+        <h1 class="titleH1">Approach</h1>
+    </div>
 </section>
 
 
@@ -102,7 +102,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10 mt-5 text-center">
-                <p style="font-size: 21px;  font-family: 'Proxima Nova';">Expanding into India and South Asia’s dynamic and multifaceted market
+                <p style="font-size: 22px;  font-family: 'Poppins', sans-serif;">Expanding into India and South Asia’s dynamic and multifaceted market
                     requires a strategic framework that goes beyond generic solutions. We adopt a methodical, data-driven approach, working as an
                     extension of your institution to ensure measurable outcomes and sustainable impact. Our focus is on
                     aligning with your institutional goals while navigating the complexities of the region with
@@ -122,8 +122,8 @@
     <div class="container-fluid">
         <div class="row">
             <img src="{{ asset('website/assets/images/approach/approach_img.png') }}"
-                class="w-100 d-none d-sm-none d-md-block d-lg-block">
-            <img src="{{ asset('website/assets/images/apporoachcontent.png') }}" class="w-100 d-md-none d-lg-none">
+                class="w-100 d-none d-sm-none d-md-block d-lg-block" alt="">
+            <img src="{{ asset('website/assets/images/apporoachcontent.png') }}" class="w-100 d-md-none d-lg-none" alt="">
         </div>
         <!-- <div class="disp-m pt-5 p-3">
                     <div class="row">

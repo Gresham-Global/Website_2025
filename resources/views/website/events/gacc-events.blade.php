@@ -17,11 +17,9 @@
 
 <!-- Text and City Picture section starts -->
 <div class="customSection">
-  <div class="customContainer mediaCon" style="font-family: 'Proxima Nova';
-">
-    <h1 class="text-center">Gresham Annual Counsellors Conference (GACC) 2024</h1>
-    <p class="text-center my-3" style="font-size: 20px; font-family: 'Proxima Nova';
-">
+  <div class="customContainer mediaCon" style="">
+    <h2 class="text-center">Gresham Annual Counsellors Conference (GACC) 2024</h2>
+    <p class="text-center my-3" style="font-size: 20px; ">
       GACC is an annual conference for counsellors supporting high school students in their
       career transitions. This flagship event aimed to provide counsellors with insights and
       information on new career options, empowering them with diverse pathways from top UK,

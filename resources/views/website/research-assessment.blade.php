@@ -7,17 +7,22 @@
 
 
 <style>
-@media screen and (max-width:1700px) and (min-width:1100px) {
-    .fntsize {
-        font-size: 1rem;
-        text-align: start;
+    @media screen and (max-width:1700px) and (min-width:1100px) {
+        .fntsize {
+            /* font-size: 1rem; */
+            font-size: 20px;
+            text-align: start;
+        }
+
+        .Explore {
+            width: 15%;
+            min-width: 200px;
+        }
     }
 
-    .Explore {
-        width: 15%;
-        min-width: 200px;
+    .custom-container .fntsize {
+        font-size: 20px;
     }
-}
 </style>
 <!-- banner section starts here -->
 <div class="container-fluid servicesbannerSec3 firstSection">
@@ -31,7 +36,7 @@
     <div class="custom-container">
         <div class="row g-4">
             <div class="col-12 col-sm-12 col-md-10 col-lg-10 overview-title">
-                <h1 class="serh1">Empowering your University’s Future, Today</h1>
+                <h2 class="serh1">Empowering your University’s Future, Today</h2>
 
                 <p class="service-p">India and South Asia's vast and diverse landscape presents immense opportunities
                     for
@@ -153,7 +158,7 @@
                 </a>
             </div>
 
-          
+
             <div class="">
                 <a href="/academic-collaborations" class="text-dark">
                     <button type="button" class="btn Explore">
@@ -211,8 +216,8 @@
                 </a>
             </div>
 
-         
-           
+
+
 
         </div>
     </div>

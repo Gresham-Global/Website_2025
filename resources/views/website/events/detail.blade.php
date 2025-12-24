@@ -64,7 +64,7 @@
     section.similar_newsandblogs .slick-dots li.slick-active button {
         width: 31px;
         border-radius: 10px;
-        background: #EF4B4F;
+        background: #e32636;
         height: 18px;
     }
 
@@ -118,10 +118,10 @@
 </section>
 
 <div class="customSection">
-    <div class="customContainer mediaCon" style="font-family: 'Proxima Nova';">
-        <h1 class="text-center">{{ $event->title }}</h1>
+    <div class="customContainer mediaCon" style="">
+        <h2 class="text-center">{{ $event->title }}</h2>
 
-        <p class="text-center my-3" style="font-size: 20px; font-family: 'Proxima Nova';">
+        <p class="text-center my-3" style="font-size: 20px; ">
             {!! ($event->description) !!}
         </p>
 
@@ -139,24 +139,24 @@
 
         <div class="category-section mediaCon {{ $event->video_link == '' ? 'mt-5' : ''}}">
             @if($uniqueCityIds->count() > 1)
-                <div class="citybox">
-                    <div class="city-buttons">
-                        @if($uniqueCityIds->count() > 1)
-                            <button class="city-button active" data-city="all">All Cities</button>
-                        @endif
-                    
-                        @foreach($uniqueCityIds as $cityId)
-                            @php
-                                $city = $cities[$cityId];
-                                $cityName = $city->city_name;
-                            @endphp
-                            <button class="city-button {{ $uniqueCityIds->count() === 1 ? 'active' : '' }}"
-                                data-city="{{ $cityName }}">
-                                {{ $cityName }}
-                            </button>
-                        @endforeach
-                    </div>
+            <div class="citybox">
+                <div class="city-buttons">
+                    @if($uniqueCityIds->count() > 1)
+                    <button class="city-button active" data-city="all">All Cities</button>
+                    @endif
+
+                    @foreach($uniqueCityIds as $cityId)
+                    @php
+                    $city = $cities[$cityId];
+                    $cityName = $city->city_name;
+                    @endphp
+                    <button class="city-button {{ $uniqueCityIds->count() === 1 ? 'active' : '' }}"
+                        data-city="{{ $cityName }}">
+                        {{ $cityName }}
+                    </button>
+                    @endforeach
                 </div>
+            </div>
             @endif
 
             <div class="image-gallery">

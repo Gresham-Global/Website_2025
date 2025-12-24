@@ -1,7 +1,7 @@
 @extends('website.layout.master')
 
 @section('meta')
-    <meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex, nofollow">
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
 <div class="customSection">
   <div class="customContainer mediaCon" style="font-family: 'Proxima Nova';
 ">
-    <h1 class="text-center">Gresham Connect Bangladesh</h1>
+    <h2 class="text-center">Gresham Connect Bangladesh</h2>
     <p class="text-center my-3" style="font-size: 20px; font-family: 'Proxima Nova';">
       Gresham Connect Bangladesh brought together leading universities, recruitment partners, and industry experts to explore the evolving landscape of international education in Bangladesh. The event provided a platform for meaningful discussions on market trends, student mobility, and collaborative opportunities, fostering stronger connections between institutions and education professionals. Through insightful conversations and strategic networking, Gresham Connect Bangladesh reinforced our commitment to fostering partnerships that drive international education forward.</p>
 
@@ -45,7 +45,7 @@
       window.onload = shuffleImages;
     </script>
 
-    
+
     <div class="category-section mediaCon">
       <div class="citybox">
         <div class="city-buttons">
@@ -76,7 +76,7 @@
         <img src="{{ asset('website/assets/images/bangladesh/bangladesh17.webp') }}" alt="Event" data-city="bangladesh" />
         <img src="{{ asset('website/assets/images/bangladesh/bangladesh18.webp') }}" alt="Event" data-city="bangladesh" />
       </div>
-      
+
     </div>
   </div>
 </div>

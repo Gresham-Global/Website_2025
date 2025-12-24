@@ -18,8 +18,8 @@
     </div>
     <!-- <img src="{{ asset('website/assets/images/about-bannerimg.png') }}" class=" img-fluid forMobBanne w-100" -->
     <!-- alt="Bootstrap Themes" /> -->
-    <img src="{{ asset('website/assets/images/about-bannerimg.png') }}" class="w-100 forMobBanner d-none d-md-block" />
-    <img src="{{ asset('website/assets/images/aboutmobile.png') }}" class="w-100 aboutmobile forMobBanner d-block d-md-none" />
+    <img src="{{ asset('website/assets/images/about-bannerimg.png') }}" class="w-100 forMobBanner d-none d-md-block" alt="" />
+    <img src="{{ asset('website/assets/images/aboutmobile.png') }}" class="w-100 aboutmobile forMobBanner d-block d-md-none" alt="" />
 </section>
 
 <!-- Below about us -->
@@ -176,9 +176,9 @@
                     </div>
                     <!-- Right Column (Description) -->
                     <div class="" style="flex: 1">
-                        <p class="mb-0" style="font-family: Proxima Nova;
+                        <p class="mb-0" style="font-family: 'Poppins', sans-serif;
                                                                 font-weight: 400;
-                                                                font-size: 18px;
+                                                                font-size: 20px;
                                                                 line-height: 26px;
                                                                 letter-spacing: 0%;
                                                                 margin-top: 24px;
@@ -210,9 +210,9 @@
                     </div>
                     <!-- Right Column (Description) -->
                     <div class="" style="flex: 1">
-                        <p class="mb-0" style="font-family: Proxima Nova;
+                        <p class="mb-0" style="font-family: 'Poppins', sans-serif;
                                                                 font-weight: 400;
-                                                                font-size: 18px;
+                                                                font-size: 20px;
                                                                 line-height: 26px;
                                                                 letter-spacing: 0%;
                                                                 margin-top: 24px;
@@ -235,6 +235,8 @@
 
 
 <!-- sec 6 starts -->
+<x-our-values />
+<?php /*
 <section class="sec6">
     <div class="custom-container">
         <h2>Our Values</h2>
@@ -383,6 +385,7 @@
     </div><br>
 
 </section>
+<?php */ ?>
 <!-- sec 6 ends -->
 
 @endsection

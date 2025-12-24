@@ -1,15 +1,16 @@
 @extends('website.layout.master')
 @section('content')
 
-<section id="" class="about-banner-background firstSection customSection">
+<x-banner-section type="event" title="Events" />
+<!-- <section id="" class="about-banner-background firstSection customSection">
   <div class="customContainer firstContainer">
     <h1 class="text-white titleH1">Events</h1>
   </div>
   <img src="{{ asset('website/assets/images/banner_events.png') }}" class="w-100 img-fluid forMobBanner minScreenBG"
     alt="Bootstrap Themes" />
-</section>
+</section> -->
 <!-- banner section ends here -->
-  
+
 <!-- Text and City Picture section starts -->
 <section class="events_main my-5">
   <div class="events_container container-fluid px-5 py-5">
@@ -17,12 +18,12 @@
       <div class="event-card">
         <div class="event-img col-md-12">
           <a href="/events1/gacc-events">
-          <img src="https://gresham.world/website/assets/images/mumbai/img1.png" alt="Event Image">
-         </div>
-         <div class="event-content col-md-12">
+            <img src="https://gresham.world/website/assets/images/mumbai/img1.png" alt="Event Image">
+        </div>
+        <div class="event-content col-md-12">
           <div class="event-title">Gresham Annual Counsellors Conference (GACC) 2024</div>
           <div class="event-description">GACC is an annual conference for counsellors supporting high school students in their career transitions. This flagship event aimed to provide counsellors with insights and information on new career options, empowering them with diverse pathways from top UK, Canada and European...</div>
-                      </a>
+          </a>
 
           <div class="events_footer_card">
             <a href="/events1/gacc-events" class="read-more" data-post-url="/gacc-events">Read More</a>
@@ -30,20 +31,20 @@
               <img src="https://gresham.world/website/assets/images/events/share_icon.webp" alt="" srcset="">
             </a>
           </div>
-        
+
         </div>
       </div>
 
       <div class="event-card">
         <div class="event-img col-md-12">
           <a href="/events1/gresham-connect-bangladesh">
-          <img src="https://gresham.world/website/assets/images/bangladesh/bangladesh.webp" alt="Event Image">
+            <img src="https://gresham.world/website/assets/images/bangladesh/bangladesh.webp" alt="Event Image">
         </div>
         <div class="event-content col-md-12">
           <div class="event-title ">Gresham Connect Bangladesh</div>
           <div class="event-description">Gresham Connect Bangladesh brought together leading universities, recruitment partners, and industry experts to explore the evolving landscape of international education in Bangladesh. The event provided a platform for meaningful discussions on market trends, student mobility,...</div>
-                   </a>
- 
+          </a>
+
           <div class="events_footer_card">
             <a href="/events1/gresham-connect-bangladesh" class="read-more">Read More</a>
             <a href="#" class="share_social share-blog-hit" data-post-url="/events/gresham-connect-bangladesh">
