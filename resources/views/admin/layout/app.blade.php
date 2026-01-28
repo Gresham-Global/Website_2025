@@ -12,8 +12,8 @@
     <link rel="icon" href="{{ asset('website/assets/icons/favicon/icon-01.webp')}}" sizes="192x192" />
     <link rel="apple-touch-icon" href="{{ asset('website/assets/icons/favicon/icon-01.webp')}}" /> -->
 
-     <!-- Favicon setup -->
-     <link rel="icon" href="{{ asset('website/assets/icons/favicon/favicon.ico') }}" type="image/x-icon" />
+    <!-- Favicon setup -->
+    <link rel="icon" href="{{ asset('website/assets/icons/favicon/favicon.ico') }}" type="image/x-icon" />
     <link rel="icon" href="{{ asset('website/assets/icons/favicon/Monogram.png') }}" sizes="32x32" />
     <link rel="icon" href="{{ asset('website/assets/icons/favicon/Monogram.png') }}" sizes="192x192" />
     <link rel="apple-touch-icon" href="{{ asset('website/assets/icons/favicon/Monogram.png') }}" />
@@ -130,10 +130,10 @@
         src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
         integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="

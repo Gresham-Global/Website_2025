@@ -11,15 +11,36 @@
 }
 
 #growth-partner {
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
+    padding-top: 1rem;
+}
+/* Make columns equal height */
+#growth-partner .row {
+  align-items: stretch;
 }
 
+.imgHolder {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+   position:relative; 
+
+}
+.imgHolder img {
+    width: 350px;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    margin-top:5% ;
+}
 .aboutCon {
     margin: 0 !important;
 }
 
 .paragraph {
-    color: #555;
+    color: #606161;
     /* font-family: "Proxima Nova"; */
     font-family: "Poppins", sans-serif;
     /* font-size: 24px; */
@@ -77,6 +98,9 @@ section.sec6 button.getintouchBtn.ctagetint {
     /* font-family: "Proxima Nova"; */
     font-weight: 700;
     font-family: "Poppins", sans-serif;
+}
+p.foundersp {
+    color: #606161;
 }
 
 /* -------------------------------- */
@@ -255,7 +279,8 @@ section.sec6 button.getintouchBtn.ctagetint {
 
 @media screen and (max-width: 1440px) {
     .paragraph {
-        font-size: 20px;
+        font-size: 18px;
+line-height: 28px;
         line-height: 26px;
     }
 }

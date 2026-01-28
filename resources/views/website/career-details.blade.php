@@ -4,15 +4,15 @@
 
 
 <!-- 1st Section -->
- @php
-  $image_path = $career['cover_image']??'website/assets/images/career/career_currentopening.webp';
- @endphp
+@php
+$image_path = $career['cover_image']??'website/assets/images/career/career_currentopening.webp';
+@endphp
 <div class="career-current-opening-internal">
   <img src="{{ asset($image_path) }}" alt="">
   <div class="customContainer justify-content-center">
     <div class="textWrapper">
       <h1 class="jobtitle">{{$career['title']}}</h1>
-      
+
     </div>
   </div>
 </div>
@@ -132,3 +132,12 @@ From in-country representation and market development to hands-on execution and 
 
     </div>
 </section>
+<style>
+  p,
+  span,
+  .mediaCon span {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+</style>

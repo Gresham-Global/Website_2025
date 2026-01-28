@@ -44,12 +44,15 @@
                         <!-- Thumbnail Image -->
                         <div class="form-group form-group-box">
                             <label for="thumbnail_image" class="fullName">
-                                Add Thumbnail Image (Max: 500KB, Recommended: 640x360px)
+                                Add Thumbnail Image 
+                                 <small class="text-muted ">
+                                    (Upload image Max: 500KB, Dimensions: 640x360px) / (Recommended format: <strong>.webp</strong>)
+                                </small>
                             </label>
                             <div class="input-group">
                                 <input type="file" id="thumbnail_image" name="thumbnail_image" class="form-control"
                                     onchange="previewImage(event)" required
-                                    accept=".png, .jpg, .jpeg, .webp, .svg, image/png, image/jpeg, image/webp, image/svg+xml">
+                                    accept=".png, .jpg, .jpeg, .webp, .svg, image/png, image/jpeg, image/webp, image/svg+xml" style="padding: 15px 15px">
                             </div>
                             <img id="thumbnail_preview" class="preview-image" src="#" alt="Thumbnail Preview" />
                             <span id="thumbnail_image-error" class="error"></span>
@@ -90,29 +93,39 @@
                     <div class="form-flex-box upload-section p-0 mt-5">
                         <!-- Banner Image -->
                         <div class="form-group form-group-box">
-                            <label for="banner_image" class="fullName">Add Desktop Banner Image (Max: 500KB, Recommended: 1720x530px)</label>
+                            <label for="banner_image" class="fullName">Add Desktop Banner Image 
+<small class="text-muted ">
+                                    (Upload image Max: 500KB, Dimensions: 1720x530px) / (Recommended format: <strong>.webp</strong>)
+                                </small>
+
+                            </label>
                             <div class="input-group">
-                                <input type="file" id="banner_image" name="banner_image" class="form-control" onchange="previewImage(event)" required accept=".png, .jpg, .jpeg, .webp, .svg">
+                                <input type="file" id="banner_image" name="banner_image" class="form-control" onchange="previewImage(event)" required accept=".png, .jpg, .jpeg, .webp, .svg" style="padding: 40px 15px">
                             </div>
                             <img id="banner_preview" class="preview-image" src="#" alt="Banner Preview" />
                             <span id="banner_image-error" class="error"></span>
                         </div>
 
                         <!--Mobile  Banner Image -->
-                        <div class="form-group form-group-box">
+                        <!-- <div class="form-group form-group-box">
                             <label for="mb_banner_image" class="fullName">Add Mobile Banner Image (Max: 500KB, Recommended: 430x350px)</label>
                             <div class="input-group">
                                 <input type="file" id="mb_banner_image" name="mb_banner_image" class="form-control" onchange="previewImage(event)" required accept=".png, .jpg, .jpeg, .webp, .svg">
                             </div>
                             <img id="mb_banner_preview" class="preview-image" src="#" alt="Banner Preview" />
                             <span id="mb_banner_image-error" class="error"></span>
-                        </div>
+                        </div> -->
 
                         <!-- Vertical Image -->
                         <div class="form-group form-group-box">
-                            <label for="vertical_image" class="fullName">Add Vertical Image (Max: 500KB, Recommended: 374x540px)</label>
+                            <label for="vertical_image" class="fullName">Add Vertical Image
+<small class="text-muted ">
+                                    (Upload image Max: 500KB, Recommended: 374x540px) / (Recommended format: <strong>.webp</strong>)
+                                </small>
+
+                            </label>
                             <div class="input-group">
-                                <input type="file" id="vertical_image" name="vertical_image" class="form-control" onchange="previewImage(event)" required accept=".png, .jpg, .jpeg, .webp, .svg">
+                                <input type="file" id="vertical_image" name="vertical_image" class="form-control" onchange="previewImage(event)" required accept=".png, .jpg, .jpeg, .webp, .svg" style="padding: 40px 15px">
                             </div>
                             <img id="vertical_preview" class="preview-image" src="#" alt="Vertical Preview" />
                             <span id="vertical_image-error" class="error"></span>
@@ -132,7 +145,7 @@
                     <!-- Description -->
                     <div class="form-flex-box p-0 mt-3 desc_section">
                         <div class="form-group w-100 form-group-box {{ $errors->has('description') ? 'has-error' : '' }}">
-                            <label for="description" class="description">Description (Upload image Max: 500KB, Dimensions: 1280x720px)</label>
+                            <label for="description" class="description">Description</label>
                             <div class="input-group">
                                 <textarea id="description" name="description" rows="20" class="form-control w-100" required>{{ old('description') }}</textarea>
                             </div>

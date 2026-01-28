@@ -41,7 +41,7 @@
         <div class="navContainer">
             <!-- Logo -->
             <a href="{{ url('')}}" class="navLogo d-flex align-items-center">
-                <img src="{{ asset('website/assets/logo/logo.svg') }}" alt="Logo" class="navLogoImg" />
+                <img src="{{ asset('website/assets/logo/logo.png') }}" alt="Logo" class="navLogoImg" />
             </a>
             <!-- Toggle Button for Side Navigation on Tablet/Smaller Screens -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
@@ -54,55 +54,55 @@
                 <ul class="nav">
 
                     <li class="nav-item {{ request()->is('/') ? 'active' : '' }} ">
-                        <a href="{{ url('')}}" class="nav-link text-dark"><strong>Home</strong></a>
+                        <a href="{{ url('')}}" class="nav-link "><strong>Home</strong></a>
                     </li>
 
                     <li
                         class="nav-item borderLB dropdown {{ (request()->is('about') || request()->is('approach')) ? 'active' : '' }}">
-                        <a href="#" class="nav-link text-dark dropdown-toggle" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">
                             <strong>About</strong>
                         </a>
                         <ul class="dropdown-menu secNavMenus">
                             <li><a class="dropdown-item text-black {{ request()->is('about') ? 'active' : '' }}"
-                                    style="{{ request()->is('about') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('about') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white !important;"
                                     href="{{ url('about')}}">About Us</a>
                             </li>
                             <li><a class="dropdown-item text-black {{ request()->is('approach') ? 'active' : '' }}"
-                                    style="{{ request()->is('approach') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('approach') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('approach')}}">Approach</a>
                             </li>
                         </ul>
                     </li>
                     <li
                         class="nav-item borderLB dropdown {{(request()->is('research-assessment')||request()->is('incountry-representation')||request()->is('academic-collaborations')||request()->is(patterns: 'admission-compliance')||request()->is('strategic-marketing')||request()->is('operational-support')) ? 'active' : '' }} ">
-                        <a href="#" class="nav-link text-dark dropdown-toggle" data-bs-toggle="dropdown"><strong>
+                        <a href="#" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown"><strong>
                                 Services</strong>
                         </a>
                         <ul class="dropdown-menu secNavMenus">
                             <li><a class="dropdown-item text-black {{ request()->is('research-assessment') ? 'active' : '' }}"
-                                    style="{{ request()->is('research-assessment') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('research-assessment') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('research-assessment')}}">Research &
                                     Assessment</a>
                             </li>
                             <li><a class="dropdown-item text-black {{ request()->is('incountry-representation') ? 'active' : '' }}"
-                                    style="{{ request()->is('incountry-representation') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('incountry-representation') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('incountry-representation')}}">In-Country
                                     Representation</a>
                             </li>
                             <li><a class="dropdown-item text-black {{ request()->is('academic-collaborations') ? 'active' : '' }}"
-                                    style="{{ request()->is('academic-collaborations') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('academic-collaborations') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('academic-collaborations')}}">Academic Collaborations</a>
                             </li>
                             <li><a class="dropdown-item text-black {{ request()->is('admission-compliance') ? 'active' : '' }}"
-                                    style="{{ request()->is('admission-compliance') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('admission-compliance') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('admission-compliance')}}">Admission Compliance</a>
                             </li>
                             <li><a class="dropdown-item text-black {{ request()->is('strategic-marketing') ? 'active' : '' }}"
-                                    style="{{ request()->is('strategic-marketing') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('strategic-marketing') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('strategic-marketing')}}">Strategic Marketing</a>
                             </li>
                             <li><a class="dropdown-item text-black {{ request()->is('operational-support') ? 'active' : '' }}"
-                                    style="{{ request()->is('operational-support') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('operational-support') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('operational-support')}}">Operational Support</a>
                             </li>
                             <!-- <li><a class="dropdown-item text-black {{ request()->is('strategic-marketing') ? 'active' : '' }}"
@@ -116,40 +116,40 @@
                         </ul>
                     </li>
                     <!-- <li class="nav-item borderLB {{ request()->is('media') ? 'active' : '' }}">
-                        <a href="{{ url('media') }}" class="nav-link text-dark"><strong>Media</strong></a>
+                        <a href="{{ url('media') }}" class="nav-link "><strong>Media</strong></a>
                     </li> -->
 
                     <li
                         class="nav-item borderLB dropdown {{ (request()->is('media') || request()->is('news-and-blogs')) ? 'active' : '' }}">
-                        <a href="#" class="nav-link text-dark dropdown-toggle" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">
                             <strong>Media</strong>
                         </a>
                         <ul class="dropdown-menu secNavMenus">
                             <li><a class="dropdown-item text-black {{ request()->is('media') ? 'active' : '' }}"
-                                    style="{{ request()->is('media') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('media') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('media')}}">Media</a>
                             </li>
                             <li><a class="dropdown-item text-black {{ request()->is('news-and-blogs') ? 'active' : '' }}"
-                                    style="{{ request()->is('news-and-blogs') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('news-and-blogs') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('news-and-blogs')}}">News and Blogs</a>
                             </li>
                             <!-- <li><a class="dropdown-item text-black {{ request()->is('publications') ? 'active' : '' }}"
-                                    style="{{ request()->is('publications') ? 'color:#ef4b4f!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                                    style="{{ request()->is('publications') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('publications')}}">Publications</a>
                             </li> -->
                         </ul>
                     </li>
                     <li class="nav-item borderLB {{ request()->is('publications') ? 'active' : '' }}">
-                        <a href="{{ url('publications') }}" class="nav-link text-dark"><strong>Publications</strong></a>
+                        <a href="{{ url('publications') }}" class="nav-link "><strong>Publications</strong></a>
                     </li>
                     <li class="nav-item borderLB {{ request()->is('events') ? 'active' : '' }}">
-                        <a href="{{ url('events') }}" class="nav-link text-dark"><strong>Events</strong></a>
+                        <a href="{{ url('events') }}" class="nav-link "><strong>Events</strong></a>
                     </li>
                     <li class="nav-item borderLB {{ request()->is('careers') ? 'active' : '' }}">
-                        <a href="{{ url('careers') }}" class="nav-link text-dark"><strong>Careers</strong></a>
+                        <a href="{{ url('careers') }}" class="nav-link "><strong>Careers</strong></a>
                     </li>
                     <li class="nav-item borderLB {{ request()->is('contact') ? 'active' : '' }}">
-                        <a href="{{ url('contact')}}" class="nav-link text-dark"><strong>Contact Us</strong></a>
+                        <a href="{{ url('contact')}}" class="nav-link "><strong>Contact Us</strong></a>
                     </li>
 
                 </ul>
@@ -167,63 +167,64 @@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
             <div class="offcanvas-header">
                 <a href="{{ url('')}}" class="navLogo d-flex align-items-center" id="offcanvasNavLabel">
-                    <img src="{{ asset('website/assets/logo/logo.svg') }}" alt="Logo" class="navLogoImg" />
+                    <img src="{{ asset('website/assets/logo/logo.png') }}" alt="Logo" class="navLogoImg" />
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body headmbmenu">
                 <ul class="nav flex-column" aria-label="Close">
-                    <li class="nav-item active">
-                        <a href="{{ url(path: '')}}" class="nav-link text-dark">Home</a>
+                    <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+                        <a href="{{ url('/') }}" class="nav-link">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{ url('about')}}" class="nav-link dropdown-toggle text-dark d-flex align-items-center"
+                    <li class="nav-item {{ request()->is('about') || request()->is('approach') ? 'active' : '' }}">
+                        <a href="{{ url('about')}}" class="nav-link dropdown-toggle  d-flex align-items-center"
                             id="aboutusBtn">
                             About Us
                         </a>
-                        <ul class="dropdownmenu">
-                            <li><a class="dropdown-item" href="{{ url('about')}}">About Us</a></li>
-                            <li><a class="dropdown-item last" href="{{ url('approach')}}">Approach</a></li>
+                        <ul class="dropdownmenu {{ request()->is('about') || request()->is('approach') ? 'show' : '' }}">
+                            <li><a class="dropdown-item {{ request()->is('about') ? 'active' : '' }}" style="{{ request()->is('about') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('about')}}">About Us</a></li>
+                            <li><a class="dropdown-item {{ request()->is('approach') ? 'active' : '' }}" style="{{ request()->is('approach') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('approach')}}">Approach</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link dropdown-toggle text-dark d-flex align-items-center"
+                    <li class="nav-item {{(request()->is('research-assessment')||request()->is('incountry-representation')||request()->is('academic-collaborations')||request()->is(patterns: 'admission-compliance')||request()->is('strategic-marketing')||request()->is('operational-support')) ? 'active' : '' }}">
+                        <a href="#" class="nav-link dropdown-toggle  d-flex align-items-center"
                             id="servicesBtn">
                             Services
                         </a>
                         <ul class="dropdownmenu">
-                            <li><a class="dropdown-item" href="{{ url('research-assessment')}}">Research &
+                            <li><a class="dropdown-item" style="{{ request()->is('research-assessment') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('research-assessment')}}">Research &
                                     Assessment</a></li>
-                            <li><a class="dropdown-item" href="{{ url('incountry-representation')}}">In-Country
+                            <li><a class="dropdown-item" style="{{ request()->is('incountry-representation') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('incountry-representation')}}">In-Country
                                     Representation</a></li>
-                            <li><a class="dropdown-item" href="{{ url('academic-collaborations')}}">Academic
+                            <li><a class="dropdown-item" style="{{ request()->is('academic-collaborations') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('academic-collaborations')}}">Academic
                                     Collaborations</a></li>
-                            <li><a class="dropdown-item" href="{{ url('admission-compliance')}}">Admissions
+                            <li><a class="dropdown-item" style="{{ request()->is('admission-compliance') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('admission-compliance')}}">Admissions
                                     Compliance</a></li>
-                            <li><a class="dropdown-item" href="{{ url('strategic-marketing')}}">Strategic Marketing</a>
+                            <li><a class="dropdown-item" style="{{ request()->is('strategic-marketing') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('strategic-marketing')}}">Strategic Marketing</a>
                             </li>
-                            <li><a class="dropdown-item last" href="{{ url('operational-support')}}">Operational
+                            <li><a class="dropdown-item last" style="{{ request()->is('operational-support') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('operational-support')}}">Operational
                                     Support</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link dropdown-toggle text-dark d-flex align-items-center"
+                    <li class="nav-item {{ (request()->is('media') || request()->is('news-and-blogs')) ? 'active' : '' }}">
+                        <a href="#" class="nav-link dropdown-toggle  d-flex align-items-center"
                             id="mediaBtn">Media</a>
                         <ul class="dropdownmenu">
-                            
-                            <li><a class="dropdown-item" href="{{ url('media')}}">Media</a></li>
-                            <li><a class="dropdown-item" href="{{ url('news-and-blogs')}}">News and Blogs</a></li>
-                            {{-- <li><a class="dropdown-item" href="{{ url('publications')}}">Publications</a></li> --}}
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="{{ url('publications')}}">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="{{ url('events')}}">Events</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="{{ url('careers')}}">Careers</a></li>
-                    <li class="nav-item">
-                        <a href="{{ url('contact')}}" class="nav-link text-dark">Contact Us</a>
-                    </li>
+
+                            <li><a class="dropdown-item" style="{{ request()->is('media') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('media')}}">Media</a></li>
+                            <li><a class="dropdown-item" style="{{ request()->is('news-and-blogs') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;" href="{{ url('news-and-blogs')}}">News and Blogs</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ url('publications')}}">Publications</a>
+                    </li> --}}
+                </ul>
+                </li>
+                <li class="nav-item {{ request()->is('publications') ? 'active' : '' }} "><a class="nav-link " href="{{ url('publications')}}">Publications</a></li>
+                <li class="nav-item {{ request()->is('events') ? 'active' : '' }} "><a class="nav-link " href="{{ url('events')}}">Events</a></li>
+                <li class="nav-item {{ request()->is('careers') ? 'active' : '' }} "><a class="nav-link " href="{{ url('careers')}}">Careers</a></li>
+                <li class="nav-item {{ request()->is('contact') ? 'active' : '' }} ">
+                    <a href="{{ url('contact')}}" class="nav-link ">Contact Us</a>
+                </li>
                 </ul>
             </div>
         </div>

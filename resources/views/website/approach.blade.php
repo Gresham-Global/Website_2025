@@ -12,13 +12,14 @@
         } */
 
     .approach_about p {
-        color: #555555;
-        font-size: 24px;
+        color: #606161;
+        font-size: 18px;
+        line-height: 28px;
         text-align: center;
     }
 
     .approach_about1 p {
-        color: #555555;
+        color: #606161;
         font-size: 15px;
     }
 
@@ -102,7 +103,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10 mt-5 text-center">
-                <p style="font-size: 22px;  font-family: 'Poppins', sans-serif;">Expanding into India and South Asia’s dynamic and multifaceted market
+                <p style="font-family: 'Poppins', sans-serif;">Expanding into India and South Asia’s dynamic and multifaceted market
                     requires a strategic framework that goes beyond generic solutions. We adopt a methodical, data-driven approach, working as an
                     extension of your institution to ensure measurable outcomes and sustainable impact. Our focus is on
                     aligning with your institutional goals while navigating the complexities of the region with
@@ -121,9 +122,9 @@
 <section class="approach_about1">
     <div class="container-fluid">
         <div class="row">
-            <img src="{{ asset('website/assets/images/approach/approach_img.png') }}"
+            <img src="{{ asset('website/assets/images/approach/approach_img.webp') }}"
                 class="w-100 d-none d-sm-none d-md-block d-lg-block" alt="">
-            <img src="{{ asset('website/assets/images/apporoachcontent.png') }}" class="w-100 d-md-none d-lg-none" alt="">
+            <img src="{{ asset('website/assets/images/apporoachcontent.webp') }}" class="w-100 d-md-none d-lg-none" alt="">
         </div>
         <!-- <div class="disp-m pt-5 p-3">
                     <div class="row">

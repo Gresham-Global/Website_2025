@@ -1,17 +1,16 @@
 @extends('website.layout.master')
 @section('content')
 <!-- banner section starts here -->
-<!-- <section class="about-banner-background firstSection customSection">
+<section class="about-banner-background firstSection customSection">
     <div class="customContainer firstContainer">
         <h1 class="text-white  titleH1">Publications</h1>
     </div>
     <img src="{{ asset('website/assets/images/banner_event_publi.webp') }}"
-        class="w-100 forMobBanner d-none d-md-block" alt="" />
+        class="w-100 forMobBanner d-none d-md-block" />
     <img src="{{ asset('website/assets/images/banner_event_publi_mb.webp') }}"
-        class="w-100 forMobBanner d-block d-md-none" alt="" />
+        class="w-100 forMobBanner d-block d-md-none" />
 
-</section> -->
-<x-banner-section type="publication" title="Publications" />
+</section>
 <!-- Media section -->
 
 
@@ -23,21 +22,27 @@
         <div class="row g-4 publication-container" id="publicationContainer">
             @foreach ($publications as $publication)
             <!-- Card 1 -->
-            <div class="col-md-6 col-lg-4 ">
+            <div class="col-md-4 ">
                 <div class="news-card publication-card h-100 d-flex flex-column">
 
                     <div class="news-card-body d-flex flex-column flex-grow-1">
                         <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
                             <img src="{{ $publication->thumbnail_image }}" alt="News Image" class="news-card-img">
                         </a>
-                        <!-- <div class="d-flex align-items-center gap-2 text-muted small">
-          <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
-          <span>12 March 2025 | 5:56 IST</span>
-          </div> -->
+                        <div class="d-flex align-items-center gap-2 mt-3 text-muted-c small">
+                            <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
+                                class="icon-sm">
+                            <span style="font-size: 0.85em !important;">{{ \Carbon\Carbon::parse($publication->created_at)->format('d M Y') }}</span>
+                        </div>
                         <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
-                            <h5 class="news-card-title">{{ $publication->title }}</h5>
+                            <h5 class="news-card-title">
+                                <!-- {{$publication->title }} -->
+                                {{ \Illuminate\Support\Str::limit($publication->title, 63) }}
+                            </h5>
                         </a>
-                        <p class="news-card-text flex-grow-1">{{ $publication->short_description }} ...</p>
+                        <p class="news-card-text flex-grow-1">
+                            {{ \Illuminate\Support\Str::limit($publication->short_description, 250) }}
+                        </p>
                         <div class="cards_tags">
                             <span class="taghead">Tags: </span>
                             <span class="tagtxt">
@@ -77,17 +82,8 @@
                     </div>
                 </div>
             </div>
-
             @endforeach
         </div>
-        <!-- <div class="row g-4 addmoreBlogs text-center">
-          <button id="loadMorePublications" data-page="2" data-loaded="{{ $publications->count() }}"
-          data-total="{{ $total }}">
-          <span>Load More</span>
-          <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
-          </button>
-        </div> -->
-
         <!-- <div class="row g-4 addmoreBlogs text-center">
                   <button id="loadMorePublications" data-page="2" data-loaded="{{ $publications->count() }}"
                   data-total="{{ $total }}">
@@ -95,10 +91,99 @@
                   <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
                   </button>
                 </div> -->
+<!-- Desktop Infinite Scroll Loader -->
+<div id="infinite-loader" class="text-center my-3 d-none">
+    <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
+</div>
 
-
+<!-- Mobile Load More Button -->
+<div class="text-center my-4 d-md-none" id="loadMoreWrapperPublications">
+    <button class="mx-auto btn btn-primary" id="loadMorePublications"
+            data-page="2" 
+            data-loaded="{{ $publications->count() }}" 
+            data-total="{{ $total }}">
+        Load More
+    </button>
+    <div class="mt-2 d-none" id="loadMoreLoaderPublications">
+        <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
+    </div>
+</div>
     </div>
 </section>
+<style>
+      .news-card-title {
+        overflow: hidden;
+        min-height: 2.26em;
+        max-height: 2.5em;
+        line-height: 28px;
+    }
+
+    @supports (-webkit-line-clamp: 2) {
+        .news-card-title {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+
+        .news-card-title {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 60px !important;
+        }
+
+        @supports (-webkit-line-clamp: 2) {
+            .news-card-text {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                max-height: unset;
+            }
+        }
+    }
+
+
+    .news-card-text {
+        overflow: hidden;
+        min-height: 2.26em;
+        max-height: 2.5em;
+        line-height: 28px;
+    }
+
+    @supports (-webkit-line-clamp: 3) {
+        .news-card-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+
+        .news-card-text {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 66px !important;
+        }
+
+        @supports (-webkit-line-clamp: 3) {
+            .news-card-text {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                max-height: unset;
+            }
+        }
+    }
+</style>
 @endsection
 
 <!--
@@ -145,38 +230,131 @@
 
 @push('js_code')
 <script>
-    $('#loadMorePublications').on('click', function() {
-        var button = $(this);
-        var page = button.data('page');
-        var loaded = button.data('loaded');
-        var total = button.data('total');
-        var loader = button.find('img');
+    // $('#loadMorePublications').on('click', function() {
+    //     var button = $(this);
+    //     var page = button.data('page');
+    //     var loaded = button.data('loaded');
+    //     var total = button.data('total');
+    //     var loader = button.find('img');
 
-        loader.removeClass('d-none');
+    //     loader.removeClass('d-none');
 
-        $.ajax({
-            url: '{{ url(' / publications ') }}?page=' + page,
-            type: 'GET',
-            dataType: 'json',
-            success: function(res) {
-                $('#publicationContainer').append(res.html);
+    //     $.ajax({
+    //         url: '{{ url(' / publications ') }}?page=' + page,
+    //         type: 'GET',
+    //         dataType: 'json',
+    //         success: function(res) {
+    //             $('#publicationContainer').append(res.html);
 
-                // Update counts
-                var newLoaded = loaded + res.count;
-                button.data('page', page + 1);
-                button.data('loaded', newLoaded);
+    //             // Update counts
+    //             var newLoaded = loaded + res.count;
+    //             button.data('page', page + 1);
+    //             button.data('loaded', newLoaded);
 
-                if (newLoaded >= total) {
-                    button.addClass('d-none');
+    //             if (newLoaded >= total) {
+    //                 button.addClass('d-none');
+    //             }
+
+    //             loader.addClass('d-none');
+    //         },
+    //         error: function() {
+    //             // alert('Failed to load more publications.');
+    //             loader.addClass('d-none');
+    //         }
+    //     });
+    // });
+    $(document).ready(function() {
+        let page = parseInt($('#loadMorePublications').data('page')) || 2;
+        let loaded = parseInt($('#loadMorePublications').data('loaded')) || 0;
+        const total = parseInt($('#loadMorePublications').data('total')) || 0;
+        let loading = false;
+
+        const isMobile = $(window).width() < 768; // Bootstrap md breakpoint
+
+        if (isMobile) {
+            // Mobile: Load More button
+            $('#loadMorePublications').on('click', function() {
+                if (loading || loaded >= total) return;
+
+                loading = true;
+                var button = $(this);
+                var loader = button.find('img');
+                loader.removeClass('d-none');
+
+                $.ajax({
+                    url: '{{ url("publications") }}',
+                    type: 'GET',
+                    data: {
+                        page: page
+                    },
+                    dataType: 'json',
+                    success: function(res) {
+                        $('#publicationContainer').append(res.html);
+
+                        loaded += res.count;
+                        page++;
+
+                        button.data('page', page);
+                        button.data('loaded', loaded);
+
+                        if (loaded >= total || res.count === 0) {
+                            button.addClass('d-none');
+                        }
+                    },
+                    complete: function() {
+                        loading = false;
+                        loader.addClass('d-none');
+                    },
+                    error: function() {
+                        console.error('Failed to load more publications.');
+                        loading = false;
+                        loader.addClass('d-none');
+                    }
+                });
+            });
+        } else {
+            // Desktop: Infinite scroll
+            $(window).scroll(function() {
+                if (loading || loaded >= total) return;
+
+                if ($(window).scrollTop() + $(window).height() + 100 >= $(document).height()) {
+                    loading = true;
+                    $('#loadMorePublications img').removeClass('d-none');
+
+                    $.ajax({
+                        url: '{{ url("publications") }}',
+                        type: 'GET',
+                        data: {
+                            page: page
+                        },
+                        dataType: 'json',
+                        success: function(res) {
+                            $('#publicationContainer').append(res.html);
+
+                            loaded += res.count;
+                            page++;
+
+                            $('#loadMorePublications').data('page', page);
+                            $('#loadMorePublications').data('loaded', loaded);
+
+                            if (loaded >= total || res.count === 0) {
+                                $(window).off('scroll');
+                                $('#loadMorePublications').addClass('d-none');
+                            }
+                        },
+                        complete: function() {
+                            loading = false;
+                            $('#loadMorePublications img').addClass('d-none');
+                        },
+                        error: function() {
+                            console.error('Failed to load more publications.');
+                            loading = false;
+                            $('#loadMorePublications img').addClass('d-none');
+                        }
+                    });
                 }
-
-                loader.addClass('d-none');
-            },
-            error: function() {
-                // alert('Failed to load more publications.');
-                loader.addClass('d-none');
-            }
-        });
+            });
+        }
     });
 </script>
 @endpush

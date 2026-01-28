@@ -57,7 +57,6 @@
 
         <div class="row g-4 align-items-stretch">
             <!-- Contact Info -->
-
             <div class="col-lg-4">
                 <div class="contact-card p-4 h-100 d-flex flex-column">
                     <h3 class="mb-3 fw-bold">Gresham Global</h3>
@@ -67,7 +66,7 @@
                                 height:80px!important">
                         <a target="_blank" href="https://www.google.com/maps/dir//Gresham+Global+consultancy+LLP,+The+Epicenter,+806-808,+MBPT+Colony,+Wadhwa,+Chembur,+Mumbai,+Maharashtra+400088/@19.0595049,72.8969309,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.9105279!2d19.0478745!3e3?entry=ttu&g_ep=EgoyMDI1MTIwOC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D">
 
-                            <span class="contact-text dark">The Epicenter, 806-808, MBPT Colony, Wadhwa, Chembur, Mumbai, Maharashtra 400088</span>
+                            <span class="contact-text dark">806 – 808, The Epicentre, Wadhwa, Off Eastern Freeway, Chembur, <br />Mumbai – 400 088, Maharashtra, INDIA</span>
                         </a>
                     </div>
                     <div class="contact-detail d-flex gap-2 mb-2">

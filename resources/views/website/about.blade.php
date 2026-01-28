@@ -16,10 +16,10 @@
     <div class="customContainer firstContainer ">
         <h1 class="titleH1">About Us</h1>
     </div>
-    <!-- <img src="{{ asset('website/assets/images/about-bannerimg.png') }}" class=" img-fluid forMobBanne w-100" -->
+    <!-- <img src="{{ asset('website/assets/images/about-bannerimg.webp') }}" class=" img-fluid forMobBanne w-100" -->
     <!-- alt="Bootstrap Themes" /> -->
-    <img src="{{ asset('website/assets/images/about-bannerimg.png') }}" class="w-100 forMobBanner d-none d-md-block" alt="" />
-    <img src="{{ asset('website/assets/images/aboutmobile.png') }}" class="w-100 aboutmobile forMobBanner d-block d-md-none" alt="" />
+    <img src="{{ asset('website/assets/images/about-bannerimg.webp') }}" class="w-100 forMobBanner d-none d-md-block" alt="" />
+    <img src="{{ asset('website/assets/images/aboutmobile.webp') }}" class="w-100 aboutmobile forMobBanner d-block d-md-none" alt="" />
 </section>
 
 <!-- Below about us -->
@@ -27,8 +27,10 @@
     <div class="customContainer aboutCon">
         <div class="row align-items-center">
             <div class="col-md-6 col-lg-5">
-                <img src="{{ asset('website/assets/images/aboutusauimg.png') }}" alt="Global Growth Partner"
-                    class="w-100" />
+                <div class="imgHolder">
+                    <img src="{{ asset('website/assets/images/aboutusauimg.webp') }}" alt="Global Growth Partner"
+                        class="" style="flex: 0 0 30%;"/>
+                </div>
                 <br>
                 <br>
             </div>
@@ -56,7 +58,7 @@
                             <div class="customContainer aboutCon">
                                 <div class="row align-items-center">
                                     <div class="col-md-6 col-lg-5">
-                                        <img src="{{ asset('website/assets/images/aboutusauimg.png') }}" alt="Global Growth Partner"
+                                        <img src="{{ asset('website/assets/images/aboutusauimg.webp') }}" alt="Global Growth Partner"
                                             class="w-100" />
                                     </div>
                                     <div class="col-md-6 col-lg-7">
@@ -105,7 +107,7 @@
                 <div id="news-carousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="slider articalMe">
                         <div class="news-card border-0 position-relative">
-                            <img src="{{ asset('website/assets/images/first-c.png') }}" class="card-img-top" alt="News 1" />
+                            <img src="{{ asset('website/assets/images/first-c.webp') }}" class="card-img-top" alt="News 1" />
                             <div class="gradient-overlay"></div>
                             <div class="card-img-overlay d-flex align-items-end p-3">
                                 <h5 class="card-title text-white">
@@ -114,7 +116,7 @@
                             </div>
                         </div>
                         <div class="news-card border-0 position-relative">
-                            <img src="{{ asset('website/assets/images/second-c.png') }}" class="card-img-top" alt="News 2" />
+                            <img src="{{ asset('website/assets/images/second-c.webp') }}" class="card-img-top" alt="News 2" />
                             <div class="gradient-overlay"></div>
                             <div class="card-img-overlay d-flex align-items-end p-3">
                                 <h5 class="card-title text-white">
@@ -123,7 +125,7 @@
                             </div>
                         </div>
                         <div class="news-card border-0 position-relative">
-                            <img src="{{ asset('website/assets/images/third-c.png') }}" class="card-img-top" alt="News 3" />
+                            <img src="{{ asset('website/assets/images/third-c.webp') }}" class="card-img-top" alt="News 3" />
                             <div class="gradient-overlay"></div>
                             <div class="card-img-overlay d-flex align-items-end p-3">
                                 <h5 class="card-title text-white">
@@ -132,7 +134,7 @@
                             </div>
                         </div>
                         <div class="news-card border-0 position-relative">
-                            <img src="{{ asset('website/assets/images/fourth-c.png') }}" class="card-img-top" alt="News 4" />
+                            <img src="{{ asset('website/assets/images/fourth-c.webp') }}" class="card-img-top" alt="News 4" />
                             <div class="gradient-overlay"></div>
                             <div class="card-img-overlay d-flex align-items-end p-3">
                                 <h5 class="card-title text-white">
@@ -141,7 +143,7 @@
                             </div>
                         </div>
                         <div class="news-card border-0 position-relative">
-                            <img src="{{ asset('website/assets/images/fourth-c.png') }}" class="card-img-top" alt="News 4" />
+                            <img src="{{ asset('website/assets/images/fourth-c.webp') }}" class="card-img-top" alt="News 4" />
                             <div class="gradient-overlay"></div>
                             <div class="card-img-overlay d-flex align-items-end p-3">
                                 <h5 class="card-title text-white">
@@ -165,18 +167,18 @@
                     <!-- Left Column (Image & Name) -->
                     <div class="d-flex flex-column align-items-center justify-content-center"
                         style="flex: 0 0 30%; text-align: center">
-                        <img src="{{ asset('website/assets/images/Group 1000004028.png') }}" alt="Founder 1"
+                        <img src="{{ asset('website/assets/images/Group 1000004028.webp') }}" alt="Founder 1"
                             class="img-fluid" style="
                                    width: 282.9515075683594;
                 height: 282.9515075683594;
                 top: 2850.18px;
                 left: 111px;" />
                         <h5 class="fw-bold mt-3 mb-0 foundersp">Jaspreet Singh</h5>
-                        <p class="text-muted mb-0 foundersp">Co-Founder</p>
+                        <p class="text-muted-c mb-0 foundersp">Co-Founder</p>
                     </div>
                     <!-- Right Column (Description) -->
                     <div class="" style="flex: 1">
-                        <p class="mb-0" style="font-family: 'Poppins', sans-serif;
+                        <p class="mb-0 text-muted-c" style="font-family: 'Poppins', sans-serif;
                                                                 font-weight: 400;
                                                                 font-size: 20px;
                                                                 line-height: 26px;
@@ -198,7 +200,7 @@
                     <!-- Left Column (Image & Name) -->
                     <div class="d-flex flex-column align-items-center justify-content-center"
                         style="flex: 0 0 30%; text-align: center">
-                        <img src="{{ asset('website/assets/images/Group 1000004029.png') }}" alt="Founder 2"
+                        <img src="{{ asset('website/assets/images/Group 1000004029.webp') }}" alt="Founder 2"
                             class="img-fluid" style="
                                     width: 282.9515075683594;
                 height: 282.9515075683594;
@@ -206,11 +208,11 @@
                 left: 111px;
                 " />
                         <h5 class="fw-bold mt-3 mb-0 foundersp">Jasminder Khanna</h5>
-                        <p class="text-muted mb-0 foundersp">Co-Founder and CEO</p>
+                        <p class="text-muted-c mb-0 foundersp">Co-Founder and CEO</p>
                     </div>
                     <!-- Right Column (Description) -->
                     <div class="" style="flex: 1">
-                        <p class="mb-0" style="font-family: 'Poppins', sans-serif;
+                        <p class="mb-0 text-muted-c" style="font-family: 'Poppins', sans-serif;
                                                                 font-weight: 400;
                                                                 font-size: 20px;
                                                                 line-height: 26px;
@@ -264,7 +266,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/compliance.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/compliance.webp') }}" alt="" />
                             <h4>Compliance
                             </h4>
                         </div>
@@ -283,7 +285,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/growth.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/growth.webp') }}" alt="" />
                             <h4>Growth</h4>
                         </div>
                     </div>
@@ -301,7 +303,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/commitment.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/commitment.webp') }}" alt="" />
                             <h4>Commitment</h4>
                         </div>
                     </div>
@@ -317,7 +319,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/transparency.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/transparency.webp') }}" alt="" />
                             <h4>Transparency</h4>
                         </div>
                     </div>

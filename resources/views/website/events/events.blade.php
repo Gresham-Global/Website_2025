@@ -22,14 +22,15 @@
                     </a>
                 </div>
                 <div class="event-content col-md-12 p-0">
-                    <div class="d-flex align-items-center gap-2 text-muted small">
+                    <div class="d-flex align-items-center gap-2 text-muted-c small">
                         <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
                         <span>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</span>
                     </div>
                     <div class="news-card-title"> <a href="{{ route('events.show', $event->slug) }}"
-                            class="news-card-title">{{ \Illuminate\Support\Str::limit($event->title, 20) }}</a></div>
+                            class="news-card-title">{{ \Illuminate\Support\Str::limit($event->title, 63) }}</a></div>
                     <div class="news-card-text">
-                        {{ \Illuminate\Support\Str::limit($event->short_description, 200) }}
+                        <!-- {{ \Illuminate\Support\Str::limit($event->short_description, 200) }} -->
+                        {{ $event->short_description }}
                     </div>
                     <hr class="opacity-25 w-100">
                     <div class="events_footer_card">
@@ -53,14 +54,24 @@
 
         </div>
 
-        <div class="row g-4 addmoreevents text-center {{ $events->count() >= $total ? 'd-none' : '' }} ">
+        <!-- <div class="row g-4 addmoreevents text-center {{ $events->count() >= $total ? 'd-none' : '' }} ">
             <button class="mx-auto" id="loadMoreEvents" data-page="2" data-loaded="{{ $events->count() }}"
                 data-total="{{ $total }}">
                 <span>Load More</span>
                 <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
             </button>
+        </div> -->
+        <!-- Loader -->
+        <div id="infinite-loader" class="text-center my-3 d-none">
+            <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
         </div>
-    </div>
+
+        <div class="text-center my-4 d-md-none" id="loadMoreWrapperEvents">
+            <button class="mx-auto" id="loadMore">Load More</button>
+            <div class="mt-2 d-none" id="loadMoreLoaderEvents">
+                <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
+            </div>
+        </div>
 </section>
 
 
@@ -124,39 +135,162 @@
 @push('js_code')
 <script>
     $(document).ready(function() {
-        $('#loadMoreEvents').click(function() {
-            let button = $(this);
-            let page = parseInt(button.data('page'));
-            let total = parseInt(button.data('total'));
-            let loaded = parseInt(button.data('loaded'));
-            let loader = button.find('img');
+        let page = 2;
+        const total = parseInt("{{ $total }}");
+        let loaded = parseInt("{{ $events->count() }}");
+        let loading = false;
 
-            loader.removeClass('d-none');
+        // Detect mobile
+        const isMobile = $(window).width() < 768; // Bootstrap md breakpoint
 
-            $.ajax({
-                url: "{{ url('events') }}?page=" + page,
-                type: "GET",
-                dataType: "json",
-                success: function(response) {
-                    if (response.count === 0) {
-                        button.hide();
-                    } else {
-                        $('#eventscrads').append(response.html);
-                        loaded += response.count;
-                        button.data('page', page + 1);
-                        button.data('loaded', loaded);
-                        if (loaded >= total) {
-                            button.hide();
+        if (isMobile) {
+            // Mobile: Load More button
+            $('#loadMore').on('click', function() {
+                if (loading || loaded >= total) return;
+
+                loading = true;
+                $('#loadMoreLoaderEvents').removeClass('d-none');
+                $(this).prop('disabled', true);
+
+                $.ajax({
+                    url: "{{ url('events') }}",
+                    type: "GET",
+                    data: {
+                        page: page
+                    },
+                    dataType: "json",
+                    success: function(data) {
+                        if (data.html.trim() !== "") {
+                            $('#eventscrads').append(data.html);
+                            loaded += data.count;
+                            page++;
                         }
+
+                        if (loaded >= total || data.html.trim() === "") {
+                            $('#loadMoreWrapperEvents').hide();
+                        }
+                    },
+                    complete: function() {
+                        loading = false;
+                        $('#loadMoreLoaderEvents').addClass('d-none');
+                        $('#loadMore').prop('disabled', false);
+                    },
+                    error: function() {
+                        console.error('Could not load more events.');
+                        loading = false;
+                        $('#loadMoreLoaderEvents').addClass('d-none');
+                        $('#loadMore').prop('disabled', false);
                     }
-                    loader.addClass('d-none');
-                },
-                error: function() {
-                    // alert('Could not load more events. Try again.');
-                    loader.addClass('d-none');
+                });
+            });
+        } else {
+            // Desktop: Infinite scroll
+            $(window).scroll(function() {
+                if (loading) return;
+                if ($(window).scrollTop() + $(window).height() + 100 >= $(document).height()) {
+                    if (loaded >= total) return;
+
+                    loading = true;
+                    $('#infinite-loader').removeClass('d-none');
+
+                    $.ajax({
+                        url: "{{ url('events') }}?page=" + page,
+                        type: "GET",
+                        success: function(data) {
+                            if (data.html.trim() !== "") {
+                                $('#eventscrads').append(data.html);
+                                loaded += data.count;
+                                page++;
+                            }
+                        },
+                        complete: function() {
+                            loading = false;
+                            $('#infinite-loader').addClass('d-none');
+                        },
+                        error: function() {
+                            console.error('Could not load more events.');
+                            loading = false;
+                            $('#infinite-loader').addClass('d-none');
+                        }
+                    });
                 }
             });
-        });
+        }
     });
 </script>
+
 @endpush
+<style>
+    .news-card-title {
+        overflow: hidden;
+        min-height: 2.26em;
+        max-height: 2.5em;
+        line-height: 28px;
+    }
+
+    @supports (-webkit-line-clamp: 2) {
+        .news-card-title {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+
+        .news-card-title {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 60px !important;
+        }
+
+        @supports (-webkit-line-clamp: 2) {
+            .news-card-text {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                max-height: unset;
+            }
+        }
+    }
+
+
+    .news-card-text {
+        overflow: hidden;
+        min-height: 2.26em;
+        max-height: 2.5em;
+        line-height: 28px;
+    }
+
+    @supports (-webkit-line-clamp: 3) {
+        .news-card-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+
+        .news-card-text {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 66px !important;
+        }
+
+        @supports (-webkit-line-clamp: 3) {
+            .news-card-text {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                max-height: unset;
+            }
+        }
+    }
+</style>

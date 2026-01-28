@@ -10,7 +10,8 @@
     @media screen and (max-width:1700px) and (min-width:1100px) {
         .fntsize {
             /* font-size: 1rem; */
-            font-size: 20px;
+            font-size: 18px;
+            line-height: 28px;
             text-align: start;
         }
 
@@ -21,7 +22,8 @@
     }
 
     .custom-container .fntsize {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 28px;
     }
 </style>
 <!-- banner section starts here -->

@@ -2,7 +2,7 @@
 <div class="panelSidebar-component" id="sidenav">
     <span class="material-symbols-outlined" id="menu-back"> close </span>
     <div class="panelSidebar-logo-container">
-        <img src="{{ asset('website/assets/logo/logo.svg') }}" alt="" class="navLogoImg" />
+        <img src="{{ asset('website/assets/logo/logo.png') }}" alt="" class="navLogoImg" />
     </div>
 
     <div class="panelSidebar-collegeTitlebox">

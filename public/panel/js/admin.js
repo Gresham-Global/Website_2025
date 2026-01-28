@@ -149,19 +149,37 @@ $(document).ready(function () {
     $(".alert-success").delay(5000).slideUp(300);
     $(".alert-danger").delay(5000).slideUp(300);
     if ($("#description").length) {
-        $("#description").summernote({
-            height: 300,
-            toolbar: [
-                ["style", ["style"]],
-                ["font", ["bold", "underline", "clear"]],
-                ["color", ["color"]],
-                ["para", ["ul", "ol", "paragraph"]],
-                ["table", ["table"]],
-                ["insert", ["link", "picture"]],
-                ["view", ["fullscreen", "codeview", "help"]],
-            ],
-        });
-    }
+    $("#description").summernote({
+        height: 300,
+        toolbar: [
+            ["style", ["style"]],
+            ["font", ["bold", "underline", "clear", "fontsize", "fontname"]],
+            ["color", ["color"]],
+            ["para", ["ul", "ol", "paragraph"]],
+            ["table", ["table"]],
+            ["insert", ["link"]],
+            ["view", ["fullscreen", "codeview", "help"]],
+        ],
+        disableDragAndDrop: true,
+        fontNames: ["Poppins"], // Only Poppins in dropdown
+        fontSizes: ["8", "10", "12", "14", "16", "18", "24", "32", "48", "64", "80"], // up to 80px
+        callbacks: {
+            onInit: function() {
+                $("#description").summernote("fontName", "Poppins"); // Default font
+            }
+        }
+    });
+
+    // Load Google Fonts Poppins
+    $("<link>", {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    }).appendTo("head");
+
+    // Apply Poppins in editor content
+    $("#description").next(".note-editor").find(".note-editable").css("font-family", "Poppins, sans-serif");
+}
+
 
     if ($(".summernote-highlight").length) {
         $(".summernote-highlight").each(function () {

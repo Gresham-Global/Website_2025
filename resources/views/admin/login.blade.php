@@ -23,7 +23,7 @@
     <section class="login-signup-section">
         <div class="login-signup-container">
             <div class="headerLog">
-                <img src="{{ asset('website/assets/logo/logo.svg') }}" alt="" class="instImg" />
+                <img src="{{ asset('website/assets/logo/logo.png') }}" alt="" class="instImg" />
                 <!-- <h1 class="text-white"><b>College Vorti</b></h1> -->
                 <h6 class="InstTitle">Admin Login</h6>
             </div>

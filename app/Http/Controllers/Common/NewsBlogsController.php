@@ -123,75 +123,70 @@ class NewsBlogsController extends Controller
         $heading = 'Create News and Blogs';
         return view('admin.newsandblog.create', compact('title', 'heading'));
     }
-
     public function store(Request $request)
     {
         try {
             $data = $request->all();
+
+            /* ---------------- THUMBNAIL ---------------- */
             $data['thumbnail_image'] = null;
-
             if ($request->hasFile('thumbnail_image')) {
-                $thumbnail_image = $request->file('thumbnail_image');
+                $file = $request->file('thumbnail_image');
+                $folder = public_path('/uploads/newsandblog');
+                if (!file_exists($folder)) mkdir($folder, 0755, true);
 
-                $requestData = new Request(['folder_name' => 'newsandblog']);
-                $requestData->files->set('image', $thumbnail_image);
-
-                $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-                $imageController = new ImageController();
-                $response = $imageController->upload_image_storage_only($imageUploadRequest);
-                $responseImageData = json_decode($response->getContent(), true);
-
-                if (!empty($responseImageData['success'])) {
-                    $data['thumbnail_image'] = $responseImageData['data']['imagePath'] ?? null;
-                }
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move($folder, $filename);
+                $data['thumbnail_image'] = '/uploads/newsandblog/' . $filename;
             }
 
-            $data['gallery_images'] = [];
+            /* ---------------- BANNER IMAGE ---------------- */
+            $data['banner_image'] = null;
+            if ($request->hasFile('banner_image')) {
+                $file = $request->file('banner_image');
+                $folder = public_path('/uploads/newsandblog/banner');
+                if (!file_exists($folder)) mkdir($folder, 0755, true);
 
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move($folder, $filename);
+                $data['banner_image'] = '/uploads/newsandblog/banner/' . $filename;
+            }
+
+            /* ---------------- GALLERY IMAGES ---------------- */
+            $galleryPaths = [];
             if ($request->hasFile('gallery_images')) {
-                $galleryImages = $request->file('gallery_images');
-                $paths = [];
+                foreach ($request->file('gallery_images') as $file) {
+                    $folder = public_path('/uploads/newsandblog/gallery');
+                    if (!file_exists($folder)) mkdir($folder, 0755, true);
 
-                foreach ($galleryImages as $image) {
-                    $requestData = new Request(['folder_name' => 'newsandblog/gallery']);
-                    $requestData->files->set('image', $image);
-
-                    $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-                    $imageController = new ImageController();
-                    $response = $imageController->upload_image_storage_only($imageUploadRequest);
-                    $responseImageData = json_decode($response->getContent(), true);
-
-                    if (!empty($responseImageData['success'])) {
-                        $paths[] = $responseImageData['data']['imagePath'] ?? null;
-                    }
+                    $filename = time() . '_' . $file->getClientOriginalName();
+                    $file->move($folder, $filename);
+                    $galleryPaths[] = '/uploads/newsandblog/gallery/' . $filename;
                 }
-
-                $data['gallery_images'] = json_encode($paths);
             }
 
-
-            $user = Auth::user();
-
-            if (!$user) {
-                return redirect()->back()->withInput()->with('error_message_catch', 'Authentication required!');
-            }
-
+            /* ---------------- CREATE ---------------- */
             News_and_Blogs::create([
-                "title" => $request->get('title'),
-                "slug" => Str::slug($request->get('title')),
-                "short_description" => $request->get('short_description'),
-                "description" => $data['description'] ?? null,
-                "thumbnail_image" => $data['thumbnail_image'],
-                "published_date" => $request->get('published_date'),
-                "share_link" => $request->get('share_link'),
-                "created_by" => $user->id,
+                'title'             => $request->title,
+                'slug'              => Str::slug($request->title),
+                'short_description' => $request->short_description,
+                'description'       => $request->description,
+                'thumbnail_image'   => $data['thumbnail_image'],
+                'banner_image'      => $data['banner_image'],
+                'gallery_images'    => json_encode($galleryPaths),
+                'published_date'    => $request->published_date,
+                'type'              => $request->type,
+                'template'          => $request->template,
+                'status'            => $request->status,
+                'created_by'        => Auth::id(),
             ]);
 
-            return redirect()->back()->with('status', 'News and Blogs created successfully!');
+            return back()->with('status', 'News and Blogs created successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error_message_catch', $e->getMessage());
+            return back()->withInput()->with('error_message_catch', $e->getMessage());
         }
     }
+
 
     public function newsandblog_edit($id)
     {
@@ -212,44 +207,63 @@ class NewsBlogsController extends Controller
     public function newsandblog_update(Request $request, $id)
     {
         try {
-            $news_and_blog = News_and_Blogs::findOrFail($id);
-            $data = $request->all();
-            $thumbnail_image_path = null;
+            $news = News_and_Blogs::findOrFail($id);
 
+            /* ---------------- THUMBNAIL ---------------- */
             if ($request->hasFile('thumbnail_image')) {
-                $thumbnail_image = $request->file('thumbnail_image');
-                $requestData = new Request(['folder_name' => 'event']);
-                $requestData->files->set('image', $thumbnail_image);
+                $file = $request->file('thumbnail_image');
+                $folder = public_path('/uploads/newsandblog');
+                if (!file_exists($folder)) mkdir($folder, 0755, true);
 
-                $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-                $imageController = new ImageController();
-                $response = $imageController->upload_image_storage_only($imageUploadRequest);
-                $responseImageData = json_decode($response->getContent(), true);
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move($folder, $filename);
+                $news->thumbnail_image = '/uploads/newsandblog/' . $filename;
+            }
 
-                if (!empty($responseImageData['success'])) {
-                    $thumbnail_image_path = $responseImageData['data']['imagePath'] ?? null;
+            /* ---------------- BANNER ---------------- */
+            if ($request->hasFile('banner_image')) {
+                $file = $request->file('banner_image');
+                $folder = public_path('/uploads/newsandblog/banner');
+                if (!file_exists($folder)) mkdir($folder, 0755, true);
+
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move($folder, $filename);
+                $news->banner_image = '/uploads/newsandblog/banner/' . $filename;
+            }
+
+            /* ---------------- GALLERY ---------------- */
+            $galleryImages = $request->input('existing_gallery_images', []);
+            if ($request->hasFile('gallery_images')) {
+                foreach ($request->file('gallery_images') as $file) {
+                    $folder = public_path('/uploads/newsandblog/gallery');
+                    if (!file_exists($folder)) mkdir($folder, 0755, true);
+
+                    $filename = time() . '_' . $file->getClientOriginalName();
+                    $file->move($folder, $filename);
+                    $galleryImages[] = '/uploads/newsandblog/gallery/' . $filename;
                 }
             }
 
-            $news_and_blog->title = $request->get('title') ?? $news_and_blog->title;
-            $news_and_blog->slug = Str::slug($request->get('title'));
-            $news_and_blog->short_description = $request->get('short_description') ?? null;
-            $news_and_blog->description = $request->get('description') ?? null;
-            $news_and_blog->thumbnail_image = $thumbnail_image_path ?? $data["thumbnail_image_url_original"] ?? $news_and_blog->thumbnail_image;
-            $news_and_blog->published_date = $request->get('published_date') ?? null;
-            $news_and_blog->share_link = $request->get('share_link') ?? null;
-            $news_and_blog->updated_by = Auth::user()->id ?? null;
+            /* ---------------- UPDATE FIELDS ---------------- */
+            $news->title             = $request->title;
+            $news->slug              = Str::slug($request->title);
+            $news->short_description = $request->short_description;
+            $news->description       = $request->description;
+            $news->published_date    = $request->published_date;
+            $news->type              = $request->type;
+            $news->template          = $request->template;
+            $news->status            = $request->status;
+            $news->gallery_images    = json_encode($galleryImages);
+            $news->updated_by        = Auth::id();
 
-            // Update the status field from the request (use the provided status or leave the current one if not set)
-            $news_and_blog->status = $request->get('status', 'Active');
+            $news->save();
 
-            $news_and_blog->save();
-
-            return redirect('admin/newsandblog/edit/' . $id)->with('status', 'News and Blogs updated successfully!');
+            return back()->with('status', 'News and Blogs updated successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error_message_catch', 'Something went wrong! ' . $e->getMessage());
+            return back()->with('error_message_catch', $e->getMessage());
         }
     }
+
 
     public function delete(Request $request)
     {
@@ -284,26 +298,66 @@ class NewsBlogsController extends Controller
     {
         $paginate_count = env('PAGINATE_COUNT', 6);
         $page = $request->get('page', 1);
-        $total = News_and_Blogs::where('status', 'Active')->count();
+
+
+        // ✅ Default type = news
+        $type = $request->get('type', 'news');
+
 
         // Set the current page for pagination
         Paginator::currentPageResolver(function () use ($page) {
             return $page;
         });
 
-        $news_and_blogs = News_and_Blogs::where('status', 'Active')
-            ->orderBy('published_date', 'desc')
-            ->paginate($paginate_count);
 
-        // For AJAX "load more"
+        // ✅ Base query
+        $query = News_and_Blogs::where('status', 'Active')
+            ->where('type', $type)
+            ->orderBy('published_date', 'desc');
+
+
+        // ✅ Total count PER TYPE
+        $total = $query->count();
+
+
+        // ✅ Paginate
+        $news_and_blogs = $query->paginate($paginate_count);
+
+
+        // ✅ AJAX response
         if ($request->ajax()) {
             return response()->json([
                 'html' => view('website.news-and-blogs.item', compact('news_and_blogs'))->render(),
-                'count' => $news_and_blogs->count()
+                'count' => $news_and_blogs->count(),
+                'total' => $total,
             ]);
         }
 
+
+        // ✅ First page load (default: news)
         return view('website.news-and-blogs', compact('news_and_blogs', 'total'));
+        // $paginate_count = env('PAGINATE_COUNT', 6);
+        // $page = $request->get('page', 1);
+        // $total = News_and_Blogs::where('status', 'Active')->count();
+
+        // // Set the current page for pagination
+        // Paginator::currentPageResolver(function () use ($page) {
+        //     return $page;
+        // });
+
+        // $news_and_blogs = News_and_Blogs::where('status', 'Active')
+        //     ->orderBy('published_date', 'desc')
+        //     ->paginate($paginate_count);
+
+        // // For AJAX "load more"
+        // if ($request->ajax()) {
+        //     return response()->json([
+        //         'html' => view('website.news-and-blogs.item', compact('news_and_blogs'))->render(),
+        //         'count' => $news_and_blogs->count()
+        //     ]);
+        // }
+
+        // return view('website.news-and-blogs', compact('news_and_blogs', 'total'));
     }
 
 

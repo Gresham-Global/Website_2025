@@ -82,7 +82,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
 <body>
@@ -128,7 +129,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <!-- Get To Touch -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -732,8 +734,13 @@ $(document).ready(function() {
             centerMode: true,
             centerPadding: '20px',
             arrows: true,
+            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+            nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
             centerPadding: '20%',
-            autoplaySpeed: 3000,
+            slideTransition: "linear",
+            autoplay: false,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
             responsive: [{
                     breakpoint: 991,
                     settings: {

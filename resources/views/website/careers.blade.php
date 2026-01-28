@@ -125,6 +125,10 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
     .cardContainer1 {
         align-items: center;
     }
+
+    .opening-card h5 {
+        font-weight: 500 !important;
+    }
 </style>
 
 
@@ -228,7 +232,7 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
 </section>
 
 <!-- sec 6 starts -->
-<x-our-values />
+<x-our-values page="careers" />
 <?php /* ?>
 <section class="sec6" id="our-values-sec">
     <div class="custom-container">
@@ -407,7 +411,7 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
 <!-- sec 6 ends -->
 
 <!--Carousel-->
-<section id="latest-news" class="customSection">
+<section id="latest-news" class="customSection mt-4">
     <div class="customContainer">
         <!-- Title -->
         <div class="d-flex justify-content-center align-items-center mb-4">
@@ -449,7 +453,16 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
                     <h3 class="job-title">{{ $career['title'] }}</h3>
                     <!-- <p class="opencard_txt"><strong class="stbgtxt">Education & Experience:</strong> {{ $career['education_experience_card'] }}</p> -->
                     <p><strong class="stbgtxt">Job Description:</strong>
-                        {!! $career['short_description'] !!}</p>
+
+
+                        {!! preg_replace(
+                        ['#\s*style="[^"]*"#i', '#</?(b|strong)>#i'],
+                        '',
+                        $career['short_description']
+                        ) !!}
+                    </p>
+
+
                     <a href="{{ url('career-details') }}/{{ $career['slug'] }}">
                         <button class="apply-btn">Apply Now</button>
                     </a>
@@ -484,4 +497,30 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
         </div>
     </div>
 </section>
+<style>
+    #our-founders .customContainer,
+    #latest-news .customContainer {
+        margin: 0 0;
+    }
+
+    .mediaCon span {
+        font-family: "Poppins", sans-serif !important;
+        font-size: 18px !important;
+    }
+
+    .apply-btn-closed {
+        border-radius: 8px !important;
+        background: #545454 !important;
+        /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%) !important; */
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        padding: 0.4rem 1.5rem;
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
+        line-height: 1.2;
+        border: unset !important;
+    }
+</style>
 @endsection

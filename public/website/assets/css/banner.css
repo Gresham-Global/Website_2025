@@ -1,5 +1,5 @@
 .servicesbannerSec {
-    background: url("../images/banner.png") no-repeat center center;
+    background: url("../images/banner.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -60,7 +60,7 @@
 /* events */
 
 .servicesbannerSec2 {
-    background: url("../images/banner_events.png") no-repeat center center;
+    background: url("../images/banner_events.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -121,7 +121,7 @@
 /* Research and assessment */
 
 .servicesbannerSec3 {
-    background: url("../images/banner.png") no-repeat center center;
+    background: url("../images/banner.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -172,7 +172,7 @@
 @media screen and (max-width: 768px) {
     .servicesbannerSec3 {
         padding: 10px 60px 300px 60px;
-        background: url("../images/banner.png");
+        background: url("../images/banner.webp");
     }
 
     .servicesbannerSec3 h1 {
@@ -183,7 +183,7 @@
 /* contact-us */
 
 .servicesbannerSec1 {
-    background: url("../../assets/images/contactus.png") no-repeat center center;
+    background: url("../../assets/images/contactus.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -235,7 +235,7 @@
 @media screen and (max-width: 768px) {
     .servicesbannerSec1 {
         padding: 40px 60px 260px 60px;
-        background-image: url(../images/contactusmobile.png);
+        background-image: url(../images/contactusmobile.webp);
         background-size: cover;
     }
 
@@ -251,7 +251,7 @@
 /* career inside  */
 
 .servicesbannerSec5 {
-    background: url("../../assets/images/bg-img.png") no-repeat center center;
+    background: url("../../assets/images/bg-img.webp") no-repeat center center;
     color: #fff;
     padding: 200px 60px 60px 60px;
     background-size: cover;
@@ -358,7 +358,7 @@
 /* service page */
 
 .servicesbannerSec3 {
-    background: url("../images/Service1.png") no-repeat center center;
+    background: url("../images/Service1.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -417,7 +417,7 @@
 }
 
 .servicesbannerSec3 {
-    background: url("../images/Service1.png") no-repeat center center;
+    background: url("../images/Service1.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -471,7 +471,7 @@
 @media screen and (max-width: 768px) {
     .servicesbannerSec3 {
         padding: 70px 60px 660px 60px;
-        background: url(../images/rsmobileview.png) no-repeat center center;
+        background: url(../images/rsmobileview.webp) no-repeat center center;
         background-size: cover;
     }
 
@@ -482,7 +482,7 @@
 
 /*       in country css          */
 .in_country {
-    background-image: url("../images/icounrtybannerimg1.png");
+    background-image: url("../images/icounrtybannerimg1.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -546,7 +546,7 @@
     .in_country {
         padding: 70px 60px 660px 60px;
         /* margin-top: 8rem; */
-        background-image: url(../images/in-countrmobileview.png);
+        background-image: url(../images/in-countrmobileview.webp);
         background-position: center;
     }
 
@@ -558,7 +558,7 @@
 
 /* academic coolab css */
 .servicesbannerSec98 {
-    background: url("../images/Group 1000004072.png") no-repeat center center;
+    background: url("../images/Group 1000004072.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -618,7 +618,7 @@
     .servicesbannerSec98 {
         padding: 70px 60px 660px 60px;
         /* margin-top: 8rem; */
-        background: url(../images/academicmobileview.png) no-repeat center
+        background: url(../images/academicmobileview.webp) no-repeat center
             center;
         background-size: cover;
     }
@@ -630,7 +630,7 @@
 
 /* Admission_compliance css */
 .servicesbannerSec100 {
-    background: url("../images/aacservice-banner.png") no-repeat center center;
+    background: url("../images/aacservice-banner.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -690,7 +690,7 @@
     .servicesbannerSec100 {
         padding: 40px 60px 260px 60px;
         /* margin-top: 8rem; */
-        background: url(../images/asmissionmobilev.png) no-repeat center center;
+        background: url(../images/asmissionmobilev.webp) no-repeat center center;
         background-size: cover;
     }
 
@@ -702,7 +702,7 @@
 /* Strategic_marketing css */
 
 .servicesbannerSec101 {
-    background: url("../images/Frame 2.png") no-repeat center center;
+    background: url("../images/Frame 2.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -762,7 +762,7 @@
     .servicesbannerSec101 {
         padding: 40px 60px 260px 60px;
         /* margin-top: 8rem; */
-        background: url(../images/stratergicmob.png) no-repeat center center;
+        background: url(../images/stratergicmob.webp) no-repeat center center;
         background-size: cover;
     }
 
@@ -773,7 +773,7 @@
 
 /* operational support csss */
 .servicesbannerSec102 {
-    background: url(../images/operational_banner.png) no-repeat center center;
+    background: url(../images/operational_banner.webp) no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;
@@ -833,7 +833,7 @@
     .servicesbannerSec102 {
         padding: 40px 60px 260px 60px;
         /* margin-top: 8rem; */
-        background: url(../images/operationalmobie.png) no-repeat center center;
+        background: url(../images/operationalmobie.webp) no-repeat center center;
         background-size: cover;
     }
 
@@ -845,7 +845,7 @@
 /* home page css */
 
 .servicesbannerSec104 {
-    background: url("../images/banner.png") no-repeat center center;
+    background: url("../images/banner.webp") no-repeat center center;
     color: #fff;
     padding: 400px 60px 60px 60px;
     background-size: cover;

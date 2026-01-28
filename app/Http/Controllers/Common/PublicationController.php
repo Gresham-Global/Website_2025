@@ -147,7 +147,7 @@ class PublicationController extends Controller
             // dd($data);
             $data['thumbnail_image'] = null;
             $data['banner_image'] = null;
-            $data['mb_banner_image'] = null;
+            // $data['mb_banner_image'] = null;
             $data['vertical_image'] = null;
             $data['report_pdf'] = null;
             $data['report_images'] = [];
@@ -346,7 +346,7 @@ class PublicationController extends Controller
                 "description" => $data['description'] ?? null,
                 "thumbnail_image" => $data['thumbnail_image'],
                 "banner_image" => $data['banner_image'],
-                "mb_banner_image" => $data['mb_banner_image'],
+                // "mb_banner_image" => $data['mb_banner_image'],
                 "vertical_image" => $data['vertical_image'],
                 "report_pdf" => $data['report_pdf'],
                 'report_cards' => json_encode($reportCards),
@@ -528,7 +528,7 @@ class PublicationController extends Controller
 
             $publications->thumbnail_image = $thumbnail_image_path ?? $request->input("thumbnail_image_url_original") ?? $publications->thumbnail_image;
             $publications->banner_image = $banner_image_path ?? $request->input("banner_image_url_original") ?? $publications->banner_image;
-            $publications->mb_banner_image = $mb_banner_image_path ?? $request->input("mb_banner_image_url_original") ?? $publications->mb_banner_image;
+            // $publications->mb_banner_image = $mb_banner_image_path ?? $request->input("mb_banner_image_url_original") ?? $publications->mb_banner_image;
             $publications->vertical_image = $vertical_image_path ?? $request->input("vertical_image_url_original") ?? $publications->vertical_image;
             $publications->report_pdf = $report_pdf_path ?? $request->input("report_pdf_url_original") ?? $publications->report_pdf;
 

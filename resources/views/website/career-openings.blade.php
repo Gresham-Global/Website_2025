@@ -207,7 +207,7 @@
                     </a>
                     @else
                     {{-- <a href="{{ url('career-details/' . $career['slug']) }}"> --}}
-                    <button class="apply-btn">Opening Closed</button>
+                    <button class="apply-btn apply-btn-closed">Opening Closed</button>
                     {{-- </a> --}}
                     @endif
                 </div>
@@ -216,4 +216,20 @@
         </div>
     </div>
 </section>
+<style>
+    .apply-btn-closed {
+        border-radius: 8px !important;
+        background: #545454 !important;
+        /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%) !important; */
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        padding: 0.4rem 1.5rem;
+        /* font-family: "Proxima Nova"; */
+        font-family: "Poppins", sans-serif;
+        line-height: 1.2;
+        border: unset !important;
+    }
+</style>
 @endsection

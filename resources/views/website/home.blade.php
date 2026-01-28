@@ -36,6 +36,31 @@
     .slick-prev {
         left: -2.5rem;
     }
+
+    .slick-arrow {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s;
+    }
+
+    .slider:hover .slick-arrow {
+        opacity: 1;
+    }
+
+    .news-card-title-in-mediaBox {
+        overflow: hidden;
+        max-height: 4.5em;
+        line-height: 1.5em;
+    }
+
+    @supports (-webkit-line-clamp: 3) {
+        .news-card-title-in-mediaBox {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
 </style>
 
 <!-- 1st Section -->
@@ -45,7 +70,7 @@
     <div class="customContainer firstContainer home-banner-text">
         <h1>
             Your Global <br />
-            <span>Growth Partner</span>
+            <span>Gro<span style="letter-spacing: 5px;">wt</span>h Pa<span style="letter-spacing: 5px;">rt</span>ner</span>
         </h1>
         <p class="mt-4">
             We are an in-country representative specialist firm for<br>
@@ -61,7 +86,7 @@
     <div class="custom-container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-lg-block d-md-none d-sm-none d-none sec2Left"><img
-                    src="{{ asset('website/assets/images/abouthome.png') }}" alt="" class="w-100" /></div>
+                    src="{{ asset('website/assets/images/abouthome.webp') }}" alt="" class="w-100" /></div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 sec2right">
                 <h2>About Us</h2>
                 <p>We deliver comprehensive solutions to ensure your university’s success, from establishing in-country
@@ -77,7 +102,7 @@
                 </p>
             </div>
             <div class="d-xl-none d-lg-none col-md-none col-sm-block sec2Leftmob"><img
-                    src="{{ asset('website/assets/images/abouthome.png') }}" alt="" class="w-100" /></div>
+                    src="{{ asset('website/assets/images/abouthome.webp') }}" alt="" class="w-100" /></div>
         </div>
     </div>
 </section>
@@ -98,7 +123,7 @@
                                     <h3>Research &<br /> Assessment</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img
-                                        src="{{ asset('website/assets/images/rotate.png') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -124,7 +149,7 @@
                                     <h3>In-Country<br /> Representation</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img
-                                        src="{{ asset('website/assets/images/rotate.png') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -149,7 +174,7 @@
                                     <h3>Operational<br /> Support</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img
-                                        src="{{ asset('website/assets/images/rotate.png') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -174,7 +199,7 @@
                                     <h3>Academic<br /> Collaboration</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img
-                                        src="{{ asset('website/assets/images/rotate.png') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -201,7 +226,7 @@
                                     <h3>Strategic<br /> Marketing</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img
-                                        src="{{ asset('website/assets/images/rotate.png') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -235,7 +260,7 @@
                                     <h3>Admission <br>Compliance</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img
-                                        src="{{ asset('website/assets/images/rotate.png') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -360,7 +385,7 @@
                 </p>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 sec4Right"><img
-                    src="{{ asset('website/assets/images/whychoose.png') }}" alt="" /></div>
+                    src="{{ asset('website/assets/images/whychoose.webp') }}" alt="" /></div>
 
         </div>
     </div>
@@ -375,7 +400,7 @@
             <p>We prioritise understanding your institution’s unique landscape, ensuring our tailored strategies drive
                 brand
                 growth and cultivate regional success in India and South Asia.</p>
-            <img src="{{ asset('website/assets/images/Group 1000004157.png') }}" alt=""
+            <img src="{{ asset('website/assets/images/Group 1000004157.webp') }}" alt=""
                 class="w-100 d-none d-sm-none d-md-block d-lg-block" />
             <img src="{{ asset('website/assets/images/Group 1000004057.svg') }}" alt="" class="w-100 d-md-none d-lg-none" />
         </div>
@@ -412,7 +437,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/compliance.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/compliance.webp') }}" alt="" />
                             <h4>Compliance
                             </h4>
                         </div>
@@ -431,7 +456,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/growth.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/growth.webp') }}" alt="" />
                             <h4>Growth</h4>
                         </div>
                     </div>
@@ -448,7 +473,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/commitment.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/commitment.webp') }}" alt="" />
                             <h4>Commitment</h4>
                         </div>
                     </div>
@@ -465,7 +490,7 @@
                 <div class="flip-card1">
                     <div class="front-card1">
                         <div class="box1">
-                            <img src="{{ asset('website/assets/images/transparency.png') }}" alt="" />
+                            <img src="{{ asset('website/assets/images/transparency.webp') }}" alt="" />
                             <h4>Transparency</h4>
                         </div>
                     </div>
@@ -559,7 +584,7 @@
 
                     $images = is_array(json_decode($media->thumbnail_image))
                     ? json_decode($media->thumbnail_image)
-                    : ($media->thumbnail_image ? [$media->thumbnail_image] : ['/storage/default-fallback.png']);
+                    : ($media->thumbnail_image ? [$media->thumbnail_image] : ['/storage/default-fallback.webp']);
                     @endphp
                     <div class="swiper imageSwiper">
                         <div class="swiper-wrapper">
@@ -591,7 +616,7 @@
                                     <p>{{ \Illuminate\Support\Str::limit($media->title, 100) }}</p>
                                 </a>
                             </div>
-                            <div class="mt-3">
+                            <div class="mt-2">
                                 <a href="{{ $media->media_link }}" target="_blank" class="readmoreBtn">Read More</a>
                             </div>
                         </div>
@@ -623,11 +648,12 @@
                             {{-- Title (similar to original card's h5, but placed within mediaboxB) --}}
                             <a href="{{ route('news-and-blogs.show', $news_and_blog->slug) }}" target="_blank"
                                 class="mediaText">
-                                <p class="news-card-title-in-mediaBox">{{ \Illuminate\Support\Str::limit($news_and_blog->title, 50) }}</p>
+                                <!-- <p class="news-card-title-in-mediaBox">{{ \Illuminate\Support\Str::limit($news_and_blog->title, 150) }}</p> -->
+                                <p class="news-card-title-in-mediaBox">{{ $news_and_blog->title }}</p>
                                 {{-- Short Description (re-added from original card) --}}
-                                <p class="news-card-text flex-grow-1 mt-2">
+                                <!-- <p class="news-card-text flex-grow-1 mt-2">
                                     {{ Str::limit($news_and_blog->short_description, 50, '...') }}
-                                </p>
+                                </p> -->
                             </a>
 
 
@@ -675,7 +701,7 @@
                         <p class="see-more-btn ">See More</p>
                     </div>
                     <div class="col-md-3 col-3 test_btm_sect"><img
-                            src="{{ asset('website/assets/images/Group 1000004092.png') }}" alt="" class="w-100" />
+                            src="{{ asset('website/assets/images/Group 1000004092.webp') }}" alt="" class="w-100" />
                     </div>
                     <div class="col-md-6 col-6">
                         <h4>Andrew Jones</h4>
@@ -701,7 +727,7 @@
                         <p class="see-more-btn ">See More</p>
                     </div>
                     <div class="col-md-3 col-3 test_btm_sect"><img
-                            src="{{ asset('website/assets/images/Group 1000004093.png') }}" alt="" class="w-100" />
+                            src="{{ asset('website/assets/images/Group 1000004093.webp') }}" alt="" class="w-100" />
                     </div>
                     <div class="col-md-6 col-6">
                         <h4>Jenny Oxley
@@ -735,7 +761,7 @@
                         <p class="see-more-btn ">See More</p>
                     </div>
                     <div class="col-md-3 col-3 test_btm_sect"><img
-                            src="{{ asset('website/assets/images/Group 1000004094.png') }}" alt="" class="w-100" />
+                            src="{{ asset('website/assets/images/Group 1000004094.webp') }}" alt="" class="w-100" />
                     </div>
                     <div class="col-md-6 col-6">
                         <h4>Luke Huo
@@ -768,7 +794,7 @@
                         </p>
                         <p class="see-more-btn ">See More</p>
                     </div>
-                    <div class="col-md-3 col-3"><img src="{{ asset('website/assets/images/Group 1000004095.png') }}"
+                    <div class="col-md-3 col-3"><img src="{{ asset('website/assets/images/Group 1000004095.webp') }}"
                             alt="" class="w-100" />
                     </div>
                     <div class="col-md-6 col-6">
@@ -796,7 +822,7 @@
 
         <div class="slider video">
           <div class="mainvidBox">
-          <img src="{{ asset('website/assets/images/vid1.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/vid1.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-4 col-4 videoB">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
@@ -805,7 +831,7 @@
 
           </div>
           <div class="mainvidBox">
-          <img src="{{ asset('website/assets/images/vid2.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/vid2.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-4 col-4 videoB">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
@@ -813,7 +839,7 @@
           </div>
           </div>
           <div class="mainvidBox">
-          <img src="{{ asset('website/assets/images/vid3.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/vid3.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-4 col-4 videoB">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
@@ -821,7 +847,7 @@
           </div>
           </div>
           <div class="mainvidBox">
-          <img src="{{ asset('website/assets/images/vid4.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/vid4.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-4 col-4 videoB">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
@@ -829,7 +855,7 @@
           </div>
           </div>
           <div class="mainvidBox">
-          <img src="{{ asset('website/assets/images/vid1.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/vid1.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-4 col-4 videoB">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
@@ -849,7 +875,7 @@
         <h2>Research & Publication</h2>
         <div class="slider Research">
           <div>
-          <img src="{{ asset('website/assets/images/1.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/1.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-6 col-6 researchboxL">4 Min Read </div>
           <div class="col-md-6 col-6 researchboxR">Sunday, 24 June 2024</div>
@@ -860,7 +886,7 @@
 
           </div>
           <div>
-          <img src="{{ asset('website/assets/images/2.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/2.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-6 col-6 researchboxL">4 Min Read </div>
           <div class="col-md-6 col-6 researchboxR">Sunday, 24 June 2024</div>
@@ -870,7 +896,7 @@
           </div>
           </div>
           <div>
-          <img src="{{ asset('website/assets/images/3.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/3.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-6 col-6 researchboxL">4 Min Read </div>
           <div class="col-md-6 col-6 researchboxR">Sunday, 24 June 2024</div>
@@ -880,7 +906,7 @@
           </div>
           </div>
           <div>
-          <img src="{{ asset('website/assets/images/4.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/4.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-6 col-6 researchboxL">4 Min Read </div>
           <div class="col-md-6 col-6 researchboxR">Sunday, 24 June 2024</div>
@@ -890,7 +916,7 @@
           </div>
           </div>
           <div>
-          <img src="{{ asset('website/assets/images/1.png') }}" class="w-100" />
+          <img src="{{ asset('website/assets/images/1.webp') }}" class="w-100" />
           <div class="row">
           <div class="col-md-6 col-6 researchboxL">4 Min Read </div>
           <div class="col-md-6 col-6 researchboxR">Sunday, 24 June 2024</div>

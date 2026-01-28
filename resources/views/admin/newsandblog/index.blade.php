@@ -9,7 +9,7 @@
                     </div>
 
                     <div class="item-alignment-right">
-                        <a href="{{route('admin.newsandblog.create')}}" 
+                        <a href="{{route('admin.newsandblog.create')}}"
                             class="btn btn-block bg-primary btn-width text-white">Add News and Blogs</a>
                     </div>
                 </div>

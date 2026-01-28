@@ -45,7 +45,7 @@
 .firstContainer h1 span {
     /* color: #fff; */
     font-style: normal;
-    font-weight: 800;
+    /* font-weight: 800; */
     /* color: #ef4b4f; */
     color: #e32636;
 }
@@ -55,7 +55,8 @@
     color: #fff;
     /* font-family: "Proxima Nova"; */
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+line-height: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -92,7 +93,8 @@
     font-weight: 400;
     line-height: 38px;
     text-align: left;
-    color: #555555;
+    /* color: #555555; */
+    color: #606161;
 }
 
 /* Third Section */
@@ -236,7 +238,8 @@
 }
 .new-sec-6 h2 {
     font-family: "Poppins", sans-serif;
-    font-size: 92px;
+    /* font-size: 92px; */
+    font-size: 80px;
     font-weight: bold;
     color: #e32636;
     line-height: 0.9;
@@ -245,14 +248,19 @@
 .new-sec-6 h5 {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 25px;
     color: #000000;
 }
 .new-sec-6 p {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    /* font-size: 25px; */
+    /* font-size: 22px; */
+    font-size: 18px;
+        line-height: 28px;
     color: #000000;
+    width: 95%;
 }
 
 .icon-bx {
@@ -262,6 +270,18 @@
 
 .news-card {
     overflow: hidden;
+}
+@media screen and (max-width: 1440px){
+    .new-sec-6 p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    /* font-size: 25px; */
+    /* font-size: 22px; */
+    font-size: 18px;
+        line-height: 28px;
+    color: #000000;
+    width: 100%;
+}
 }
 @media (min-width: 992px) {
     .custom-margin {
@@ -286,7 +306,9 @@
         font-size: 24px;
     }
     .new-sec-6 p {
-        font-size: 20px;
+        font-size: 18px;
+line-height: 28px;
+width: 100%;
     }
 }
 /* Target arrows only inside the .testimonials slider */
@@ -295,8 +317,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+
+   
     border: none;
     width: 40px;
     height: 40px;
@@ -305,12 +327,18 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
+    font-size: 40px;
+    color: rgb(168, 35, 35);
+    cursor: pointer;
+    z-index: 100;
+
 }
 
 /* Positioning */
 .testimonials .slick-prev {
     left: 10px;
+    margin-left: 0 !important;
 }
 .testimonials .slick-next {
     right: 23px !important;
@@ -320,31 +348,34 @@
 /* Hover effect */
 .testimonials .slick-prev:hover,
 .testimonials .slick-next:hover {
-    background: rgba(0, 0, 0, 0.9);
+    /* background: rgba(0, 0, 0, 0.9); */
+        color: rgb(184, 34, 34);
 }
 
 /* Hide default icons */
 .testimonials .slick-prev::before,
 .testimonials .slick-next::before {
-    display: none;
+    /* display: none; */
+
 }
 
 /* Insert Google Material Icons */
 .testimonials .slick-prev::after,
 .testimonials .slick-next::after {
-    font-family: "Material Symbols Outlined";
-    font-size: 35px;
-    color: #fff;
+
 }
 
 /* Left arrow icon */
 .testimonials .slick-prev::after {
-    content: "keyboard_arrow_left";
+    /* content: "keyboard_arrow_left"; */
+    /* content: "arrow_back_ios";
+    position: absolute;
+    left: 7px; */
 }
 
 /* Right arrow icon */
 .testimonials .slick-next::after {
-    content: "arrow_forward_ios";
+    /* content: "arrow_forward_ios"; */
 }
 
 .privacy_policy h1 {
@@ -421,7 +452,8 @@
         line-height: 65px;
     }
     .secRightBox p {
-        font-size: 20px;
+        font-size: 18px;
+line-height: 28px;
         line-height: 28px;
     }
     .servicesCard {
@@ -465,7 +497,8 @@
         line-height: 70px;
     }
     .firstContainer p {
-        font-size: 20px;
+        font-size: 18px;
+line-height: 28px;
     }
 }
 
@@ -497,6 +530,9 @@
 }
 
 @media screen and (max-width: 768px) {
+      .fixcms {
+        margin-bottom: 80px;
+    }
     .servicesCard {
         height: 350px;
     }
@@ -527,6 +563,7 @@
 }
 
 @media screen and (max-width: 550px) {
+  
     /* .heroBannerVideo {
         height: 450px;
     } */
@@ -636,7 +673,8 @@
 }
 
 .serv_card-title {
-    font-size: 20px;
+    font-size: 18px;
+line-height: 28px;
     margin-bottom: 8px;
     color: #fff;
     /* font-family: "Proxima Nova"; */
@@ -695,9 +733,14 @@
     background: url("../images/service/Admission\ &\ Compliance.webp") no-repeat;
     background-size: cover;
 }
-
+.icon-box-cc {
+        margin-bottom: 15px;
+    }
 /* Homepage Our Value section */
 @media screen and (max-width: 768px) {
+    .overview-title {
+        padding-top: 20px;
+    }
     .media .slick-slide {
         padding-right: 0 !important;
         padding-left: 0 !important;
@@ -712,6 +755,20 @@
 }
 
 @media screen and (max-width: 640px) {
+    .icon-box-cc {
+        margin-bottom: 5px !important;
+    }
+    .icon-bx {
+        width: 60px !important;
+        height: auto;
+    }
+    .icon-bx-h {
+        font-size: 18px !important;
+    }
+    .icon-bx-d {
+                font-size: 16px !important;
+        line-height: 20px !important;
+    }
     .container.ourval_sec {
         display: flex !important;
     }
@@ -738,7 +795,7 @@
         min-height: 12rem !important;
     }
     .mediaboxB {
-        height: 7rem !important;
+        min-height: 7rem !important;
     }
     .TestiBox h4 {
         font-size: 18px !important;
@@ -822,7 +879,7 @@
 
 .ovalue_text p {
     font-size: 14px;
-    color: #555;
+    color: #606161;
     margin-bottom: 0 !important;
 }
 
@@ -862,4 +919,23 @@
     border-radius: 10px 10px 0 0;
     display: block;
     overflow: hidden;
+}
+
+.news-card-body img {
+     border-radius: 10px 10px 0 0;
+    display: block;
+    overflow: hidden;
+}
+section.events_main .event-img img {
+    border-radius: 10px 10px 0 0 !important;
+    display: block;
+    overflow: hidden;
+    -webkit-border-radius: 10px 10px 0 0 !important;
+    -moz-border-radius: 10px 10px 0 0 !important;
+    -ms-border-radius: 10px 10px 0 0 !important;
+    -o-border-radius: 10px 10px 0 0 !important;
+}
+
+.taghead, .tagtxt {
+    font-size: 1rem !important;
 }
