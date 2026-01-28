@@ -303,7 +303,8 @@ form#footerForm {
 }
 @media screen and (max-width: 1800px) {
     .subContainer {
-        top: -50px;
+        /* top: -50px; */
+        top: -9%;
         gap: 2rem;
     }
     .subContainer h4 {

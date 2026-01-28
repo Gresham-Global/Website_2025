@@ -224,10 +224,8 @@
 <script>
     $(document).ready(function() {
 
-
         let loading = false;
         const isMobile = $(window).width() < 768;
-
 
         // State per type
         let state = {
@@ -239,41 +237,46 @@
             }
         };
 
-
+        // Get currently active type
         function getActiveType() {
             return $('.toggle-btn.active').data('type');
         }
 
-
+        // Reset content and load first page
         function resetAndLoad(type) {
-            // reset state
             state[type].page = 1;
             $('#newscrads').html(''); // clear old cards
             $('#loadMoreWrapperNews').show();
 
-
-            loadMoreContent(true);
+            loadMoreContent(true); // initial load
         }
 
+        // Check if we need to load more for desktop (short content)
+        function checkScrollLoad() {
+            if (!isMobile && $(window).scrollTop() + $(window).height() + 120 >= $(document).height()) {
+                loadMoreContent();
+            }
+        }
 
+        // Load content via AJAX
         function loadMoreContent(isFirstLoad = false) {
             if (loading) return;
 
-
             const type = getActiveType();
             const current = state[type];
-
+            const cardCount = $('#newscrads .card').length; // count existing cards
 
             loading = true;
 
+            // Only show loader if more than 6 cards already present
+            const showLoader = cardCount >= 6;
 
-            if (isMobile) {
+            if (isMobile && showLoader) {
                 $('#loadMoreLoaderNews').removeClass('d-none');
                 $('#loadMore').prop('disabled', true);
-            } else {
+            } else if (!isMobile && showLoader) {
                 $('#infinite-loader').removeClass('d-none');
             }
-
 
             $.ajax({
                 url: "{{ url('news-and-blogs') }}",
@@ -284,20 +287,25 @@
                 },
                 dataType: "json",
                 success: function(data) {
-
-
                     if (data.html.trim() !== "") {
                         $('#newscrads').append(data.html);
                         current.page++;
+
+                        // Desktop: if first load, check if content still doesn't fill screen
+                        if (!isMobile && isFirstLoad) {
+                            checkScrollLoad();
+                        }
                     } else if (!isFirstLoad) {
                         $('#loadMoreWrapperNews').hide();
                     }
                 },
                 complete: function() {
                     loading = false;
-                    $('#loadMoreLoaderNews').addClass('d-none');
-                    $('#infinite-loader').addClass('d-none');
-                    $('#loadMore').prop('disabled', false);
+                    if (showLoader) {
+                        $('#loadMoreLoaderNews').addClass('d-none');
+                        $('#infinite-loader').addClass('d-none');
+                        $('#loadMore').prop('disabled', false);
+                    }
                 },
                 error: function() {
                     loading = false;
@@ -306,14 +314,13 @@
             });
         }
 
-
-        // Mobile Load More
+        // Mobile: Load More button
         if (isMobile) {
             $('#loadMore').on('click', function() {
                 loadMoreContent();
             });
         }
-        // Desktop infinite scroll
+        // Desktop: infinite scroll
         else {
             $(window).on('scroll', function() {
                 if ($(window).scrollTop() + $(window).height() + 120 >= $(document).height()) {
@@ -322,28 +329,21 @@
             });
         }
 
-
-        // Toggle buttons → trigger AJAX
+        // Toggle buttons → switch type
         $('.toggle-btn').on('click', function() {
             const type = $(this).data('type');
-
 
             $('.toggle-btn').removeClass('active');
             $(this).addClass('active');
 
+            $('.news-blog-toggle').toggleClass('blogs-active', type === 'blogs');
 
-            $('.news-blog-toggle')
-                .toggleClass('blogs-active', type === 'blogs');
-
-
-            resetAndLoad(type); // 🔥 AJAX trigger here
+            resetAndLoad(type);
         });
-
 
         // Initial load → News
         $('.toggle-btn[data-type="news"]').addClass('active');
         resetAndLoad('news');
-
 
     });
 </script>
