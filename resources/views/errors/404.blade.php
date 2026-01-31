@@ -1,3 +1,5 @@
+@extends('website.layout.master')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +21,7 @@
         body {
             padding: 0;
             margin: 0;
-            background: #E32636;
+            background: #E32636 !important;
         }
 
         #notfound {
@@ -38,7 +40,7 @@
         }
 
         .notfound p {
-            font-size: 40px;
+            font-size: 25px;
             color: #fff;
         }
 
@@ -46,7 +48,8 @@
             outline: none;
             background: #F9FDFF;
             border-radius: 191.313px;
-            width: 300px;
+            width: 100%;
+            max-width: 250px;
             height: 70px;
             display: inline-block;
 
@@ -57,6 +60,9 @@
             font-family: 'Poppins', sans-serif;
             color: #000;
 
+        }
+        .notfound img {
+            width: 80%;
         }
 
         @media screen and (max-width: 1024px) {

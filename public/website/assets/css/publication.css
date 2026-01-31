@@ -47,7 +47,7 @@ line-height: 28px;
 }
 
 .downloadBtn {
-    /* background: linear-gradient(270deg, #ef4b4f 0%, #991f3d 100%); */
+    /* background: linear-gradient(270deg, #e32636  0%, #991f3d 100%); */
     background: #e32636  !important;
     font-family: "Proxima Nova";
     font-weight: 700;
@@ -109,7 +109,7 @@ line-height: 28px;
 
 .backView {
     /* transform: rotateY(180deg);
-    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+    background: linear-gradient(180deg, #e32636  0%, #991f3d 100%);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -197,7 +197,7 @@ line-height: 28px;
 }
 
 .reapeatButton {
-    background-color: #ef4b4f;
+    background-color: #e32636 ;
     border: 0;
     padding: 8px;
     border-radius: 50%;
@@ -322,7 +322,7 @@ a.downloadBtn:hover {
     font-size: 24px;
     line-height: 140%;
     letter-spacing: 0%;
-    color: #ef4b4f;
+    color: #e32636 ;
     margin-top: 0.5rem;
 }
 
@@ -352,7 +352,8 @@ a.downloadBtn:hover {
 }
 
 .readMoreBtn {
-    background: linear-gradient(270deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(270deg, #e32636  0%, #991f3d 100%); */
+    background: #e32636;
     font-family: "Proxima Nova";
     font-weight: 700;
     font-size: 18px;
@@ -376,7 +377,7 @@ line-height: 28px;
 
 .publicationSlider .slick-dots li.slick-active {
     width: 40px;
-    background-color: #ef4b4f;
+    background-color: #e32636 ;
 }
 
 .publicationSlider .slick-dots li button:before {
@@ -733,7 +734,8 @@ textarea.form-input {
     display: inline-block;
     margin: 10px;
     transition: background-color 0.3s;
-    background: linear-gradient(270deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(270deg, #e32636  0%, #991f3d 100%); */
+    background: #e32636;
     /* font-family: "Proxima Nova"; */
     font-family: "Poppins", sans-serif;
     font-weight: 700;

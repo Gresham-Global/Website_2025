@@ -136,7 +136,7 @@ From in-country representation and market development to hands-on execution and 
   p,
   span,
   .mediaCon span {
-    font-family: "Poppins", sans-serif !important;
+    font-family: "Poppins", sans-serif;
     font-size: 18px !important;
     line-height: 28px !important;
   }

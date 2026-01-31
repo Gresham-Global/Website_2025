@@ -25,7 +25,7 @@
     <!-- <div class="followBox">
                     <p>Follow us on</p>
                     <a href="https://www.linkedin.com/company/gresham-global" target="_blank"><img
-                            src="{{ asset('website/assets/icons/linkedinRound.svg') }}" alt="" /></a> -->
+                            src="{{ asset('website/assets/icons/linkedinRound.webp') }}" alt="" /></a> -->
     <!-- <a href="https://www.instagram.com/gresham.global" target="_blank"><img
                             src="{{ asset('website/assets/icons/instaRound.svg') }}" alt="" /></a> -->
     <!-- </div> -->
@@ -156,8 +156,8 @@
                 <!-- <button class="touchBtn" id="touchBtn">Follow us on</button> -->
                 <div class="followBox">
                     <!-- <p>Follow us on</p> -->
-                    <a href="https://www.linkedin.com/company/gresham-global" target="_blank"><img
-                            src="{{ asset('website/assets/icons/linkedinRound.svg') }}" alt="" /></a>
+                    <a href="https://www.linkedin.com/company/gresham-global" target="_blank"><img style="width: 32px; height: 32px"
+                            src="{{ asset('website/assets/icons/linkedinRound.webp') }}" alt="" /></a>
                     <!-- <a href="https://www.instagram.com/gresham.global" target="_blank"><img
                             src="{{ asset('website/assets/icons/instaRound.svg') }}" alt="" /></a> -->
                 </div>

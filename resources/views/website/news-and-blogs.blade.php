@@ -9,7 +9,7 @@
     <img src="{{ asset('website/assets/images/mediamobilebanner.png') }}" class="w-100 forMobBanner d-block d-md-none" />
 </section>
 <!-- Toggle Buttons -->
-<section class="customSection customSectionToggle pt-2 pb-2 my-0">
+<section class="customSection customSectionToggle pt-4 pb-2 my-0">
     <div class="customContainer  customContainerToggle">
         <div class="news-blog-toggle">
             <button class="toggle-btn active" data-type="news">News</button>
@@ -70,8 +70,8 @@
 </section>
 <style>
     .customSectionToggle .customContainerToggle {
-        width: 88%;
-        text-align: right;
+        width: 100%;
+        text-align: center;
     }
 
     .news-blog-card {

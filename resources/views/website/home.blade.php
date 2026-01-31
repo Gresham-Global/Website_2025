@@ -122,7 +122,7 @@
                                 <div class="col-md-8 col-8 frontcardLeft">
                                     <h3>Research &<br /> Assessment</h3>
                                 </div>
-                                <div class="col-md-4 col-4 frontcardRight"><img
+                                <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
                                         src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                                 <div class="col-md-8 col-8 frontcardLeft">
                                     <h3>In-Country<br /> Representation</h3>
                                 </div>
-                                <div class="col-md-4 col-4 frontcardRight"><img
+                                <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
                                         src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                                 <div class="col-md-8 col-8 frontcardLeft">
                                     <h3>Operational<br /> Support</h3>
                                 </div>
-                                <div class="col-md-4 col-4 frontcardRight"><img
+                                <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
                                         src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
@@ -198,7 +198,7 @@
                                 <div class="col-md-8 col-8 frontcardLeft">
                                     <h3>Academic<br /> Collaboration</h3>
                                 </div>
-                                <div class="col-md-4 col-4 frontcardRight"><img
+                                <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
                                         src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                                 <div class="col-md-8 col-8 frontcardLeft">
                                     <h3>Strategic<br /> Marketing</h3>
                                 </div>
-                                <div class="col-md-4 col-4 frontcardRight"><img
+                                <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
                                         src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
@@ -259,7 +259,7 @@
                                 <div class="col-md-8 col-8 frontcardLeft">
                                     <h3>Admission <br>Compliance</h3>
                                 </div>
-                                <div class="col-md-4 col-4 frontcardRight"><img
+                                <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
                                         src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
                             </div>
                         </div>
@@ -396,7 +396,7 @@
 <section class="sec5">
     <div class="custom-container">
         <div class="row">
-            <h2><span>Our Commitment,</span> Your Global Growth</h2>
+            <p class="h2"><span>Our Commitment,</span> Your Global Growth</p>
             <p>We prioritise understanding your institution’s unique landscape, ensuring our tailored strategies drive
                 brand
                 growth and cultivate regional success in India and South Asia.</p>

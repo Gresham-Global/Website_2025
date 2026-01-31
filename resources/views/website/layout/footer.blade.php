@@ -41,7 +41,7 @@
                     class="contactlinks">
                     <p class="contactP " style="line-height: 22px;">
 
-                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" /> 806-808, The Epicenter Wadhwa, Chembur, Mumbai, Maharashtra, India 400088
+                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" />806 – 808, The Epicentre, Wadhwa, <br>Off Eastern Freeway, Chembur, <br> Mumbai – 400 088, Maharashtra, INDIA.
 
                     </p>
 
@@ -131,7 +131,7 @@
                 <img src="{{ asset('website/assets/images/offer.webp') }}" alt="Great Place to Work"
                     class="img-fluid" />
             </div> -->
-            
+
         </div>
         <!-- <div class="col-lg-1 col-md-6 mb-4 order-md-2 order-3 " style="border: 1px solid #000;"></div> -->
         <div class="col-lg-1 col-sm-6 col-6 mb-4 order-md-2 order-3 ">
@@ -140,7 +140,7 @@
                 <li class="mb-4">
 
                     <a href="https://www.linkedin.com/company/gresham-global/" target="_blank" class="text-light"
-                        style=""><img src="{{ asset('website/assets/icons/linkedinRound.svg') }}"
+                        style=""><img style="width:40px; height:40px;" src="{{ asset('website/assets/icons/linkedinRound.webp') }}"
                             alt="" class="fIcon me-4" /></a>
 
                 </li>
@@ -213,29 +213,30 @@
             </form>
         </div>
         <div class="mobileHIde col-lg-1 col-12 mb-4  order-3 d-block d-lg-none">
-                <h6 class="mb-4">Contact Us</h6>
-                <a target="_blank" href="tel:9773911384" class="contactlinks">
-                    <p class="contactP d-flex ">
-                        <img src="{{ asset('website/assets/icons/callIcon.svg') }}" alt="" /> +91 97739 11384
-                    </p>
-                </a>
-                <a target="_blank" href="mailto:contact@gresham.world" class="contactlinks">
-                    <p class="contactP  ">
-                        <img src="{{ asset('website/assets/icons/emailfooter.svg') }}"
-                            alt="email">contact@gresham.world
-                    </p>
-                </a>
-                <a target="_blank"
-                    href="https://www.google.com/maps/dir//1206,+Signature+Business+Park,+Mono+Rail+Station,+Postal+Colony+Rd,+near+Chembur,+Postal+Colony,+Chembur,+Mumbai,+Maharashtra+400071/@19.0600367,72.8138403,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.896242!2d19.060055?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D"
-                    class="contactlinks">
-                    <p class="contactP " style="line-height: 22px;">
+            <h6 class="mb-4">Contact Us</h6>
+            <a target="_blank" href="tel:9773911384" class="contactlinks">
+                <p class="contactP d-flex ">
+                    <img src="{{ asset('website/assets/icons/callIcon.svg') }}" alt="" /> +91 97739 11384
+                </p>
+            </a>
+            <a target="_blank" href="mailto:contact@gresham.world" class="contactlinks">
+                <p class="contactP  ">
+                    <img src="{{ asset('website/assets/icons/emailfooter.svg') }}"
+                        alt="email">contact@gresham.world
+                </p>
+            </a>
+            <a target="_blank"
+                href="https://www.google.com/maps/dir//1206,+Signature+Business+Park,+Mono+Rail+Station,+Postal+Colony+Rd,+near+Chembur,+Postal+Colony,+Chembur,+Mumbai,+Maharashtra+400071/@19.0600367,72.8138403,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c8ed89588c29:0xba83964829b13797!2m2!1d72.896242!2d19.060055?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D"
+                class="contactlinks">
+                <p class="contactP " style="line-height: 22px;">
 
-                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" /> 806-808, The Epicenter Wadhwa, Chembur, Mumbai, Maharashtra, India 400088
+                    <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" />
+                   806 – 808, The Epicentre, Wadhwa, <br>Off Eastern Freeway, Chembur, <br> Mumbai – 400 088, Maharashtra, INDIA.
 
-                    </p>
+                </p>
 
-                </a>
-            </div>
+            </a>
+        </div>
     </div>
     </div>
     <!-- Bottom Section -->

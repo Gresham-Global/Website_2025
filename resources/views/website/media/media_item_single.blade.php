@@ -8,14 +8,14 @@
                     alt="Media Image">
             </a>
 
-            <div class="d-flex align-items-center gap-2 text-muted-c small mt-3">
+            <div class="d-flex align-items-center gap-2 text-muted-c small mt-1">
                 <img src="{{ asset('website/assets/images/time.svg') }}" class="icon-sm">
                 <span style="font-size: .875em !important; ">
                     {{ \Carbon\Carbon::parse($item->publish_date ?? $item->created_at)->format('d M Y') }}
                 </span>
             </div>
 
-            <img src="{{ asset($item->logo_image) }}" class="repiblicimg my-2">
+            <img src="{{ asset($item->logo_image) }}"  class="repiblicimg">
 
             <a href="{{ $item->media_link }}" target="_blank">
                 <h5 class="news-card-title">

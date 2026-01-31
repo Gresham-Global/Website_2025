@@ -29,11 +29,11 @@
                         <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
                             <img src="{{ $publication->thumbnail_image }}" alt="News Image" class="news-card-img">
                         </a>
-                        <div class="d-flex align-items-center gap-2 mt-3 text-muted-c small">
+                        <!-- <div class="d-flex align-items-center gap-2 mt-3 text-muted-c small">
                             <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon"
                                 class="icon-sm">
                             <span style="font-size: 0.85em !important;">{{ \Carbon\Carbon::parse($publication->created_at)->format('d M Y') }}</span>
-                        </div>
+                        </div> -->
                         <a href="{{ route('publications.show', $publication->slug) }}" target="_blank">
                             <h5 class="news-card-title">
                                 <!-- {{$publication->title }} -->

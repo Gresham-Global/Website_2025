@@ -435,7 +435,7 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
     <div class="customContainer mediaCon h ">
         <div class="currentopn_topsect mb-2">
             <div class="headsect">
-                <h1 class="text-start mb-0" id="currentopeningsection">Current Openings</h1>
+                <h2 class="text-start mb-0" id="currentopeningsection">Current Openings</h2>
             </div>
             <div class="veiwallsec">
                 <a href="/careers-openings" id="viewall">
