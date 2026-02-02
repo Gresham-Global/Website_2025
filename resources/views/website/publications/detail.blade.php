@@ -112,9 +112,9 @@
                 </a>
                 <div class="bodyContent">
                     <a href="{{ route('publications.show', $item->slug) }}" target="_blank">
-                        <h4 class="similarPublicationsTitle">{{ Str::limit($item->title, 20) }}</h4>
+                        <h4 class="similarPublicationsTitle">{{ Str::limit($item->title, 63) }}</h4>
                     </a>
-                    <p class="similarPublicationsDesc">{{ Str::limit(strip_tags($item->short_description), 200) }}</p>
+                    <p class="similarPublicationsDesc">{{ Str::limit(strip_tags($item->short_description), 250) }}</p>
                 </div>
 
                 @if ($item->tags && count($item->tags))
@@ -177,7 +177,97 @@
         </form>
     </div>
 </div>
+<style>
+    .tagDiv span {
+        font-size: 1rem !important;
 
+    }
+
+    .similarPublicationsTitle {
+        overflow: hidden;
+        min-height: 2.26em;
+        max-height: 2.5em;
+        line-height: 28px;
+    }
+
+    @supports (-webkit-line-clamp: 2) {
+        .similarPublicationsTitle {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    .similarPublicationsDesc {
+        overflow: hidden;
+        min-height: 2.26em;
+        max-height: 2.5em;
+        line-height: 28px;
+    }
+
+    @supports (-webkit-line-clamp: 3) {
+        .similarPublicationsDesc {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    @media screen and (max-width: 1366px) {
+        .similarPublicationsTitle {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 60px !important;
+        }
+
+        .similarPublicationsDesc {
+            overflow: hidden;
+            max-height: 5em;
+            line-height: 28px;
+            min-height: 66px !important;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+
+
+        .similarPublicationsTitle {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 60px !important;
+        }
+
+        @supports (-webkit-line-clamp: 2) {
+            .similarPublicationsDesc {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                max-height: unset;
+            }
+        }
+
+        .similarPublicationsDesc {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 66px !important;
+        }
+
+        @supports (-webkit-line-clamp: 3) {
+            .similarPublicationsDesc {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                max-height: unset;
+            }
+        }
+    }
+</style>
 
 @endif
 

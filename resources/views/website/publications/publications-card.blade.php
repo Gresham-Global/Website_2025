@@ -26,14 +26,14 @@
 
                 @if (!empty($publication->share_link))
                 <a href="{{ $publication->share_link }}" class="share_social share-blog-hit ">
-                    <img src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="Share Icon">
+                    <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="Share Icon">
                 </a>
                 @endif
 
                 <a href="javascript:void(0);" class="share_social share-blog-hit"
                     data-url="{{ route('publications.show', $publication->slug) }}"
                     data-title="{{ $publication->title }}">
-                    <img src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
+                    <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
                 </a>
             </div>
         </div>

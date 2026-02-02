@@ -15,7 +15,7 @@
         color: #606161;
         font-size: 18px;
         line-height: 28px;
-        text-align: center;
+        text-align: left;
     }
 
     .approach_about1 p {

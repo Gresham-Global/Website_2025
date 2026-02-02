@@ -522,5 +522,13 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
         line-height: 1.2;
         border: unset !important;
     }
+
+    .opening-card h5,
+    .opening-card p,
+    .opening-card strong,
+    .opening-card span {
+        font-family: "Poppins", sans-serif !important;
+        color: #606161 !important;
+    }
 </style>
 @endsection

@@ -25,6 +25,19 @@
         font-size: 18px;
         line-height: 28px;
     }
+    @media screen and (max-width:1366px) and (min-width:768px) {
+        .fntsize {
+            /* font-size: 0.8rem; */
+            font-size: 16px;
+            text-align: start;
+        }
+
+        .Explore {
+            width: 40%;
+            min-width: 200px;
+            margin-bottom: 15px;
+        }
+    }
 </style>
 <!-- banner section starts here -->
 <div class="container-fluid servicesbannerSec3 firstSection">

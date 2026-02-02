@@ -160,7 +160,7 @@ line-height: 28px;
     font-weight: 500;
     /* font-size: 26px; */
     font-size: 22px;
-    line-height: 160%;
+    line-height: 170%;
     letter-spacing: 0%;
     color: #ffffff;
 }
@@ -340,21 +340,21 @@ a.downloadBtn:hover {
 .publicationCard .tagDiv {
     /* font-family: "Proxima Nova"; */
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+    /* font-weight: 600;
+    font-size: 16px; */
     line-height: 24px;
     letter-spacing: 0%;
 }
 
 .publicationCard .tagDiv span {
-    color: #9c9c9c;
-    font-weight: 700;
+    /* color: #606161; */
+    font-weight: 400;
 }
 
 .readMoreBtn {
     /* background: linear-gradient(270deg, #e32636  0%, #991f3d 100%); */
     background: #e32636;
-    font-family: "Proxima Nova";
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 18px;
 line-height: 28px;
@@ -456,6 +456,20 @@ line-height: 28px;
     }
 }
 
+@media screen and (max-width:1366px){
+    .backView ul li::before {
+        content: "";
+        background-image: url(../images/publications/globe.svg);
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 3px;
+    }
+        .backView ul li {
+        font-size: 13px;
+    }
+}
 @media screen and (max-width: 991px) {
     h2.mainHeadingSection {
         font-size: 48px;

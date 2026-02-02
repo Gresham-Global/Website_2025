@@ -2394,7 +2394,13 @@ line-height: 28px;
 .ValueBox {
     margin: 0.5rem !important;
 }
-
+.share-blog-hit img {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+}
 @media screen and (max-width: 1800px) and (min-width: 1100px) {
     .ValueBox {
         width: 18% !important;
@@ -2403,6 +2409,14 @@ line-height: 28px;
 
     .back-card ul li {
         font-size: 14px;
+    }
+}
+@media screen and (max-width:1280px){
+.back-card ul li {
+        font-size: 13px;
+    }
+    .back-card ul li {
+        padding: 0 0 0 20px
     }
 }
 

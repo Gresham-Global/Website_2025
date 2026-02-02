@@ -104,7 +104,12 @@ p.foundersp {
 }
 
 /* -------------------------------- */
-
+@media screen and (max-width: 1366px){
+    .founder p{
+                font-size: 18px !important;
+        line-height: 24px !important;
+    } 
+}
 @media screen and (max-width: 1080px) {
     .paragraph.mt4Is {
         margin-top: 1rem !important;

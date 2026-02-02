@@ -67,7 +67,7 @@
                             @if (!empty($publication->share_link))
                             <a href="{{ !empty($publication->share_link) ? $publication->share_link : '#' }}"
                                 class="share_social share-blog-hit ">
-                                <img src="{{ asset('website/assets/images/events/share_icon.webp') }}"
+                                <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}"
                                     alt="Share Icon">
                             </a>
                             @endif
@@ -91,27 +91,27 @@
                   <img src="{{ asset('website/assets/images/loading.svg') }}" alt="" class="d-none">
                   </button>
                 </div> -->
-<!-- Desktop Infinite Scroll Loader -->
-<div id="infinite-loader" class="text-center my-3 d-none">
-    <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
-</div>
+        <!-- Desktop Infinite Scroll Loader -->
+        <div id="infinite-loader" class="text-center my-3 d-none">
+            <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
+        </div>
 
-<!-- Mobile Load More Button -->
-<div class="text-center my-4 d-md-none" id="loadMoreWrapperPublications">
-    <button class="mx-auto btn btn-primary" id="loadMorePublications"
-            data-page="2" 
-            data-loaded="{{ $publications->count() }}" 
-            data-total="{{ $total }}">
-        Load More
-    </button>
-    <div class="mt-2 d-none" id="loadMoreLoaderPublications">
-        <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
-    </div>
-</div>
+        <!-- Mobile Load More Button -->
+        <div class="text-center my-4 d-md-none" id="loadMoreWrapperPublications">
+            <button class="mx-auto btn btn-primary" id="loadMorePublications"
+                data-page="2"
+                data-loaded="{{ $publications->count() }}"
+                data-total="{{ $total }}">
+                Load More
+            </button>
+            <div class="mt-2 d-none" id="loadMoreLoaderPublications">
+                <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
+            </div>
+        </div>
     </div>
 </section>
 <style>
-      .news-card-title {
+    .news-card-title {
         overflow: hidden;
         min-height: 2.26em;
         max-height: 2.5em;
@@ -125,6 +125,39 @@
             -webkit-box-orient: vertical;
             max-height: unset;
         }
+    }
+
+    .news-card-text {
+        overflow: hidden;
+        min-height: 2.26em;
+        max-height: 2.5em;
+        line-height: 28px;
+    }
+
+    @supports (-webkit-line-clamp: 3) {
+        .news-card-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        .news-card-title {
+            overflow: hidden;
+            max-height: 3.5em;
+            line-height: 28px;
+            min-height: 60px !important;
+        }
+
+        .news-card-text {
+            overflow: hidden;
+            max-height: 5em;
+            line-height: 28px;
+            min-height: 66px !important;
+        }
+
     }
 
     @media screen and (max-width: 768px) {
@@ -145,27 +178,6 @@
                 max-height: unset;
             }
         }
-    }
-
-
-    .news-card-text {
-        overflow: hidden;
-        min-height: 2.26em;
-        max-height: 2.5em;
-        line-height: 28px;
-    }
-
-    @supports (-webkit-line-clamp: 3) {
-        .news-card-text {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            max-height: unset;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-
 
         .news-card-text {
             overflow: hidden;
