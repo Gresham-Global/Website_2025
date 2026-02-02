@@ -530,6 +530,13 @@ line-height: 28px;
 }
 
 @media screen and (max-width: 768px) {
+    .d-flex-c {
+        display: block !important;
+
+    }
+    .icon-h {
+        white-space: nowrap !important;
+    }
       .fixcms {
         margin-bottom: 80px;
     }
@@ -558,7 +565,8 @@ line-height: 28px;
         margin-top: 2rem !important;
     }
     h2.serviecsmob {
-        font-size: 42px !important;
+        font-size: 27px !important;
+        /* font-size: 42px !important; */
     }
 }
 

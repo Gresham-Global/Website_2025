@@ -2070,7 +2070,15 @@ line-height: 28px;
     }
 }
 
+
 @media screen and (max-width: 768px) {
+    .sec5 p.h2{
+                font-size: 27px !important;
+        line-height: 32px !important;
+    }
+    .sec5 p {
+        margin: 0 auto 20px auto;
+    }
     .sec2 {
         padding: 60px 0 0 0px;
     }
@@ -2364,8 +2372,10 @@ line-height: 28px;
         font-family: "Poppins", sans-serif;
         font-size: 16px;
         font-style: normal;
-        font-weight: 700;
-        line-height: 150%;
+        /* font-weight: 700;
+        line-height: 150%; */
+        font-size: 18px;
+        line-height: 28px;
         text-align: start;
     }
     .mt-5.abtnt5btn {

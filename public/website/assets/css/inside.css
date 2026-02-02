@@ -237,11 +237,12 @@ body {
 } */
 
 .submit-button {
-    background: linear-gradient(
+    background: #e32636 !important;
+    /* background: linear-gradient(
         265.76deg,
         #ef4b4f -0.04%,
         #991f3d 72.43%
-    ); /* Fixed background */
+    );  */
     color: #fff;
     padding: 12px 24px;
     font-size: 16px;
@@ -291,7 +292,7 @@ a {
     /* color: #fff !important; */
 }
 a:hover {
-    color: #ef4b4f !important;
+    color: #e32636 !important;
 }
 
 .customSection {
@@ -382,7 +383,7 @@ body {
 }
 
 .card-title1 {
-    color: #ef4b4f;
+    color: #e32636;
     /* font-family: "Proxima Nova"; */
     font-family: "Poppins", sans-serif;
     font-size: 24px;
@@ -413,11 +414,13 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
+    background: #e32636
 }
 
 .read-more:hover {
-    background: linear-gradient(180deg, #831113 0%, #5e071d 100%);
+    /* background: linear-gradient(180deg, #831113 0%, #5e071d 100%); */
+    background: #e32636;
     color: #fff !important;
 }
 
@@ -791,7 +794,8 @@ line-height: 28px;
 
 .city-button.active,
 .city-button:hover {
-    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
+    background: #e32636;
     color: #fff;
 }
 
@@ -1036,7 +1040,8 @@ p {
 }
 
 #our-values {
-    background: linear-gradient(to top, #d32f2f, #f44336);
+    /* background: linear-gradient(to top, #d32f2f, #f44336); */
+    background: #e32636;
     color: white;
 }
 
@@ -1052,7 +1057,8 @@ img.rounded-circle {
 
 .values-section {
     /* background: linear-gradient(135deg, #d32f2f, #ff6659); */
-    background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%);
+    /* background: linear-gradient(180deg, #ef4b4f 0%, #991f3d 100%); */
+    background: #e32636;
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -1132,7 +1138,8 @@ img.rounded-circle {
     color: #fff !important;
   } */
 .connect-btn {
-    background: linear-gradient(265.76deg, #ef4b4f -0.04%, #991f3d 72.43%);
+    /* background: linear-gradient(265.76deg, #ef4b4f -0.04%, #991f3d 72.43%); */
+    background: #e32636;
     color: #fff !important;
     font-size: 1rem;
     font-weight: bold;
@@ -1753,7 +1760,8 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     min-height: 100%;
-    background: linear-gradient(180.85deg, #ef4b4f 0.85%, #991f3d 99.4%);
+    /* background: linear-gradient(180.85deg, #ef4b4f 0.85%, #991f3d 99.4%); */
+    background:#e32636;
 }
 .custom-card.light {
     background: white;
@@ -1973,6 +1981,7 @@ line-height: 28px;
 @media screen and (max-width: 991px) {
     .custom-container {
         padding: 0rem 1rem;
+        width: 100%;
     }
 }
 
@@ -2117,7 +2126,8 @@ button.Explore:hover div .pr-2.fntsize {
     line-height: normal;
 }
 .redvideotext {
-    color: #ef4b4f;
+    /* color: #ef4b4f; */
+    color: #e32636;
     /* font-family: "Proxima Nova"; */
     font-family: "Poppins", sans-serif;
     font-size: 110px;

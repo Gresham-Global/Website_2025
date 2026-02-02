@@ -182,7 +182,7 @@
     /* border-bottom: 1px solid #000000; */
 }
 .offcanvas .nav .nav-item.active a {
-    color: #ef4b4f !important;
+    color: #e32636 !important;
     /* font-weight: 700; */
     border-bottom: 0;
 }
@@ -401,7 +401,7 @@
 }
 
 .nav-item:hover .nav-link {
-    color: #ef4b4f !important;
+    color: #e32636 !important;
 }
 
 .nav-item:hover .dropdown-menu {

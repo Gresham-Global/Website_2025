@@ -353,6 +353,9 @@ form#footerForm {
                 font-size: 27px !important;
         line-height: 32px !important;
     }
+    h2 {
+        text-align: center;
+    }
      .customImgoffer{
         width: 80px;
     }

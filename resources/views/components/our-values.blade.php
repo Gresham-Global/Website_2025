@@ -14,7 +14,7 @@
         <div class="col-lg-7 custom-margin fixcms">
             <div class="row ">
                 <div class="col-12 col-md-6 d-flex flex-column">
-                    <div class="d-flex align-items-center mb-4" style="gap: 15px;">
+                    <div class="d-block d-md-flex align-items-center mb-4" style="gap: 15px;">
                         <h2 class="icon-h">OUR <br />VALUES</h2>
                     </div>
                 </div>

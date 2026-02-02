@@ -217,6 +217,16 @@
     </div>
 </section>
 <style>
+    #our-founders .customContainer,
+    #latest-news .customContainer {
+        margin: 0 0;
+    }
+
+    .mediaCon span {
+        font-family: "Poppins", sans-serif !important;
+        font-size: 18px !important;
+    }
+
     .apply-btn-closed {
         border-radius: 8px !important;
         background: #545454 !important;
@@ -230,6 +240,15 @@
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         border: unset !important;
+    }
+
+    .opening-card h5,
+    .opening-card p,
+    .opening-card strong,
+    .opening-card span {
+        font-family: "Poppins", sans-serif !important;
+        color: #606161 !important;
+        font-weight: 500 !important;
     }
 </style>
 @endsection

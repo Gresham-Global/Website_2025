@@ -509,11 +509,13 @@ line-height: 28px;
     }
 
     .backView h5 {
-        font-size: 28px;
+        /* font-size: 28px; */
+        font-size: 25px;
     }
 
     .backView ul li {
-        font-size: 18px;
+        /* font-size: 18px; */
+        font-size: 15px;
     }
 
     .keyHightCard > img {
