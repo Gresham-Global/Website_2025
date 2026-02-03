@@ -180,8 +180,8 @@
                     <div class="" style="flex: 1">
                         <p class="mb-0 text-muted-c" style="font-family: 'Poppins', sans-serif;
                                                                 font-weight: 400;
-                                                                font-size: 20px;
-                                                                line-height: 26px;
+                                                                font-size: 18px;
+                                                                line-height: 34px;
                                                                 letter-spacing: 0%;
                                                                 margin-top: 24px;
                                                                 ">
@@ -214,8 +214,8 @@
                     <div class="" style="flex: 1">
                         <p class="mb-0 text-muted-c" style="font-family: 'Poppins', sans-serif;
                                                                 font-weight: 400;
-                                                                font-size: 20px;
-                                                                line-height: 26px;
+                                                                font-size: 18px;
+                                                                line-height: 34px;
                                                                 letter-spacing: 0%;
                                                                 margin-top: 24px;
                                                                             ">

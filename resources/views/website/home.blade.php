@@ -397,7 +397,7 @@
     <div class="custom-container">
         <div class="row">
             <p class="h2"><span>Our Commitment,</span> Your Global Growth</p>
-            <p>We prioritise understanding your institution’s unique landscape, ensuring our tailored strategies drive
+            <p class="text-muted-c">We prioritise understanding your institution’s unique landscape, ensuring our tailored strategies drive
                 brand
                 growth and cultivate regional success in India and South Asia.</p>
             <img src="{{ asset('website/assets/images/Group 1000004157.webp') }}" alt=""

@@ -67,7 +67,8 @@ line-height: 28px;
 }
 
 .reportSection {
-    padding: 60px 0;
+    /* padding: 60px 0; */
+    padding: 20px 0;
 }
 
 .reportCard {
@@ -290,9 +291,23 @@ line-height: 28px;
 }
 
 .publicationCard {
-    border: 1px solid #bebebe;
-    padding: 0.8rem;
-    border-radius: 30px;
+     background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    /* width: calc(33% - 13px); */
+    /* flex: 1 1 calc(33% - 10px); */
+    /* min-width: 300px; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* font-family: "Proxima Nova"; */
+    font-family: "Poppins", sans-serif;
+    align-items: stretch;
+    flex-wrap: wrap;
+    /* gap: 16px; */
+    gap: 5px;
     margin: 0 1rem;
 }
 
@@ -312,7 +327,14 @@ a.downloadBtn:hover {
 }
 
 .publicationCard img {
-    border-radius: 10px;
+    /* border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px; */
+    border-radius: 10px 10px 0 0;
+    display: block;
+    overflow: hidden;
 }
 
 .publicationCard h4 {
@@ -770,7 +792,7 @@ line-height: 28px;
 }
 
 .form-submit:hover {
-    background-color: #218838;
+    /* background-color: #218838; */
 }
 
 .form-submit:disabled {

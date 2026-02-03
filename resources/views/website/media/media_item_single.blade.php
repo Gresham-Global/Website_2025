@@ -15,12 +15,12 @@
                 </span>
             </div>
 
-            <img src="{{ asset($item->logo_image) }}"  class="repiblicimg">
+            <img src="{{ asset($item->logo_image) }}" class="repiblicimg">
 
             <a href="{{ $item->media_link }}" target="_blank">
                 <h5 class="news-card-title">
                     {{ \Illuminate\Support\Str::limit($item->title, 63) }}
-                 
+
                 </h5>
             </a>
 
@@ -34,13 +34,18 @@
                 <a href="{{ $item->media_link }}" target="_blank" class="readmoreBtn">
                     Read More
                 </a>
+                <a href="javascript:void(0);" class="share_social share-blog-hit"
+                    data-url="{{ route('news-and-blogs.show', $item->slug) }}"
+                    data-title="{{ $item->title }}">
+                    <img src="{{ asset('website/assets/images/events/share_icon.webp') }}">
+                </a>
             </div>
 
         </div>
     </div>
 </div>
 <style>
-      .news-card-title {
+    .news-card-title {
         overflow: hidden;
         min-height: 2.26em;
         max-height: 2.5em;

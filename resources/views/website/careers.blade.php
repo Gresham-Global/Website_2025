@@ -411,7 +411,7 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
 <!-- sec 6 ends -->
 
 <!--Carousel-->
-<section id="latest-news" class="customSection mt-4">
+<section id="latest-news" class="customSection mt-8 mb-6">
     <div class="customContainer">
         <!-- Title -->
         <div class="d-flex justify-content-center align-items-center mb-4">
@@ -487,7 +487,7 @@ $life = $life ?? Life::where('status', 1)->orderBy('order', 'asc')->get();
             <!-- Text Column -->
             <div class="col-md-6 col-lg-5">
                 <h2 class="display-5 fw-bold py-1 mb-4">Ready to Make an Impact.</h2>
-                <p class="lead1">
+                <p class="lead1 text-muted-c">
                     Explore our current openings and discover how you can contribute to Gresham Global <br>Together,
                     let’s build
                     a brighter future.

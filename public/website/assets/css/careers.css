@@ -99,7 +99,7 @@
     line-height: 1.5;
 }
 
-.whyWorkHeading h2 {
+.whyWorkHeading h2, #latest-news h2, #growth-partner h2 {
     color: #000;
     /* font-family: "Proxima Nova"; */
     font-family: "Poppins", sans-serif;
@@ -108,6 +108,7 @@
     font-weight: 700;
     line-height: 1.5;
 }
+
 
 /* input::placeholder,
 textarea::placeholder {
@@ -202,7 +203,7 @@ textarea::placeholder {
         #991f3d 72.43%
     ) !important; */
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: #ffffff;
     padding: 0.4rem 1.5rem;
@@ -223,7 +224,9 @@ textarea::placeholder {
 .careerFooter {
     /* margin-bottom: -100px; */
 }
-
+#latest-news {
+    margin: 4em 0;
+}
 .latest-news .slide-item {
     transition: 0.3s;
 }
@@ -237,7 +240,7 @@ textarea::placeholder {
     /* background: linear-gradient(265.76deg, #ef4b4f -0.04%, #991f3d 72.43%); */
     background: #e32636;
     color: #fff !important;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 8px;
     padding: 10px 20px;
@@ -587,7 +590,7 @@ textarea::placeholder {
 
 .careerbanner_description {
     /* font-size: 1.25rem; */
-    font-size: 22px;
+    font-size: 18px;
     max-width: 35%;
 }
 
@@ -840,7 +843,7 @@ h2#currentopeningsection {
         font-size: 20px !important;
     }
     .opening-card h3.job-title {
-        font-size: 24px !important;
+        font-size: 25px !important;
         line-height: 30px !important;
         min-height: 59px;
     }

@@ -244,6 +244,7 @@ line-height: 28px;
     color: #e32636;
     line-height: 0.9;
     letter-spacing: -0.02em;
+        width: 85%;
 }
 .new-sec-6 h5 {
     font-family: "Poppins", sans-serif;
@@ -301,6 +302,7 @@ line-height: 28px;
     }
     .new-sec-6 h2 {
         font-size: 76px;
+        width: 100%;
     }
     .new-sec-6 h5 {
         font-size: 24px;
@@ -916,6 +918,7 @@ line-height: 28px;
     border-radius: 8px;
     /* background: linear-gradient(266deg, #ef4b4f -0.04%, #991f3d 72.43%); */
     background: #e32636;
+    font-size: 18px;
 }
 .com_gradient {
     border-radius: 8px;

@@ -129,8 +129,8 @@
                                     style="{{ request()->is('media') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('media')}}">Media</a>
                             </li>
-                            <li><a class="dropdown-item text-black {{ request()->is('news-and-blogs') ? 'active' : '' }}"
-                                    style="{{ request()->is('news-and-blogs') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
+                            <li><a class="dropdown-item text-black {{ request()->is('news-and-blogs*') ? 'active' : '' }}"
+                                    style="{{ request()->is('news-and-blogs*') ? 'color:#e32636!important;' : 'color:#000!important;border-bottom:white!important;' }} background-color:white!important;"
                                     href="{{ url('news-and-blogs')}}">News and Blogs</a>
                             </li>
                             <!-- <li><a class="dropdown-item text-black {{ request()->is('publications') ? 'active' : '' }}"
@@ -139,13 +139,13 @@
                             </li> -->
                         </ul>
                     </li>
-                    <li class="nav-item borderLB {{ request()->is('publications') ? 'active' : '' }}">
+                    <li class="nav-item borderLB {{ request()->is('publications*') ? 'active' : '' }}">
                         <a href="{{ url('publications') }}" class="nav-link "><strong>Publications</strong></a>
                     </li>
-                    <li class="nav-item borderLB {{ request()->is('events') ? 'active' : '' }}">
+                    <li class="nav-item borderLB {{ request()->is('events*') ? 'active' : '' }}">
                         <a href="{{ url('events') }}" class="nav-link "><strong>Events</strong></a>
                     </li>
-                    <li class="nav-item borderLB {{ request()->is('careers') ? 'active' : '' }}">
+                    <li class="nav-item borderLB {{ request()->is('careers*') || request()->is('career-details*') ? 'active' : '' }}">
                         <a href="{{ url('careers') }}" class="nav-link "><strong>Careers</strong></a>
                     </li>
                     <li class="nav-item borderLB {{ request()->is('contact') ? 'active' : '' }}">
@@ -219,7 +219,9 @@
                     </li> --}}
                 </ul>
                 </li>
-                <li class="nav-item {{ request()->is('publications') ? 'active' : '' }} "><a class="nav-link " href="{{ url('publications')}}">Publications</a></li>
+                <li class="nav-item {{ request()->is('publications*') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ url('publications') }}">Publications</a>
+                </li>
                 <li class="nav-item {{ request()->is('events') ? 'active' : '' }} "><a class="nav-link " href="{{ url('events')}}">Events</a></li>
                 <li class="nav-item {{ request()->is('careers') ? 'active' : '' }} "><a class="nav-link " href="{{ url('careers')}}">Careers</a></li>
                 <li class="nav-item {{ request()->is('contact') ? 'active' : '' }} ">

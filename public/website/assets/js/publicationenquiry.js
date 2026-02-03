@@ -46,104 +46,135 @@ $(document).ready(function () {
         return false;
     }
 
-    $("#downloadForm").on("submit", function (e) {
-        e.preventDefault();
+    // Disable submit button by default
+$("#submitBtn").prop("disabled", true);
 
-        var name = $("#fullName").val();
-        var email = $("#emailId").val();
-       
-        // Validate name
-        if (!name) return showError("Enter your full name");
-        if (/[^a-zA-Z \-]/.test(name)) return showError("Enter only alphabets in name");
+// Real-time validation check
+function checkFormValidity() {
+    var name = $("#fullName").val().trim();
+    var email = $("#emailId").val().trim();
 
-        // Validate email
-        if (!email) return showError("Enter Your Email Address");
+    // Name validation
+    if (!name) return $("#submitBtn").prop("disabled", true);
+    if (/[^a-zA-Z \-]/.test(name)) return $("#submitBtn").prop("disabled", true);
 
-        var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailReg.test(email)) return showError("Enter a valid Email Address");
+    // Email validation
+    if (!email) return $("#submitBtn").prop("disabled", true);
 
-        // Disallowed domains
-        var disallowedDomains = [
-            "gmail.com", "yahoo.com", "hotmail.com", "outlook.com",
-            "live.com", "aol.com", "msn.com", "icloud.com",
-            "me.com", "mail.com", "gmx.com", "protonmail.com", "yandex.com"
-        ];
+    var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailReg.test(email)) return $("#submitBtn").prop("disabled", true);
 
-        var emailDomain = email.split('@')[1].toLowerCase();
-        if (disallowedDomains.includes(emailDomain)) {
-            return showError("Please use your official or institutional email address. ");
-        }
+    // Disallowed domains
+    var disallowedDomains = [
+        "gmail.com", "yahoo.com", "hotmail.com", "outlook.com",
+        "live.com", "aol.com", "msn.com", "icloud.com",
+        "me.com", "mail.com", "gmx.com", "protonmail.com", "yandex.com"
+    ];
+
+    var emailDomain = email.split('@')[1].toLowerCase();
+    if (disallowedDomains.includes(emailDomain)) {
+        return $("#submitBtn").prop("disabled", true);
+    }
+
+    // All validations passed
+    $("#submitBtn").prop("disabled", false);
+}
+
+// Run validation while typing / on blur
+$("#fullName, #emailId").on("keyup blur", checkFormValidity);
 
 
-        // Show loading state
-        $("#submitBtn").prop("disabled", true).text("Processing...");
-        $("#loadingMsg").show().text("Processing..."); // Show loading message
+// ======================
+// YOUR ORIGINAL CODE
+// ======================
+$("#downloadForm").on("submit", function (e) {
+    e.preventDefault();
 
-        const formData = {
-            full_name: $("#fullName").val(),
-            email_id: $("#emailId").val(),
-            report_url: $("#reportUrl").val(), // Ensure report_url is being passed
-            publicationTitle: $("#publicationTitle").val(),
-            publicationId: $("#publicationId").val(),
-            _token: $('meta[name="csrf-token"]').attr("content"),
-        };
+    var name = $("#fullName").val();
+    var email = $("#emailId").val();
 
-        $.ajax({
-            url: "/publications/download-report",
-            method: "POST",
-            data: formData,
-            dataType: "json",
-            success: function (response) {
-                // Update the loading message with the response message
-                $("#loadingMsg").text(response.message);
+    // Validate name
+    if (!name) return showError("Enter your full name");
+    if (/[^a-zA-Z \-]/.test(name)) return showError("Enter only alphabets in name");
 
-                if (response.success) {
-                    // Show success SweetAlert
-                    Swal.fire({
-                        icon: "success",
-                        title: "Successful",
-                        text: response.message,
-                        customClass: {
-                            popup: "downloadReportPopup", // Custom class for styling
-                        },
-                    });
+    // Validate email
+    if (!email) return showError("Enter Your Email Address");
 
-                    // Trigger the download of the PDF file
-                    // downloadPDF(response.pdf_url, $("#publicationTitle").val());
+    var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailReg.test(email)) return showError("Enter a valid Email Address");
 
-                    // Optionally, hide the popup after a few seconds
-                    setTimeout(function () {
-                        hidePopup();
-                        $("#submitBtn").prop("disabled", false).text("Submit");
-                    }, 3000);
-                } else {
-                    // Show error SweetAlert
-                    Swal.fire({
-                        icon: "error",
-                        title: "Error!",
-                        text: response.message,
-                        customClass: {
-                            popup: "downloadReportPopup", // Custom class for styling
-                        },
-                    });
+    // Disallowed domains
+    var disallowedDomains = [
+        "gmail.com", "yahoo.com", "hotmail.com", "outlook.com",
+        "live.com", "aol.com", "msn.com", "icloud.com",
+        "me.com", "mail.com", "gmx.com", "protonmail.com", "yandex.com"
+    ];
 
-                    // Re-enable the submit button
-                    $("#submitBtn").prop("disabled", false).text("Submit");
-                }
-            },
-            error: function (xhr, status, error) {
-                // Show error message using SweetAlert
+    var emailDomain = email.split('@')[1].toLowerCase();
+    if (disallowedDomains.includes(emailDomain)) {
+        return showError("Please use your official or institutional email address.");
+    }
+
+    // Show loading state
+    $("#submitBtn").prop("disabled", true).text("Processing...");
+    // $("#loadingMsg").show().text("Processing...");
+
+    const formData = {
+        full_name: $("#fullName").val(),
+        email_id: $("#emailId").val(),
+        report_url: $("#reportUrl").val(),
+        publicationTitle: $("#publicationTitle").val(),
+        publicationId: $("#publicationId").val(),
+        _token: $('meta[name="csrf-token"]').attr("content"),
+    };
+
+    $.ajax({
+        url: "/publications/download-report",
+        method: "POST",
+        data: formData,
+        dataType: "json",
+        success: function (response) {
+            $("#loadingMsg").text(response.message);
+
+            if (response.success) {
                 Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "An error occurred: " + error,
+                    icon: "success",
+                    title: "Successful",
+                    text: response.message,
+                    customClass: {
+                        popup: "downloadReportPopup",
+                    },
                 });
 
-                $("#loadingMsg").text("An error occurred: " + error);
+                setTimeout(function () {
+                    hidePopup();
+                    $("#submitBtn").prop("disabled", false).text("Submit");
+                }, 3000);
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error!",
+                    text: response.message,
+                    customClass: {
+                        popup: "downloadReportPopup",
+                    },
+                });
+
                 $("#submitBtn").prop("disabled", false).text("Submit");
-            },
-        });
+            }
+        },
+        error: function (xhr, status, error) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "An error occurred: " + error,
+            });
+
+            $("#loadingMsg").text("An error occurred: " + error);
+            $("#submitBtn").prop("disabled", false).text("Submit");
+        },
     });
+});
 
     // Function to trigger the PDF download
     // function downloadPDF(pdfUrl) {

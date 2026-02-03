@@ -15,7 +15,7 @@
             <div class="row ">
                 <div class="col-12 col-md-6 d-flex flex-column">
                     <div class="d-block d-md-flex align-items-center mb-4" style="gap: 15px;">
-                        <h2 class="icon-h">OUR <br />VALUES</h2>
+                        <h2 class="icon-h">OUR VALUES</h2>
                     </div>
                 </div>
 

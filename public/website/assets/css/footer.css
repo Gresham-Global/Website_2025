@@ -107,7 +107,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     text-align: center;
     color: #ffffff;
@@ -460,12 +460,18 @@ line-height: 28px;
 }
 
 @media screen and (max-width: 400px) {
+    .subscribeBox {
+    width: 95%;
+    }
     .subscribeBox input {
-        width: auto;
+        width: 100%;
+        max-width: 300px;
         font-size: 12px;
+      
     }
     .subscribeBox button {
-        width: 115px;
+        width: 100%;
+        max-width: 115px;
         font-size: 10px !important;
     }
     .subContainer h4 {
@@ -478,6 +484,7 @@ line-height: 28px;
         font-size: 16px !important;
     }
 }
+
 /* form css start */
 .text-danger {
     color: #fb0119 !important;

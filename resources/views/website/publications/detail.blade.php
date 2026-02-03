@@ -108,7 +108,7 @@
             @foreach ($similarPublications as $item)
             <div class="col-md-3 publicationCard">
                 <a href="{{ route('publications.show', $item->slug) }}" target="_blank">
-                    <img src="{{ $item->thumbnail_image ?? asset('website/assets/images/publications/publicationCard.webp') }}" alt="{{ $item->title }}" class="w-100">
+                    <img src="{{ $item->thumbnail_image ?? asset('website/assets/images/publications/publicationCard.webp') }}" alt="{{ $item->title }}" class="w-100 news-card-img">
                 </a>
                 <div class="bodyContent">
                     <a href="{{ route('publications.show', $item->slug) }}" target="_blank">
@@ -167,17 +167,20 @@
 
             <span class="mb-3 formtxt">By Submitting this form, you are accepting Gresham Global's <a class="formLink" href="/privacy-policy" target="_blank">Terms &amp; Conditions</a>.</span>
 
-            <button type="submit" class="form-submit" id="submitBtn">
+            <button type="submit" class="form-submit" id="submitBtn" disabled>
                 Submit
             </button>
 
-            <div class="loading" id="loadingMsg">
+            <!-- <div class="loading" id="loadingMsg">
                 Processing your request...
-            </div>
+            </div> -->
         </form>
     </div>
 </div>
 <style>
+    .slick-list {
+        padding-bottom: 20px;
+    }
     .tagDiv span {
         font-size: 1rem !important;
 
