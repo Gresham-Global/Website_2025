@@ -42,25 +42,31 @@
         .notfound p {
             font-size: 25px;
             color: #fff;
+            margin-bottom: 25px;
         }
 
         .notfound a {
             outline: none;
             background: #F9FDFF;
-            border-radius: 191.313px;
-            width: 100%;
-            max-width: 250px;
-            height: 70px;
-            display: inline-block;
 
-            font-size: 25px;
-            line-height: 70px;
-            text-decoration: none;
-
-            font-family: 'Poppins', sans-serif;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
             color: #000;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            /* font-family: "Proxima Nova"; */
+            font-family: "Poppins", sans-serif;
+            /* margin-top: 5rem; */
+            line-height: 1.2;
 
         }
+
         .notfound img {
             width: 80%;
         }
@@ -92,14 +98,35 @@
                 height: 50px;
                 line-height: 50px;
                 font-size: 18px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 28px;
+                text-align: center;
+                color: #000;
+                padding: 0.5rem 1.5rem;
+                border-radius: 8px;
+                /* font-family: "Proxima Nova"; */
+                font-family: "Poppins", sans-serif;
+                /* margin-top: 5rem; */
+                line-height: 1.2;
             }
 
+        }
+
+        @media (max-width: 768px) {
+            #notfound {
+                position: relative;
+                height: 60vh;
+                text-align: center;
+            }
         }
 
         @media (max-width: 480px) {
             .notfound img {
                 max-width: 250px;
             }
+
+
         }
     </style>
 </head>

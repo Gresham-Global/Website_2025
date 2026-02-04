@@ -396,7 +396,7 @@
 <section class="sec5">
     <div class="custom-container">
         <div class="row">
-            <p class="h2"><span>Our Commitment,</span> Your Global Growth</p>
+            <h2><span>Our Commitment,</span> Your Global Growth</h2>
             <p class="text-muted-c">We prioritise understanding your institution’s unique landscape, ensuring our tailored strategies drive
                 brand
                 growth and cultivate regional success in India and South Asia.</p>

@@ -375,7 +375,8 @@ form#footerForm {
 line-height: 28px;
     }
     .subscribeBox input {
-        width: 250px;
+        width: 100%;
+        max-width: 250px;
         font-size: 18px;
 line-height: 28px;
     }
@@ -384,6 +385,11 @@ line-height: 28px;
     }
 }
 @media screen and (max-width: 768px) {
+    .subscribeBox button {
+        width: 100%;
+        max-width: 150px;
+        font-size: 10px;
+    }
     .veiwallsec{
         margin-top: 5%
     }
@@ -409,7 +415,8 @@ line-height: 28px;
 line-height: 28px;
     }
     .subscribeBox input {
-        width: 300px;
+        width:100%;
+        max-width: 300px;
     }
 }
 @media screen and (max-width: 550px) {
@@ -450,12 +457,14 @@ line-height: 28px;
         font-size: 18px;
     }
     .subscribeBox input {
-        width: auto;
+        width: 100%;
         font-size: 14px;
     }
     .subscribeBox button {
-        max-width: 125px;
-        font-size: 13px !important;
+       width: 100%;
+        max-width: 155px;
+        font-size: 12px;
+        border: 1px solid #c5c5c5 !important;
     }
 }
 
@@ -637,4 +646,7 @@ line-height: 28px;
 .popModal .modal-body img {
     width: 100%;
     height: auto;
+}
+.similarProductSection .slick-arrow {
+    display: none !important;
 }

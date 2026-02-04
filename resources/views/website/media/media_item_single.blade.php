@@ -35,7 +35,7 @@
                     Read More
                 </a>
                 <a href="javascript:void(0);" class="share_social share-blog-hit"
-                    data-url="{{ route('news-and-blogs.show', $item->slug) }}"
+                    data-url="{{ $item->media_link }}"
                     data-title="{{ $item->title }}">
                     <img src="{{ asset('website/assets/images/events/share_icon.webp') }}">
                 </a>

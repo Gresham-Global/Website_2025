@@ -124,11 +124,22 @@
                 @endif
 
                 <hr />
-                <div class="d-flex justify-content-between">
+                <div class="mt-1 d-flex justify-content-between align-items-center w-100">
                     <a href="{{ route('publications.show', $item->slug) }}" class="readMoreBtn" aria-label="Read More">
                         Read More
                     </a>
-                    <img src="{{ asset('website/assets/images/publications/share.svg') }}" alt="Share Icon" />
+
+                    @if (!empty($item->share_link))
+                    <a href="{{ $item->share_link }}" class="share_social share-blog-hit ">
+                        <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="Share Icon">
+                    </a>
+                    @endif
+
+                    <a href="javascript:void(0);" class="share_social share-blog-hit"
+                        data-url="{{ route('publications.show', $item->slug) }}"
+                        data-title="{{ $item->title }}">
+                        <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
+                    </a>
                 </div>
             </div>
             @endforeach
@@ -181,6 +192,7 @@
     .slick-list {
         padding-bottom: 20px;
     }
+
     .tagDiv span {
         font-size: 1rem !important;
 

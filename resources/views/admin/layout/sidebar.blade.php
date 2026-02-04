@@ -150,7 +150,7 @@
                     <span class="material-symbols-outlined collegeMenu-itemIcon">
                         campaign
                     </span>
-                    <p class="collegeMenu-itemText">Life at Grisham Global</p>
+                    <p class="collegeMenu-itemText">Life at Gresham Global</p>
                 </div>
             </a>
 

@@ -19,7 +19,7 @@ class LifeController extends Controller
     public function index()
     {
         $title = 'Gresham Global';
-        $heading = 'Life at Grisham Global';
+        $heading = 'Life at Gresham Global';
         return view('admin.life.index', compact('title', 'heading'));
     }
 
@@ -99,8 +99,8 @@ class LifeController extends Controller
     }
     public function create()
     {
-        $title = 'Create Life at Grisham Global';
-        $heading = 'Create Life at Grisham Global';
+        $title = 'Create Life at Gresham Global';
+        $heading = 'Create Life at Gresham Global';
         return view('admin.life.create', compact('title', 'heading'));
     }
 
@@ -200,8 +200,8 @@ class LifeController extends Controller
         $lifeData = (new LifeResource($life))->toArray(request());
         // $lifeData = new LifeResource($life);
 
-        $title = 'Edit Life at Grisham Global';
-        $heading = 'Edit Life at Grisham Global';
+        $title = 'Edit Life at Gresham Global';
+        $heading = 'Edit Life at Gresham Global';
         return view('admin.life.edit', compact('title', 'heading', 'lifeData'));
     }
 

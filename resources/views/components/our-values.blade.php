@@ -14,7 +14,7 @@
         <div class="col-lg-7 custom-margin fixcms">
             <div class="row ">
                 <div class="col-12 col-md-6 d-flex flex-column">
-                    <div class="d-block d-md-flex align-items-center mb-4" style="gap: 15px;">
+                    <div class="d-block d-md-flex align-items-center mb-1 mb-md-4" style="gap: 15px;">
                         <h2 class="icon-h">OUR VALUES</h2>
                     </div>
                 </div>
@@ -43,8 +43,8 @@
 
     @media screen and (max-width: 768px) {
         .icon-h {
-            font-size: 45px !important;
-            line-height: 45px !important;
+            font-size: 27px !important;
+        line-height: 32px !important;
         }
     }
 </style>

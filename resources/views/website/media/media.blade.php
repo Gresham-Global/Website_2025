@@ -15,7 +15,7 @@
             @endforeach
         </div>
 
-         <!-- Loader -->
+        <!-- Loader -->
         <div class="text-center my-4 d-none" id="scrollLoader">
             <img src="{{ asset('website/assets/images/loading.svg') }}" alt="Loading">
         </div>
@@ -39,8 +39,16 @@
 
         let page = 2;
         let loading = false;
-        let total = {{ $total ?? 0 }};
-        let loaded = {{ $media->count() ?? 0 }};
+        let total = {
+            {
+                $total ?? 0
+            }
+        };
+        let loaded = {
+            {
+                $media - > count() ?? 0
+            }
+        };
 
         // Detect screen width
         const isMobile = $(window).width() < 768; // Bootstrap md breakpoint
@@ -57,7 +65,9 @@
                 $.ajax({
                     url: "{{ url('/media') }}",
                     type: "GET",
-                    data: { page: page },
+                    data: {
+                        page: page
+                    },
                     dataType: "json",
                     success: function(response) {
                         if (response.count > 0) {
@@ -94,7 +104,9 @@
                     $.ajax({
                         url: "{{ url('/media') }}",
                         type: "GET",
-                        data: { page: page },
+                        data: {
+                            page: page
+                        },
                         dataType: "json",
                         success: function(response) {
                             if (response.count > 0) {

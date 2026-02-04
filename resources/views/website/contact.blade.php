@@ -128,6 +128,9 @@
                                         value="Strategic Marketing"> Strategic Marketing</li>
                                 <li><input type="checkbox" class="form-check-input service-option3"
                                         value="Operational Support"> Operational Support</li>
+                                         <li><input type="checkbox" class="form-check-input service-option3"
+                                        value="Others">
+                                    Others</li>
                             </ul>
                         </div>
 

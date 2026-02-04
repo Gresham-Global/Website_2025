@@ -41,7 +41,7 @@
                     class="contactlinks">
                     <p class="contactP " style="line-height: 22px;">
 
-                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" />806 – 808, The Epicentre, Wadhwa, <br>Off Eastern Freeway, Chembur, <br> Mumbai – 400 088, Maharashtra, INDIA.
+                        <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" />806 – 808, The Epicentre, Wadhwa, Off Eastern Freeway, Chembur, Mumbai – 400 088, Maharashtra, INDIA.
 
                     </p>
 
@@ -196,7 +196,7 @@
                                         value="Strategic Marketing"> Strategic Marketing</li>
                                 <li><input type="checkbox" class="form-check-input service-option2"
                                         value="Operational Support"> Operational Support</li>
-                                <li><input type="checkbox" class="form-check-input service-option"
+                                <li><input type="checkbox" class="form-check-input service-option2"
                                         value="Others">
                                     Others</li>
                             </ul>
@@ -231,7 +231,7 @@
                 <p class="contactP " style="line-height: 22px;">
 
                     <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" />
-                   806 – 808, The Epicentre, Wadhwa, <br>Off Eastern Freeway, Chembur, <br> Mumbai – 400 088, Maharashtra, INDIA.
+                    806 – 808, The Epicentre, Wadhwa, Off Eastern Freeway, Chembur, Mumbai – 400 088, Maharashtra, INDIA.
 
                 </p>
 
