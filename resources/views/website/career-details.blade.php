@@ -8,7 +8,7 @@
 $image_path = $career['cover_image']??'website/assets/images/career/career_currentopening.webp';
 @endphp
 <div class="career-current-opening-internal">
-  <img src="{{ asset($image_path) }}" alt="">
+  <img src="{{ asset($image_path) }}" alt="{{$career['title']}}">
   <div class="customContainer justify-content-center">
     <div class="textWrapper">
       <h1 class="jobtitle">{{$career['title']}}</h1>

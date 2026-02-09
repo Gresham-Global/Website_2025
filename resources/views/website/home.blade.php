@@ -86,7 +86,7 @@
     <div class="custom-container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-lg-block d-md-none d-sm-none d-none sec2Left"><img
-                    src="{{ asset('website/assets/images/abouthome.webp') }}" alt="" class="w-100" /></div>
+                    src="{{ asset('website/assets/images/abouthome.webp') }}" alt="About Us" class="w-100" /></div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 sec2right">
                 <h2>About Us</h2>
                 <p>We deliver comprehensive solutions to ensure your university’s success, from establishing in-country
@@ -102,7 +102,7 @@
                 </p>
             </div>
             <div class="d-xl-none d-lg-none col-md-none col-sm-block sec2Leftmob"><img
-                    src="{{ asset('website/assets/images/abouthome.webp') }}" alt="" class="w-100" /></div>
+                    src="{{ asset('website/assets/images/abouthome.webp') }}" alt="About Us" class="w-100" /></div>
         </div>
     </div>
 </section>
@@ -123,7 +123,7 @@
                                     <h3>Research &<br /> Assessment</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
-                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="Research & Assessment" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -149,7 +149,7 @@
                                     <h3>In-Country<br /> Representation</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
-                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="In-Country Representation" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -174,7 +174,7 @@
                                     <h3>Operational<br /> Support</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
-                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="Operational Support" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -199,7 +199,7 @@
                                     <h3>Academic<br /> Collaboration</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
-                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="Academic Collaboration" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -226,7 +226,7 @@
                                     <h3>Strategic<br /> Marketing</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
-                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="Strategic Marketing" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -260,7 +260,7 @@
                                     <h3>Admission <br>Compliance</h3>
                                 </div>
                                 <div class="col-md-4 col-4 frontcardRight"><img style="width: 60px; height: 60px;"
-                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="" /></div>
+                                        src="{{ asset('website/assets/images/rotate.webp') }}" alt="Admission Compliance" /></div>
                             </div>
                         </div>
                         <div class="back-card">
@@ -385,7 +385,7 @@
                 </p>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 sec4Right"><img
-                    src="{{ asset('website/assets/images/whychoose.webp') }}" alt="" /></div>
+                    src="{{ asset('website/assets/images/whychoose.webp') }}" alt="Why Choose Us" /></div>
 
         </div>
     </div>
@@ -400,9 +400,9 @@
             <p class="text-muted-c">We prioritise understanding your institution’s unique landscape, ensuring our tailored strategies drive
                 brand
                 growth and cultivate regional success in India and South Asia.</p>
-            <img src="{{ asset('website/assets/images/Group 1000004157.webp') }}" alt=""
+            <img src="{{ asset('website/assets/images/Group 1000004157.webp') }}" alt="Our Commitment"
                 class="w-100 d-none d-sm-none d-md-block d-lg-block" />
-            <img src="{{ asset('website/assets/images/Group 1000004057.svg') }}" alt="" class="w-100 d-md-none d-lg-none" />
+            <img src="{{ asset('website/assets/images/Group 1000004057.svg') }}" alt="Our Commitment" class="w-100 d-md-none d-lg-none" />
         </div>
     </div>
 </section>
@@ -701,7 +701,7 @@
                         <p class="see-more-btn ">See More</p>
                     </div>
                     <div class="col-md-3 col-3 test_btm_sect"><img
-                            src="{{ asset('website/assets/images/Group 1000004092.webp') }}" alt="" class="w-100" />
+                            src="{{ asset('website/assets/images/Group 1000004092.webp') }}" alt="Cranfield University"" class=" w-100" />
                     </div>
                     <div class="col-md-6 col-6">
                         <h4>Andrew Jones</h4>
@@ -727,7 +727,7 @@
                         <p class="see-more-btn ">See More</p>
                     </div>
                     <div class="col-md-3 col-3 test_btm_sect"><img
-                            src="{{ asset('website/assets/images/Group 1000004093.webp') }}" alt="" class="w-100" />
+                            src="{{ asset('website/assets/images/Group 1000004093.webp') }}" alt="Leeds Arts University" class="w-100" />
                     </div>
                     <div class="col-md-6 col-6">
                         <h4>Jenny Oxley
@@ -761,7 +761,7 @@
                         <p class="see-more-btn ">See More</p>
                     </div>
                     <div class="col-md-3 col-3 test_btm_sect"><img
-                            src="{{ asset('website/assets/images/Group 1000004094.webp') }}" alt="" class="w-100" />
+                            src="{{ asset('website/assets/images/Group 1000004094.webp') }}" alt="University College Birmingham" class="w-100" />
                     </div>
                     <div class="col-md-6 col-6">
                         <h4>Luke Huo
@@ -795,7 +795,7 @@
                         <p class="see-more-btn ">See More</p>
                     </div>
                     <div class="col-md-3 col-3"><img src="{{ asset('website/assets/images/Group 1000004095.webp') }}"
-                            alt="" class="w-100" />
+                            alt="Arnaud Jonquet" class="w-100" />
                     </div>
                     <div class="col-md-6 col-6">
                         <h4>Arnaud Jonquet

@@ -10,6 +10,7 @@ use App\Models\Media;
 use App\Http\Resources\NewsAndBlogs\NewsBlogsResource;
 use App\Http\Controllers\Common\ImageController;
 use App\Http\Requests\Common\ImageUploadRequest;
+use App\Models\Seo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\Paginator;
@@ -41,6 +42,27 @@ class NewsBlogsController extends Controller
         return view('website.home', compact('news_and_blogs_for_slider', 'media_for_slider', 'title'));
         // If you accidentally did compact('news_and_blogs') here, then it would be correct.
         // But if you did compact('news_and_blogs_for_slider'), the view needs to use that name.
+    }
+
+    public function about()
+    {
+        $news_and_blogs_for_slider = News_and_Blogs::where('status', 'Active')
+            ->latest('published_date')
+            ->take(5)
+            ->get();
+
+        $media_for_slider = Media::where('status', 1)
+            ->latest('publish_date')
+            ->take(6)
+            ->get();
+
+        $title = 'About Gresham Global';
+
+        return view('website.about', compact(
+            'news_and_blogs_for_slider',
+            'media_for_slider',
+            'title'
+        ));
     }
 
 
@@ -128,6 +150,16 @@ class NewsBlogsController extends Controller
         try {
             $data = $request->all();
 
+            /* ---------- Generate Unique Slug ---------- */
+
+            $slug = Str::slug($request->title);
+
+            $count = News_and_Blogs::where('slug', 'like', $slug . '%')->count();
+
+            if ($count > 0) {
+                $slug .= '-' . ($count + 1);
+            }
+
             /* ---------------- THUMBNAIL ---------------- */
             $data['thumbnail_image'] = null;
             if ($request->hasFile('thumbnail_image')) {
@@ -166,7 +198,7 @@ class NewsBlogsController extends Controller
             }
 
             /* ---------------- CREATE ---------------- */
-            News_and_Blogs::create([
+            $news = News_and_Blogs::create([
                 'title'             => $request->title,
                 'slug'              => Str::slug($request->title),
                 'short_description' => $request->short_description,
@@ -180,6 +212,18 @@ class NewsBlogsController extends Controller
                 'status'            => $request->status,
                 'created_by'        => Auth::id(),
             ]);
+
+            /* ---------- Save SEO ---------- */
+
+            // Seo::create([
+
+            //     'page_url'         => '/news-and-blogs/' . $news->slug,
+            //     'page_name'        => $news->title,
+            //     'meta_title'       => $news->title,
+            //     'meta_description' => Str::limit(strip_tags($news->short_description), 160),
+            //     'meta_keywords'    => $news->title,
+
+            // ]);
 
             return back()->with('status', 'News and Blogs created successfully!');
         } catch (\Exception $e) {
@@ -208,6 +252,18 @@ class NewsBlogsController extends Controller
     {
         try {
             $news = News_and_Blogs::findOrFail($id);
+
+            /* ---------- Generate Unique Slug ---------- */
+
+            $slug = Str::slug($request->title);
+
+            $count = News_and_Blogs::where('slug', 'like', $slug . '%')
+                ->where('id', '!=', $id)
+                ->count();
+
+            if ($count > 0) {
+                $slug .= '-' . ($count + 1);
+            }
 
             /* ---------------- THUMBNAIL ---------------- */
             if ($request->hasFile('thumbnail_image')) {
@@ -257,6 +313,22 @@ class NewsBlogsController extends Controller
             $news->updated_by        = Auth::id();
 
             $news->save();
+
+            /* ---------- Update SEO ---------- */
+
+            // Seo::updateOrCreate(
+
+            //     [
+            //         'page_url' => '/news-and-blogs/' . $slug,
+            //     ],
+
+            //     [
+            //         'page_name'        => $news->title,
+            //         'meta_title'       => $news->title,
+            //         'meta_description' => Str::limit(strip_tags($news->short_description), 160),
+            //         'meta_keywords'    => $news->title,
+            //     ]
+            // );
 
             return back()->with('status', 'News and Blogs updated successfully!');
         } catch (\Exception $e) {

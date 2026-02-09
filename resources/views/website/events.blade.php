@@ -28,7 +28,7 @@
           <div class="events_footer_card">
             <a href="/events1/gacc-events" class="read-more" data-post-url="/gacc-events">Read More</a>
             <a href="#" class="share_social share-blog-hit" data-post-url="/events/gacc-events">
-              <img src="https://gresham.world/website/assets/images/events/share_icon.webp" alt="" srcset="">
+              <img src="https://gresham.world/website/assets/images/events/share_icon.webp" alt="gacc-event" srcset="">
             </a>
           </div>
 
@@ -48,7 +48,7 @@
           <div class="events_footer_card">
             <a href="/events1/gresham-connect-bangladesh" class="read-more">Read More</a>
             <a href="#" class="share_social share-blog-hit" data-post-url="/events/gresham-connect-bangladesh">
-              <img src="https://gresham.world/website/assets/images/events/share_icon.webp" alt="" srcset="">
+              <img src="https://gresham.world/website/assets/images/events/share_icon.webp" alt="gresham-connect-bangladesh" srcset="">
             </a>
           </div>
         </div>
@@ -58,7 +58,7 @@
     <div class="row g-4 addmoreevents d-none">
       <button id="loadMore">
         <span>Load More</span>
-        <img src="https://gresham.world/website/assets/images/loading.svg" alt="" class="d-none">
+        <img src="https://gresham.world/website/assets/images/loading.svg" alt="loading icon" class="d-none">
       </button>
     </div>
   </div>

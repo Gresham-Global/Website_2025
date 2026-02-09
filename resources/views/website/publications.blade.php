@@ -76,7 +76,7 @@
                                 data-url="{{ route('publications.show', $publication->slug) }}"
                                 data-title="{{ $publication->title }}">
                                 <img src="{{ asset('website/assets/images/events/share_icon.webp') }}"
-                                    alt="">
+                                    alt="share -icon">
                             </a>
                         </div>
                     </div>

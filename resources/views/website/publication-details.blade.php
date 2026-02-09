@@ -127,7 +127,7 @@
         </div>
         <div class="text-center mt-5">
             <button type="button" aria-label="Download Brochure" class="downloadBtn mb-3">
-                Download Report <img src="website/assets/images/publications/downloadArrow.svg" alt="" />
+                Download Report <img src="website/assets/images/publications/downloadArrow.svg" alt="download icon" />
             </button>
         </div>
     </div>
@@ -137,7 +137,7 @@
         <h2 class="mainHeadingSection mb-5">Similar publications</h2>
         <div class="row publicationSlider">
             <div class="publicationCard">
-                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="publications" class="w-100">
                 <div class="bodyContent">
                     <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
                     <p>GACC is an annual conference for counsellors supporting high school students in their
@@ -155,7 +155,7 @@
                 </div>
             </div>
             <div class="publicationCard">
-                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="publications" class="w-100">
                 <div class="bodyContent">
                     <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
                     <p>GACC is an annual conference for counsellors supporting high school students in their
@@ -173,7 +173,7 @@
                 </div>
             </div>
             <div class="publicationCard">
-                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="publications" class="w-100">
                 <div class="bodyContent">
                     <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
                     <p>GACC is an annual conference for counsellors supporting high school students in their
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <div class="publicationCard">
-                <img src="website/assets/images/publications/publicationCard.webp" alt="" class="w-100">
+                <img src="website/assets/images/publications/publicationCard.webp" alt="publications" class="w-100">
                 <div class="bodyContent">
                     <h4>Maintaining Excellence: Gresham Global's Continued Role As A Leading...</h4>
                     <p>GACC is an annual conference for counsellors supporting high school students in their

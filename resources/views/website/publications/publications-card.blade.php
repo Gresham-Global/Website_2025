@@ -33,7 +33,7 @@
                 <a href="javascript:void(0);" class="share_social share-blog-hit"
                     data-url="{{ route('publications.show', $publication->slug) }}"
                     data-title="{{ $publication->title }}">
-                    <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
+                    <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="share icon">
                 </a>
             </div>
         </div>

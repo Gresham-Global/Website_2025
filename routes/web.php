@@ -19,9 +19,7 @@ require base_path('routes/admin.php');
 Route::get('/', [NewsBlogsController::class, 'homepage'])->name('website.home');
 
 
-Route::get('/about', function () {
-    return view('website.about');
-});
+Route::get('/about', [NewsBlogsController::class, 'about'])->name('website.about');
 
 Route::get('/approach', function () {
     return view('website.approach');

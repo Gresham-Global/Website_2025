@@ -27,19 +27,83 @@
                         {{-- Page Dropdown --}}
                         <div class="form-group w-48 form-group-box">
                             <label for="page_url">Select Page</label>
+
                             <div class="input-group">
+
                                 <select name="page_url" id="page_url" class="form-control" required>
+
                                     <option value="">-- Select Page --</option>
-                                    @foreach($pages as $page)
-                                    <option value="{{ $page['url'] }}"
-                                        {{ isset($page['disabled']) && $page['disabled'] ? 'disabled' : '' }}>
-                                        {{ $page['title'] }}
-                                        {{ isset($page['disabled']) && $page['disabled'] ? '(Already has SEO)' : '' }}
-                                    </option>
-                                    @endforeach
+
+
+                                    {{-- Static Pages --}}
+                                    @if(!empty($pages['static']))
+                                    <optgroup label="Static Pages">
+                                        @foreach($pages['static'] as $page)
+                                        <option value="{{ $page['url'] }}"
+                                            {{ isset($page['disabled']) && $page['disabled'] ? 'disabled' : '' }}>
+
+                                            {{ $page['title'] }}
+                                            {{ isset($page['disabled']) && $page['disabled'] ? '(Already Added SEO)' : '' }}
+
+                                        </option>
+                                        @endforeach
+                                    </optgroup>
+                                    @endif
+
+
+                                    {{-- News & Blogs --}}
+                                    @if(!empty($pages['blogs']))
+                                    <optgroup label="News & Blogs">
+                                        @foreach($pages['blogs'] as $page)
+                                        <option value="{{ $page['url'] }}"
+                                            {{ isset($page['disabled']) && $page['disabled'] ? 'disabled' : '' }}>
+
+                                            {{ $page['title'] }}
+                                            {{ isset($page['disabled']) && $page['disabled'] ? '(Already Added SEO)' : '' }}
+
+                                        </option>
+                                        @endforeach
+                                    </optgroup>
+                                    @endif
+
+
+                                    {{-- Publications --}}
+                                    @if(!empty($pages['publications']))
+                                    <optgroup label="Publications">
+                                        @foreach($pages['publications'] as $page)
+                                        <option value="{{ $page['url'] }}"
+                                            {{ isset($page['disabled']) && $page['disabled'] ? 'disabled' : '' }}>
+
+                                            {{ $page['title'] }}
+                                            {{ isset($page['disabled']) && $page['disabled'] ? '(Already Added SEO)' : '' }}
+
+                                        </option>
+                                        @endforeach
+                                    </optgroup>
+                                    @endif
+
+
+                                    {{-- Events --}}
+                                    @if(!empty($pages['events']))
+                                    <optgroup label="Events">
+                                        @foreach($pages['events'] as $page)
+                                        <option value="{{ $page['url'] }}"
+                                            {{ isset($page['disabled']) && $page['disabled'] ? 'disabled' : '' }}>
+
+                                            {{ $page['title'] }}
+                                            {{ isset($page['disabled']) && $page['disabled'] ? '(Already Added SEO)' : '' }}
+
+                                        </option>
+                                        @endforeach
+                                    </optgroup>
+                                    @endif
+
+
                                 </select>
+
                             </div>
                         </div>
+
 
                         {{-- Meta Title --}}
                         <div class="form-group w-48 form-group-box">

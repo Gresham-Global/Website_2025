@@ -23,7 +23,7 @@
                     data-title="{{$publications['title']}}"
                     data-id="{{$publications['id']}}"
                     aria-label="Download Brochure">
-                    Download Report <img src="../website/assets/images/publications/downloadArrow.svg" alt="" />
+                    Download Report <img src="../website/assets/images/publications/downloadArrow.svg" alt="download arrow" />
                 </a>
             </div>
             <div class="col-sm-8 col-xl-8">
@@ -138,7 +138,7 @@
                     <a href="javascript:void(0);" class="share_social share-blog-hit"
                         data-url="{{ route('publications.show', $item->slug) }}"
                         data-title="{{ $item->title }}">
-                        <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="">
+                        <img style="border-radius: 0 !important;" src="{{ asset('website/assets/images/events/share_icon.webp') }}" alt="Share Icon">
                     </a>
                 </div>
             </div>

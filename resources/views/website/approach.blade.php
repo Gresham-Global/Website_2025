@@ -123,8 +123,8 @@
     <div class="container-fluid">
         <div class="row">
             <img src="{{ asset('website/assets/images/approach/approach_img.webp') }}"
-                class="w-100 d-none d-sm-none d-md-block d-lg-block" alt="">
-            <img src="{{ asset('website/assets/images/apporoachcontent.webp') }}" class="w-100 d-md-none d-lg-none" alt="">
+                class="w-100 d-none d-sm-none d-md-block d-lg-block" alt="Approach">
+            <img src="{{ asset('website/assets/images/apporoachcontent.webp') }}" class="w-100 d-md-none d-lg-none" alt="Approach">
         </div>
         <!-- <div class="disp-m pt-5 p-3">
                     <div class="row">

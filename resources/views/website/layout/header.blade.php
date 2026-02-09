@@ -46,7 +46,7 @@
             <!-- Toggle Button for Side Navigation on Tablet/Smaller Screens -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
                 aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="{{ asset('website/assets/icons/menu.png') }}" alt="" />
+                <img src="{{ asset('website/assets/icons/menu.png') }}" alt="menu-icon" />
             </button>
 
             <!-- Navigation for Web View -->
@@ -157,7 +157,7 @@
                 <div class="followBox">
                     <!-- <p>Follow us on</p> -->
                     <a href="https://www.linkedin.com/company/gresham-global" target="_blank"><img style="width: 32px; height: 32px"
-                            src="{{ asset('website/assets/icons/linkedinRound.webp') }}" alt="" /></a>
+                            src="{{ asset('website/assets/icons/linkedinRound.webp') }}" alt="linkedin-icon" /></a>
                     <!-- <a href="https://www.instagram.com/gresham.global" target="_blank"><img
                             src="{{ asset('website/assets/icons/instaRound.svg') }}" alt="" /></a> -->
                 </div>

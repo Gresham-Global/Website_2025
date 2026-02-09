@@ -141,7 +141,7 @@
 
                     <a href="https://www.linkedin.com/company/gresham-global/" target="_blank" class="text-light"
                         style=""><img style="width:40px; height:40px;" src="{{ asset('website/assets/icons/linkedinRound.webp') }}"
-                            alt="" class="fIcon me-4" /></a>
+                            alt="linkedin" class="fIcon me-4" /></a>
 
                 </li>
                 <li>
@@ -216,7 +216,7 @@
             <h6 class="mb-4">Contact Us</h6>
             <a target="_blank" href="tel:9773911384" class="contactlinks">
                 <p class="contactP d-flex ">
-                    <img src="{{ asset('website/assets/icons/callIcon.svg') }}" alt="" /> +91 97739 11384
+                    <img src="{{ asset('website/assets/icons/callIcon.svg') }}" alt="call-icon" /> +91 97739 11384
                 </p>
             </a>
             <a target="_blank" href="mailto:contact@gresham.world" class="contactlinks">
@@ -230,7 +230,7 @@
                 class="contactlinks">
                 <p class="contactP " style="line-height: 22px;">
 
-                    <img src="{{ asset('website/assets/icons/pin.png') }}" alt="" />
+                    <img src="{{ asset('website/assets/icons/pin.png') }}" alt="location-icon" />
                     806 – 808, The Epicentre, Wadhwa, Off Eastern Freeway, Chembur, Mumbai – 400 088, Maharashtra, INDIA.
 
                 </p>
@@ -314,7 +314,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="modal-body">
                 <a href="https://gacc.gresham.world/" target="_blank">
-                    <img src="{{ asset('/website/assets/images/popup.webp') }}" alt="">
+                    <img src="{{ asset('/website/assets/images/popup.webp') }}" alt="popup">
 </a>
 </div>
 </div>

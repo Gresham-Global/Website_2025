@@ -1,6 +1,10 @@
 @extends('website.layout.master')
 @section('content')
 <style>
+    .sec7 {
+        padding: 60px 0px 80px 0;
+    }
+
     .getintouchBtn {
         font-family: "Proxima Nova";
     }
@@ -8,6 +12,73 @@
     @media screen and (max-width:767px) {
         .position-relative {
             margin-bottom: 1rem;
+        }
+    }
+
+    /* Custom Slick Arrow Buttons */
+    .slick-prev,
+    .slick-next {
+        font-size: 40px;
+        color: rgb(168, 35, 35);
+        cursor: pointer;
+        z-index: 100;
+        margin-left: -1rem;
+    }
+
+    .slick-next {
+        right: 0.7rem !important;
+    }
+
+    .slick-prev {
+        left: 2 !important;
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover {
+        color: rgb(184, 34, 34);
+    }
+
+    .slick-next:before,
+    .slick-prev:before {
+        display: none;
+    }
+
+    .slick-next {
+        right: -1.3rem !important;
+    }
+
+    .slick-prev {
+        left: -2.5rem;
+    }
+
+    .slick-arrow {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s;
+    }
+
+    .slider:hover .slick-arrow {
+        opacity: 1;
+    }
+
+    .news-card-title-in-mediaBox {
+        overflow: hidden;
+        max-height: 4.5em;
+        line-height: 1.5em;
+    }
+
+    @supports (-webkit-line-clamp: 3) {
+        .news-card-title-in-mediaBox {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: unset;
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        .sec7 {
+            padding: 60px 0px 120px 0;
         }
     }
 </style>
@@ -18,8 +89,8 @@
     </div>
     <!-- <img src="{{ asset('website/assets/images/about-bannerimg.webp') }}" class=" img-fluid forMobBanne w-100" -->
     <!-- alt="Bootstrap Themes" /> -->
-    <img src="{{ asset('website/assets/images/about-bannerimg.webp') }}" class="w-100 forMobBanner d-none d-md-block" alt="" />
-    <img src="{{ asset('website/assets/images/aboutmobile.webp') }}" class="w-100 aboutmobile forMobBanner d-block d-md-none" alt="" />
+    <img src="{{ asset('website/assets/images/about-bannerimg.webp') }}" class="w-100 forMobBanner d-none d-md-block" alt="about us  " />
+    <img src="{{ asset('website/assets/images/aboutmobile.webp') }}" class="w-100 aboutmobile forMobBanner d-block d-md-none" alt="about us " />
 </section>
 
 <!-- Below about us -->
@@ -29,7 +100,7 @@
             <div class="col-md-6 col-lg-5">
                 <div class="imgHolder">
                     <img src="{{ asset('website/assets/images/aboutusauimg.webp') }}" alt="Global Growth Partner"
-                        class="" style="flex: 0 0 30%;"/>
+                        class="" style="flex: 0 0 30%;" />
                 </div>
                 <br>
                 <br>
@@ -238,6 +309,127 @@
 
 <!-- sec 6 starts -->
 <x-our-values />
+
+<!-- Articles & Resources -->
+
+<?php /*
+<section class="sec7">
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 sec7Left">
+                <h2>Articles & Resources</h2>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 sec7Right">
+                <ul>
+                    <!-- <a href="media"> -->
+                    <li class="tabs active" id="hmtab1" data-tab="tab1">Media</li>
+                    <li class="tabs" id="hmtab2" data-tab="tab2">News & Blogs</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <!-- slider starts -->
+
+            <div class="slider media hmmedia">
+                @foreach ($media_for_slider as $media)
+                <div>
+                    @php
+
+                    $images = is_array(json_decode($media->thumbnail_image))
+                    ? json_decode($media->thumbnail_image)
+                    : ($media->thumbnail_image ? [$media->thumbnail_image] : ['/storage/default-fallback.webp']);
+                    @endphp
+                    <div class="swiper imageSwiper">
+                        <div class="swiper-wrapper">
+
+                            @foreach ($images as $image)
+                            <div class="swiper-slide">
+                                <div class="home-news-card-img-wrapper">
+                                    <a href="{{ $media->media_link }}" target="_blank">
+                                        <img src="{{ asset($image) }}"
+                                            alt="News Image"
+                                            class="mediaText imgRadius">
+                                    </a>
+                                </div>
+                            </div>
+                            @endforeach
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- <a href="{{ $media->media_link }}" target="_blank" class="mediaText imgRadius">
+                        <img src="{{ asset($media->thumbnail_image) }}" class="articalThamble" alt="" />
+                    </a> -->
+                    <div class="mediaBox">
+                        <div class="row">
+                            <div class="col-md-12 col-12 mediaboxB">
+                                <img src="{{ asset($media->logo_image) }}" alt="icon" class="mediaLogo">
+                                <a href="{{ $media->media_link }}" target="_blank" class="mediaText">
+                                    <p>{{ \Illuminate\Support\Str::limit($media->title, 100) }}</p>
+                                </a>
+                            </div>
+                            <div class="mt-2">
+                                <a href="{{ $media->media_link }}" target="_blank" class="readmoreBtn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+
+            </div>
+            <!-- slider ends -->
+        </div>
+
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <!-- slider starts -->
+        <div class="slider media hmnews custom-container">
+            @foreach ($news_and_blogs_for_slider as $news_and_blog)
+            <div> {{-- This div represents a single slide in your slider --}}
+                {{-- Image with direct link --}}
+                <a href="{{ route('news-and-blogs.show', $news_and_blog->slug) }}" target="_blank" class="mediaText">
+                    <img src="{{ asset($news_and_blog->thumbnail_image) }}" class="articalThamble"
+                        alt="{{ $news_and_blog->title ?? 'News Image' }}" />
+                </a>
+
+                <div class="mediaBox">
+                    <div class="row">
+                        <div class="col-md-12 col-12 mediaboxB">
+
+                            {{-- Title (similar to original card's h5, but placed within mediaboxB) --}}
+                            <a href="{{ route('news-and-blogs.show', $news_and_blog->slug) }}" target="_blank"
+                                class="mediaText">
+                                <!-- <p class="news-card-title-in-mediaBox">{{ \Illuminate\Support\Str::limit($news_and_blog->title, 150) }}</p> -->
+                                <p class="news-card-title-in-mediaBox">{{ $news_and_blog->title }}</p>
+                                {{-- Short Description (re-added from original card) --}}
+                                <!-- <p class="news-card-text flex-grow-1 mt-2">
+                                    {{ Str::limit($news_and_blog->short_description, 50, '...') }}
+                                </p> -->
+                            </a>
+
+
+                        </div>
+                        <div class="mt-1 d-flex justify-content-between align-items-center w-100">
+                            {{-- Read More Button (retained) --}}
+                            <a href="{{ route('news-and-blogs.show', $news_and_blog->slug) }}" target="_blank"
+                                class="readmoreBtn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <!-- slider ends -->
+    </div>
+
+
+    </div>
+</section>
+*/ ?>
 <?php /*
 <section class="sec6">
     <div class="custom-container">

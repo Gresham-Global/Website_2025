@@ -1003,7 +1003,7 @@ $(document).ready(function() {
         blogs += '<span>8 July 2024 | 5:56 IST</span>';
         blogs += '</div>';
         blogs += '<img src="{{ asset('
-        website / assets / icons / Desktop.png ') }}" alt="" class="repiblicimg">';
+        website / assets / icons / Desktop.png ') }}" alt="dektop-icon" class="repiblicimg">';
         blogs += '<a href="https://thepienews.com/unified-consortium-in-india/" target="_blank">';
         blogs += '<h5 class="news-card-title">We need a unified consortium for India’s int’l education industry</h5>';
         blogs += '</a>';
@@ -1028,7 +1028,7 @@ $(document).ready(function() {
         blogs += '<span>8 July 2024 | 5:56 IST</span>';
         blogs += '</div>';
         blogs += '<img src="{{ asset('
-        website / assets / icons / Outlook 1. svg ') }}" alt="" class="repiblicimg">';
+        website / assets / icons / Outlook 1. svg ') }}" alt="Outlook Icon" class="repiblicimg">';
         blogs += '<a href="https://www.outlookindia.com/hub4business/maintaining-excellence-gresham-globals-continued-role-as-a-leading-representative-of-international-educational-institutes-in-the-global-market" target="_blank">';
         blogs += '<h5 class="news-card-title">Maintaining Excellence: Gresham Globals Continued Role...</h5>';
         blogs += '</a>';
