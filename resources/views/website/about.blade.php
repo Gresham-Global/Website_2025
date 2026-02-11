@@ -312,7 +312,7 @@
 
 <!-- Articles & Resources -->
 
-<?php /*
+
 <section class="sec7">
     <div class="custom-container">
         <div class="row">
@@ -429,7 +429,7 @@
 
     </div>
 </section>
-*/ ?>
+
 <?php /*
 <section class="sec6">
     <div class="custom-container">
