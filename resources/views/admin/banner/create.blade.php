@@ -24,7 +24,7 @@
                     {{-- Banner Title --}}
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label for="title" class="fullName">Banner Title</label>
+                            <label for="title" class="fullName">Banner Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control"
                                     value="{{ old('title') }}" required>

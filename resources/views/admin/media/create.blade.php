@@ -24,7 +24,7 @@
 
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }} w-48 form-group-box">
-                            <label for="title" class="fullName">Media Title</label>
+                            <label for="title" class="fullName">Media Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" required
                                     value="{{ old('title')}}">
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group form-group-box w-48">
-                            <label for="logo_image" class="fullName">Add logo image (Max: 500KB, 500x500px)</label>
+                            <label for="logo_image" class="fullName">Add logo image (Max: 500KB, Recommended: 200x40px)</label>
                             <div class="input-group">
                                 <input type="file" id="logo_image" name="logo_image" class="form-control">
                             </div>

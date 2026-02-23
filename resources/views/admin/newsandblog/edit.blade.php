@@ -29,14 +29,14 @@
                             <div class="input-group d-flex gap-4" style="height:50px; align-items:center; border: none; padding-left: 15px;">
                                 <label class="d-flex align-items-center gap-4">
                                     <input type="radio" name="type" value="news"
-                                       {{ old('type', $newsblogData['type'] ?? 'news') == 'news' ? 'checked' : '' }}>
+                                        {{ old('type', $newsblogData['type'] ?? 'news') == 'news' ? 'checked' : '' }}>
                                     News
                                 </label>
 
 
                                 <label class="d-flex align-items-center gap-4" style="margin-left: 20px;">
                                     <input type="radio" name="type" value="blogs"
-                                      {{ old('type', $newsblogData['type'] ?? 'blogs') == 'blogs' ? 'checked' : '' }}>
+                                        {{ old('type', $newsblogData['type'] ?? 'blogs') == 'blogs' ? 'checked' : '' }}>
                                     Blog
                                 </label>
                             </div>
@@ -48,7 +48,7 @@
                     <!-- Title & Short Description -->
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label for="title" class="fullName" id="titleLabel">News and Blogs Title</label>
+                            <label for="title" class="fullName" id="titleLabel">News and Blogs Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" required
                                     value="{{ old('title', $newsblogData['title']) }}">
@@ -88,7 +88,7 @@
                     <!-- Banner Upload & Preview -->
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box">
-                            <label for="banner_image" class="fullName">Update Banner Image <small class="text-muted ">(Upload image Max: 500KB, Dimensions: 1280x720px) / (Recommended format: <strong>.webp</strong>)</small></label>
+                            <label for="banner_image" class="fullName">Update Banner Image <small class="text-muted ">(Upload image Max: 500KB, Dimensions: 1720x530px) / (Recommended format: <strong>.webp</strong>)</small></label>
                             <div class="input-group">
                                 <input type="file" id="banner_image" name="banner_image" class="form-control" accept=".png,.jpg,.jpeg,.webp"
                                     onchange="previewBanner(event)">

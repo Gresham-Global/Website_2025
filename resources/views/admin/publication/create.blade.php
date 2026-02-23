@@ -23,7 +23,7 @@
                     <!-- publications Title & Short Description -->
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label for="title" class="fullName">Publications Title</label>
+                            <label for="title" class="fullName">Publications Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" required value="{{ old('title') }}">
                             </div>

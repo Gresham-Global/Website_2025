@@ -24,7 +24,7 @@
                 <div class="event-content col-md-12 p-0">
                     <div class="d-flex align-items-center gap-2 text-muted-c small">
                         <img src="{{ asset('website/assets/images/time.svg') }}" alt="Time Icon" class="icon-sm">
-                        <span>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</span>
+                        <span> {{ \Carbon\Carbon::parse($event->published_date ?? $event->created_at)->format('d M Y') }}</span>
                     </div>
                     <div class="news-card-title"> <a href="{{ route('events.show', $event->slug) }}"
                             class="news-card-title">{{ \Illuminate\Support\Str::limit($event->title, 63) }}</a></div>

@@ -17,6 +17,8 @@ class Event extends Model
         'slug',
         'short_description',
         'thumbnail_image',
+        'banner_image',
+        'published_date',
         'description',
         'logo_image',
         'video_link',

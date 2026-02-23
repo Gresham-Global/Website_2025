@@ -86,9 +86,10 @@
 
 <section class="about-banner-background firstSection customSection">
     <div class="customContainer firstContainer">
-        <h1 class="text-white titleH1">Events</h1>
+        <!-- <h1 class="text-white titleH1">Events</h1> -->
     </div>
-    <img src="{{ asset('website/assets/images/banner_events.png') }}"
+    <img
+        src="{{ $event->banner_image ? asset($event->banner_image) : asset('website/assets/images/banner_events.png') }}"
         class="w-100 img-fluid forMobBanner minScreenBG"
         alt="{{ $event->title }}" />
 </section>
@@ -328,12 +329,12 @@ ADD DOWNLOAD OVERLAY BUTTON
         z-index: 5;
         opacity: 0;
         transition: opacity 0.3s ease;
-       
+
         font-size: 1rem;
-       
+
         cursor: pointer;
         transition: background-color 0.3s ease;
-     
+
     }
 
 

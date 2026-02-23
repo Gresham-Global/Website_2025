@@ -39,16 +39,9 @@
 
         let page = 2;
         let loading = false;
-        let total = {
-            {
-                $total ?? 0
-            }
-        };
-        let loaded = {
-            {
-                $media - > count() ?? 0
-            }
-        };
+        let total = {{ $total ?? 0 }};
+    
+        let loaded = {{ $media->count() ?? 0 }};
 
         // Detect screen width
         const isMobile = $(window).width() < 768; // Bootstrap md breakpoint

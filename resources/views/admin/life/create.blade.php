@@ -24,7 +24,7 @@
 
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }} w-48 form-group-box">
-                            <label for="title" class="fullName">Life Title</label>
+                            <label for="title" class="fullName">Life Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" required
                                     value="{{ old('title')}}">

@@ -17,7 +17,7 @@
     .blog-wrapper {
         background: #ffffff;
         padding: 80px 0;
-        font-family: 'Georgia', 'Times New Roman', serif;
+        /* font-family: 'Georgia', 'Times New Roman', serif; */
     }
 
     .blog-container {

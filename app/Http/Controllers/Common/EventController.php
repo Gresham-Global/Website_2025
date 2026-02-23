@@ -105,69 +105,85 @@ class EventController extends Controller
     public function store(Request $request)
     {
         try {
+
             $data = $request->all();
+
+            // Default null values
             $data['thumbnail_image'] = null;
-            // dd($data);
+            $data['banner_image'] = null;
+
+            /* ---------------- THUMBNAIL ---------------- */
             if ($request->hasFile('thumbnail_image')) {
-                $thumbnail_image = $request->file('thumbnail_image');
 
-                $requestData = new Request(['folder_name' => 'event']);
-                $requestData->files->set('image', $thumbnail_image);
+                $file = $request->file('thumbnail_image');
 
-                $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-                $imageController = new ImageController();
-                $response = $imageController->upload_image_storage_only($imageUploadRequest);
-                $responseImageData = json_decode($response->getContent(), true);
-
-                if (!empty($responseImageData['success'])) {
-                    $data['thumbnail_image'] = $responseImageData['data']['imagePath'] ?? null;
+                $folder = public_path('/uploads/event');
+                if (!file_exists($folder)) {
+                    mkdir($folder, 0755, true);
                 }
+
+                $filename = time() . '_' . $file->getClientOriginalName();
+
+                $file->move($folder, $filename);
+
+                // ✅ Save path in $data
+                $data['thumbnail_image'] = '/uploads/event/' . $filename;
             }
 
-            // $data['gallery_images'] = [];
 
-            // if ($request->hasFile('gallery_images')) {
-            //     $galleryImages = $request->file('gallery_images');
-            //     $paths = [];
+            /* ---------------- BANNER ---------------- */
+            if ($request->hasFile('banner_image')) {
 
-            //     foreach ($galleryImages as $image) {
-            //         $requestData = new Request(['folder_name' => 'event/gallery']);
-            //         $requestData->files->set('image', $image);
+                $file = $request->file('banner_image');
 
-            //         $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-            //         $imageController = new ImageController();
-            //         $response = $imageController->upload_image_storage_only($imageUploadRequest);
-            //         $responseImageData = json_decode($response->getContent(), true);
+                $folder = public_path('/uploads/event/banner');
+                if (!file_exists($folder)) {
+                    mkdir($folder, 0755, true);
+                }
 
-            //         if (!empty($responseImageData['success'])) {
-            //             $paths[] = $responseImageData['data']['imagePath'] ?? null;
-            //         }
-            //     }
+                $filename = time() . '_' . $file->getClientOriginalName();
 
-            //     $data['gallery_images'] = json_encode($paths);
-            // }
+                $file->move($folder, $filename);
+
+                // ✅ Save path in $data
+                $data['banner_image'] = '/uploads/event/banner/' . $filename;
+            }
 
 
+            /* ---------------- AUTH CHECK ---------------- */
             $user = Auth::user();
 
             if (!$user) {
-                return redirect()->back()->withInput()->with('error_message_catch', 'Authentication required!');
+                return redirect()->back()
+                    ->withInput()
+                    ->with('error_message_catch', 'Authentication required!');
             }
 
+
+            /* ---------------- CREATE EVENT ---------------- */
             Event::create([
                 "title" => $request->get('title'),
                 "slug" => Str::slug($request->get('title')),
                 "short_description" => $request->get('short_description'),
                 "description" => $request->get('description') ?? null,
+
+                // ✅ Correct image paths
                 "thumbnail_image" => $data['thumbnail_image'],
+                "banner_image" => $data['banner_image'],
+
+                "published_date" => $request->get('published_date'),
                 "video_link" => $request->get('video_link'),
                 "status" => $request->get('status'),
                 "created_by" => $user->id,
             ]);
 
+
             return redirect()->back()->with('status', 'Event created successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error_message_catch', $e->getMessage());
+
+            return redirect()->back()
+                ->withInput()
+                ->with('error_message_catch', $e->getMessage());
         }
     }
 
@@ -190,44 +206,90 @@ class EventController extends Controller
     public function event_update(Request $request, $id)
     {
         try {
+
             $event = Event::findOrFail($id);
-            $data = $request->all();
-            $thumbnail_image_path = null;
 
+            /* ---------------- DEFAULT VALUES ---------------- */
+            $thumbnailPath = $event->thumbnail_image;
+            $bannerPath    = $event->banner_image;
+
+
+            /* ---------------- THUMBNAIL ---------------- */
             if ($request->hasFile('thumbnail_image')) {
-                $thumbnail_image = $request->file('thumbnail_image');
-                $requestData = new Request(['folder_name' => 'event']);
-                $requestData->files->set('image', $thumbnail_image);
 
-                $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-                $imageController = new ImageController();
-                $response = $imageController->upload_image_storage_only($imageUploadRequest);
-                $responseImageData = json_decode($response->getContent(), true);
+                $file = $request->file('thumbnail_image');
 
-                if (!empty($responseImageData['success'])) {
-                    $thumbnail_image_path = $responseImageData['data']['imagePath'] ?? null;
+                $folder = public_path('/uploads/event');
+                if (!file_exists($folder)) {
+                    mkdir($folder, 0755, true);
                 }
+
+                $filename = time() . '_' . $file->getClientOriginalName();
+
+                $file->move($folder, $filename);
+
+                // ✅ New path
+                $thumbnailPath = '/uploads/event/' . $filename;
             }
 
-            $event->title = $request->get('title') ?? $event->title;
-            $event->slug = Str::slug($request->get('title'));
-            $event->short_description = $request->get('short_description') ?? null;
-            $event->description = $request->get('description') ?? null;
-            $event->thumbnail_image = $thumbnail_image_path ?? $data["thumbnail_image_url_original"] ?? $event->thumbnail_image;
-            $event->video_link = $request->get('video_link') ?? null;
-            $event->status = $request->get('status') ?? null;
-            $event->updated_by = Auth::user()->id ?? null;
 
-            // Update the status field from the request (use the provided status or leave the current one if not set)
-            $event->status = $request->get('status', '1');
+            /* ---------------- BANNER (OPTIONAL) ---------------- */
+            if ($request->hasFile('banner_image')) {
 
+                $file = $request->file('banner_image');
+
+                $folder = public_path('/uploads/event/banner');
+                if (!file_exists($folder)) {
+                    mkdir($folder, 0755, true);
+                }
+
+                $filename = time() . '_' . $file->getClientOriginalName();
+
+                $file->move($folder, $filename);
+
+                // ✅ New path
+                $bannerPath = '/uploads/event/banner/' . $filename;
+            }
+
+
+            /* ---------------- UPDATE DATA ---------------- */
+
+            $event->title = $request->get('title', $event->title);
+
+            // Only change slug if title exists
+            if ($request->filled('title')) {
+                $event->slug = Str::slug($request->get('title'));
+            }
+
+            $event->short_description = $request->get('short_description', $event->short_description);
+
+            $event->description = $request->get('description', $event->description);
+
+            $event->thumbnail_image = $thumbnailPath;
+            $event->published_date = $request->get('published_date', $event->published_date);
+
+            $event->banner_image = $bannerPath;
+
+            $event->video_link = $request->get('video_link', $event->video_link);
+
+            $event->status = $request->get('status', $event->status);
+
+            $event->updated_by = Auth::id();
+
+
+            /* ---------------- SAVE ---------------- */
             $event->save();
 
-            return redirect('admin/event/edit/' . $id)->with('status', 'Event updated successfully!');
+
+            return redirect('admin/event/edit/' . $id)
+                ->with('status', 'Event updated successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error_message_catch', 'Something went wrong! ' . $e->getMessage());
+
+            return redirect()->back()
+                ->with('error_message_catch', 'Something went wrong! ' . $e->getMessage());
         }
     }
+
 
     public function delete(Request $request)
     {

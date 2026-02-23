@@ -25,7 +25,7 @@
                     <!-- Title & Short Description -->
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label for="title" class="fullName">Event Title</label>
+                            <label for="title" class="fullName">Event Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" required
                                     value="{{ old('title', $eventData['title']) }}">
@@ -62,10 +62,96 @@
                             <span id="video_link-error" class="error" for="name" style="display: none;"></span>
                         </div>
                     </div>
+                    {{-- ================= BANNER & DATE ================= --}}
+                    <div class="form-flex-box p-0 mt-3">
 
+                        <div class="form-group w-48 form-group-box">
+
+                         <label for="banner_image" class="fullName">
+                                Banner Image <small class="text-muted ">(Upload image Max: 500KB, Dimensions: 1720x530px) / (Recommended format: <strong>.webp</strong>)</small>
+                            </label>
+<div class="input-group">
+                            <input type="file"
+                                name="banner_image"
+                                class="form-control"
+                                accept=".png,.jpg,.jpeg,.webp">
+
+</div>
+                            @error('banner_image')
+                            <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+
+                        <div class="form-group w-48 form-group-box">
+
+                           <label for="published_date" class="fullName">Published Date</label>
+<div class="input-group">
+                            <input type="datetime-local"
+                                name="published_date"
+                                class="form-control"
+                                required
+                                value="{{ old('published_date',
+                                        \Carbon\Carbon::parse($eventData['published_date'])
+                                        ->format('Y-m-d\TH:i')) }}">
+</div>
+                            @error('published_date')
+                            <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                    </div>
+
+
+
+                    {{-- ================= IMAGE PREVIEW ================= --}}
+                    <div class="form-flex-box p-0 mt-3">
+
+                        {{-- Thumbnail Preview --}}
+                        <div class="form-group w-48 form-group-box">
+
+                            <label class="fullName">
+                                Thumbnail Preview
+                            </label><br>
+
+                            @if(!empty($eventData['thumbnail_image']))
+                            <a href="{{ asset($eventData['thumbnail_image']) }}" target="_blank">
+
+                                <img src="{{ asset($eventData['thumbnail_image']) }}"
+                                    style="max-height:100px">
+
+                            </a>
+                            @else
+                            <small class="text-muted">No thumbnail uploaded</small>
+                            @endif
+
+                        </div>
+
+
+                        {{-- Banner Preview --}}
+                        <div class="form-group w-48 form-group-box">
+
+                            <label class="fullName">
+                                Banner Preview
+                            </label><br>
+
+                            @if(!empty($eventData['banner_image']))
+                            <a href="{{ asset($eventData['banner_image']) }}" target="_blank">
+
+                                <img src="{{ asset($eventData['banner_image']) }}"
+                                    style="max-height:80px;max-width:250px">
+
+                            </a>
+                            @else
+                            <small class="text-muted">No banner uploaded</small>
+                            @endif
+
+                        </div>
+
+                    </div>
                     <!-- Thumbnail Preview & Video Link -->
                     <div class="form-flex-box p-0 mt-3">
-                        <div class="form-group w-48 form-group-box">
+                        <!-- <div class="form-group w-48 form-group-box">
                             <label class="fullName">Uploaded Thumbnail Image Preview</label><br>
                             <div class="input-group">
                                 @if ($eventData['thumbnailImagePath'])
@@ -75,7 +161,7 @@
                                 </a>
                                 @endif
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="form-group w-48 form-group-box {{ $errors->has('share_link') ? 'has-error' : '' }}">
                             <label for="share_link" class="fullName">Social Link</label>

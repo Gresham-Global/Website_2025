@@ -12,6 +12,8 @@ use Brevo\Client\Configuration;
 use Brevo\Client\Model\CreateContact;
 use GuzzleHttp\Client;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\EnquiryMail;
 
 class EnquiryController extends Controller
 {
@@ -67,67 +69,28 @@ class EnquiryController extends Controller
         Enquiry::create($request->all());
 
         try {
-            $config = Configuration::getDefaultConfiguration()
-                ->setApiKey('api-key', env('BREVO_API_KEY'));
 
-            $client = new Client();
+            $data = [
+                'full_name'    => $request->full_name,
+                'email'        => $request->email,
+                'designation'  => $request->designation,
+                'organisation' => $request->organisation,
+                'services'     => $request->services,
+                'message'      => $request->message,
+            ];
 
-            /** ------------------------------
-             *  1️⃣ Add contact to Brevo list
-             * ------------------------------ */
-            $contactsApi = new \Brevo\Client\Api\ContactsApi($client, $config);
-
-            $contact = new \Brevo\Client\Model\CreateContact([
-                'email' => $request->email,
-                'attributes' => [
-                    'FULLNAME' => $request->full_name,
-                    'DESIGNATION' => $request->designation,
-                    'ORGANISATION' => $request->organisation,
-                ],
-                'listIds' => [(int) env('BREVO_LIST_ID')],
-                'updateEnabled' => true
-            ]);
-
-            $contactsApi->createContact($contact);
-
-            /** ------------------------------
-             *  2️⃣ Send email notification
-             * ------------------------------ */
-            $emailApi = new TransactionalEmailsApi($client, $config);
-
-            $email = new SendSmtpEmail([
-                'subject' => 'New Enquiry Received',
-                'sender' => [
-                    'name' => 'Website Enquiry',
-                    'email' => env('BREVO_SENDER_EMAIL')
-                ],
-                'to' => [
-                    [
-                        'email' => 'subhadeephaldar.a2@gmail.com',
-                        'name'  => 'Subhadeep Haldar'
-                    ]
-                ],
-                'htmlContent' => "
-                <h2>New Enquiry</h2>
-                <p><strong>Name:</strong> {$request->full_name}</p>
-                <p><strong>Email:</strong> {$request->email}</p>
-                <p><strong>Designation:</strong> {$request->designation}</p>
-                <p><strong>Organisation:</strong> {$request->organisation}</p>
-                <p><strong>Services:</strong> {$request->services}</p>
-                <p><strong>Message:</strong><br>{$request->message}</p>
-            "
-            ]);
-
-            $emailApi->sendTransacEmail($email);
+            Mail::to('jaspreet@gresham.world')
+                ->send(new EnquiryMail($data));
 
             return response()->json([
                 'status' => true,
                 'message' => 'Enquiry submitted & email sent successfully!'
             ]);
         } catch (\Exception $e) {
+
             return response()->json([
                 'status' => false,
-                'message' => 'Brevo Error: ' . $e->getMessage()
+                'message' => 'Mail Error: ' . $e->getMessage()
             ], 500);
         }
     }

@@ -36,7 +36,7 @@
       <div class="d-flex align-items-center gap-2 text-muted-c small mt-3">
         <img src="{{ asset('website/assets/images/time.svg') }}" class="icon-sm">
         <span style="font-size: 0.875em">
-          {{ \Carbon\Carbon::parse($news_and_blog->publish_date ?? $news_and_blog->created_at)->format('d M Y') }}
+          {{ \Carbon\Carbon::parse($news_and_blog->published_date ?? $news_and_blog->created_at)->format('d M Y') }}
         </span>
       </div>
 

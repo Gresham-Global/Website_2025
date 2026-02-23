@@ -13,11 +13,26 @@
     {{-- Desktop Banner --}}
     <img src="{{ $desktopImage }}"
         alt="{{ $altText }}"
-        class="w-100 forMobBanner d-none d-md-block">
+        class="w-100 forMobBanner d-none d-md-block ">
 
     {{-- Mobile Banner --}}
     <img src="{{ $mobileImage }}"
         alt="{{ $altText }}"
         class="w-100 forMobBanner d-block d-md-none">
 </section>
+<style>
+    @media screen and (min-width:1280px) {
+        .about-banner-background {
+            height: 530px;
+            overflow: hidden;
+        }
+
+        .about-banner-background img {
+            width: 100%;
+            max-height: 530px;
+            object-fit: cover;
+        }
+    }
+</style>
+
 @endif

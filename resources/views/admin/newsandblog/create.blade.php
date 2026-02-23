@@ -26,7 +26,7 @@
 
 
                             <div class="input-group d-flex gap-4" style="height:50px; align-items:center; border: none; padding-left: 15px;">
-                                <label class="d-flex align-items-center gap-4" >
+                                <label class="d-flex align-items-center gap-4">
                                     <input type="radio" name="type" value="news"
                                         {{ old('type', 'news') == 'news' ? 'checked' : '' }}>
                                     News
@@ -47,7 +47,7 @@
                     <!-- Event Title & Short Description -->
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label for="title" class="fullName" id="titleLabel">News and Blogs Title</label>
+                            <label for="title" class="fullName" id="titleLabel">News and Blogs Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" required value="{{ old('title') }}">
                             </div>
@@ -104,7 +104,7 @@
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box">
                             <label for="banner_image" class="fullName">
-                                Banner Image <small class="text-muted ">(Upload image Max: 500KB, Dimensions: 1280x720px) / (Recommended format: <strong>.webp</strong>)</small>
+                                Banner Image <small class="text-muted ">(Upload image Max: 500KB, Dimensions: 1720x530px) / (Recommended format: <strong>.webp</strong>)</small>
                             </label>
                             <div class="input-group">
                                 <input type="file" accept=".png,.jpg,.jpeg,.webp" id="banner_image" name="banner_image" class="form-control">

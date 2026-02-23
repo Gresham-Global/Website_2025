@@ -24,7 +24,7 @@
                     <!-- Event Title & Short Description -->
                     <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label for="title" class="fullName">Event Title</label>
+                            <label for="title" class="fullName">Event Title (Max: 255 characters)</label>
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" required
                                     value="{{ old('title') }}">
@@ -73,10 +73,31 @@
                         </div> -->
                     </div>
                     <div class="form-flex-box p-0 mt-3">
+
+                        <div class="form-group w-48 form-group-box">
+                            <label for="banner_image" class="fullName">
+                                Banner Image <small class="text-muted ">(Upload image Max: 500KB, Dimensions: 1720x530px) / (Recommended format: <strong>.webp</strong>)</small>
+                            </label>
+                            <div class="input-group">
+                                <input type="file" accept=".png,.jpg,.jpeg,.webp" id="banner_image" name="banner_image" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group w-48 form-group-box {{ $errors->has('published_date') ? 'has-error' : '' }}">
+                            <label for="published_date" class="fullName">Published Date</label>
+                            <div class="input-group">
+                                <!-- <input type="date" id="published_date" name="published_date" class="form-control" required value="{{ old('published_date') }}"> -->
+                                <input type="datetime-local" id="published_date" name="published_date" class="form-control" required value="{{ old('published_date') }}">
+
+                            </div>
+                            <span id="published_date-error" class="error" for="name" style="display: none;"></span>
+                        </div>
+                    </div>
+                    <div class="form-flex-box p-0 mt-3">
                         <div class="form-group w-48 form-group-box">
                             <label class="fullName">Uploaded Thumbnail Image Preview</label><br>
                             <div class="input-group">
-                                <img id="thumbnail_preview" src="#" alt="Image Preview" accept=".png, .jpg, .jpeg,.webp" style="display:none; height: 16rem;display: block;width: 100%;object-fit: fill;" />
+                                <img id="thumbnail_preview" src="#" alt="Image Preview" accept=".png, .jpg, .jpeg,.webp" style="display:none; height: 16rem;width: 100%;object-fit: fill;" />
 
                             </div>
                         </div>

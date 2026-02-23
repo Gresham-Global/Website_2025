@@ -111,16 +111,155 @@ class MediaController extends Controller
         return view('admin.media.create', compact('title', 'heading'));
     }
 
+    // public function store(Request $request)
+    // {
+
+    //     $request->validate([
+    //         'thumbnail_image.*' => [
+    //             'required',
+    //             'image',
+    //             'mimes:jpg,jpeg,png,webp',
+    //             'max:500', // 500 KB
+    //             // 'dimensions:width=640,height=360'
+    //         ],
+    //         'logo_image' => [
+    //             'nullable',
+    //             'image',
+    //             'mimes:jpg,jpeg,png,webp',
+    //             'max:500'
+    //         ],
+    //     ], [
+    //         'thumbnail_image.*.max' => 'Each thumbnail image must be below 500KB.',
+    //         'thumbnail_image.*.dimensions' => 'Thumbnail image must be exactly 640x360 pixels.',
+    //     ]);
+    //     try {
+
+    //         $data = $request->all();
+    //         // dd($data);
+
+    //         if ($request->hasFile('thumbnail_image')) {
+
+    //             $thumbnail_images = $request->file('thumbnail_image');
+    //             $imagePaths = [];
+
+    //             foreach ($thumbnail_images as $thumbnail_image) {
+
+    //                 $requestData = new Request([
+    //                     'folder_name' => 'media',
+    //                 ]);
+
+    //                 $requestData->files->set('image', $thumbnail_image);
+
+    //                 $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
+
+    //                 $imageController = new ImageController();
+    //                 $response = $imageController->upload_image_storage_only($imageUploadRequest);
+
+    //                 $responseImageData = json_decode($response->getContent(), true);
+
+    //                 if ($responseImageData['success']) {
+    //                     $imagePaths[] = $responseImageData['data']['imagePath'];
+    //                 }
+    //             }
+
+    //             // store multiple images as JSON
+    //             $data['thumbnail_image'] = json_encode($imagePaths);
+    //         } else {
+    //             $data['thumbnail_image'] = null;
+    //         }
+
+    //         // if ($request->hasFile('thumbnail_image')) {
+    //         //     // dd('sssssss');
+    //         //     $thumbnail_image = $request->file('thumbnail_image');
+
+    //         //     // Create a new Request instance and merge the file and folder name
+    //         //     $requestData = new Request([
+    //         //         'folder_name' => 'media',
+    //         //     ]);
+
+    //         //     // Add the file to the request
+    //         //     $requestData->files->set('image', $thumbnail_image);
+
+    //         //     // Create a new instance of the ImageUploadRequest using the Request data
+    //         //     $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
+
+    //         //     // Create an instance of ImageController
+    //         //     $imageController = new ImageController();
+
+    //         //     // Call the upload_image_s3_only method and get the response
+    //         //     $response = $imageController->upload_image_storage_only($imageUploadRequest);
+
+    //         //     // Decode the response to get the data
+    //         //     $responseImageData = json_decode($response->getContent(), true);
+    //         //     // dd($responseImageData);
+    //         //     // Check if the response is successful and set the cover_image data
+    //         //     if ($responseImageData['success']) {
+    //         //         $data['thumbnail_image'] = $responseImageData['data']['imagePath'];
+    //         //     }
+    //         // } else {
+    //         //     // dd('sssssssvvvvvvv');
+    //         //     $data['thumbnail_image'] = null;
+    //         // }
+
+    //         if ($request->hasFile('logo_image')) {
+    //             // dd('sssssss');
+    //             $image = $request->file('logo_image');
+
+    //             // Create a new Request instance and merge the file and folder name
+    //             $requestData = new Request([
+    //                 'folder_name' => 'media',
+    //             ]);
+
+    //             // Add the file to the request
+    //             $requestData->files->set('image', $image);
+
+    //             // Create a new instance of the ImageUploadRequest using the Request data
+    //             $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
+
+    //             // Create an instance of ImageController
+    //             $imageController = new ImageController();
+
+    //             // Call the upload_image_s3_only method and get the response
+    //             $response = $imageController->upload_image_storage_only($imageUploadRequest);
+
+    //             // Decode the response to get the data
+    //             $responseImageData = json_decode($response->getContent(), true);
+    //             // Check if the response is successful and set the logo_image data
+    //             if ($responseImageData['success']) {
+    //                 $data['logo_image'] = $responseImageData['data']['imagePath'];
+    //             }
+    //         } else {
+    //             // dd('sssssssvvvvvvv');
+    //             $data['logo_image'] = null;
+    //         }
+
+    //         $media = Media::create([
+    //             "title" => $request->get('title'),
+    //             "slug" => Str::slug($request->get('title')), // Generate slug dynamically
+    //             "short_description" => $request->get('short_description'),
+    //             "thumbnail_image" => $data['thumbnail_image'] ?? null,
+    //             "logo_image" => $data['logo_image'] ?? null,
+    //             "media_link" => $request->get('media_link'),
+    //             "publish_date" => $request->get('publish_date') ?? null,
+    //             "status" => $request->get('status') ?? 0,
+    //             "created_by" => auth()->id(),
+    //         ]);
+
+    //         return redirect()->back()->with('status', 'Media created successfully!');
+    //     } catch (\Exception $e) {
+    //         //dd($e->getMessage());
+    //         return redirect()->back()->withInput()->with('error_message_catch', $e->getMessage());
+    //     }
+    // }
+
     public function store(Request $request)
     {
-
         $request->validate([
             'thumbnail_image.*' => [
                 'required',
                 'image',
                 'mimes:jpg,jpeg,png,webp',
                 'max:500', // 500 KB
-                'dimensions:width=640,height=360'
             ],
             'logo_image' => [
                 'nullable',
@@ -130,115 +269,75 @@ class MediaController extends Controller
             ],
         ], [
             'thumbnail_image.*.max' => 'Each thumbnail image must be below 500KB.',
-            'thumbnail_image.*.dimensions' => 'Thumbnail image must be exactly 640x360 pixels.',
         ]);
+
         try {
 
             $data = $request->all();
-            // dd($data);
+
+            /* ============================
+           Upload Thumbnail Images
+        ============================ */
 
             if ($request->hasFile('thumbnail_image')) {
 
-                $thumbnail_images = $request->file('thumbnail_image');
+                $files = $request->file('thumbnail_image');
                 $imagePaths = [];
 
-                foreach ($thumbnail_images as $thumbnail_image) {
-
-                    $requestData = new Request([
-                        'folder_name' => 'media',
-                    ]);
-
-                    $requestData->files->set('image', $thumbnail_image);
-
-                    $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-
-                    $imageController = new ImageController();
-                    $response = $imageController->upload_image_storage_only($imageUploadRequest);
-
-                    $responseImageData = json_decode($response->getContent(), true);
-
-                    if ($responseImageData['success']) {
-                        $imagePaths[] = $responseImageData['data']['imagePath'];
-                    }
+                $folder = public_path('/uploads/media');
+                if (!file_exists($folder)) {
+                    mkdir($folder, 0755, true);
                 }
 
-                // store multiple images as JSON
+                foreach ($files as $file) {
+
+                    $filename = time() . '_' . uniqid() . '_' . $file->getClientOriginalName();
+
+                    $file->move($folder, $filename);
+
+                    $imagePaths[] = '/uploads/media/' . $filename;
+                }
+
+                // Store multiple images as JSON
                 $data['thumbnail_image'] = json_encode($imagePaths);
             } else {
                 $data['thumbnail_image'] = null;
             }
 
-            // if ($request->hasFile('thumbnail_image')) {
-            //     // dd('sssssss');
-            //     $thumbnail_image = $request->file('thumbnail_image');
 
-            //     // Create a new Request instance and merge the file and folder name
-            //     $requestData = new Request([
-            //         'folder_name' => 'media',
-            //     ]);
-
-            //     // Add the file to the request
-            //     $requestData->files->set('image', $thumbnail_image);
-
-            //     // Create a new instance of the ImageUploadRequest using the Request data
-            //     $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-
-            //     // Create an instance of ImageController
-            //     $imageController = new ImageController();
-
-            //     // Call the upload_image_s3_only method and get the response
-            //     $response = $imageController->upload_image_storage_only($imageUploadRequest);
-
-            //     // Decode the response to get the data
-            //     $responseImageData = json_decode($response->getContent(), true);
-            //     // dd($responseImageData);
-            //     // Check if the response is successful and set the cover_image data
-            //     if ($responseImageData['success']) {
-            //         $data['thumbnail_image'] = $responseImageData['data']['imagePath'];
-            //     }
-            // } else {
-            //     // dd('sssssssvvvvvvv');
-            //     $data['thumbnail_image'] = null;
-            // }
+            /* ============================
+           Upload Logo Image
+        ============================ */
 
             if ($request->hasFile('logo_image')) {
-                // dd('sssssss');
-                $image = $request->file('logo_image');
 
-                // Create a new Request instance and merge the file and folder name
-                $requestData = new Request([
-                    'folder_name' => 'media',
-                ]);
+                $file = $request->file('logo_image');
 
-                // Add the file to the request
-                $requestData->files->set('image', $image);
-
-                // Create a new instance of the ImageUploadRequest using the Request data
-                $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-
-                // Create an instance of ImageController
-                $imageController = new ImageController();
-
-                // Call the upload_image_s3_only method and get the response
-                $response = $imageController->upload_image_storage_only($imageUploadRequest);
-
-                // Decode the response to get the data
-                $responseImageData = json_decode($response->getContent(), true);
-                // Check if the response is successful and set the logo_image data
-                if ($responseImageData['success']) {
-                    $data['logo_image'] = $responseImageData['data']['imagePath'];
+                $folder = public_path('/uploads/media');
+                if (!file_exists($folder)) {
+                    mkdir($folder, 0755, true);
                 }
+
+                $filename = time() . '_' . uniqid() . '_' . $file->getClientOriginalName();
+
+                $file->move($folder, $filename);
+
+                $data['logo_image'] = '/uploads/media/' . $filename;
             } else {
-                // dd('sssssssvvvvvvv');
                 $data['logo_image'] = null;
             }
 
+
+            /* ============================
+           Save Media
+        ============================ */
+
             $media = Media::create([
                 "title" => $request->get('title'),
-                "slug" => Str::slug($request->get('title')), // Generate slug dynamically
+                "slug" => Str::slug($request->get('title')),
                 "short_description" => $request->get('short_description'),
-                "thumbnail_image" => $data['thumbnail_image'] ?? null,
-                "logo_image" => $data['logo_image'] ?? null,
+                "thumbnail_image" => $data['thumbnail_image'],
+                "logo_image" => $data['logo_image'],
                 "media_link" => $request->get('media_link'),
                 "publish_date" => $request->get('publish_date') ?? null,
                 "status" => $request->get('status') ?? 0,
@@ -247,8 +346,10 @@ class MediaController extends Controller
 
             return redirect()->back()->with('status', 'Media created successfully!');
         } catch (\Exception $e) {
-            //dd($e->getMessage());
-            return redirect()->back()->withInput()->with('error_message_catch', $e->getMessage());
+
+            return redirect()->back()
+                ->withInput()
+                ->with('error_message_catch', $e->getMessage());
         }
     }
 
@@ -267,115 +368,220 @@ class MediaController extends Controller
     }
 
 
+    // public function media_update(Request $request, $id)
+    // {
+
+    //     $data = $request->all();
+    //     // ✅ VALIDATION
+    //     $request->validate([
+    //         'thumbnail_image.*' => [
+    //             'nullable',
+    //             'image',
+    //             'mimes:jpg,jpeg,png,webp',
+    //             'max:500',
+    //             // 'dimensions:width=640,height=360'
+    //         ],
+    //         'logo_image' => [
+    //             'nullable',
+    //             'image',
+    //             'mimes:jpg,jpeg,png,webp',
+    //             'max:500'
+    //         ],
+    //     ], [
+    //         'thumbnail_image.*.dimensions' => 'Thumbnail image must be exactly 640x360 pixels.',
+    //     ]);
+    //     try {
+    //         $media = Media::findOrFail($id);
+
+    //         if ($media != null) {
+
+    //             $thumbnail_image_path = "";
+    //             $logo_image_path = "";
+    //             if ($request->hasFile('thumbnail_image')) {
+
+    //                 $thumbnail_images = $request->file('thumbnail_image');
+    //                 $imagePaths = [];
+
+    //                 foreach ($thumbnail_images as $thumbnail_image) {
+
+    //                     $requestData = new Request([
+    //                         'folder_name' => 'media',
+    //                     ]);
+
+    //                     $requestData->files->set('image', $thumbnail_image);
+
+    //                     $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
+
+    //                     $imageController = new ImageController();
+    //                     $response = $imageController->upload_image_storage_only($imageUploadRequest);
+
+    //                     $responseImageData = json_decode($response->getContent(), true);
+
+    //                     if (!empty($responseImageData['success']) && $responseImageData['success']) {
+    //                         $imagePaths[] = $responseImageData['data']['imagePath'];
+    //                     }
+    //                 }
+
+    //                 // replace with new JSON
+    //                 $media->thumbnail_image = json_encode($imagePaths);
+    //             } else {
+    //                 // keep existing images
+    //                 $media->thumbnail_image = $data['thumbnail_image_url_original'];
+    //             }
+    //             if ($request->hasFile('logo_image')) {
+    //                 $image = $request->file('logo_image');
+
+    //                 // Create a new Request instance and merge the file and folder name
+    //                 $requestData = new Request([
+    //                     'folder_name' => 'media',
+    //                 ]);
+
+    //                 // Add the file to the request
+    //                 $requestData->files->set('image', $image);
+
+    //                 // Create a new instance of the ImageUploadRequest using the Request data
+    //                 $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
+
+    //                 // Create an instance of ImageController
+    //                 $imageController = new ImageController();
+
+    //                 // Call the upload_image_s3_only method and get the response
+    //                 $response = $imageController->upload_image_storage_only($imageUploadRequest);
+
+    //                 // Decode the response to get the data
+    //                 $responseImageData = json_decode($response->getContent(), true);
+    //                 // dump($responseImageData);
+    //                 ($responseImageData);
+    //                 // Check if the response is successful and set the cover_image data
+    //                 if ($responseImageData['success']) {
+    //                     $logo_image_path = $responseImageData['data']['imagePath'];
+    //                 }
+    //             }
+    //             $media->title = $request->get('title') ?? $media->title;
+    //             $media->slug = Str::slug($request->get('title'));
+    //             $media->short_description = $request->get('short_description') ?? $media->short_description;
+    //             $media->thumbnail_image = $thumbnail_image_path == "" ? $data["thumbnail_image_url_original"] : $thumbnail_image_path;
+    //             $media->logo_image = $logo_image_path == "" ? $data["logo_image_url_original"] : $logo_image_path;
+    //             $media->media_link = $request->get('media_link') ?? $media->media_link;
+    //             $media->publish_date = $request->get('publish_date') ?? $media->publish_date;
+    //             $media->status = $request->get('status') ?? $media->status;
+    //             $media->updated_by = auth()->id();
+    //             $media->save();
+    //             return redirect('admin/media/edit/' . $id)->with('status', 'Media updated successfully!');
+    //         } else {
+    //             return redirect()->back()->with('error_message_catch', 'Something went wrong!');
+    //         }
+    //     } catch (\Exception $e) {
+    //         // dd($e->getMessage()." catch");
+
+    //         return redirect()->back()->with('error_message_catch', 'Something went wrong! ');
+    //     }
+    // }
+
     public function media_update(Request $request, $id)
     {
-
-        $data = $request->all();
-        // ✅ VALIDATION
+        // ✅ Validation
         $request->validate([
-            'thumbnail_image.*' => [
-                'nullable',
-                'image',
-                'mimes:jpg,jpeg,png,webp',
-                'max:500',
-                'dimensions:width=640,height=360'
-            ],
-            'logo_image' => [
-                'nullable',
-                'image',
-                'mimes:jpg,jpeg,png,webp',
-                'max:500'
-            ],
-        ], [
-            'thumbnail_image.*.dimensions' => 'Thumbnail image must be exactly 640x360 pixels.',
+            'thumbnail_image.*' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:500',
+            'logo_image'        => 'nullable|image|mimes:jpg,jpeg,png,webp|max:500',
         ]);
+
         try {
+
             $media = Media::findOrFail($id);
 
-            if ($media != null) {
+            /* ===============================
+           THUMBNAIL UPLOAD
+        =============================== */
 
-                $thumbnail_image_path = "";
-                $logo_image_path = "";
-                if ($request->hasFile('thumbnail_image')) {
+            if ($request->hasFile('thumbnail_image')) {
 
-                    $thumbnail_images = $request->file('thumbnail_image');
-                    $imagePaths = [];
+                $thumbnailImages = $request->file('thumbnail_image');
 
-                    foreach ($thumbnail_images as $thumbnail_image) {
+                $imagePaths = [];
 
-                        $requestData = new Request([
-                            'folder_name' => 'media',
-                        ]);
+                foreach ($thumbnailImages as $image) {
 
-                        $requestData->files->set('image', $thumbnail_image);
-
-                        $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
-
-                        $imageController = new ImageController();
-                        $response = $imageController->upload_image_storage_only($imageUploadRequest);
-
-                        $responseImageData = json_decode($response->getContent(), true);
-
-                        if (!empty($responseImageData['success']) && $responseImageData['success']) {
-                            $imagePaths[] = $responseImageData['data']['imagePath'];
-                        }
-                    }
-
-                    // replace with new JSON
-                    $media->thumbnail_image = json_encode($imagePaths);
-                } else {
-                    // keep existing images
-                    $media->thumbnail_image = $data['thumbnail_image_url_original'];
-                }
-                if ($request->hasFile('logo_image')) {
-                    $image = $request->file('logo_image');
-
-                    // Create a new Request instance and merge the file and folder name
                     $requestData = new Request([
                         'folder_name' => 'media',
                     ]);
 
-                    // Add the file to the request
                     $requestData->files->set('image', $image);
 
-                    // Create a new instance of the ImageUploadRequest using the Request data
                     $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
 
-                    // Create an instance of ImageController
                     $imageController = new ImageController();
 
-                    // Call the upload_image_s3_only method and get the response
-                    $response = $imageController->upload_image_storage_only($imageUploadRequest);
+                    $response = $imageController
+                        ->upload_image_storage_only($imageUploadRequest);
 
-                    // Decode the response to get the data
-                    $responseImageData = json_decode($response->getContent(), true);
-                    // dump($responseImageData);
-                    ($responseImageData);
-                    // Check if the response is successful and set the cover_image data
-                    if ($responseImageData['success']) {
-                        $logo_image_path = $responseImageData['data']['imagePath'];
+                    $responseData = json_decode($response->getContent(), true);
+
+                    if (!empty($responseData['success'])) {
+                        $imagePaths[] = $responseData['data']['imagePath'];
                     }
                 }
-                $media->title = $request->get('title') ?? $media->title;
-                $media->slug = Str::slug($request->get('title'));
-                $media->short_description = $request->get('short_description') ?? $media->short_description;
-                $media->thumbnail_image = $thumbnail_image_path == "" ? $data["thumbnail_image_url_original"] : $thumbnail_image_path;
-                $media->logo_image = $logo_image_path == "" ? $data["logo_image_url_original"] : $logo_image_path;
-                $media->media_link = $request->get('media_link') ?? $media->media_link;
-                $media->publish_date = $request->get('publish_date') ?? $media->publish_date;
-                $media->status = $request->get('status') ?? $media->status;
-                $media->updated_by = auth()->id();
-                $media->save();
-                return redirect('admin/media/edit/' . $id)->with('status', 'Media updated successfully!');
-            } else {
-                return redirect()->back()->with('error_message_catch', 'Something went wrong!');
-            }
-        } catch (\Exception $e) {
-            // dd($e->getMessage()." catch");
 
-            return redirect()->back()->with('error_message_catch', 'Something went wrong! ');
+                // ✅ Save FIRST image only (no JSON)
+                if (!empty($imagePaths)) {
+                    $media->thumbnail_image = $imagePaths[0];
+                }
+            }
+
+
+            /* ===============================
+           LOGO UPLOAD
+        =============================== */
+
+            if ($request->hasFile('logo_image')) {
+
+                $image = $request->file('logo_image');
+
+                $requestData = new Request([
+                    'folder_name' => 'media',
+                ]);
+
+                $requestData->files->set('image', $image);
+
+                $imageUploadRequest = ImageUploadRequest::createFromBase($requestData);
+
+                $imageController = new ImageController();
+
+                $response = $imageController
+                    ->upload_image_storage_only($imageUploadRequest);
+
+                $responseData = json_decode($response->getContent(), true);
+
+                if (!empty($responseData['success'])) {
+                    $media->logo_image = $responseData['data']['imagePath'];
+                }
+            }
+
+
+            /* ===============================
+           OTHER FIELDS
+        =============================== */
+
+            $media->title             = $request->title ?? $media->title;
+            $media->slug              = Str::slug($request->title);
+            $media->short_description = $request->short_description ?? $media->short_description;
+            $media->media_link        = $request->media_link ?? $media->media_link;
+            $media->publish_date      = $request->publish_date ?? $media->publish_date;
+            $media->status            = $request->status ?? $media->status;
+            $media->updated_by        = auth()->id();
+
+            $media->save();
+
+
+            return redirect('admin/media/edit/' . $id)
+                ->with('status', 'Media updated successfully!');
+        } catch (\Exception $e) {
+
+            return redirect()->back()
+                ->with('error_message_catch', 'Something went wrong!');
         }
     }
+
 
     public function delete(Request $request)
     {

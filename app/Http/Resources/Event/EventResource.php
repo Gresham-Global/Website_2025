@@ -1,9 +1,10 @@
 <?php
+
 namespace App\Http\Resources\Event;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Controllers\Common\ImageController; 
+use App\Http\Controllers\Common\ImageController;
 
 class EventResource extends JsonResource
 {
@@ -19,9 +20,12 @@ class EventResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'short_description' => $this->short_description,
-            'description' => $this->description, 
+            'description' => $this->description,
             'thumbnail_image' => $this->thumbnail_image, 
             'thumbnailImagePath' => $this->thumbnail_image != null ? (new ImageController())->generatePresignedUrl($this->thumbnail_image)  : null, 
+            // 'thumbnail_image' => $this->thumbnail_image != null ? (new ImageController())->generatePresignedUrl($this->thumbnail_image)  : null,
+            'banner_image' => $this->banner_image != null ? (new ImageController())->generatePresignedUrl($this->banner_image)  : null,
+            'published_date' => $this->published_date,
             'video_link' => $this->video_link,
             'share_link' => $this->share_link,
             'status' => $this->status,
