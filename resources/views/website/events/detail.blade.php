@@ -103,13 +103,13 @@
         </p>
 
         @if($event->video_link)
-        <div class="video-container text-center my-4">
+        <!-- <div class="video-container text-center my-4">
             <iframe width="100%" height="800"
                 src="{{ $event->video_link }}"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
-        </div>
+        </div> -->
         @endif
 
         @if(($cityImages && $cityImages->isNotEmpty()))
@@ -340,6 +340,12 @@ ADD DOWNLOAD OVERLAY BUTTON
 
     .img-wrap:hover .download-btn {
         opacity: 1;
+    }
+
+    iframe {
+        width: 100%;
+        height: 800px;
+        border: none;
     }
 </style>
 
