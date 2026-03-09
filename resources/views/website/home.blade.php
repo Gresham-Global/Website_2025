@@ -402,7 +402,7 @@
                 growth and cultivate regional success in India and South Asia.</p>
             <img src="{{ asset('website/assets/images/Group 1000004157.webp') }}" alt="Our Commitment"
                 class="w-100 d-none d-sm-none d-md-block d-lg-block" />
-            <img src="{{ asset('website/assets/images/Group 1000004057.svg') }}" alt="Our Commitment" class="w-100 d-md-none d-lg-none" />
+            <img src="{{ asset('website/assets/images/Phone Version - Our Commitment - red.webp') }}" alt="Our Commitment" class="w-100 d-md-none d-lg-none" />
         </div>
     </div>
 </section>
